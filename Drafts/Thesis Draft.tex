@@ -3,25 +3,48 @@
 %\usepackage{geometry}
 %\geometry{verbose,letterpaper,tmargin=2.54cm,bmargin=2.54cm,lmargin=2.54cm,rmargin=2.54cm}
 
-\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
-%\usepackage[table,xcdraw]{xcolor}
+\usepackage[left=1in,right=2in,top=1in,bottom=1in]{geometry}
 
-%\usepackage{booktabs}
+\usepackage{booktabs, colortbl}
+\usepackage[table,xcdraw,dvipsnames]{xcolor}
 %\usepackage[utf8]{inputenc}
 %\usepackage{amsmath}
 %\usepackage{graphicx}
-\usepackage{todonotes}
+\usepackage[textwidth=1.8in]{todonotes}
 \usepackage{setspace}
 %\usepackage{listings}
-%\usepackage{hyperref}
 \usepackage{natbib}
 \usepackage{wrapfig,subfig,graphicx}
 
+% from hrv report
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{latexsym}
+%\usepackage{listings}
+%\usepackage{textcomp}
+%\usepackage{sidecap}
+\usepackage{multirow}
+%\usepackage{changepage}
+%\usepackage{amsmath}
+%\usepackage{siunitx}
+\usepackage[figuresright]{rotating}
+\usepackage[format=hang,labelfont=bf,size=small]{caption}
 
-%\usepackage{lineno}
-%\linenumbers
+
+%\usepackage[modulo]{lineno}
+
+
+\usepackage{hyperref}
+%\usepackage{cleverref}
+\newcommand\myshade{85}
+\colorlet{mylinkcolor}{violet}
+\colorlet{mycitecolor}{Aquamarine}
+\colorlet{myurlcolor}{YellowOrange}
+
+\hypersetup{colorlinks=true, citecolor=mycitecolor!\myshade!black, linkcolor=mylinkcolor!\myshade!black, urlcolor = myurlcolor!\myshade!black}
 
 %\doublespacing
+%\linenumbers
 
 \title{Effect of climate change on future landscape composition and configuration, Tahoe National Forest, California, USA}
 \author{ Maritza Mallek }
@@ -39,38 +62,57 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Introduction}
-\todo{define SRV early}
+\section*{Introduction}\todo{I have headings but don't know if I need them or which to include.}
 
 \paragraph{1. Importance of fire in western forests, especially the Sierra Nevada}
-In the Sierra Nevada, cycles of fire and vegetation recovery occur variably over large extents, as well as over long periods of time. Ongoing disturbance on a landscape results in increased heterogeneity captured by various metrics used to describe vegetation composition and configuration \citep{Monica2008}. Prior to European settlement, wildfire was the major source of disturbance in Sierran forests, shaping the composition and configuration of vegetation communities. Fires were primarily lightning-caused, although indigenous peoples are thought to have set fires for vegetation management, especially in the lower elevations. In general, fire was frequent, with a mean rotation as short as 20 years in Ponderosa Pine-dominated forests. Wetter mixed conifer areas are predicted to have had a mean fire rotation of 30 years. Fire rotation is thought to increase gradually with elevation. For example, mesic Red Fir forests, which exist around 2,000 feet higher in elevation than Ponderosa Pine forests, had a mean fire rotation of 60 years. Variance around these means can be significant, as some parts of the forest experience fire much more frequently, while other escape fire for long periods. 
+In the Sierra Nevada, cycles of fire and vegetation recovery occur variably over large extents, as well as over long periods of time. Ongoing disturbance on a landscape results in increased heterogeneity captured by various metrics used to describe vegetation composition and configuration \citep{Monica2008}. Prior to European settlement, wildfire was the major source of disturbance in Sierran forests, shaping the composition and configuration of vegetation communities. Fires were primarily lightning-caused, although indigenous peoples are thought to have set fires for vegetation management, especially in the lower elevations. In general, fire was frequent, with a mean rotation as short as 20 years in Ponderosa Pine-dominated forests. Fire rotations increase with increased moisture and elevation. Variance around a mean fire rotation can be remarkable, as some parts of the forest experience fire much more frequently, while other escape fire for long periods. In general, regardless of vegetation type, fires during the pre-settlement period were thought to burn primarily at low intensities. High mortality (over 70\% overstory canopy mortality) was uncommon. Under this disturbance regime, stand-replacing fire initiated early development conditions on the landscape, and the predominant effect of most fires was of low overstory tree mortality, which tended to open forest canopies, especially in more xeric parts of the forest \citep{Mallek2013,Safford2014,SNEP1996,SNEP1996a}. 
 
-In general, regardless of vegetation type, high mortality fires were thought to be rare, with the vast majority of fires killing under 70\% of overstory trees. Under this disturbance regime, stand-replacing fire initiated early development conditions on the landscape. Low mortality fire tended to open forest canopies, especially in more xeric parts of the forest, while vegetation succession closed them again. The rarity of high mortality fire allowed large forest stands to succeed into late development and old growth conditions \citep{SNEP1996,Mallek2013,Safford2014,SNEP1996a}. Since then, fire suppression, logging, grazing, and mining have all interacted to alter the historical fire regime and vegetation patterns \citep{Stephens2015,Knapp2013}. For the drier forest types within this landscape, frequent fires (usually having low mortality) were the norm. After large-scale fire suppression became the norm in the second half of the 19th century, less fire-tolerant species (such as Douglas fir and white fir) have come to dominate areas where they were once a minor part of the vegetation community. Grazing and development made fires less common by altering or removing the fine fuels that carried fire. Timber harvest, especially of fire-tolerant species such as ponderosa and sugar pines, accelerated the increased cover of species such as white fir. Finally, fire suppression allowed the buildup of medium size fuels and ladder fuels, which promotes larger and hotter fires when they do occur. Moreover, the lack of natural fires has meant that variation in fuel loading has decreased, which allows large fires to spread over very large areas \citep{Hessburg2005}.
+Since then, fire suppression, logging, grazing, and mining have all interacted to alter the historical fire regime and vegetation patterns \citep{Stephens2015,Knapp2013}. For the drier forest types within this landscape, frequent fires (usually having low mortality) were the norm. After large-scale fire suppression became the norm in the second half of the 19th century, less fire-tolerant species (such as Douglas fir and white fir) have come to dominate areas where they were once a minor part of the vegetation community. Grazing and development made fires less common by altering or removing the fine fuels that carried fire. Timber harvest, especially of fire-tolerant species such as ponderosa and sugar pines, accelerated the increased cover of species such as white fir. Finally, fire suppression allowed the buildup of medium size fuels and ladder fuels, which promotes larger and hotter fires when they do occur. Moreover, the lack of natural fires has meant that variation in fuel loading has decreased, which allows large fires to spread over very large areas \citep{Hessburg2005}.
+
 
 \paragraph{2. relevance to planning needs}
-With the popularization (and to some extent forced adoption) of ecosystem management in the early 1990s, the need to recognize ecosystems as dynamic and constantly-changing became well accepted, and calls to manage forests sustainably became common \citep{Christensen1996}. Within the context of forest and land management planning, the restoration of ecosystems to their pre-European settlement states was incorporated as a goal or desired future condition into various plans, including the Sierra Nevada Ecosystem Project \cite{SNEP1996a}. By 2000, the U.S. Forest Service's formal Planning Rule explicitly required the agency to manage for ecological characteristics within the range of variability expected under natural disturbance regimes (federal register). The need to consider the natural range of variability was maintained through various amendments to the rule, and is still present in the new 2012 rule, finalized in early 2015 (federal register). 
+With the emergence of ecosystem management in the early 1990s, the need to recognize ecosystems as dynamic and constantly-changing became well accepted, and calls to manage forests sustainably became common \citep{Christensen1996}. Within the context of forest and land management planning, the restoration of ecosystems to their pre-European settlement states was incorporated as a goal or desired future condition into various plans, including the Sierra Nevada Ecosystem Project \cite{SNEP1996a}. By 2000, the U.S. Forest Service's formal Planning Rule explicitly called for the agency to estimate and describe the range of variability under natural disturbance regimes, and manage for those characteristics (36 CFR \textsection 219 2000). The need to consider the natural range of variability was maintained through various amendments to the rule, and is still present in the new 2012 rule, finalized in early 2015 (36 CFR \textsection 219 2012).
 
 
 \paragraph{3. Historic range of variability analysis, models, fragstats}
-Methods for quantifying the natural range of variability for a diversity of landscapes in the United States augmented the development of research focused on this task \citep{Landres1999}. Of these, simulation of the historical dynamics became fairly popular. By 2004, some 45 landscape fire and succession models alone had been developed \citep{Keane2004}. Many of these, such as \textsc{landis} \citep{He1999}, \textsc{zelig-l} \citep{Miller1999}, \textsc{safe-forests} \cite{Sessions1997} and LANDSUM \citep{Keane2012} are still in use today. Landscape fire and succession models are used to create spatially-explicit simulations of both of these key forest processes, typically outputting a set of GIS layers for each timestep of the model that can then be analyzed to quantify trajectories and patterns in the disturbance regime, seral stage composition, and landscape configuration over time \citep{Keane2004}. Most historical range of variability analyses in the United States have focused on the Rocky Mountains and the Oregon Coast Range. Only one historical range of variability study has been carried out within the Sierra Nevada \citep{Miller1999}, which took place in Sequoia National Park in the southern Sierra. Most information about the historical range of variability of Sierran wildfire regimes and vegetation was compiled as part of the Sierra Nevada Ecosystem Project \citep{SNEP1996a}. 
+Methods for quantifying the natural range of variability for a diversity of landscapes in the United States augmented the development of research focused on this task \citep{Landres1999}. Of these, simulation of the historical dynamics became fairly popular. By 2004, some 45 landscape fire and succession models alone had been developed \citep{Keane2004}. Many of these, such as \textsc{landis} \citep{He1999}, \textsc{zelig-l} \citep{Miller1999}, \textsc{safe-forests} \cite{Sessions1997} and \textsc{landsum} \citep{Keane2012} are still in use today. Landscape fire and succession models are used to create spatially-explicit simulations of both of these key forest processes, typically outputting a set of GIS layers for each timestep of the model that can then be analyzed to quantify trajectories and patterns in the disturbance regime, seral stage composition, and landscape configuration over time \citep{Keane2004}. Most historical range of variability (HRV) analyses in the United States have focused on the Rocky Mountains and the Oregon Coast Range. Only one HRV study has been carried out within the Sierra Nevada \citep{Miller1999}, which took place in Sequoia National Park in the southern Sierra. Most information about the HRV of Sierran wildfire regimes and vegetation was compiled as part of the Sierra Nevada Ecosystem Project \citep{SNEP1996a}. 
+
+\paragraph{Climate matters too}
+
+In addition to the HRV analysis, the need to explore and understand the ramifications of climate change on the disturbance regime and its relationship to the forest has become more well recognized. As important as it is to understand the characteristics of the historical period, the future climate will differ from the historic climate. Fires have become more common and proportionally more severe in the last few decades, and and this is anticipated to continue under warmer and drier climate change scenarios \citep{McKenzie2004,Westerling2007}. Where the focus of management efforts had been restoration in the past, now adaptation to ensure resilient ecosystems is the primary objective of managers \citep{Stephens2010}. By simulating both the historical and a range of potential future climate scenarios, we are able to isolate the effect of climate on the disturbance regime, and evaluate the difference between results generated under the historical versus future scenarios, as well as place the current landscape within the context of both. This provides a more complete picture of the range of potential variation in the landscape than either an HRV or future climate analaysis alone. Moreover, an examination of landscape composition and configuration under potential climate change scenarios is important because it can provide additional information about what restoration strategies are likely to remain resilient and make sense ecologically for the area under study. 
 
 \paragraph{Prior Work}
-In a previous study, we adapted a landscape fire and succession model, \textsc{RMLands}, developed for the Rocky Mountains, to the Sierra Nevada (Mallek, unpublished thesis). As part of this work we quantified the historical range of variability (HRV) for a sublandscape on the Tahoe National Forest. Although many such range of variability analyses have been completed, research that offers a complementary analysis of future scenarios under climate change are rare (but see \cite{Keane2008} and \cite{Duveneck2014}). Concern about the impact of changes to precipitation and temperature anticipated under climate change in the northern Sierra on local disturbance regimes, and subsequently, seral stage distribution and patch configuration motivates studies that look not only at the current and historical conditions, but also into the future \citep{Fule2008,North2012}. Quantifying and describing a ``Future Range of Variability'' (FRV) can inform how realistic restoration toward an HRV may be \citep{Duncan2010}.
+\textsc{RMLands} has been used previously to assess the HRV on the San Juan National Forest \citep{Mcgarigal2012} and the Uncompahgre Plateau \citep{Romme2009} in Colorado, as well as the Lolo National Forest in Montana \citep{Cushman2011}. As a continuation of the Montana study, which adapted \textsc{RMLands} to use data from the LandFire project\todo{cite landfire?}, we further adapted the program for use in the Sierra Nevada in order to prepare an HRV analysis for part of the Tahoe National Forest in California. Although many range of variability analyses have been completed, research that offers a complementary analysis of future scenarios under climate change are rare (but see \cite{Keane2008} and \cite{Duveneck2014}). Concern about the impact of changes to precipitation and temperature anticipated under climate change in the northern Sierra on local disturbance regimes, and subsequently, seral stage distribution and patch configuration motivates studies that look not only at the current and historical conditions, but also into the future \citep{Fule2008,North2012}. Quantifying and describing a ``Future Range of Variability'' (FRV) can inform how realistic restoration toward an HRV may be \citep{Duncan2010}.
 
 \paragraph{Objectives}
 In this study, our objectives were to evaluate the effect of climate change on the wildfire regime and landscape composition and configuration for the area previously studied on the Tahoe National Forest. We held model parameters constant but changed the climate parameter, incorporating Palmer Drought Severity Index (PDSI) values from a suite of seven climate trajectories developed by the National Center for Atmospheric Research (USA) and the Canadian Centre for Climate Modelling and Analysis to the year 2090 \citep{Cook2014}. We used \textsc{Fragstats} software and R to analyze outputs and report the 90\% range of variability for both simulated historical and future metrics. Ultimately, we evaluate our results for a series of simulations for these future scenarios to the historical range of variability and to the current conditions. 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section*{Methods}
 
 \subsection*{Study area}
-The project landscape (see Figure~\ref{projectarea}) is located on the northern part of the Tahoe National Forest, on the Yuba River and Sierraville Ranger Districts, and comprises about 181,550 hectares. The topography of the project landscape consists of rugged mountains incised by two major and a few minor river drainages. Elevation ranges from about 350 to 2500 meters. The area receives 30--260 cm of precipitation annually, most of which falls as snow in the middle to upper elevations \citep{Storer1963}. Some areas in the mid-elevation band receive high precipitation compared to the region, resulting in patches of exceptionally productive forest (Alan Doerr, \emph{personal communication}). Vegetation is tremendously diverse and changes slowly along an elevational gradient and in response to local changes in drainage, aspect, and soil structure. Grasslands, chaparral, oak woodlands, mixed conifer forests, and subalpine forests are all found within the study area. 
+The project landscape (see Figure~\ref{projectarea}) is located on the northern part of the Tahoe National Forest, on the Yuba River and Sierraville Ranger Districts, and comprises about 181,550 hectares. The topography of the project landscape consists of rugged mountains incised by two major and a few minor river drainages. Elevation ranges from about 350 m to 2500 m. The area receives 30 cm to 260 cm of precipitation annually, most of which falls as snow in the middle to upper elevations \citep{Storer1963}. Some areas in the mid-elevation band receive high precipitation compared to the region, resulting in patches of exceptionally productive forest \citep{Littell2012}. Vegetation is tremendously diverse and changes slowly along an elevational gradient and in response to local changes in drainage, aspect, and soil structure. Grasslands, chaparral, oak woodlands, mixed conifer forests, and subalpine forests are all found within the study area. 
 
 % brad said to make study area more obvious for non-US readers; will probably have to redo plot for publication but this is ok for now I think
 \begin{figure}
+\centering
 \includegraphics[width=.8\textwidth]{/Users/mmallek/Tahoe/Report3/images/studyarea.png}
 \caption{The Sierra Nevada Ecoregion is outlined in brown. The project landscape (outlined in green) is located in the northern extent of the Sierra Nevada on the Tahoe National Forest, comprising the Yuba River watershed.}
 \label{projectarea}
@@ -80,16 +122,40 @@ The project landscape (see Figure~\ref{projectarea}) is located on the northern 
 \subsection*{RMLands, parameterization}
 
 \paragraph{The Model}
-\textsc{RMLands} is a spatially-explicit, stochastic, landscape-level disturbance and succession model capable of simulating fine-grained processes over large spatial and long temporal extents \citep{McGarigal2005}. It is grid-based but simulates disturbance and succession at the patch level, and employs a dichotomous high vs. low mortality effect of fire at the cell level in place of the uniformly low, mixed, and high severity regimes used elsewhere \citep{McGarigal2012}. Originally developed for use in the Rocky Mountains of southern Colorado to provide a quantitative description of HRV \citep{McGarigal2012}, \textsc{RMLands} has also been used to simulate wildfire and vegetation succession in northern Idaho \citep{Cushman2011}. We recently completed an analysis of the historical range of variability for the study area (Mallek, unpublished thesis).
+\textsc{RMLands} is a spatially-explicit, stochastic, landscape-level disturbance and succession model capable of simulating fine-grained processes over large spatial and long temporal extents \citep{McGarigal2005}. It is grid-based but simulates disturbance and succession at the patch level, and employs a dichotomous high vs. low mortality effect of fire at the cell level in place of the uniformly low, mixed, and high severity regimes used elsewhere \citep{Mcgarigal2012}. That is, we recognize that all fires form a mosaic of high mortality (over 70\% of overstory trees killed) and low mortality (less than 70\% of overstory trees killed) patches, with the ratio varying depending on several factors, including vegetation type, seral sage, topography, and climate. Outputs from the model are readable by the landscape pattern analysis software \textsc{Fragstats}, which facilitates the landscape configuration analysis. These outputs comprise the \emph{Simulated Range of Variability} for either the historical or future conditions; we use ``SRV'' to denote both of these together when warranted.
+
 
 \paragraph{On mortality/severity}
-Some fire ecologists combine fire attributes such as flame length and fire size into their interpretation of the relative "severity" of a particular fire \citep{Agee1993}. However, in our model the relevance of severity is the outcome of the fire: does it reset the area burned to an early seral state, open the stand, or have no effect on the overstory?  Ecologists working at other scales and not working with models often describe ``mixed severity'' regimes (Kane et al 2012), which \citet{Collins2010} define as ``stand-replacing patches within a matrix of low to moderate fire-induced effects.'' Because at the 30 m cell size of our model, most real fires would be classified as ``mixed severity'' by the prior definition, it becomes moot. The most consensus exists on the definition of high severity (but see X and X for discussion on the appropriate cutoff value), and so we elected to separate fires into two categories: those resulting in high mortality (which we define as over 75\%) and those that do not.
+Some fire ecologists combine fire attributes such as flame length and fire size into their interpretation of the relative "severity" of a particular fire \citep{Agee1993}. However, in our model the relevance of severity is the outcome of the fire: does it reset the area burned to an early seral state, open the stand, or have no effect on the overstory?  Ecologists working at other scales and not working with models often describe ``mixed severity'' regimes \citep[e.g.,]{Kane2013}, which \citet{Collins2010} define as ``stand-replacing patches within a matrix of low to moderate fire-induced effects.'' Because at the 30 m cell size of our model, most real fires would be classified as ``mixed severity'' by the prior definition, it becomes moot. The most consensus exists that high severity (but see \citep{Fule2014} and \citep{Mallek2013} for discussion on the appropriate cutoff value) fire is that which kills 70-75\% of the overstory tree canopy, and so we elected to separate fires into two categories: those resulting in high mortality and those that do not \citep{Miller2009, Baker2014}.
 
-\paragraph{Input layers}\todo{update with stuff from HRV report - note collaboration}\todo{note that starting landscape is current landscape}
-In collaboration with USDA Forest Service staff, we developed a system of land cover and seral stage classification based on LandFire. We used Forest Service corporate spatial data as inputs to the model. State and transition models for all 31 land cover types were developed based on the VDDT models associated with the LandFire project, and refined with input from local experts \todo{how to cite? list everyone?}. Our HRV report for the same study area contains a detailed description of input spatial data and model parameters (Mallek, unpublished thesis). In general model parameters were developed using meta-analyses published in the literature. For example, LandFire data was used to calculate transition probabilities, \citet{Mallek2013} was used for several fire rotation calibration parameters, and wind direction information was obtained from multiple area weather stations.
+\paragraph{Input layers}
+In collaboration with USDA Forest Service staff, we developed a system of land cover and seral stage classification based on LandFire. We used Forest Service corporate spatial data as inputs to the model. State and transition models for 31 land cover types were developed based on the VDDT models associated with the LandFire project, and refined with input from local experts to capture subtle changes in succession and transition at the project scale. In general model parameters were developed using meta-analyses published in the literature. For example, LandFire data was used to calculate transition probabilities, \citet{Mallek2013} was used for several fire rotation calibration parameters, and wind direction information was obtained from multiple area weather stations. We used landscape conditions as of 2010 as the starting point for all simulations.
+
 
 \paragraph{Model calibration}
-We calibrated the model by manipulating the ignition coefficient (number of attempted fire starts per timestep) and by adjusting the relative magnitude of the scale parameter in the Weibull cumulative distribution function that governs the susceptibility of each land cover type and seral stage.\todo{more details in appendix?} We repeated this process until we achieved our predicted overall rotation values for the nine land cover types greater than 1000 ha within the project landscape. Visual analysis of the seral stage distribution was used to determine when the model was equilibrated; we have ommited the first 40 timesteps of the model from the results. No true equilibration was done for the future simulations, but we elected to include only the final 5 timesteps (25 years) of the results in order to achieve some distance from the starting (current) conditions, maintain focus on the ending trajectory of climate and the range of variation possible in the landscape at the end of the 21st century, yet still capture the variability inherent to the PDSI-based climate parameter (Figure \ref{pdsi-final5}).
+Although \textsc{RMLands} is a process-based model with parameters sourced from the literature, our team had greater confidence in some parameters than others, especially as to how they function within the \textsc{RMLands} framework. Consequently, we calibrated our model by iteratively adjusting certain parameters in which we had less confidence about the appropriate values until the outputs were tuned to a set of parameters in which we had high confidence. Specifically, we manipulated an ignition calibration coefficient and the fire return index and measured calibration success based on conformity to pre-specified rotation values at the cover type level. Fire return index values were changed by a constant multiplier across all seral stages of a given cover type; cover types were modified as groups but the index ratios within them were maintained. We set our calibration target as rotation values for the nine most prevalent cover types (Table~\ref{tab:covertable}) within 10\% of their original target rotations. Target values were based on empirical published values and local expert opinion. We chose rotation as the calibration target because targets were available from the literature and because fire rotation is a fundamental measurement that \textsc{RMLands} was designed to capture. In addition, using rotation ties calibration to a parameter that is relateable to Forest Service staff and that can be used as a target by managers in various programs. We omitted the first 40 timesteps of the historical range of variability results for model equilibration after a visual analysis of the seral stage distribution. No true equilibration was done for the future simulations, but we elected to include only the final 5 timesteps (25 years) of the results in order to achieve some distance from the starting (current) conditions, maintain focus on the ending trajectory of climate and the range of variation possible in the landscape at the end of the 21st century, yet still capture the variability inherent to the PDSI-based climate parameter (Figure \ref{fig:pdsi-final5}).
+
+
+\begin{table}[!htbp]
+\small
+\centering
+\caption{List of land cover types developed for this project. Included are the cover type abbreviation, full cover type name, and total area in the buffered project landscape in both acres and hectares.}
+\label{tab:covertable}
+\begin{tabular}{@{}lll@{}}
+
+\toprule
+\textbf{\begin{tabular}[c]{@{}l@{}}Land Cover \\ Abbreviation\end{tabular}} & \textbf{Land Cover Name}    & \textbf{\begin{tabular}[c]{@{}l@{}}Area \\ Core Only\\ (Hectares)\end{tabular}}  \\ \midrule
+  							\textsc{meg\_m  }     & Mixed Evergreen - Mesic                      & 7,273  \\
+\rowcolor[HTML]{CAD6BA}  	\textsc{meg\_x  }     & Mixed Evergreen - Xeric                      & 6,768  \\
+     						\textsc{ocfw    }     & Oak-Conifer Forest and Woodland              & 23,729 \\
+\rowcolor[HTML]{CAD6BA}		\textsc{ocfw\_u }     & \begin{tabular}[c]{@{}l@{}}Oak-Conifer Forest and \\ Woodland -  Ultramafic\end{tabular} & 1,060 \\
+  							\textsc{rfr\_m  }     & Red Fir - Mesic                              & 8,563  	  \\
+\rowcolor[HTML]{CAD6BA}		\textsc{rfr\_x  }     & Red Fir - Xeric                              & 7,493  	  \\
+                    		\textsc{smc\_m  }     & Sierran Mixed Conifer - Mesic                & 57,853 	  \\
+\rowcolor[HTML]{CAD6BA}  	\textsc{smc\_u  }     & Sierran Mixed Conifer - Ultramafic           & 4,124  	  \\
+                     		\textsc{smc\_x  }     & Sierran Mixed Conifer - Xeric                & 52,198 	  \\
+\end{tabular}
+\end{table}
 
 % Brad's comment: Is it possible to validate this model in some way? In particular, how do we know that varying the climate multiplier affects fires in a realistic way? Could you hindcast to see how well the PDSI for past years matches the historical fire pattern?
 
@@ -97,11 +163,10 @@ We calibrated the model by manipulating the ignition coefficient (number of atte
 % More notes: HRV article has a brief comparison of climate vs. disturbed area. Weak relationship. We expect cascading results affecting landscape structure and composition as well as changes to fires. Some non-standard fire behavior may occur but no real way to test this because we don't know what fires will "look" like in the future. 
 
 \subsection*{PDSI, climate parameter}
-A climate variable unique to each timestep in the model is the key parameter that varies across the scenarios in this study. The Palmer Drought Severity Index (PDSI) forms the basis of this parameter, a commonly used tool to assess drought in the western United States \citep{Cook2004}. The PDSI is appropriate for use in local scales like ours, and evaluates precipitation and temperature within a water balance model \citep{HeimJr2002}. Values from multiple point locations were used on an inverse distance-weighted basis, which were then rescaled to a mean of 1 and inverted so that they could be used as a multiplier within \textsc{RMLands}. Within the model, climate affects probabilities regulating initiation, susceptibility, and spread. We observed in our study on HRV that disturbed area was weakly positively correlated with increased climate parameter values. We do not expect a simple correlation because of the interacting effects between climate, fires, and vegetation, both in the real world and in \textsc{RMLands}. %last bit in response to a comment from Brad.
+A climate variable unique to each timestep in the model is the key parameter that varies across the scenarios in this study. The Palmer Drought Severity Index (PDSI) forms the basis of this parameter, a commonly used tool to assess drought in the western United States \citep{Cook2004}. The PDSI is appropriate for use in local scales like ours, and evaluates precipitation and temperature within a water balance model \citep{HeimJr2002}. Values from multiple point locations were used on an inverse distance-weighted basis, which were then rescaled to a mean of 1 and inverted so that they could be used as a multiplier within \textsc{RMLands}. Within the model, climate affects probabilities regulating initiation, susceptibility, and spread. We observed in our study on HRV that disturbed area was weakly positively correlated with increased climate parameter values. We do not expect a simple correlation because of the interacting effects between climate, fires, and vegetation, both in the real world and in \textsc{RMLands}. However, by comparing the HRV to a set of future scenarios under a treatment consisting only of adjusting the climate parameter, we have isolated the effect of increased temperatures and decreased rainfall (as synthesized by the PDSI), which is predicted under climate change.
 
-PDSI calculations from the period 1550-1850 (the three hundred years prior to European establishment) were acquired from the National Oceanic and Atmosphereic Administration and used for the HRV simulations. For the future simulations, we used data available from \citet{Cook2014}. The Intergovernmental Panel on Climate Change (IPCC) Working Group III developed 40 different scenarios involving different assumptions about demographic, social, economic, technological, and environmental development, which are then grouped into four broad categories \citep{Nakicenovic2000}. This strategy was updated in 2013, as the IPCC Working Group I developed a new set of scenarios, so-called Representative Concentration Pathways (RCPs). The RCPs represent different targets for radiative forcing at the year 2100: 2.6, 4.5, 6.0 and 8.5 W m$^2$ \citep{Stocker2013}. \citet{Cook2014} calculated future values of the Palmer Drought Severity Index (PDSI) fit to historical data through 2099, based on the RCP8.5 model outputs. They used the same methodology as the North American Climate Atlas \citep{Cook2004}. An examination of landscape composition and configuration under potential climate change scenarios is important because it can provide additional information about what restoration strategies are likely to remain resilient and make sense ecologically for the area under study. 
-
-Project partners analyzed the suite of climate models for which \citet{Cook2014} had calculated PDSI, and selected the CCSM4 from the National Center for Atmospheric Research and the GFDL-ESM2M from the NOAA Geophysical Fluid Dynamics Laboratory. The CCSM4 results are typically warmer and similar precipitation as the historical period, while the GFDL-ESM2M model projects hotter and drier weather than the historical period (Becky Estes, \emph{personal communication}). Six separate runs of the CCSM4 model were available, so we treated each run as a separate scenario. Each of the seven total runs followed a unique pattern and trend (Figure \ref{pdsi-lm}). Some of the runs of the CCSM4 model are similar to the HRV scenario in terms of median and range of variability, which others more clearly show an increase in the climate parameter value (Figure \ref{pdsi-boxplots}). Due to this variability, we present results by individual scenario as well as more coarsely, comparing the HRV results to all of the future results together. In the case of the climate parameter, the future values have a higher median and a much larger spread than the historical values (Figure \ref{pdsi-boxplots}).
+PDSI calculations from the period 1550-1850 (the three hundred years prior to European establishment) were acquired from the National Oceanic and Atmosphereic Administration, converted into our climate paramter, and used for the HRV simulations. %For the future simulations, we used PDSI data available from \citet{Cook2014}. %The Intergovernmental Panel on Climate Change (IPCC) Working Group III developed 40 different scenarios involving different assumptions about demographic, social, economic, technological, and environmental development, which are then grouped into four broad categories \citep{Nakicenovic2000}. This strategy was updated in 2013, as the IPCC Working Group I developed a new set of scenarios, so-called Representative Concentration Pathways (RCPs). The RCPs represent different targets for radiative forcing at the year 2100: 2.6, 4.5, 6.0 and 8.5 W m$^2$ \citep{Stocker2013}. 
+We used PDSI data from \citet{Cook2014}, who calculated future values of the Palmer Drought Severity Index (PDSI) fit to historical data through 2099, based on the RCP8.5 model outputs to generate the climate parameter for all future-based simulations. They used the same methodology as the North American Climate Atlas \citep{Cook2004}. Project partners analyzed the suite of climate models for which \citet{Cook2014} had calculated PDSI, and selected the CCSM4 from the National Center for Atmospheric Research and the GFDL-ESM2M from the NOAA Geophysical Fluid Dynamics Laboratory. The CCSM4 results are typically warmer and similar precipitation as the historical period, while the GFDL-ESM2M model projects hotter and drier weather than the historical period. Six PDSI sequences based on the CCSM4 model were available, so we treated each run as a separate scenario. Each of the seven total runs followed a unique pattern and trend (Figure \ref{fig:pdsi_future}). Some of the runs of the CCSM4 model are similar to the HRV scenario in terms of median and range of variability, while others more clearly show an increase in the range of climate parameter values (Figure \ref{pdsi-boxplots}). Due to this variability, we present results by individual scenario as well as more coarsely, comparing the HRV results to the pooled future results pooled. 
 
 
 
@@ -109,15 +174,16 @@ Project partners analyzed the suite of climate models for which \citet{Cook2014}
 \centering
   \subfloat[][]{
     \centering
-\includegraphics[height=0.25\textheight]{/Users/mmallek/Documents/Thesis/Plots/pdsi/futureclimate_wlm.png}
+	\includegraphics[height=0.25\textheight]{/Users/mmallek/Documents/Thesis/Plots/pdsi/futureclimate_wlm.png}
     \label{fig:pdsi-lm}
   }%
   \subfloat[][]{
-\includegraphics[height=0.25\textheight]{/Users/mmallek/Documents/Thesis/Plots/pdsi/future_last5timesteps.png}
-}
-\label{pdsi-final5}
-\caption{(a) Climate parameter trajectory for 18 timesteps used in our simulations for the 6 scenarios from the CCSM model and the single scenario from the ESM2M model. Solid lines connect the climate parameter values for each timestep, and the dashed line represents a fitted linear regression to the data. (b) Zoom on the final five timesteps (without regression lines) for better visualization of variability in each scenario. The climate parameter in \textsc{RMLands} is based on the Palmer Drought Severity Index. Models in the legend appear in descending order from least to greatest mean value for the full time series of the simulation.The HRV values are not shown because they spanned many more timesteps, but for comparison note that the HRV trend line if shown would be flat at a value of 1.0. 
-}
+  	\centering
+	\includegraphics[height=0.25\textheight]{/Users/mmallek/Documents/Thesis/Plots/pdsi/future_last5timesteps.png}
+	\label{fig:pdsi-final5}
+	}
+	\caption{(a) Climate parameter trajectory for 18 timesteps used in our simulations for the 6 scenarios from the CCSM model and the single scenario from the ESM2M model. Solid lines connect the climate parameter values for each timestep, and the dashed line represents a fitted linear regression to the data. (b) Zoom on the final five timesteps (without regression lines) for better visualization of variability in each scenario. The climate parameter in \textsc{RMLands} is based on the Palmer Drought Severity Index. Models in the legend appear in descending order from least to greatest mean value for the full time series of the simulation.The HRV values are not shown because they spanned many more timesteps, but for comparison note that the HRV trend line if shown would be flat at a value of 1.0.}
+\label{fig:pdsi_future}
 
 \end{figure}
 
@@ -133,111 +199,226 @@ Project partners analyzed the suite of climate models for which \citet{Cook2014}
 \end{figure}
 
 
-\subsection*{Evaluating fire regimes}
-We evaluate the fire regime across the future scenarios by evaluating the median disturbed area for each.\todo{compared to what we'd expect based on proportional difference?} We also compute the fire rotation for the nine most prevalent cover types in the study area, and compare them to the HRV fire rotation. We focus on these nine types because they all have area over 1,000 ha, and are thus statistically stable from simulation to simulation, and because they were identified as key types to understand by Tahoe National Forest collaborators. Fire rotation is defined as the time it takes to burn an area equivalent to the area under study (either for a particular cover type or the landscape as a whole) \citep{Agee1993}.
+\subsection*{Evaluating Future Range of Variability}
+We evaluate the fire regime across the future scenarios by evaluating the median disturbed area for each.\todo{compared to what we'd expect based on proportional difference?} We also compute the fire rotation for the nine\todo{There isn't really room for all these results. Maybe don't promise all of them? Not sure where to put it. Of course can go in supplementary material. But almost don't want to draw attention in text of this paper.} most prevalent cover types in the study area, and compare them to the HRV fire rotation (Table~\ref{tab:covertable}). We focus on these nine types because they all have area over 1,000 ha, and are thus statistically stable from simulation to simulation, and because they were identified as key types to understand by Tahoe National Forest collaborators. Fire rotation is defined as the time it takes to burn an area equivalent to the area under study (either for a particular cover type or the landscape as a whole) \citep{Agee1993}.%
+%
 
 
-\subsection*{Landscape composition}
-Our evaluation of landscape composition compares the seral stage distribution for our nine focal cover types across future scenarios and between the simulated future and historical periods. We report the 90\% range of variability.
+%\subsection*{Landscape composition}
+\todo{expand on this}Our evaluation of landscape composition compares the seral stage distribution for our nine focal cover types across future scenarios and between the simulated future and historical periods. We report the 90\% range of variability.
+%
+%
+%\subsection*{Landscape configuration}
+We used \textsc{Fragstats} computer software \citep{Fragstats2012} to conduct the spatial pattern analysis and assess differences in landscape configuration between the current landscape, the historical range of variability, and the future range(s) of variability. In total, we generated 22 metrics for the full landscape, which are available in Appendix \todo{to be created}. However, several of the metrics are redundant with one another, and so we focus on a subset of six metrics to simplify interpretation: Area-weighted mean patch area (\textsc{area\_am}), area-weighted mean core area (\textsc{core\_am}), contagion (\textsc{contag}), area-weighted mean radius of gyration (\textsc{gyrate\_am}), area-weighted mean shape index (\textsc{shape\_am}), and Simpson's evenness index (\textsc{siei}). We report the 90\% range of variability. %and for SMC? 
+
+To assess landscape composition and configuration, we compare the current landscape to both the FRV and the HRV, and report departure based on the following standards. If the current landscape metric value falls within the 25th to 75th percentile range (the box in our boxplots), it is considered not departed. If it falls within the 5th to 25th percentile or the 75th to 95th percentile (the whiskers in our boxplots), it is moderately departed. If it falls outside that range, it is completely departed.
+
+In comparing the FRV and HRV, we classify departure in five bins, and use the HRV as the anchoring value. If the 25th to 75th percentile ranges overlap such that one box completely contains the other, the FRV is considered not departed. If those boxes overlap only in part, the FRV is slightly departed. Moderate departure occurs when the box overlaps whiskers only. The FRV is highly departed if only the whiskers overlap, and if no overlap at all occurs then the FRV is fully departed from the HRV.
 
 
-\subsection*{Landscape configuration}
-We used \textsc{Fragstats} computer software \citep{McGarigal2012} to conduct the spatial pattern analysis and assess differences in landscape configuration between the current landscape, the historical range of variability, and the future range(s) of variability. We report results for a select group of landscape metrics to simplify interpretation. We report the 90\% range of variability. %and for SMC? 
+\subsection*{Methodological Limitations}
+We acknowledge some limitations that should be understood before applying the results in a management context. \textsc{RMLands} simulates wildfires, but does not simulate all of the disturbance processes or all of the complex interactions among them that characterize real landscapes. Our input data was the best available, but is not perfect. We do not simulate changes in the spatial configuration of land cover types. That is, we do not model upward movement of forest types or type conversions after fire or drought events. Many studies indicate that such change will occur in the next 100 years and even has occurred in many places \citep{Bachelet2001}. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We acknowledge that the climate parameter is a proxy for climate, not a direct measure of it. We utilize a single RCP, 8.5, which is the scenario projecting the most significant change in climate, after \citet{Cook2014}. In generating the climate parameter, we collapsed the projected PDSI data into 5-year summer averages and rescaled it, thus removing some of the variability and extremes present in the raw PDSI.
+
+The model and our results can only be improved with better model parameterization. As higher-quality input data and refinements to parameter estimations become available, our simulations can be rerun in order to refine our understanding and description of both the historical and potential future range of variability on this landscape.
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Results}
 * Looks like the absolute range of variability is a lot wider in the future than during the HRV!  \\
 * In some cases the landscape is out of HRV but within most of the FRVs
 
 % brad says figures > table. precise results not necessary
+% becky found this confusing
 \subsection*{Natural fire regime}
-The median amount of land burned by wildfire during simulations of seven alternative future climate trajectories ranged from 11.6\% to 18.5\% of the landscape, while during the simulated historical period the median area burned was 13.7\% of the landscape (Figure \ref{darea_modelcomp}). The two scenarios with median area burned below the HRV were those with similar climate paramter distributions to the historical period. These patterns held for low mortality fire and high mortality fire in isolation. Area burned at high mortality increased under models with higher median climate values. Area burned at low mortality was also larger than during the simulated historical period, but a higher area burned for high mortality did not necessarily correspond to an increase in area burned at low mortality.\todo{I can also show a table here, in addition or instead of the figure, if it helps.} In the two scenarios where the climate trend was moderated, the ratio of low mortality to high mortality area burned increased by over 50\%. In the other scenarios, the difference was slight, with the exception of the ESM2M model, in which the ratio of low mortality to high mortality area burned narrowed to about 1.5. When we pooled the future scenario results, the general pattern held of slight increases in area burned at all mortality levels.
 
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea_allmodelcomp.png}
-\caption{Barplots of percent of landscape burned for three mortality levels and across the historical simulation and the seven future climate scenarios. Future scenarios presented in order of increasing median value for climate parameter.}
-\label{darea_modelcomp}
-\end{figure}
+We analyzed the wildfire disturbance regime in terms of its effect on the full study area, the area classified to Sierran Mixed Conifer - Mesic (\textsc{smc\_m}), and the area classified to Sierran Mixed Conifer - Xeric (\textsc{smc\_x}).
 
-% good comment from brad in this section:
-The pattern for Sierran Mixed Conifer - Mesic, the most prevalent cover type, closely match those of the landscape as a whole. However, Sierran Mixed Conifer - Xeric, the second most prevalent cover type, different from both the full landscape and the mesic type. While total burned area remained similar, the difference narrowed, with high mortality increased relative to low mortality. In the ESM2M model scenario, the median area burned at low mortality and median area burned at high mortality are nearly the same (Figure \ref{fig:dareacomp_smc}). 
+The median amount of land burned by wildfire during simulations of seven alternative future climate trajectories increased as the climate parameter increased, thought not perfectly monotonically (Figure~\ref{fig:dareacomp}). In general, the trend was strongest for the amount of the study area that burned at high mortality, which of course influences the overall values. Differences in the quantity of area burned at low mortality does not appear to be ecologically significant. These observations hold for the full study area as well as \textsc{smc\_m} and \textsc{smc\_x}. More striking is the fact that the area burned at high mortality increased relative to low mortality. Compared to the full landscape, this was slightly less conspicuous for \textsc{smc\_m}. However, in \textsc{smc\_x}, the \textsc{esm2m} scenario resulted in nearly identical extents of high versus low mortality. 
 
-\emph{I want to incorporate the rotation results somehow, but haven't figured out the best way yet. Suggestions welcome. In general they got shorter.}
+
+
+%The median amount of land burned by wildfire during simulations of seven alternative future climate trajectories ranged from 11.6\% to 18.5\% of the landscape, while during the simulated historical period the median area burned was 13.7\% of the landscape (Figure \ref{fig:darea_modelcomp}). The two scenarios with median area burned below the HRV were those with similar climate paramter distributions to the historical period. These patterns held for low mortality fire and high mortality fire in isolation. Area burned at high mortality increased under models with higher median climate values. Area burned at low mortality was also larger than during the simulated historical period, but a higher area burned for high mortality did not necessarily correspond to an increase in area burned at low mortality. In the two scenarios where the climate trend was moderated, the ratio of low mortality to high mortality area burned increased by over 50\%. In the other scenarios, the difference was slight, with the exception of the ESM2M model, in which the ratio of low mortality to high mortality area burned narrowed to about 1.5. When we pooled the future scenario results, the general pattern held of slight increases in area burned at all mortality levels.
+
+%\begin{figure}[!htbp]
+%\centering
+%\includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea_allmodelcomp.png}
+%\caption{Barplots of percent of landscape burned for three mortality levels and across the historical simulation and the seven future climate scenarios. Future scenarios presented in order of increasing median value for climate parameter. Dotted lines in the HRV section represent the median value for each mortality level after combining all seven future scenario results. }
+%\label{fig:darea_modelcomp}
+%\end{figure}
 
 %make these plots to the same scale
 \begin{figure}[!htbp]
   \centering
+    \subfloat[][]{
+	\centering
+	\includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea_allmodelcomp.png}
+	\label{fig:darea_modelcomp}
+	}
+
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.7\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea_allmodelcomp_smcm.png}
+    \includegraphics[width=.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea_allmodelcomp_smcm.png}
     \label{fig:dareacomp_smcm}
   } 
 
   \subfloat[][]{
   \centering
-    \includegraphics[width=0.7\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea_allmodelcomp_smcx.png}
+    \includegraphics[width=.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea_allmodelcomp_smcx.png}
     \label{fig:dareacomp_smcx}
   }
-    \caption{Barplots of Sierran Mixed Conifer, Mesic and Xeric variants, area disturbed across all simulated scenarios.}
-  \label{fig:dareacomp_smc}
+    \caption{Barplots showing (a) proportion of the full study landscape, (b) proportion of Sierran Mixed Conifer - Mesic, and (c) proportion of Sierran Mixed Conifer - Xeric burned for three mortality levels and across the historical simulation and the seven future climate scenarios. Future scenarios presented in order of increasing median value for climate parameter. Dotted lines in the HRV section represent the median value for each mortality level after combining all seven future scenario results. From left to right, scenarios are presented in order of increasing median climate parameter value.}
+  \label{fig:dareacomp}
 \end{figure}
 
+% Fire rotation
+We also calculated the fire rotation for each scenario, and plot these results across all scenarios (Table~\ref{fig:frotation}). The simulated HRV rotations are always within the range of rotations from the seven future climate scenarios. Although there is considerable variability in the results for all scenarios, as the climate parameter set diverges more from the HRV climate parameter set, rotation values decrease for high mortality events. As with the disturbed area, changes to the low mortality rotations are slight, but seem to increase when high mortality rotation decreases more, such that the any mortality values decrease is modest. 
+
+The variability in these results across future climate scenarios underscores the uncertainty in predicting future fire regime behavior. The mesic mixed conifer type seems more resilient than the xeric mixed conifer type, based on the greater proportional shift downward in the xeric type.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/rotation/rotation_all.png}
+\caption{Fire rotation values across scenarios for Sierran Mixed Conifer - Mesic, Sierran Mixed Conifer - Xeric, and the full extent of the study area during the last five timesteps of the simulations, as well as the values for the historical range of variability. Different colors denote different extents (the full landscape, specific cover types). Different point shapes correspond to different mortality levels. Connecting lines have been included to aid in finding cover and mortality values across scenarios.}
+\label{fig:frotation}
+\end{figure}
+
+
+%Interestingly, the median values for the future and historical simulations match, further supporting the idea that the main shifts in the disturbance regime provoked by climate change will be in the frequency and extent of area burned at high mortality. 
+
+%\begin{table}[]
+%\small
+%\centering
+%\caption{Rotation values across scenarios for Sierran Mixed Conifer - Mesic, Sierran Mixed Conifer - Xeric, and the full extent of the study area during the last five timesteps of the simulations, as well as the values for the historical range of variability.}
+%\label{tab:frotation}
+%\begin{tabular}{@{}llrrrr@{}}
+%\toprule
+%        &                	& \multicolumn{4}{c}{Rotation}  \\ 
+%Cover Type 					& Mortality Level  	& Min   & Median  & Max   & HRV         \\ \midrule
+%\multirow{3}{*}{Mesic} 		& Low   			& 33    & 35      & 46    & 35         \\
+%					        & High  			& 68    & 91      & 161   & 113         \\
+%					        & Any   			& 23    & 24      & 36    & 27         \\ \midrule
+%\multirow{3}{*}{Xeric}      & Low   			& 32    & 34      & 39    & 34         \\
+%					        & High  			& 37    & 53      & 84    & 72         \\
+%					        & Any   			& 19    & 20      & 27    & 23         \\ \midrule
+%\multirow{3}{*}{Total}      & Low   			& 34    & 38      & 44    & 38         \\
+%                            & High  			& 56    & 76      & 129   & 103         \\
+%                            & Any   			& 22    & 24      & 33    & 28         \\ \bottomrule
+%\end{tabular}
+%\end{table}
+
+
+\subsection*{Landscape configuration}
+We present pooled results for the six metrics in Figure~\ref{fig:fragland} because differences across future scenarios were minimal. The current landscape is completely departed from both the FRV and the HRV. Results across four of six metrics (area-weighted mean patch size, corea area, radius of gyration, and shape) show that the FRV is completely departed from the HRV as well. In terms of Contagion, the FRV is slightly departed from the HRV. For the Simpson's Evenness Index, the FRV is moderately departed from the HRV.\todo{I don't think there is a need to look at class-level dynamics, but we could. I haven't thought of a good question it would answer yet.}
+
+% departure categories
+%not departed - boxes completely overlap/contain each other
+%slightly departed - medians don't overlap the boxes, but boxes overlap
+%moderately departed - box overlaps whiskers
+%highly departed - only whiskers overlap
+%completely departed - no overlap of full rv
+
+% Notes from brad: use full metric name, use dashed instead of straight line for current landscape to better distinguish it
+	\begin{figure}[!htbp]
+	  \centering
+	  \subfloat[][]{
+	    \centering
+	    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/AREA_AM-frvhrv-boxplots.png}
+	    \label{fig:boxplot-land-areaam}
+	  }%
+	  %\qquad
+	  \subfloat[][]{
+	    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/CONTAG-frvhrv-boxplots.png}
+	    \label{fig:boxplot-land-contag}
+	  } \\
+	    \subfloat[][]{
+	    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/CORE_AM-frvhrv-boxplots.png}
+	    \label{fig:boxplot-land-coream}
+	  }%
+	  %\qquad
+	  \subfloat[][]{
+	    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/GYRATE_AM-frvhrv-boxplots.png}
+	    \label{fig:boxplot-land-gyrateam}
+	  } \\
+	    %\qquad
+	    \subfloat[][]{
+	    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/SHAPE_AM-frvhrv-boxplots.png}
+	    \label{fig:boxplot-land-shapeam}
+	  }
+	  %\qquad
+	      \subfloat[][]{
+	    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/SIEI-frvhrv-boxplots.png}
+	    \label{fig:boxplot-land-siei}
+	  }
+	    \caption{Boxplots illustrating the range of variability across historical and future climate trajectories. The dashed black bar represents the current condition. Boxplot whiskers extend from the $5^{th}$ to $95^{th}$ percentile range of variability for each model. (a) Area-weighted mean patch area (b) Contagion (c) Area-weighted mean core area (d) Area-weighted mean radius of gyration (e) Area-weighted mean patch shape (f) Simpson's evenness index}
+	  \label{fig:fragland} 
+	\end{figure} %fragland
 
 
 \subsection*{Seral Stage Distribution}
 % ideas for shortening: use a supplementary section, or come up with a clever table representation, and focus on drawing general lessons in this section
-The seral stage distribution for each cover type varied over time, normally more for the future scenarios than the historical scenario. Evidence of both high mortality fire, which triggers a transition to the early seral stage for all cover types, and low mortality fire, which can thin a stand and cause a transition to a more open canopy condition (within the middle or late developmental stage), are visible in examining the output grids. Figure \todo{to be created} illustrates these changes for a sequence of four timesteps during the simulation.
+The seral stage distribution for each cover type varied over time, normally more for the future scenarios than the historical scenario. Evidence of both high mortality fire, which triggers a transition to the early seral stage for all cover types, and low mortality fire, which can thin a stand and cause a transition to a more open canopy condition (within the middle or late developmental stage), are visible in examining the output grids. % [not necessary] Figure \todo{to be created} illustrates these changes for a sequence of four timesteps during the simulation.
 
 \emph{Review of cover type-seral stage distribution dynamics for the top 8-9 cover types by area. Presented in order of greatest to least area.}
 
 % doing analysis of all types, but we can comment out whatever makes it too long. 
 
-\paragraph{Sierran Mixed Conifer - Mesic} Early seral mesic mixed conifer forests are within both the HRV and FRV. The FRVs suggest a trend towards increasing proportions of early seral vegetation with increasing climate parameter. The current proportion of mid development, closed canopy forest is out of the range of all simulated RVs, but the FRVs are in fairly well agreement, and project a smaller proportion in mid closed than the simulated HRV. For moderate canopies, the current condition is much more common and outside all simulated RVs, with no significant difference between the HRV and the FRVs. Open canopy mesic mixed conifer forest is currently just above and outside the simulated HRV, but well within most of the FRVs. Interestingly, late development, closed canopy forest is outside the HRV, within the FRV of the climate scenarios most similar to the HRV, but outside the FRV for the scenarios with higher median climate parameter values. Results for the moderate canopy stage are similar, except only one future climate scenario (the most extreme one) had a range of variability not intersected by the current proportions. The late open seral stage for mesic mixed conifer forests is projected to become more prevalent in the future scenarios than the HRV, but is currently rare and outside all simulated RVs. For figures of all seral stage distributions, see Appendix \ref{app-seralstagefigs}, Figure \ref{fig:covcond_smcm}.
+% becky suggests taking out ultramafics
 
-When we pooled the future scenario results, we observe a range of variability under the future condition that often overlaps the much smaller range of variability in the historical scenario. The proportion of mid and late open canopy stages is projected to increase in the future scenarios relative to the historical scenario, while the proportion of mid closed is projected to drop substantially compared to the historical scenario. This is true for the other mid and late stages as well, but to a more minor degree (Figure \ref{fig:dareacomp_smcm}).
+\paragraph{Sierran Mixed Conifer - Mesic} Early seral mesic mixed conifer forests are within both the HRV and FRV. The FRVs suggest a trend towards increasing proportions of early seral vegetation with increasing climate parameter. The current proportion of mid development, closed canopy forest is out of the range of all simulated RVs, but the FRVs are in fairly well agreement, and project a smaller proportion in mid closed than the simulated HRV. For moderate canopies, the current condition is much more common and outside all simulated RVs, with no significant difference between the HRV and the FRVs. Open canopy mesic mixed conifer forest is currently just above and outside the simulated HRV, but well within most of the FRVs. Interestingly, late development, closed canopy forest is outside the HRV, within the FRV of the climate scenarios most similar to the HRV, but outside the FRV for the scenarios with higher median climate parameter values. Results for the moderate canopy stage are similar, except only one future climate scenario (the most extreme one) had a range of variability not intersected by the current proportions. The late open seral stage for mesic mixed conifer forests is projected to become more prevalent in the future scenarios than the HRV, but is currently rare and outside all simulated RVs. For figures of all seral stage distributions, see Appendix \ref{app:futurecovcond}.
+
+When we pooled the future scenario results, we observe a range of variability under the future condition that often overlaps the much smaller range of variability in the historical scenario. The proportion of mid and late open canopy stages is projected to increase in the future scenarios relative to the historical scenario, while the proportion of mid closed is projected to drop substantially compared to the historical scenario. This is true for the other mid and late stages as well, but to a more minor degree (Figure \ref{fig:dareacomp_smcm}). %becky asked about early
 
 \begin{figure}[htbp]
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2410-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2410-boxplots.png}
   }%
-  \qquad
+  %\qquad
   \subfloat[][]{
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2420-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2420-boxplots.png}
   } \\
     \subfloat[][]{
     \centering
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2421-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2421-boxplots.png}
   }%
-  \qquad
+  %\qquad
   \subfloat[][]{
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2422-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2422-boxplots.png}
   } \\
     \subfloat[][]{
     \centering
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2430-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2430-boxplots.png}
   }%
-      \subfloat[][]{
+  %\qquad
+    \subfloat[][]{
     \centering
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2431-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2431-boxplots.png}
   } \\
-  \qquad
   \subfloat[][]{
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2432-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2432-boxplots.png}
   }
-    \qquad
-  \subfloat[][]{
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-frvhrv/SMCM-frvhrv-boxplots.png}
-  }
+    %\qquad
+  %\subfloat[][]{
+  %  \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-frvhrv/SMCM-frvhrv-boxplots.png}
+  %}
     \caption{Boxplots illustrating the range of variability across historical and future climate trajectories. The horizontal black bar represents the current condition. Boxplot whiskers extend from the $5^{th}$ to $95^{th}$ range of variability for each model. }
   \label{fig:covcond_smcm}
 \end{figure} %smcm
 
-\paragraph{Sierran Mixed Conifer - Xeric} The proportion of early seral, xeric mixed conifer forests is currently below and outside the simulated RV for all scenarios. The historical and future scenarios cover similar ranges of the proportional area, except the ESM2M model, which is much higher than the others. Currently, mid development closed and moderate canopies are common, but during all simulated scenarios they were quite rare. The proportion of the cover type in mid open was quite high during the simulated HRV, but less common during the the future scenarios. Still, the current landscape still has a smaller proportion of land in mid open, which is outside the SRV of 6 of 7 future scenarios. Currently, about 25\% of the area covered by xeric mixed conifer forests is in late closed; this proportion is projected to be much lower across all the simulated RVs. Moderate canopy proportions are currently on the high side but still within all FRVs and just outside the HRV. Finally, almost no portion of the xeric mixed conifer type is currently in late open, but this is projected to increase under the HRV scenario and increase to a median of around 30\% for all of the future scenarios. For figures of all seral stage distributions, see Appendix \ref{app-seralstagefigs}, Figure \ref{fig:covcond_smcx}.
+\paragraph{Sierran Mixed Conifer - Xeric} The proportion of early seral, xeric mixed conifer forests is currently below and outside the simulated RV for all scenarios. The historical and future scenarios cover similar ranges of the proportional area, except the ESM2M model, which is much higher than the others. Currently, mid development closed and moderate canopies are common, but during all simulated scenarios they were quite rare. The proportion of the cover type in mid open was quite high during the simulated HRV, but less common during the the future scenarios. Still, the current landscape still has a smaller proportion of land in mid open, which is outside the SRV of 6 of 7 future scenarios. Currently, about 25\% of the area covered by xeric mixed conifer forests is in late closed; this proportion is projected to be much lower across all the simulated RVs. Moderate canopy proportions are currently on the high side but still within all FRVs and just outside the HRV. Finally, almost no portion of the xeric mixed conifer type is currently in late open, but this is projected to increase under the HRV scenario and increase to a median of around 30\% for all of the future scenarios. 
 
 When we pooled the future scenario results, we found the greatest difference between the historical and future projections in the proportion of the cover type in the open canopy cover stages. A high proportion of mid development open in the historical scenario is replaced by a high proportion of late development open in the future scenario. In other seral stages, the difference between the historical and future scenarios was minimal (Figure \ref{fig:covcond_smcx}).
 
@@ -245,94 +426,63 @@ When we pooled the future scenario results, we found the greatest difference bet
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2610-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2610-boxplots.png}
   }%
-  \qquad
+  %\qquad
   \subfloat[][]{
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2620-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2620-boxplots.png}
   } \\
     \subfloat[][]{
     \centering
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2621-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2621-boxplots.png}
   }%
-  \qquad
+  %\qquad
   \subfloat[][]{
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2622-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2622-boxplots.png}
   } \\
     \subfloat[][]{
     \centering
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2630-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2630-boxplots.png}
   }%
       \subfloat[][]{
     \centering
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2631-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2631-boxplots.png}
   } \\
-  \qquad
   \subfloat[][]{
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2632-boxplots.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-byscenario/2632-boxplots.png}
   }
-    \qquad 
-  \subfloat[][]{
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-frvhrv/SMCX-frvhrv-boxplots.png}
-  }
+    %\qquad 
+  %\subfloat[][]{
+  %  \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-frvhrv/SMCX-frvhrv-boxplots.png}
+  %}
     \caption{Boxplots illustrating the range of variability across historical and future climate trajectories. The horizontal black bar represents the current condition. Boxplot whiskers extend from the $5^{th}$ to $95^{th}$ range of variability for each model. }
   \label{fig:covcond_smcx}
 \end{figure} %smcx
 
 
 
-\subsection*{Landscape configuration}
-We summarize the structure and patterns in the landscape using a suite of statistical measures calculated using \textsc{Fragstats}. In total, we generated 22 metrics for the full landscape, which are available in Appendix \todo{to be created}. However, several of the metrics are redundant with one another, and so we focus on a subset of six metrics here: Area-weighted mean patch area (\textsc{area\_am}), area-weighted mean core area (\textsc{core\_am}), contagion (\textsc{contag}), area-weighted mean radius of gyration (\textsc{gyrate\_am}), area-weighted mean shape index (\textsc{shape\_am}), and Simpson's evenness index (\textsc{siei}). \todo{I could talk about edge but not sure it's interesting. Currently outside any SRV, but future has less edge than historic.}
 
-For each of these six landscape metrics, the current landscape is well outside either SRV. The FRV is farther away from the current condition than the HRV for all of the area-weighted metrics. Patches during the simulated historical period were larger\todo{Brad: this sentence is confusing - what is the relationship between metrics} and had more core area than on the current landscape, and projected to be even larger with even more core area during the simulated future period (Figures \ref{fig:boxplot-land-areaam} and \ref{fig:boxplot-land-coream}). They were also more extensive and had more complex shapes during the simulated historical period as compared to the current landscape, and even more so for the simulated future period compared to the simulated historical period (Figures \ref{fig:boxplot-land-gyrateam} and \ref{fig:boxplot-land-shapeam}). Patches during both simulated periods were more contagious at the cell level than on the current landscape (Figure \ref{fig:boxplot-land-contag}. Finally, patches were much less evenly distributed during the historical period than on the current landscape. However, although the simulated FRV overlaps the simulated HRV for the Simpson's evenness index, medians during the future period are higher than during the historical period (but the current landscape is outside both SRVs) (Figure \ref{fig:boxplot-land-siei}). \todo{I have plots that show the pooled FRV but not sure it adds anything?}
 
-% Notes from brad: use full metric name, use dashed instead of straight line for current landscape to better distinguish it
-	\begin{figure}[!htbp]
-	  \centering
-	  \subfloat[][]{
-	    \centering
-	    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/AREA_AM-frvhrv-boxplots.png}
-	    \label{fig:boxplot-land-areaam}
-	  }%
-	  \qquad
-	  \subfloat[][]{
-	    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/CONTAG-frvhrv-boxplots.png}
-	    \label{fig:boxplot-land-contag}
-	  } \\
-	    \subfloat[][]{
-	    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/CORE_AM-frvhrv-boxplots.png}
-	    \label{fig:boxplot-land-coream}
-	  }%
-	  \qquad
-	  \subfloat[][]{
-	    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/GYRATE_AM-frvhrv-boxplots.png}
-	    \label{fig:boxplot-land-gyrateam}
-	  } \\
-	    \qquad
-	    \subfloat[][]{
-	    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/SHAPE_AM-frvhrv-boxplots.png}
-	    \label{fig:boxplot-land-shapeam}
-	  }
-	  \qquad
-	      \subfloat[][]{
-	    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/SIEI-frvhrv-boxplots.png}
-	    \label{fig:boxplot-land-siei}
-	  }
-	    \caption{Boxplots illustrating the range of variability across historical and future climate trajectories. The dashed black bar represents the current condition. Boxplot whiskers extend from the $5^{th}$ to $95^{th}$ 
-	    percentile range of variability for each model. (a) Area-weighted mean patch area (b) Contagion (c) Area-weighted mean core area (d) Area-weighted mean radius of gyration (e) Area-weighted mean patch shape (f) Simpson's evenness index}
-	  \label{fig:fragland} 
-	\end{figure} %fragland
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Discussion}
 
 \emph{This section is incomplete. Below are some notes/initial synthesis.}
 \begin{enumerate}
 	\item The $5^{th}$ to $95^{th}$ percentile range of variability in future seral stage distribution for each cover type is much greater in absolute terms, across the board, than the HRV. This presents a management challenge \emph{and} opportunity because there is a relaxed definition of what a landscape within an expected range of variability might look like.
-	\item Although the 90\% range of variability is wide, the amount of area disturbed by wildfire increased by a smaller amount (Figure \ref{fig:futurehrvcomp}) that the range expanded, indicated that within the bounds of this increased variability, the disturbance regime is still fairly stable, indicating a resilient landscape. 
+	\item Although the 90\% range of variability is wide, the amount of area disturbed by wildfire increased by a smaller amount (Figure \ref{fig:darea_modelcomp}) that the range expanded, indicated that within the bounds of this increased variability, the disturbance regime is still fairly stable, indicating a resilient landscape. % becky says explain better
 	\item The slight increase in fire compare to the simulated HRV, especially the increase in fire resulting in high mortality, pushed the landscape metrics even farther from the current measurements.
 	\item In general, open canopies become more prevalent and closed less prevalent, likely also due to the increase in fire. 
 	\item I'm not sure yet why the Simpson's Index went back up in the future scenarios.
-	\item Most cover types saw a bump up in early seral, but for the most part it was not dramatic and for about half it was probably not even significant.
+	\item Most cover types saw a bump up in early seral, but for the most part it was not dramatic and for about half it was probably not even significant. % will have to be careful not to actually say "significant" anywhere
 	\item Perhaps in part because of the large range of variability in the future scenarios, more cover type-seral stage combinations are within the FRV than were within the HRV. Since the climate has been warming for decades, perhaps part of the reason for being outside of the HRV is an early response to this warming/drying trend.
 	\item The results indicate more fire and more large patches of early seral and open canopy conditions. This implies a greater need for restoring fire to the landscape than indicated by the HRV alone, which was already considerable.
 	\item A decline in closed canopy conditions does not bode well for closed canopy-dependent species.
@@ -341,23 +491,33 @@ For each of these six landscape metrics, the current landscape is well outside e
 	\item Succession somewhat inhibited for the future condition because the initial age parameter was set to the earliest part of every stage, where age had to be modeled. This was not originally thought to be an issue because the initial age would get canceled out when we eliminated early steps for equilibration. But the future results will be influenced by the starting age and seral stage.
 	\item Slightly more fire, and more high severity fire. This was distributed unevenly among cover types (SMCM had little change, SMCX had a dramatic change).
 	\item What are the general lessons from the covcond results?
+	\item Thus the areas in 'early development' may be especially susceptible to type conversions, especially by 2099.
+	\item (darea) The amount of high mortality fire on the landscape is worrisome; and previous studies have shown that the landscape may be less resilient with larger and more patchs of high mortality fire. Certainly increases the chances of a type conversion. 
+	\item (darea) If the model is right, the climate change poses great risks. More fires wont' restore the open park-like xeric mixed conifer stands, because it will also make those stands more stressed and less resilient to fire.
+	\item (rotation) Is it going to far to suggest there is a real breakpoint at which we see big shifts?
+	\item (rotation) Interestingly, the pattern of change appears substantially the same across the full landscape and the two mixed conifer cover types for high mortality, which is where we see the biggest divergences. That said, we see here a narrowing of the gap between high mortality rotations 
 
 \end{enumerate}
 
-\subsection*{Scope \& Limitations}
-\begin{enumerate}
-	\item This study looks at the effect of changing PDSI values on the disturbance regime and landscape composition and configuration of part of the Yuba River Watershed. 
-	\item We utilize only one RCP, 8.5.
-	\item PDSI is a proxy for climate, not a direct measure of it
-	\item PDSI is measured monthly, and we collapsed PDSI into 5 year summer averages.
-	\item We removed some of the variabilities and extremes that PDSI indicates by rescaling the data.
-	\item Since we are looking at historical and future, we reduce the effect of the current conditions, and the influence of the past ~100 years of fire suppression on fuels and fire regimes, except where we compare historical and future conditions to current. Thus we cannot say directly that the observed disturbance regime would occur if we let fires burn.
-	\item Still that does mean that we have isolated simply the effect of increased temperatures and decreased rainfall, which is predicted under climate change.\todo{Brad: what is role of past fire suppression in FRV runs? Did you use current landscape as start? Or end step of HRV sims?}
-	\item It tells us how different the future would be from the historic period if natural fire regimes were allowed to occur. Since this is not the case, it is not a simple roadmap. It's more about resilience. 
-	\item It also tell us if restoration toward a historical regime/composition/configuration appears likely to succeed under climate change, or whether the future is ``on the other side'' of the past.
-	\item We do not simulate changes in the spatial configuration of land cover types. That is, we do not model upward movement of forest types or type conversions after fire or drought events. Many studies indicate that such change will occur in the next 100 years and even has occurred in many places \citep{Bachelet2001}. Thus the areas in 'early development' may be especially susceptible to type conversions, especially by 2099.
-	\item We do not adjust for differential ownership within the study area, such as timber company holdings \citep{Nonaka2005}.
-\end{enumerate}
+\paragraph{Landscape configuration}
+\todo{Is relationship between current, HRV, FRV clear?} We interpret the landscape metric results to mean that the current landscape is well departed from either SRV, and the FRV tends to be fairly departed from the HRV. In practical terms, our results indicate that patches during the simulated historical period were larger, more extensive, contained more core area, and had more complex shapes during the simulated HRV than on the current landscape. The effect of increasing the climate parameter exacerbates these trends. These results fit with the increased amount of fire on the landscape.\todo{get more from HRV report?}
+
+Patches during both the simulated historical and future periods were more contagious at the cell level than on the current landcape, although contagion decreased in the future scenario. Finally, patches were much less evenly distributed during the historical period than on the current landscape, perhaps due to\todo{get from HRV}. Interestingly, with the increased amount of overall fire, especially stand-replacing fire, that we observe under the future scenarios, patches become more evenly distributed. One reason for this could be that the wildfire regime that played out in the simulated HRV removed some of the homogeneity on the current landscape by increasing the amount of structural complexity on the landscape and generating large patches of early seral associated with natural fire. During the simulated FRV, so much fire and stand-replacing fire is present that it actually increases evenness as more cover types become open and include more area in early seral.
+
+
+% so during the historical period we cancel out the homogenization of fire suppression, but during the future stuff we become more homogeneous again because of so much fire.
+
+% 1st Draft
+%For each of these six landscape metrics, the current landscape is well outside either SRV. The FRV is farther away from the current condition than the HRV for all of the area-weighted metrics. Patches during the simulated historical period were larger and had more core area than on the current landscape, and projected to be even larger with even more core area during the simulated future period (Figures \ref{fig:boxplot-land-areaam} and \ref{fig:boxplot-land-coream}). They were also more extensive and had more complex shapes during the simulated historical period as compared to the current landscape, and even more so for the simulated future period compared to the simulated historical period (Figures \ref{fig:boxplot-land-gyrateam} and \ref{fig:boxplot-land-shapeam}). Patches during both simulated periods were more contagious at the cell level than on the current landscape (Figure \ref{fig:boxplot-land-contag}. Finally, patches were much less evenly distributed during the historical period than on the current landscape. However, although the simulated FRV overlaps the simulated HRV for the Simpson's evenness index, medians during the future period are higher than during the historical period (but the current landscape is outside both SRVs) (Figure \ref{fig:boxplot-land-siei}).
+
+%\begin{enumerate}
+	%\item We do not adjust for differential ownership within the study area, such as timber company holdings \citep{Nonaka2005}.
+	%\item Did not allow major increases in disturbed area.
+%\end{enumerate}
+
+\subsection*{Management Implications}
+Because this study relied on the use of computer models, the most appropriate use of the results is therefore to help identify the most influential factors driving landscape change, implications of our simulated disturbance and succession regime, and areas where further research is needed to delineate key parameters. The comparisons made here consider the difference between the historical, current, and future disturbance regimes and landscape pattern, given a scenario in which natural fire regimes were allowed to occur. Since this is not practicable, we note that the results do not provide a simple roadmap for managers. However, they should provide insights into what landscape patterns are likely to be resilient with climate change. In addition, the results indicate when restoration toward a historical regime/composition/configuration appears likely to succeed under climate change, or whether the future is ``on the other side'' of the past. 
+
 
 
 % confusing that the last plot is different
