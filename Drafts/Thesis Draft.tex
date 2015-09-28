@@ -8,7 +8,7 @@
 \usepackage{booktabs, colortbl}
 \usepackage[table,xcdraw,dvipsnames]{xcolor}
 %\usepackage[utf8]{inputenc}
-%\usepackage{amsmath}
+\usepackage{amsmath} % need this to put plain text in math mode
 %\usepackage{graphicx}
 \usepackage[textwidth=1.8in]{todonotes}
 \usepackage{setspace}
@@ -25,13 +25,12 @@
 %\usepackage{sidecap}
 \usepackage{multirow}
 %\usepackage{changepage}
-%\usepackage{amsmath}
 %\usepackage{siunitx}
 \usepackage[figuresright]{rotating}
 \usepackage[format=hang,labelfont=bf,size=small]{caption}
 
 
-%\usepackage[modulo]{lineno}
+\usepackage[modulo]{lineno}
 
 
 \usepackage{hyperref}
@@ -44,7 +43,7 @@
 \hypersetup{colorlinks=true, citecolor=mycitecolor!\myshade!black, linkcolor=mylinkcolor!\myshade!black, urlcolor = myurlcolor!\myshade!black}
 
 %\doublespacing
-%\linenumbers
+\linenumbers
 
 \title{Effect of climate change on future landscape composition and configuration, Tahoe National Forest, California, USA}
 \author{ Maritza Mallek }
@@ -205,7 +204,7 @@ We evaluate the fire regime across the future scenarios by evaluating the median
 
 
 %\subsection*{Landscape composition}
-\todo{expand on this}Our evaluation of landscape composition compares the seral stage distribution for our nine focal cover types across future scenarios and between the simulated future and historical periods. We report the 90\% range of variability.
+\todo{expand on this}Our evaluation of landscape composition compares the seral stage distribution for our nine focal cover types across future scenarios and between the simulated future and historical periods. We report the 90\% range of variability and assess departure for the two most common cover types, Sierran Mixed Conifer - Mesic and Sierran Mixed Conifer - Xeric, across their seven seral stages.
 %
 %
 %\subsection*{Landscape configuration}
@@ -356,29 +355,32 @@ We present pooled results for the six metrics in Figure~\ref{fig:fragland} becau
 	    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/SHAPE_AM-frvhrv-boxplots.png}
 	    \label{fig:boxplot-land-shapeam}
 	  }
-	  %\qquad
+	  %(6 in 1 DHLPP\qquad
 	      \subfloat[][]{
 	    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-frvhrv/hrv-frv-current/SIEI-frvhrv-boxplots.png}
 	    \label{fig:boxplot-land-siei}
 	  }
-	    \caption{Boxplots illustrating the range of variability across historical and future climate trajectories. The dashed black bar represents the current condition. Boxplot whiskers extend from the $5^{th}$ to $95^{th}$ percentile range of variability for each model. (a) Area-weighted mean patch area (b) Contagion (c) Area-weighted mean core area (d) Area-weighted mean radius of gyration (e) Area-weighted mean patch shape (f) Simpson's evenness index}
+	    \caption{Boxplots illustrating the range of variability across historical and future climate trajectories. The dashed black bar represents the current condition. Boxplot whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentile range of variability for each model. (a) Area-weighted mean patch area (b) Contagion (c) Area-weighted mean core area (d) Area-weighted mean radius of gyration (e) Area-weighted mean patch shape (f) Simpson's evenness index}
 	  \label{fig:fragland} 
 	\end{figure} %fragland
 
 
+
 \subsection*{Seral Stage Distribution}
 % ideas for shortening: use a supplementary section, or come up with a clever table representation, and focus on drawing general lessons in this section
-The seral stage distribution for each cover type varied over time, normally more for the future scenarios than the historical scenario. Evidence of both high mortality fire, which triggers a transition to the early seral stage for all cover types, and low mortality fire, which can thin a stand and cause a transition to a more open canopy condition (within the middle or late developmental stage), are visible in examining the output grids. % [not necessary] Figure \todo{to be created} illustrates these changes for a sequence of four timesteps during the simulation.
+The seral stage distribution for each cover type varied over time, normally more for the future scenarios than the historical scenario.\todo{Not sure how to deal with long seral stage names. Use abbreviations, 'late closed', or something else?} Evidence of both high mortality fire, which triggers a transition to the early seral stage for all cover types, and low mortality fire, which can thin a stand and cause a transition to a more open canopy condition (within the middle or late developmental stage), are visible in examining the output grids. We observe at least some degree of departure for all the future climate scenarios as compared to the HRV, and for the current condition at all seral stages except the early stage as compared to the HRV. 
 
-\emph{Review of cover type-seral stage distribution dynamics for the top 8-9 cover types by area. Presented in order of greatest to least area.}
 
 % doing analysis of all types, but we can comment out whatever makes it too long. 
 
 % becky suggests taking out ultramafics
 
-\paragraph{Sierran Mixed Conifer - Mesic} Early seral mesic mixed conifer forests are within both the HRV and FRV. The FRVs suggest a trend towards increasing proportions of early seral vegetation with increasing climate parameter. The current proportion of mid development, closed canopy forest is out of the range of all simulated RVs, but the FRVs are in fairly well agreement, and project a smaller proportion in mid closed than the simulated HRV. For moderate canopies, the current condition is much more common and outside all simulated RVs, with no significant difference between the HRV and the FRVs. Open canopy mesic mixed conifer forest is currently just above and outside the simulated HRV, but well within most of the FRVs. Interestingly, late development, closed canopy forest is outside the HRV, within the FRV of the climate scenarios most similar to the HRV, but outside the FRV for the scenarios with higher median climate parameter values. Results for the moderate canopy stage are similar, except only one future climate scenario (the most extreme one) had a range of variability not intersected by the current proportions. The late open seral stage for mesic mixed conifer forests is projected to become more prevalent in the future scenarios than the HRV, but is currently rare and outside all simulated RVs. For figures of all seral stage distributions, see Appendix \ref{app:futurecovcond}.
+\paragraph{Sierran Mixed Conifer - Mesic} 
+Under the HRV, all seral stages are fairly well represented, and mid closed covers the greatest extent. During the FRV, the seral stages were fairly evenly represented, with the moderate canopy stages somewhat less prevalent. On the current landscape, late open conditions are nearly absent, while late closed are the most common.
 
-When we pooled the future scenario results, we observe a range of variability under the future condition that often overlaps the much smaller range of variability in the historical scenario. The proportion of mid and late open canopy stages is projected to increase in the future scenarios relative to the historical scenario, while the proportion of mid closed is projected to drop substantially compared to the historical scenario. This is true for the other mid and late stages as well, but to a more minor degree (Figure \ref{fig:dareacomp_smcm}). %becky asked about early
+Results within mesic mixed conifer forests varied by seral stage (Figure~\ref{fig:covcond_smcm}). We observe weak trends of increasing departure of the FRV from the HRV associated with increasing climate parameter values for the early seral, mid open, late closed, and late moderate stages, but little response from the other three. Of seral stages exhibiting trends, the proportion of early seral and mid open tended to increase with increasing climate parameter, while the two late stages declined somewhat. Interestingly, in some cases the landscape is currently completely departed from the HRV, but moderately departed or less from the FRV.
+
+
 
 \begin{figure}[htbp]
   \centering
@@ -414,13 +416,26 @@ When we pooled the future scenario results, we observe a range of variability un
   %\subfloat[][]{
   %  \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-frvhrv/SMCM-frvhrv-boxplots.png}
   %}
-    \caption{Boxplots illustrating the range of variability across historical and future climate trajectories. The horizontal black bar represents the current condition. Boxplot whiskers extend from the $5^{th}$ to $95^{th}$ range of variability for each model. }
+    \caption{Boxplots illustrating the range of variability across historical and future climate trajectories. The horizontal dashed line represents the current condition. The horizontal dotted line represents the grand mean of the future scenarios. Boxplot whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ range of variability for each model. Climate models appear left-to-right in order of increasing median climate parameter value.}
   \label{fig:covcond_smcm}
 \end{figure} %smcm
 
-\paragraph{Sierran Mixed Conifer - Xeric} The proportion of early seral, xeric mixed conifer forests is currently below and outside the simulated RV for all scenarios. The historical and future scenarios cover similar ranges of the proportional area, except the ESM2M model, which is much higher than the others. Currently, mid development closed and moderate canopies are common, but during all simulated scenarios they were quite rare. The proportion of the cover type in mid open was quite high during the simulated HRV, but less common during the the future scenarios. Still, the current landscape still has a smaller proportion of land in mid open, which is outside the SRV of 6 of 7 future scenarios. Currently, about 25\% of the area covered by xeric mixed conifer forests is in late closed; this proportion is projected to be much lower across all the simulated RVs. Moderate canopy proportions are currently on the high side but still within all FRVs and just outside the HRV. Finally, almost no portion of the xeric mixed conifer type is currently in late open, but this is projected to increase under the HRV scenario and increase to a median of around 30\% for all of the future scenarios. 
+% departure categories
+%not departed - boxes completely overlap/contain each other
+%slightly departed - medians don't overlap the boxes, but boxes overlap
+%moderately departed - box overlaps whiskers
+%highly departed - only whiskers overlap
+%completely departed - no overlap of full rv
 
-When we pooled the future scenario results, we found the greatest difference between the historical and future projections in the proportion of the cover type in the open canopy cover stages. A high proportion of mid development open in the historical scenario is replaced by a high proportion of late development open in the future scenario. In other seral stages, the difference between the historical and future scenarios was minimal (Figure \ref{fig:covcond_smcx}).
+\paragraph{Sierran Mixed Conifer - Xeric} 
+Under the HRV, these forests were dominated by early development and mid open conditions, while during the FRV, mid open becomes less common and late open more common. On the current landscape, all seral stages except late open are fairly well represented, and late closed covers the greatest extent.
+
+Results within xeric mixed conifer forests varied by seral stage (Figure~\ref{fig:covcond_smcm}). Oddly, some seral stages were nearly absent during the simulations (mid closed and mid moderate). In general, however, the FRV was either not or slightly departed from the HRV scenarios, albeit with some important exceptions. First, both the current landscape and the FRV are completely or highly departed from the HRV for the open stages. Second, as the climate parameter increased, we observed a trend of increasing departure from the HRV with increasing climate parameter values in all seral stages except mid closed and late open. Furthermore, the current landscape was completely or highly departed from the HRV in all stages except early development. 
+
+
+
+
+
 
 \begin{figure}[htbp]
   \centering
@@ -455,7 +470,7 @@ When we pooled the future scenario results, we found the greatest difference bet
   %\subfloat[][]{
   %  \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-frvhrv/SMCX-frvhrv-boxplots.png}
   %}
-    \caption{Boxplots illustrating the range of variability across historical and future climate trajectories. The horizontal black bar represents the current condition. Boxplot whiskers extend from the $5^{th}$ to $95^{th}$ range of variability for each model. }
+    \caption{Boxplots illustrating the range of variability across historical and future climate trajectories. The horizontal black bar represents the current condition. Boxplot whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ range of variability for each model. }
   \label{fig:covcond_smcx}
 \end{figure} %smcx
 
@@ -475,35 +490,71 @@ When we pooled the future scenario results, we found the greatest difference bet
 
 \section*{Discussion}
 
-\emph{This section is incomplete. Below are some notes/initial synthesis.}
-\begin{enumerate}
-	\item The $5^{th}$ to $95^{th}$ percentile range of variability in future seral stage distribution for each cover type is much greater in absolute terms, across the board, than the HRV. This presents a management challenge \emph{and} opportunity because there is a relaxed definition of what a landscape within an expected range of variability might look like.
-	\item Although the 90\% range of variability is wide, the amount of area disturbed by wildfire increased by a smaller amount (Figure \ref{fig:darea_modelcomp}) that the range expanded, indicated that within the bounds of this increased variability, the disturbance regime is still fairly stable, indicating a resilient landscape. % becky says explain better
-	\item The slight increase in fire compare to the simulated HRV, especially the increase in fire resulting in high mortality, pushed the landscape metrics even farther from the current measurements.
-	\item In general, open canopies become more prevalent and closed less prevalent, likely also due to the increase in fire. 
-	\item I'm not sure yet why the Simpson's Index went back up in the future scenarios.
-	\item Most cover types saw a bump up in early seral, but for the most part it was not dramatic and for about half it was probably not even significant. % will have to be careful not to actually say "significant" anywhere
-	\item Perhaps in part because of the large range of variability in the future scenarios, more cover type-seral stage combinations are within the FRV than were within the HRV. Since the climate has been warming for decades, perhaps part of the reason for being outside of the HRV is an early response to this warming/drying trend.
-	\item The results indicate more fire and more large patches of early seral and open canopy conditions. This implies a greater need for restoring fire to the landscape than indicated by the HRV alone, which was already considerable.
-	\item A decline in closed canopy conditions does not bode well for closed canopy-dependent species.
-	\item Increasingly warm and dry climate leads to more fire and influence of fire on landscape composition and configuration.
-	\item Worth noting that the homogeneity in the future condition could be somewhat related to homogeneity in the starting condition, but at the same time the starting condition had more small patches so these things might cancel each other out.
-	\item Succession somewhat inhibited for the future condition because the initial age parameter was set to the earliest part of every stage, where age had to be modeled. This was not originally thought to be an issue because the initial age would get canceled out when we eliminated early steps for equilibration. But the future results will be influenced by the starting age and seral stage.
-	\item Slightly more fire, and more high severity fire. This was distributed unevenly among cover types (SMCM had little change, SMCX had a dramatic change).
-	\item What are the general lessons from the covcond results?
-	\item Thus the areas in 'early development' may be especially susceptible to type conversions, especially by 2099.
-	\item (darea) The amount of high mortality fire on the landscape is worrisome; and previous studies have shown that the landscape may be less resilient with larger and more patchs of high mortality fire. Certainly increases the chances of a type conversion. 
-	\item (darea) If the model is right, the climate change poses great risks. More fires wont' restore the open park-like xeric mixed conifer stands, because it will also make those stands more stressed and less resilient to fire.
-	\item (rotation) Is it going to far to suggest there is a real breakpoint at which we see big shifts?
-	\item (rotation) Interestingly, the pattern of change appears substantially the same across the full landscape and the two mixed conifer cover types for high mortality, which is where we see the biggest divergences. That said, we see here a narrowing of the gap between high mortality rotations 
 
-\end{enumerate}
+The $5^{\text{th}} - 95^{\text{th}}$ percentile range of variability in future seral stage distribution for each cover type is much greater in absolute terms, across the board, than the HRV. This presents a management challenge \emph{and} opportunity because there is a relaxed definition of what a landscape within an expected range of variability might look like. Although the 90\% range of variability is wide, the amount of area disturbed by wildfire was fairly stable (Figure \ref{fig:darea_modelcomp}). Instead, changes to the disturbance regime mainly affected the proportion of area burning at high compared to low mortality. Although the stability in area burned may indicate stability, the resiliency of the system is thrown into question by the dramatic shift toward high mortality fire.\todo{Find reference that worries about resilience under more high mortality.}
 
-\paragraph{Landscape configuration}
-\todo{Is relationship between current, HRV, FRV clear?} We interpret the landscape metric results to mean that the current landscape is well departed from either SRV, and the FRV tends to be fairly departed from the HRV. In practical terms, our results indicate that patches during the simulated historical period were larger, more extensive, contained more core area, and had more complex shapes during the simulated HRV than on the current landscape. The effect of increasing the climate parameter exacerbates these trends. These results fit with the increased amount of fire on the landscape.\todo{get more from HRV report?}
+There were clear, if often subtle, trends apparent in our results as the climate parameter values input to each set of simulations increased. A slight increase in fire and large increase in high mortality fire, clearly influenced the seral stage distribution and landscape configuration as measured by the \textsc{Fragstats}-calculated metrics. For many cover type-seral stage combinations, the FRV moved away from the HRV as the climate parameter increased. Usually, but not always, the FRV moved away from the HRV toward the current conditions. This indicates that the current landscape composition and configuration may differ from the HRV not only due to past practices such as timber management and fire suppression, but also due to the fact that climate change and some warming and drying has already been occurring in the project area. This would explain why more cover type-seral stage combinations are within the FRV than were within the HRV.
+
+\todo{load all cover type images and review}We also observed that across cover types, open canopies became more prevalent and closed less prevalent, which in our model can be attributed to an increase in fire. Clearly this indicates a risk and future management concern surrounding plant and wildlife species that depend on closed canopy forests. Most cover types saw a bump up in early seral, but for the most part it was not dramatic and for about half it was probably not even significant. Surprisingly, we observed that the more fire-adapted landscapes tended to experience a greater increase in the relative amount of high mortality fire. For example, the proportion of xeric mixed conifer forests burning at high mortality levels increased a great deal, while mesic mixed conifer forests experienced a more modest increase.
+
+The amount of high mortality fire on the landscape is worrisome; and previous studies have shown that the landscape may be less resilient with larger and more patches of high mortality fire. The likelihood of cover type shifts and conversions may increase with this big a shift in the fire regime, on top of the shift that was already likely for patches of high mortality fire toward the end of the simulation, when the effects of climate change relative to the present day are larger. If the model is right, the climate change poses great risks. More fires won't restore the open park-like xeric mixed conifer stands, because it will also make those stands more stressed and less resilient to fire.
+
+%\paragraph{Landscape configuration}
+We interpret the landscape metric results to mean that the current landscape is well departed from either SRV, and the FRV tends to be fairly departed from the HRV. In practical terms, our results indicate that patches during the simulated historical period were larger, more extensive, contained more core area, and had more complex shapes during the simulated HRV than on the current landscape. The effect of increasing the climate parameter exacerbates these trends. These results fit with the increased amount of fire on the landscape.\todo{get more from HRV report?}
 
 Patches during both the simulated historical and future periods were more contagious at the cell level than on the current landcape, although contagion decreased in the future scenario. Finally, patches were much less evenly distributed during the historical period than on the current landscape, perhaps due to\todo{get from HRV}. Interestingly, with the increased amount of overall fire, especially stand-replacing fire, that we observe under the future scenarios, patches become more evenly distributed. One reason for this could be that the wildfire regime that played out in the simulated HRV removed some of the homogeneity on the current landscape by increasing the amount of structural complexity on the landscape and generating large patches of early seral associated with natural fire. During the simulated FRV, so much fire and stand-replacing fire is present that it actually increases evenness as more cover types become open and include more area in early seral.
 
+\subsection*{Management Implications}
+
+The combination of results depicting the relationship between the current landscape, HRV, and FRV provides a mechanism for land managers to identify and prioritize management strategies for promoting resilient forests. In cases where the current landscape and the FRV overlap, but are departed from the HRV, restoration toward the HRV may be difficult or impossible. Where the FRV results are stable despite increasing climate parameter values may represent a resilient state. If the current landscape falls within the FRV in these areas, it could be a lower priority for altered management, whereas if the current landscape or seral stage is outside of the FRV, resources could focus on pushing that metric or seral stage toward the FRV. In cases where the FRV and HRV are similar, we have higher confidence that restoration to that range of variability is both possible and desireable.
+
+The results indicate more fire and more large patches of early seral and open canopy conditions. This implies a greater need for restoring fire to the landscape than indicated by the HRV alone, which was already considerable. It also implies new challenges to managers attempting to restore lands with prescribed fire. We only simulated burning-season conditions, so if fire can be applied in a prescribed manner during months of the year previously too moist to burn, it is possible that the trend toward more high mortality fire could be mitigated. More high severity fires pose a challenge to fire officials charged with keeping intense fires away from populated areas, as the fires that do occur will probably be hotter and more difficult to control. An increased frequency of fire may not reduce the likelihood of high mortality effects, due to interactions with other impacts of climate changes such as tree stressed induced by warmer and drier conditions.
+
+The risks of type conversions are also pertinent to managers. While not explicitly explored in this study, it seems reasonable to assume that type conversions are more likely to follow stand-replacing disturbances. This risk will increase with climate change, and the additional increase in stand-replacing events suggested by the model indicates an interaction between climate change and high mortality fire that should be taken into account by managers planning restoration after fires, especially when selecting what species to plant or encourage.
+
+Because this study relied on the use of computer models, the most appropriate use of the results is therefore to help identify the most influential factors driving landscape change, implications of our simulated disturbance and succession regime, and areas where further research is needed to delineate key parameters. The comparisons made here consider the difference between the historical, current, and future disturbance regimes and landscape pattern, given a scenario in which natural fire regimes were allowed to occur. Since this is not practicable, we note that the results do not provide a simple roadmap for managers. However, they should provide insights into what landscape patterns are likely to be resilient with climate change. In addition, the results indicate when restoration toward a historical regime/composition/configuration appears likely to succeed under climate change, or whether the future is ``on the other side'' of the past. 
+
+
+
+%\emph{This section is incomplete. Below are some notes/initial synthesis.}
+%\begin{enumerate}
+	%\item The $5^{\text{th}}$ to $95^{\text{th}}$ percentile range of variability in future seral stage distribution for each cover type is much greater in absolute terms, across the board, than the HRV. This presents a management challenge \emph{and} opportunity because there is a relaxed definition of what a landscape within an expected range of variability might look like.
+	%\item Although the 90\% range of variability is wide, the amount of area disturbed by wildfire increased by a smaller amount (Figure \ref{fig:darea_modelcomp}) that the range expanded, indicated that within the bounds of this increased variability, the disturbance regime is still fairly stable, indicating a resilient landscape. % becky says explain better
+	%\item The slight increase in fire compare to the simulated HRV, especially the increase in fire resulting in high mortality, pushed the landscape metrics even farther from the current measurements.
+	%\item In general, open canopies become more prevalent and closed less prevalent, likely also due to the increase in fire. 
+	%\item I'm not sure yet why the Simpson's Index went back up in the future scenarios.
+	%\item Most cover types saw a bump up in early seral, but for the most part it was not dramatic and for about half it was probably not even significant. % will have to be careful not to actually say "significant" anywhere
+	%\item Perhaps in part because of the large range of variability in the future scenarios, more cover type-seral stage combinations are within the FRV than were within the HRV. Since the climate has been warming for decades, perhaps part of the reason for being outside of the HRV is an early response to this warming/drying trend.
+	%\item The results indicate more fire and more large patches of early seral and open canopy conditions. This implies a greater need for restoring fire to the landscape than indicated by the HRV alone, which was already considerable.
+	%\item A decline in closed canopy conditions does not bode well for closed canopy-dependent species.
+	%\item Increasingly warm and dry climate leads to more fire and influence of fire on landscape composition and configuration.
+	%\item Worth noting that the homogeneity in the future condition could be somewhat related to homogeneity in the starting condition, but at the same time the starting condition had more small patches so these things might cancel each other out. NOT INCLUDED FOR NOW
+	%\item Succession somewhat inhibited for the future condition because the initial age parameter was set to the earliest part of every stage, where age had to be modeled. This was not originally thought to be an issue because the initial age would get canceled out when we eliminated early steps for equilibration. But the future results will be influenced by the starting age and seral stage.
+	%\item Slightly more fire, and more high severity fire. This was distributed unevenly among cover types (SMCM had little change, SMCX had a dramatic change).
+	%\item What are the general lessons from the covcond results?
+	%\item Thus the areas in 'early development' may be especially susceptible to type conversions, especially by 2099.
+	%\item (darea) The amount of high mortality fire on the landscape is worrisome; and previous studies have shown that the landscape may be less resilient with larger and more patchs of high mortality fire. Certainly increases the chances of a type conversion. 
+	%\item (darea) If the model is right, the climate change poses great risks. More fires wont' restore the open park-like xeric mixed conifer stands, because it will also make those stands more stressed and less resilient to fire.
+	%\item (rotation) Is it going to far to suggest there is a real breakpoint at which we see big shifts? [yeah because it's only true for 2 of them.]
+	%\item (rotation) Interestingly, the pattern of change appears substantially the same across the full landscape and the two mixed conifer cover types for high mortality, which is where we see the biggest divergences. That said, we see here a narrowing of the gap between high mortality rotations 
+
+%\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% UNUSED DISCUSSION DRAFT ITEMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% SMCM:
+% Early seral mesic mixed conifer forests are within both the HRV and FRV. The FRVs suggest a trend towards increasing proportions of early seral vegetation with increasing climate parameter. The current proportion of mid development, closed canopy forest is out of the range of all simulated RVs, but the FRVs are in fairly well agreement, and project a smaller proportion in mid closed than the simulated HRV. For moderate canopies, the current condition is much more common and outside all simulated RVs, with no significant difference between the HRV and the FRVs. Open canopy mesic mixed conifer forest is currently just above and outside the simulated HRV, but well within most of the FRVs. Interestingly, late development, closed canopy forest is outside the HRV, within the FRV of the climate scenarios most similar to the HRV, but outside the FRV for the scenarios with higher median climate parameter values. Results for the moderate canopy stage are similar, except only one future climate scenario (the most extreme one) had a range of variability not intersected by the current proportions. The late open seral stage for mesic mixed conifer forests is projected to become more prevalent in the future scenarios than the HRV, but is currently rare and outside all simulated RVs. For figures of all seral stage distributions, see Appendix \ref{app:futurecovcond}.
+
+% When we pooled the future scenario results, we observe a range of variability under the future condition that often overlaps the much smaller range of variability in the historical scenario. The proportion of mid and late open canopy stages is projected to increase in the future scenarios relative to the historical scenario, while the proportion of mid closed is projected to drop substantially compared to the historical scenario. This is true for the other mid and late stages as well, but to a more minor degree. The amount of early seral on the landscape increases with increasing climate parameter, but the grand mean and current proportion are both within the HRV (Figure \ref{fig:dareacomp_smcm}). 
+
+% SMCX:
+% The proportion of early seral, xeric mixed conifer forests is currently below and outside the simulated RV for all scenarios. The historical and future scenarios cover similar ranges of the proportional area, except the ESM2M model, which is much higher than the others. Currently, mid development closed and moderate canopies are common, but during all simulated scenarios they were quite rare. The proportion of the cover type in mid open was quite high during the simulated HRV, but less common during the the future scenarios. Still, the current landscape still has a smaller proportion of land in mid open, which is outside the SRV of 6 of 7 future scenarios. Currently, about 25\% of the area covered by xeric mixed conifer forests is in late closed; this proportion is projected to be much lower across all the simulated RVs. Moderate canopy proportions are currently on the high side but still within all FRVs and just outside the HRV. Finally, almost no portion of the xeric mixed conifer type is currently in late open, but this is projected to increase under the HRV scenario and increase to a median of around 30\% for all of the future scenarios. 
+
+% When we pooled the future scenario results, we found the greatest difference between the historical and future projections in the proportion of the cover type in the open canopy cover stages. A high proportion of mid development open in the historical scenario is replaced by a high proportion of late development open in the future scenario. In other seral stages, the difference between the historical and future scenarios was minimal (Figure \ref{fig:covcond_smcx}).
 
 % so during the historical period we cancel out the homogenization of fire suppression, but during the future stuff we become more homogeneous again because of so much fire.
 
@@ -515,14 +566,12 @@ Patches during both the simulated historical and future periods were more contag
 	%\item Did not allow major increases in disturbed area.
 %\end{enumerate}
 
-\subsection*{Management Implications}
-Because this study relied on the use of computer models, the most appropriate use of the results is therefore to help identify the most influential factors driving landscape change, implications of our simulated disturbance and succession regime, and areas where further research is needed to delineate key parameters. The comparisons made here consider the difference between the historical, current, and future disturbance regimes and landscape pattern, given a scenario in which natural fire regimes were allowed to occur. Since this is not practicable, we note that the results do not provide a simple roadmap for managers. However, they should provide insights into what landscape patterns are likely to be resilient with climate change. In addition, the results indicate when restoration toward a historical regime/composition/configuration appears likely to succeed under climate change, or whether the future is ``on the other side'' of the past. 
 
 
 
 % confusing that the last plot is different
 
-%\include{ThesisSupplement}
+\include{ThesisSupplement}
 
 %\backmatter 
 %\include{glossary} 
