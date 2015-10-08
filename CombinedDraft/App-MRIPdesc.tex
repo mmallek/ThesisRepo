@@ -1,0 +1,157 @@
+% !TEX root = master.tex
+\newpage
+\section{Montane Riparian (MRIP)}
+
+\subsection*{General Information}
+
+\subsubsection{Cover Type Overview}
+
+\textbf{Montane Riparian (MRIP)}
+\newline
+Crosswalks
+\begin{itemize}
+	\item EVeg: Regional Dominance Type 1
+	\begin{itemize}
+		\item Riparian Mixed Hardwood
+		\item White Alder
+		\item Willow
+		\item Black Cottonwood
+		\item Willow - Alder
+		\item Mountain Alder
+		\item Willow (Shrub)
+	\end{itemize}
+
+	\item LandFire BpS Model
+	\begin{itemize}
+		\item 0611520: California Montane Riparian Systems 
+	\end{itemize}
+
+	\item Presettlement Fire Regime Type
+	\begin{itemize}
+		\item N/A
+	\end{itemize}
+\end{itemize}
+
+\noindent Reviewed by Sarah Sawyer, Assistant Pacific Southwest Regional Ecologist, USDA Forest Service
+
+\subsubsection{Vegetation Description}
+This system often occurs as a highly variable mosaic of multiple communities that are tree-dominated with a diverse shrub component. The variety of plant associations connected to this system reflect elevation, stream gradient, floodplain width, and flooding events. Usually, the montane riparian zone occurs as a narrow, often dense grove of broad-leaved, winter deciduous trees with a sparse understory. At high mountain elevations, there are usually more shrubs in the understory. At high elevations, the type may not be well developed or may occur in the shrub stage only (LandFire 2007, Grenfell 1988). Due to the methodology of assigning the landscape to particular landcover types, the montane riparian type is limited to those sites determined to be dominated by the species assemblages listed in the above crosswalk section. While we recognize that the riparian zone commonly includes areas near watercourses that are dominated by conifers and other trees, for the purposes of this model those sites have been sorted into the pertinent landcover type in accordance with the dominant vegetation observed. We do not have the capacity at this time to groundtruth or map riparian zones based on understory or midstory vegetation.
+
+Characteristic species are many, including those from the following genera: \emph{Acer}, \emph{Alnus}, \emph{Cornus}, \emph{Populus}, \emph{Rhododendron}, and \emph{Salix}. These habitats can occur as \emph{Alnus} or \emph{Salix} stringers along streams of seeps. In other situations an overstory of \emph{Populus} and/or \emph{Alnus} may be present (Grenfell 1988). Other tree species may include \emph{Pseudotsuga menziesii}, \emph{Platanus racemosa}, and \emph{Quercus agrifolia}. At lower elevations, the riparian areas may contain \emph{Arbutus menziesii}, \emph{Lithocarpus densiflorus}, \emph{Umbellularia californica}, \emph{Cornus}, \emph{Acer} and \emph{Fraxinus}. \emph{Salix} species are common throughout, following a series of species as elevation increases (LandFire 2007).
+
+
+\subsubsection{Distribution}
+MRIP is associated with montane lakes, ponds, seeps, bogs and meadows as well as rivers, streams and springs. Water may be permanent or ephemeral. The transition between MRIP and adjacent non-riparian vegetation may be abrupt, especially where the topography is steep. Typically, this vegetation type occurs below 2440 m (8000 ft) (Grenfell 1988).
+
+\subsection*{Disturbances}
+
+\subsubsection{Wildfire}
+Fire frequency is highly variable within the riparian zone. Factors that include but are not limited to topography, elevation, climate, dominant vegetation, and existing vegetation all affect fire frequency and intensity. Riparian zones are heavily influenced by the fire regime of adjacent landcover types and so are still susceptible to disturbance by wildfire, even frequent and high mortality fires. Streams also act as an inhibitor of fire spread, thus contributing to spatial and temporal diversity of landscapes beyond what their relative area would suggest (Grenfell 1988). 
+
+In some forested riparian areas, pre-fire suppression fire return intervals were likely lower than adjacent uplands, while in others, fire frequency appears to have been comparable in riparian and upland areas. FRI values are shorter for riparian zones bordering narrow streams compared to zones around wider and deeper streams. In arid ecosystems, FRIs may be shorter than the surrounding areas in part because the increased productivity of these sites results in more fuels to carry fire. Lower elevation and adjacency to fire-tolerant vegetation also contribute to shorter FRIs for some riparian areas (Sawyer 2013).
+
+Estimates of fire rotations are available from the LandFire project and a review paper (LandFire 2007, Van de Water and Safford (2011). The LandFire project’s published fire return intervals are based on a series of associated models created using the Vegetation Dynamics Development Tool (VDDT). In VDDT, fires are specified concurrently with the transition that follows them. For example, a replacement fire causes a transition to the early development stage. In the RMLands model, such fires are classified as high mortality. However, in VDDT mixed severity fires may cause a transition to early development, a transition to a more open seral stage, or no transition at all. In this case, we categorize the first example as a high mortality fire, and the second and third examples as a low mortality fire. Based on this approach, we calculated fire rotations and the probability of high mortality fire for each of the three MRIP seral stages (Table~\ref{tab:mripdesc_fire}). We computed the overall target fire rotation of 53 years based on values from Van de Water and Safford (2011). 
+
+
+
+
+\begin{table}[]
+\small
+\centering
+\caption{Fire rotation (years) and proportion of high (versus low) mortality fires. Values were derived from VDDT model 0611520 (LandFire 2007) and Van de Water and Safford (2011). }
+\label{tab:mripdesc_fire}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Condition}         & \multicolumn{1}{l}{\textbf{Fire Rotation}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Proportion \\ High Mortality\end{tabular}}} \\ \midrule
+Target                     & 53  & n/a      \\
+Early Development - All    & 50  & 1        \\
+Mid Development - Open & 50  & 0.5        \\
+Late Development - Closed  & 50  & 0.5      \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Other Disturbance}
+Other disturbances are not currently modeled, but may, depending on the seral stage affected and mortality levels, reset patches to early development, maintain existing stages, or shift/accelerate succession to a more open stage. 
+
+\subsection*{Vegetation Seral Stages}
+We recognize three separate seral stages for MRIP: Early Development (ED), Mid Development - Open Canopy Cover (MDO), and Late Development - Open Canopy Cover (LDO) (Figure~\ref{mrip_transmodel}). Our seral stages are an alternative to ``successional'' classes that imply a linear progression of states and tend not to incorporate disturbance. The seral stages identified here are derived from a combination of successional processes and anthropogenic and natural disturbance, and are intended to represent a composition and structural condition that can be arrived at from multiple other conditions described for that landcover type. Thus our seral stages incorporate age, size, canopy cover, and vegetation composition. In general, the delineation of stages has originated from the LandFire biophysical setting model descriptive of a given landcover type; however, seral stages are not necessarily identical to the classes identified in those models.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/statetransmodel/StateTransitionModel/mrip.png}
+\caption{State and Transition Model for Montane Riparian Forest. Each dark grey box represents one of the three seral stages for this landcover type. Three stages of development are represented: early, middle, and late. We describe the middle development stage as characterized by open canopy cover and the late development stage as characterized by closed canopy cover, but these are not hard and fast rules. Transitions between states/seral stages may occur as a result of high mortality fire, low mortality fire, or succession. Specific pathways for each are denoted by the appropriate color line and arrow: red lines relate to high mortality fire, orange lines relate to low mortality fire, and green lines relate to natural succession.} 
+\label{mrip_transmodel}
+\end{figure}
+
+
+
+\paragraph{Early Development (ED)}
+
+\paragraph{Description} Immediate post-disturbance responses are dependent on pre-burn vegetation composition. Typically tree dominated, but shrubs may co-dominate. \emph{Salix} and \emph{Alnus} are common, though overall composition is highly variable (LandFire 2007).
+
+\paragraph{Succession Transition} In the absence of disturbance, patches in this seral stage will transition to MDO at 10 years.
+
+\paragraph{Wildfire Transition} High mortality wildfire (100\% of fires in this seral stage) recycles the patch through the ED seral stage. Low mortality wildfire is not modeled for this seral stage.
+
+\noindent\hrulefill
+
+
+\paragraph{Mid Development - Open Canopy Cover (MDO)}
+
+\paragraph{Description} Vegetation composition in this seral stage includes tall trees and shrubs. \emph{Salix}, \emph{Populus}, and \emph{Alnus} are common. Patches in MDO are more susceptible to fire than the early seral stage (LandFire 2007).
+
+\paragraph{Succession Transition} After 20 years without a wildfire-triggered transition, patches in this seral stage will succeed to LDO.
+
+\paragraph{Wildfire Transition} High mortality wildfire (50\% of fires in this seral stage) recycles the patch through the ED seral stage. Low mortality wildfire (50\%) does not effect a change in the MDO seral stage.
+
+\noindent\hrulefill
+
+
+\paragraph{Late Development - Open Canopy Cover (LDO)}
+
+\paragraph{Description} This class represents the mature, large \emph{Populus}, \emph{Alnus}, etc. woodlands (LandFire 2007).
+
+\paragraph{Succession Transition} In the absence of disturbance, patches in this seral stage will maintain, regardless of soil characteristics.
+
+\paragraph{Wildfire Transition} High mortality wildfire (50\% of fires) recycles the patch through the ED seral stage. Low mortality wildfire (50\%) does not effect a change in the LDO seral stage.
+
+\noindent\hrulefill
+
+
+
+
+
+\subsection*{Seral Stage Classification}
+\begin{table}[hbp]
+\small
+\centering
+\caption{Classification of seral stage for MEG. Diameter at Breast Height (DBH) and Cover From Above (CFA) values taken from EVeg polygons. DBH categories are: null, 0-0.9'', 1-4.9'', 5-9.9'', 10-19.9'', 20-29.9'', 30''+. CFA categories are null, 0-10\%, 10-20\%, \dots , 90-100\%. Each row in the table below should be read with a boolean AND across each column.}
+\label{mrip_classification}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{\begin{tabular}[l]{@{}l@{}}Cover \\ Condition\end{tabular}} & \textbf{\begin{tabular}[r]{@{}r@{}}Overstory Tree \\ Diameter 1 \\ (DBH)\end{tabular}} & \textbf{\begin{tabular}[r]{@{}r@{}}Overstory Tree \\ Diameter 2 \\ (DBH)\end{tabular}} & \textbf{\begin{tabular}[r]{@{}r@{}}Total Tree\\ CFA (\%)\end{tabular}} & \textbf{\begin{tabular}[r]{@{}r@{}}Conifer \\ CFA (\%)\end{tabular}} & \textbf{\begin{tabular}[r]{@{}r@{}}Hardwood \\ CFA (\%)\end{tabular}} \\ \midrule
+Early            & Null           & any & any & any & any \\
+Early            & 0-9.9''         & any & any & any & any \\
+Mid Open         & 10-19.9''       & any & any & any & any \\
+Late Open        & 20-30''+        & any & any & any & any \\ \bottomrule
+\end{tabular}
+\end{table}
+
+
+\subsection*{References}
+\begin{hangparas}{.25in}{1} 
+Grenfell, Jr., William E. ``Montane Riparian (MRI).'' \emph{A Guide to Wildlife Habitats of California}, edited by Kenneth E. Mayer and William F. Laudenslayer. California Deparment of Fish and Game, 1988. \burl{http://www.dfg.ca.gov/biogeodata/cwhr/pdfs/MRI.pdf}. Accessed 4 December 2012.
+
+LandFire. ``Biophysical Setting Models.'' Biophysical Setting 0611520: California Montane Riparian Systems. 2007. LANDFIRE Project, U.S. Department of Agriculture, Forest Service; U.S. Department of the Interior. \burl{http://www.landfire.gov/national_veg_models_op2.php}. Accessed 9 November 2012.
+
+Sawyer, Sarah C. ``Natural Range of Variation of Non-Meadow Riparian Habitat in the Bioregional Assessment Area'' (unpublished paper, Ecology Group, Pacific Southwest Research Station, 2013).
+
+Skinner, Carl N. and Chi-Ru Chang. ``Fire Regimes, Past and Present.'' \emph{Sierra Nevada Ecosystem Project: Final report to Congress, vol. II, Assessments and scientific basis for management options}. Davis: University of California, Centers for Water and Wildland Resources, 1996.
+
+Van de Water, Kip and Malcom North. ``Fire history of coniferous riparian forests in the Sierra Nevada.'' \emph{Forest Ecology and Management} 260: 384-395. 2010.
+
+\end{hangparas}
+
+
+
+

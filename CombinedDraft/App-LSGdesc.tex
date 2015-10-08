@@ -1,0 +1,131 @@
+% !TEX root = master.tex
+\newpage
+\section{Black and Low Sagebrush (LSG)}
+\label{lsg-description}
+
+\subsection*{General Information}
+
+\subsubsection{Cover Type Overview}
+
+\textbf{Black and Low Sagebrush (LSG)}
+\newline
+Crosswalks
+\begin{itemize}
+	\item EVeg: Regional Dominance Type 1
+	\begin{itemize}
+		\item Low Sagebrush
+		\item Black Sagebrush
+	\end{itemize}
+
+	\item LandFire BpS Model
+	\begin{itemize}
+		\item 0610790: Great Basin Xeric Mixed Sagebrush Shrubland
+	\end{itemize}
+
+	\item Presettlement Fire Regime Type
+	\begin{itemize}
+		\item Black and Low Sagebrush
+	\end{itemize}
+\end{itemize}
+
+\noindent Reviewed by Michele Slaton, GIS Specialist, Inyo National Forest, USDA Forest Service
+
+\subsubsection{Vegetation Description}
+\paragraph{Black and Low Sagebrush (LSG)}	This landcover type is generally dominated by broad-leaved, evergreen shrubs of short stature, typically averaging about 15\% cover. Depending on site conditions, crowns may touch. Deciduous shrubs and small trees are sometimes sparsely scattered within this type. The ground cover of grasses and forbs is typically a sparse 5-15\% cover (Verner 1988). LSG may be dominated by either \emph{Artemisia arbuscula} or \emph{Artemisia nova}, often in association with \emph{Chrysothamnus viscidiflorus}, \emph{Purshia tridentata}, or \emph{Artemisia tridentata}; \emph{A. nova} is also commonly associated with \emph{Krascheninnikovia} and \emph{Ephedra}. \emph{Juniperus occidentalis} may be sparsely scattered in stands dominated by \emph{Artemisia arbuscula}, and \emph{Juniperus osteosperma} and \emph{Pinus monophylla} are sometimes scattered in stands dominated by \emph{A. nova}. A rich variety of forbs is usually present, including \emph{Eriogonum}, \emph{Erigeron}, \emph{Phlox}, \emph{Castilleja}, \emph{Sphaeralcea}, and \emph{Lupinus}. Common grasses include \emph{Poa}, \emph{Pseudoroegneria}, \emph{Elymus}, \emph{Stipa} and \emph{Festuca}. The abundance and distribution of associated plants is highly influenced by soils and precipitation (Verner 1988, LandFire 2007).
+
+\subsubsection{Distribution}
+Stands of \emph{A. arbuscula} are usually found on shallow soils with impaired drainage in the transition zone between the wetter bottom and open timber on the mountainsides. The type also occurs on terraces with hardpan or heavy clay soils. In mosaics formed with \emph{P. tridentata}, \emph{A. arbuscula} occurs on harsher sites with shallow, well-drained soils, while \emph{P. tridentata} occupies areas with deeper soils. Soils typically associated with stands of \emph{A. nova} are shallow, contain a high percentage of gravel, and are rich in mineral carbonates. It is prevalent on limestone soils (Verner 1988).
+
+\emph{A. arbuscula} communities are generally restricted to elevated arid plains along the eastern flanks of the Sierra Nevada. \emph{A. nova} can occur in subalpine areas, at elevations above 2420 m (8000 ft). Stands dominated by \emph{A. arbuscula} range in elevation from 1210 to 2740 m (4000-9000 ft) (Verner 1988).
+
+
+\subsection*{Disturbances}
+
+\subsubsection{Wildfire}
+Wildfires tend to be high mortality, stand-replacing fires that initiate a process of post-fire forest succession. High mortality fires kill large as well as small trees, and may kill many of the shrubs and herbs as well, although below-ground organs of at least some individual shrubs and herbs survive and re-sprout. 
+
+\emph{A. nova} generally supports more fire than other dwarf sagebrushes. Stand-replacing fire is rare due to relatively low fuel loads and herbaceous cover. Bare ground acts as a micro-barrier to fire between low-statured shrubs. Stand-replacing fires can occur in this type when successive years of above average precipitation are followed by an average or dry year. Stand-replacing fires predominate in the late successional class where the herbaceous component has diminished or where trees dominate (LandFire 2007).
+
+Although it is not included in this iteration of the model, scientists have noted that \emph{Bromus tectorum} has invaded most of these communities, altering successional pathways and disturbance regimes. It burns readily and is an early-season post-fire colonizer (Verner 1988).
+
+Estimates of fire rotations are available from the LandFire project and a review paper (LandFire 2007, Van de Water and Safford 2011). The LandFire project’s published fire return intervals are based on a series of associated models created using the Vegetation Dynamics Development Tool (VDDT). In VDDT, fires are specified concurrently with the transition that follows them. For example, a replacement fire causes a transition to the early development stage. In the RMLands model, such fires are classified as high mortality. However, in VDDT mixed severity fires may cause a transition to early development, a transition to a more open seral stage, or no transition at all. In this case, we categorize the first example as a high mortality fire, and the second and third examples as a low mortality fire. Based on this approach, we calculated fire rotations and the probability of high mortality fire for each of the three LSG seral stages (Table~\ref{tab:lsgdesc_fire}). We computed the overall target fire rotation of 82 years based on values from Van de Water and Safford (2011). 
+
+
+
+
+\begin{table}[]
+\small
+\centering
+\caption{Fire rotation (years) and proportion of high (versus low) mortality fires. Values were derived from VDDT model 0610790 (LandFire 2007) and Van de Water and Safford (2011). }
+\label{tab:lsgdesc_fire}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Condition}         & \multicolumn{1}{l}{\textbf{Fire Rotation}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Proportion \\ High Mortality\end{tabular}}} \\ \midrule
+Target                     & 82     & n/a    \\
+Early Development - All    & 250     & 1      \\
+Mid Development - Moderate & 149     & 1      \\
+Late Development - Closed  & 63     & 0.31    \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Other Disturbance}
+Other disturbances are not currently modeled, but may, depending on the seral stage affected and mortality levels, reset patches to early development, maintain existing seral stages, or shift/accelerate succession to a more open seral stage. 
+
+\subsection*{Vegetation Seral Stages}
+We recognize three separate seral stages for LSG: Early Development (ED), Mid Development - Moderate Canopy Cover (MDM), and Late Development - Closed Canopy Cover (LDC) (Figure~\ref{lsg_transmodel}). Our seral stages are an alternative to ``successional'' classes that imply a linear progression of states and tend not to incorporate disturbance. The seral stages identified here are derived from a combination of successional processes and anthropogenic and natural disturbance, and are intended to represent a composition and structural condition that can be arrived at from multiple other conditions described for that landcover type. Thus our seral stages incorporate age, size, canopy cover, and vegetation composition. In general, the delineation of stages has originated from the LandFire biophysical setting model descriptive of a given landcover type; however, seral stages are not necessarily identical to the classes identified in those models.
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/statetransmodel/StateTransitionModel/shrub.png}
+\caption{State and Transition Model for Black and Low Sagebrush. Each dark grey box represents one of the three seral stages for this landcover type. Three stages of development are represented: early, middle, and late. We describe the middle development stage as characterized by moderate canopy cover and the late development stage as characterized by closed canopy cover, but these are not hard and fast rules. Transitions between states/seral stages may occur as a result of high mortality fire, low mortality fire, or succession. Specific pathways for each are denoted by the appropriate color line and arrow: red lines relate to high mortality fire, orange lines relate to low mortality fire, and green lines relate to natural succession.} 
+\label{lsg_transmodel}
+\end{figure}
+
+\subsubsection{Early Development (ED)} 
+
+\paragraph{Description} Early seral community dominated by herbaceous vegetation, including \emph{Poa}, \emph{Pseudoroegneria}, and \emph{Achnatherum}. Shrub canopy is less than 20\%. Fire-tolerant shrubs, such as \emph{Chrysothamnus} species are initial sprouters post-fire (LandFire 2007).
+
+\paragraph{Succession Transition} In the absence of disturbance, patches in this seral stage will transition to MDM at 20 years. 
+
+\paragraph{Wildfire Transition} High mortality wildfire (100\% of fires in this seral stage) recycles the patch through the ED seral stage. Low mortality wildfire is not modeled for this seral stage.
+
+\noindent\hrulefill
+
+
+\subsubsection{Mid Development - Moderate Canopy Cover (MDM)}
+
+\paragraph{Description} Mid-seral community with a mixture of herbaceous and shrub vegetation. Vegetation present likely includes \emph{A. nova}, \emph{A. arbuscula}, \emph{Poa}, \emph{Achnatherum}, and \emph{Pseudoroegneria}.  Shrub cover often less than 25\% (LandFire 2007).
+
+\paragraph{Succession Transition} After 120 years without high mortality disturbance, patches in this seral stage will transition to LDC. 
+
+\paragraph{Wildfire Transition} High mortality wildfire (100\% of fires in this seral stage) recycles the patch through the ED seral stage. Low mortality wildfire is not modeled for this seral stage.
+
+\noindent\hrulefill
+
+
+\subsubsection{Late Development - Closed Canopy Cover (LDC)} 
+
+\paragraph{Description} Late seral community with an increased presence of conifer trees (up to 40\% cover). The degree of tree canopy closure differs depending on whether it is an \emph{A. arbuscula} (closure likely under 15\%) or an \emph{A. nova} (closure up to 40\%) community. In \emph{A. arbuscula} communities a mixture of herbaceous and shrub vegetation with over 10\% shrub cover would still be present. In \emph{A. nova} communities the herbaceous and shrub component would be greatly reduced (less than 1\% cover). Vegetation present may also include \emph{Juniperus}, \emph{P. monophylla} and \emph{Achnatherum} (LandFire 2007).
+
+\paragraph{Succession Transition} In the absence of disturbance, this class will maintain. 
+
+\paragraph{Wildfire Transition} High mortality wildfire (31\% of fires in this seral stage) recycles the patch through the ED seral stage. Low mortality wildfire (69\%) maintains the LDO seral stage.
+
+\noindent\hrulefill
+
+\subsection*{Condition Classification}
+Because seral stageification was done through orthophoto analysis, no polygons will be assigned to the LDC seral stage, which is actually not an \emph{Artemisia}-dominated seral stage. Only 3 polygons were assigned to LSG. Typical fields used to assign early-mid-late seral stage (overstory tree diameter) are null for shrubs. Cover is available. Polygons with cover less than 50\% were assigned to MDM and polygons with cover greater than 50\% were assigned to LDC.
+
+
+
+\clearpage
+\subsection*{References}
+\begin{hangparas}{.25in}{1} LandFire. ``Biophysical Setting Models.'' Biophysical Setting 0610790: Great Basin Xeric Mixed Sagebrush Shrubland. 2007. LANDFIRE Project, U.S. Department of Agriculture, Forest Service; U.S. Department of the Interior. \burl{http://www.landfire.gov/national\_veg\_models\_op2.php}. Accessed 9 November 2012.
+
+Van de Water, Kip M. and Hugh D. Safford. ``A Summary of Fire Frequency Estimates for California Vegetation Before Euro-American Settlement.'' \emph{Fire Ecology} 7.3 (2011): 26-57. doi: 10.4996/fireecology.0703026.
+
+Verner, Jared. ``Low Sage (LSG).'' \emph{A Guide to Wildlife Habitats of California}, edited by Kenneth E. Mayer and William F. Laudenslayer. California Deparment of Fish and Game, 1988. \burl{http://www.dfg.ca.gov/biogeodata/cwhr/pdfs/SGB.pdf}. Accessed 4 December 2012.
+\end{hangparas}
+
+

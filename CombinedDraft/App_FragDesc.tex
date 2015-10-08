@@ -1,0 +1,153 @@
+% !TEX root = master.tex
+\chapter{\textsc{Fragstats} Metrics: brief descriptions}
+\label{app:metricdescriptions}
+\begin{enumerate}
+	\item Percentage of Landscape (PLAND)\\
+	\emph{Landscape}-level: not computed\\
+	\emph{Class}-level: the percentage of the landscape comprised of a particular patch type\\
+	
+	%\item Core Area Percentage of Landscape (CPLAND)\\
+	%\emph{Landscape}-level: not computed\\
+	%\emph{Class}-level: the sum of all core areas in a given patch type divided by the total landscape area; reported as a percentage%\\
+	
+	\item Patch Density (PD)\\
+	\emph{Landscape}-level: number of patches of all cover types and condition classes divided by the total landscape area for one timestep\\
+	\emph{Class}-level: number of patches of a give cover type and condition class divided by the total area occupied by that cover-condition type
+\\
+
+	\item Total Edge (TE)\todo{COMPLETE ME} \\
+	label{item:TE}
+	\emph{Landscape}-level:      \\
+	\emph{Class}-level:         \\
+	
+	\item Edge Density (ED) \\
+	\label{item:ED}
+	\emph{Landscape}-level: the sum of the lengths of all edge segments divided by the total landscape area\\	
+	\emph{Class}-level: the sum of the lengths of all edge segments for a given patch type divided by the total area occuring as that patch type\\
+	
+	\item Mean Area (AREA\_MN)\\
+	\emph{Landscape}-level:  mean patch area across all cover types and condition classes\\
+	\emph{Class}-level:  mean patch area across all condition classes for a given cover type\\
+	
+	\item Area-Weighted Mean Area (AREA\_AM)\\
+	\emph{Note}: Area-weighted metrics are used to reduce the influence of the many isolated, single-pixel ``patches'' that are an artifact of the model and do not represent true ecological processes. They reflect the mean metric value for a cell selected at random on the landscape. 	\\
+	\emph{Landscape}-level: area-weighted mean patch area across all cover types and condition classes \\
+	\emph{Class}-level: area-weighted mean patch area across all condition classes for a given cover type. \\
+	
+	\item Area-Weighted Mean Radius of Gyration (GYRATE\_AM)\\
+	\emph{Landscape}-level: measure of the area-weighted mean length across the landscape a patch extends its reach; in other words, calculate the shortest path between every possible pair of cells within a patch and take the longest of this set, then take the average of these ``longest'' paths for every patch on the landscape\\
+	\emph{Class}-level: for a given cover type and condition class, the area-weighted mean average length of a patch on the landscape\\
+	
+	\item Mean Shape (SHAPE\_MN) measures the complexity of patch shape compared to a square of the same size\\
+	\emph{Landscape}-level: length of patch perimeter for all patch type on the landscape divided by the area of the landscape, %adjusted to a square standard, and averaged across all patch types\\
+	\emph{Class}-level: length of patch perimeter for each patch type on the landscape divided by the square root of the area in that patch type, adjusted to a square standard \\
+	
+	\item Area-Weighted Mean Shape (SHAPE\_AM)\\
+	\emph{Note}: the theoretical idea behind Shape is to compare a patch to the simplest shape, a square 		\\
+	\emph{Landscape}-level: length of patch perimeter for all patch types on the landscape divided by the total landscapearea, adjusted to a square standard, and converted to an area-weighted mean across all patch types \\
+	\emph{Class}-level: length of patch perimeter for each patch type on the landscape divided by the square root of the area in that patch type, adjusted to a square standard\\
+	
+	\item Mean Core Area (CORE\_MN)\\
+	\emph{Landscape}-level: total core area on the landscape, divided by landscape area\\
+	\emph{Class}-level: total core area within each patch type on the landscape, divided by the total area in the same patch type\\
+	
+	\item Area-Weighted Mean Core Area (CORE\_AM)\\
+	\emph{Note}: Core area is defined as the area within a patch beyond some specified depth-of-edge influence (i.e., edge distance) or buffer width and is important for organisms who specialize in patch interiors 	\\
+	\emph{Landscape}-level: total core area within each patch on the landscape, divided by the total landscape area in the same patch type	\\
+	\emph{Class}-level: total core area within a given patch type on the landscape, divided by the total area in the same patch type	\\
+	
+	\item Area-Weighted Mean Core Area Index (CAI\_AM)\\
+	\emph{Landscape}-level: core area for the landscape as a percentage of total landscape area \\
+	%core area of a patch divided by total area of a patch, multiplied by the area of that patch divided by the area of the landscape; reported as a percentage	\\
+	\emph{Class}-level: core area for a given patch type as a percentage of a total area in that patch type
+	%core area of a patch divided by total area of a patch, multiplied by the area of that patch divided by the total area of that patch type; reported as a percentage	\\
+	
+	\item Mean Similarity Index (SIMI\_MN)\\
+	\emph{Note}: Similarity distinguishes sparse distributions of small and insular habitat patches from configurations where the habitat forms a complex cluster of larger, hospitable (i.e., similar) patches. A similiarity value is assigned to each possible pair of condition classes before running \textsc{Fragstats}. 	\\
+	\emph{Landscape}-level: the average of the similarity value for each patch on the landscape \\
+	%the average sum over all neighboring patches with edges within a specified distance of the focal patch, of: neighboring patch area times a similarity coefficient between the focal patch type and the class of the neighboring patch, divided by the nearest edge-to-edge distance squared between the focal patch and the neighboring patch	\\
+	\emph{Class}-level: the average of the similarity value for each patch within a given patch type \\
+	%the average sum over all neighboring patches with edges within a specified distance of the focal patch, of: neighboring patch area times a similarity coefficient between the focal patch type and the class of the neighboring patch, divided by the nearest edge-to-edge distance squared between the focal patch and the neighboring patch; reported for each patch type separately	\\
+	
+	\item Contrast-Weighted Edge Density (CWED)\\
+	\emph{Note}: This metric is intended to highlight the functional importance of edge	\\
+	\emph{Landscape}-level: the sum of the lengths of all edge segments divided by the total landscape area (Edge Density, metric~\ref{item:ED}), multiplied by a contrast weight (metric~\ref{item:TECI})
+	\emph{Class}-level: the sum of the lengths of all edge segments for a given patch type divided by the total landscape area, multiplied by the appropriate contrast weight (metric~\ref{item:TECI})  	\\
+
+	\item Total Edge Contrast Index (TECI) \\
+	\label{item:TECI}
+	\emph{Note}: Contrast refers to the relative difference among patch types. For example, mature forest next to young forest might have a lower-
+contrast edge than mature forest adjacent to open field. A contrast weight is assigned to each possible pair of condition classes before 
+running \textsc{Fragstats}. 	\\
+	\emph{Landscape}-level: the sum of the lengths of all edge segments in the landscape multiplied by the appropriate contrast weight, divided by 
+the total length of edge in the landscape\\
+	\emph{Class}-level: the sum of the products of the lengths of all edge segments for a given patch type and the appropriate contrast weight, 
+divided by the sum of the lengths of all edge segments for a given patch type \\
+
+\todo{FILL ME IN}
+	\item Area-weighted Mean Edge Contrast
+	\label{item:ECONAM}
+	\emph{Landscape}-level:      \\
+	\emph{Class}-level:         \\
+
+	\item Mean Edge Contrast
+	\label{item:ECONMN}
+	\emph{Landscape}-level:      \\
+	\emph{Class}-level:         \\
+
+	
+	\item Contagion (CONTAG)\\
+	\emph{Landscape}-level: a cell-based (as opposed to patch-based) metric that measures the likelihood of a given cell belonging to the same patch type as a randomly chosen adjacent cell and is a common measure of both aggregation and dispersion 	\\
+	%1 minus the sum of the proportional abundance of each patch type multiplied by the proportion of adjacencies between cells of that patch type and another patch type, multiplied by the logarithm of the same quantity, summed over each unique adjacency type and each patch type; divided by 2 times the logarithm of the number of patch types; reported as a percent; inversely related to edge density\\
+	\emph{Class}-level: not computed \\ 	
+
+		
+	\item Clumpiness Index (CLUMPY)\\
+	\emph{Landscape}-level: not computed  	\\
+	\emph{Class}-level: similar conceptually (though not mathematically) to Contagion, the Clumpiness Index indicates how fragmented or aggregated 
+the cells of a given patch type are; values range from -1 (completely dispersed) to 1 (maximally clumped), with 0 representing a completely 
+random configuration 	\\
+	%the proportional deviation of the proportion of like adjacencies involving the corresponding class from that expected under a spatially 
+random distribution. If the proportion of like adjacencies ($G_i$) is $\geq$ the proportion of the landscape comprised of the focal class (
+$P_i$), then $\text{CLUMPY} = \frac{G_i - P_i}{1 - P_i}$. If $G_i < P_i \text{and} P_i \geq 0.5, \text{then CLUMPY} = \frac{G_i - Pi}{1 - P_i}$
+. If $G_i < Pi \text{and} P_i < 0.5, \text{then CLUMPY} = \frac{P_i - G_i}{-P_i}$.	\\
+	
+	\item Interspersion and Juxtaposition Index (IJI) \\
+	\emph{Landscape}-level: a patch-based metric that represents the observed level of interspersion as a percentage of the maximum possible given 
+the total number of patch types; based on the total length of edge in the landscape 	\\
+	%similar to Contagion, but patch-based rather than cell-based; ranges from 0 (uneven configuration of patches - low interspersion and 
+juxtaposition) to 100 (maximally evenly interspersed or juxtaposed patches) 	\\
+	%-1 times the sum of the length of each unique edge type divided by the total landscape edge, multiple by the logarithm of the same quantity, 
+summed over each unique edge type;  divided by the logarithm of the number of patch types times the number of patch types minus 1 divided by 2 
+	\\
+	\emph{Class}-level: a patch-based metric that represents the observed level of interspersion as a percentage of the maximum possible given the 
+total number of patch types, based on length of edge between the focal patch type and other patch types 	\\
+	%similar to the Clumpiness index, but patch-based rather than cell-based; ranges from 0 (uneven configuration of patches - low interspersion 
+and juxtaposition) to 100 (maximally evenly interspersed or juxtaposed patches) based on length of edge between the focal patch type and other 
+patch types 	\\
+	%-1 times the sum of the length of each unique edge type involving the corresponding patch type divided by the total length of edge involving 
+the same type, multiplied by the logarithm of the same quantity, summed over each unique edge type; divided by the logarithm of the number of 
+patch types minus 1; reported as a percentage	\\
+	
+	\item Patch Richness (PR)\\
+	\emph{Landscape}-level: the number of patch types present in the landscape	\\
+	\emph{Class}-level: not computed \\
+	
+	\item Simpson's Diversity Index (SIDI)\\
+	\emph{Landscape}-level: the probability that any 2 pixels selected at random would be different patch types	\\
+	\emph{Class}-level: not computed\\
+	
+	\item Simpson's Evenness Index (SIEI) \\
+	\emph{Landscape}-level:  the observed level of diversity divided by the maximum possible diversity for a given patch richness 	\\
+	\emph{Class}-level: not computed\\
+	
+	\item Aggregation Index (AI) - an area-weighted mean class aggregation index \\
+	\emph{Landscape}-level: cell-based metric based on the ratio of the observed number of like adjacencies to the maximum possible number of like 
+adjacencies; similar in interpretation to Contagion, but uses different statistical methods
+	%the number of cells of the same cover and condition (patch type) adjecent to one another, multiplied by the proportion of the landscape 
+comprised of that that patch type, summed over all classes; reported as a percentage	\\
+	\emph{Class}-level: the number of cells of a given patch type adjacent to one another divided by the maximum possible number of like 
+adjacencies for that patch type; similar in interpretation to the Clumpiness index, but uses different statistical methods	\\
+\end{enumerate}
+
+Several of the individual landscape metrics are redundant with one another. For example, \emph{Contagion} and \emph{Edge Density} are inversely related, so it is perhaps helpful, but not necessary, to examine both metrics. We evaluated more metrics than we needed, then narrowed our focus in order to provide a relatively simple and highly interpretable conclusion.
