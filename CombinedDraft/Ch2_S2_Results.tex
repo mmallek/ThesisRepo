@@ -3,11 +3,8 @@
 \label{sec:hrvresults}
 \subsection{Disturbance Regime}
 
-This thesis focuses on the effects of wildfire as a natural disturbance; the impacts of other natural disturbances during the reference period were likely localized in time or space and therefore probably had far less impact on vegetation patterns over broad spatial and temporal scales than did fire.\todo{Becky: is this true?} In the sections below, we describe the simulated disturbance regime in terms of its spatial extent and distribution, frequency, and temporal variability, for the landscape as a whole. Variations among vegetation types are described in Chapter~\ref{ch:covtype} and in Appendix~\ref{app:covtype_analysis}. We also acknowledge that some results were used to evaluate whether the model was correctly calibrated; specifically, fire rotation values were used in model calibration, as described in Chapter~\ref{ch:methods}. These rotation values are also an outcome of the model, and are therefore reported here. While this may seem a bit circular, it was a necessary part of the process of simulating the historical range of variability.\todo{add management context} 
-
-In addition to the disturbance regime, this chapter includes results for the seral stage dynamics and analysis of the landscape configuration metrics from \textsc{Fragstats}.
-
-%Finally, it is important to realize that while the information below is presented as ``results,'' it could have easily been presented in the methods section as ``model calibration.'' Key spatial and temporal aspects of the disturbance regime were evaluated during preliminary calibration runs, and we subsequently adjusted model parameters to effect desired changes. Thus, while the information presented below does in fact represent results (output) of the simulation, it also represents a set of targets used to calibrate the model (i.e., adjust model parameters to achieve desired results). While this may seem a bit circular, it was a necessary process for a complex model such as \textsc{RMLands}. Moreover, our real emphasis was on quantifying the vegetation patterns and dynamics resulting from these disturbance processes. 
+% Becky says move this section to the discussion
+%This thesis focuses on the effects of wildfire as a natural disturbance; the impacts of other natural disturbances during the reference period were likely localized in time or space and therefore probably had far less impact on vegetation patterns over broad spatial and temporal scales than did fire.\todo{Becky: is this true?} In the sections below, we describe the simulated disturbance regime in terms of its spatial extent and distribution, frequency, and temporal variability, for the landscape as a whole. Variations among vegetation types are described below and in Appendix~\ref{app:covtype_analysis}. We also acknowledge that some results were used to evaluate whether the model was correctly calibrated; specifically, fire rotation values were used in model calibration, as described in Chapter~\ref{sec:hrvmethods}. These rotation values are also an outcome of the model, and are therefore reported here. While this may seem a bit circular, it was a necessary part of the process of simulating the historical range of variability.\todo{add management context} In addition to the disturbance regime, this chapter includes results for the seral stage dynamics and analysis of the landscape configuration metrics from \textsc{Fragstats}.
 
 \subsubsection{Disturbed Area} 
 
@@ -15,16 +12,18 @@ In addition to the disturbance regime, this chapter includes results for the ser
 % 181553 hectares in core
 % check math using Wildfire_darea_trajectory.csv
 % redone 9/15
+
+\todo{Becky feels like this is also discussion}
 Approximately 96\% of the landscape was eligible for wildfire disturbance (all cover types except Barren and Water)\footnote{In this section we report values based on percent of eligible landscape. There are 181,550 hectares in the core project area, and 174,830 remain after excluding Barren and Water.}. As expected, the frequency and extent of simulated wildfires varied across timesteps (Figure~\ref{fig:darea}). Also, given the rotation interval and percent mortality expected over time on this landscape, large proportions of the project area burned each (5-year) timestep. High mortality fires do include the burning of early development vegetation, including chaparral, when it resets the successional process. In general, within a given timestep about a third of the disturbed area burned as high mortality. We further summarize the disturbance regime in Tables \ref{tab:darea_atleast} and \ref{tab:darea}. Figures~\ref{fig:darea_min_map}--\ref{fig:darea_mean_map} depict wildfire disturbances during the timesteps representing the $5^{th}$ percentile, $50^{th}$ percentile, $95^{th}$ percentile, and mean area burned. 
 
 % created 9/17
 \begin{table}[!htbp]
 \centering
-\caption{Summary of disturbed area in terms of proportion of the landscape burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\caption{Summary of disturbed area in terms of proportion of the landscape burned (inclusive of both high and low mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
 \label{tab:darea_atleast}
 \begin{tabular}{@{}lllll@{}}
 \toprule
-                           & at least 1\%     & at least 10\%    & at least 25\%    & at least 50\% \\ \midrule
+\textbf{Proportion of Landscape Burned} & \textbf{1\%+}     & \textbf{10\%+}    & \textbf{25\%+}    & \textbf{50\%+} \\ \midrule
 Number of timesteps        & 459              & 313              & 115              & 13            \\
 Proportion of timesteps    & 1.00             & 0.68             & 0.25             & 0.03          \\
 Interval (timesteps)       & 1.00             & 1.47             & 4.01             & 35.46         \\
@@ -58,9 +57,9 @@ $95^{th}$ percentile        &   31.29 (54,703)      & 21.43 (37,461)   &    45.8
 \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_all.png}
     }%
   \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_darea_hist.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_newhist_all.png}
     }
-  \caption{\small (a) Disturbance trajectory for wildfire during the simulation. The first timestep is 40 because we excluded earlier timesteps as equilibration. Dark blue values represent high mortality fire, while dark green values represent low mortality fire and are stacked on top of high mortality. (b) Histogram of disturbed hectares.} 
+  \caption{\small (a) Disturbance trajectory for wildfire during the simulation. The first timestep is 40 because we excluded earlier timesteps as equilibration. Red bars represent high mortality fire, while green bars represent low mortality fire and are stacked on top of high mortality. (b) Histogram of the percent of the landscape burned per timestep.} 
   \label{fig:darea}
 \end{figure}
 \clearpage
@@ -141,9 +140,9 @@ Sierran Mixed Conifer - Mesic (\textsc{smc\_m}) is the dominant cover type withi
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_smcm.png}
     }%
   \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_hist_smcm.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_newhist_smcm.png}
     }
-  \caption{\small (a) Disturbance trajectory for Sierran Mixed Conifer - Mesic. High mortality fire in dark blue; low mortality fire in dark green. (b) Histogram of disturbed hectares with density curve overlaid.} 
+  \caption{\small (a) Disturbance trajectory for Sierran Mixed Conifer - Mesic. High mortality fire in red; low mortality fire in green. (b) Histogram of the percent of the landscape burned per timestep.} 
   \label{fig:darea_smcm}
 \end{figure}
 
@@ -168,7 +167,7 @@ Mean                              & 14.42 & 4.42  & 18.83 \\
 \caption{Summary of disturbed area in terms of proportion of the amount of \textsc{smc\_m} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
 \label{tab:darea_atleast_smcm}
 \begin{tabular}{@{}lllll@{}}
-                        & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
+\textbf{Proportion of Landscape Burned} & \textbf{1\%+}     & \textbf{10\%+}    & \textbf{25\%+}    & \textbf{50\%+} \\ \midrule
 Number of timesteps     & 458          & 311           & 126           & 15            \\
 Proportion of timesteps & 0.99         & 0.67          & 0.27          & 0.03          \\
 Interval (timesteps)    & 1.01         & 1.48          & 3.66          & 30.73         \\
@@ -191,9 +190,9 @@ Sierran Mixed Conifer - Xeric (\textsc{smc\_x}) is the second most dominant cove
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_smcx.png}
     }%
   \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_hist_smcx.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_newhist_smcx.png}
     }
-  \caption{\small (a) Disturbance trajectory for Sierran Mixed Conifer - Xeric. High mortality fire in dark blue; low mortality fire in dark green. (b) Histogram of disturbed hectares with density curve overlaid.} 
+  \caption{\small (a) Disturbance trajectory for Sierran Mixed Conifer - Xeric. High mortality fire in red; low mortality fire in green. (b) Histogram of the percent of the landscape burned per timestep.} 
   \label{fig:darea_smcx}
 \end{figure}
 
@@ -219,7 +218,7 @@ Mean                          & 14.88 & 6.95  & 21.83 \\
 \caption{Summary of disturbed area in terms of proportion of the amount of \textsc{smc\_x} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
 \label{tab:darea_atleast_smcx}
 \begin{tabular}{@{}lllll@{}}
-                        & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
+\textbf{Proportion of Landscape Burned} & \textbf{1\%+}     & \textbf{10\%+}    & \textbf{25\%+}    & \textbf{50\%+} \\ \midrule
 Number of timesteps     & 461          & 347           & 148           & 27            \\
 Proportion of timesteps & 1.00         & 0.75          & 0.32          & 0.06          \\
 Interval (timesteps)    & 1.00         & 1.33          & 3.11          & 17.07         \\
@@ -232,12 +231,11 @@ Interval (years)        & 5.00         & 6.64          & 15.57         & 85.37  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Effect of Climate} 
-Climate does have a positive relationship with disturbed area, as expected (Figure \ref{fig:climate_darea}). We show here a fitted line, but note the heteroskedastic variance about the mean. The relationship is weakly positive. During wetter-than-average years, we see less disturbed area. Over 20\% of the landscape burned only in timesteps during which the climate parameter was at least 0.63. However, over 50\% of the landscape burned in several timesteps when the climate parameter was less than 1, which is the average value over the historical period. Overall we observe that as climate shifts from wet to drought, the disturbed area increases. %Climate also has a weak effect on the size of individual fires (Figure \ref{fig:climate_dsize}). 
-Fire size is also influenced by vegetation susceptibility and the specified disturbance size distribution. For this reason, large areas may burn in relatively ``wet'' years. Figure \ref{fig:compare_clim_darea} illustrates the climate parameter values and disturbed area proportion of the landscape for a subset of timesteps during the simulation.
+Climate has a positive relationship with disturbed area (Figure \ref{fig:climate_darea}). A regression line is plotted, but note the heteroskedastic variance about the mean. The relationship is weakly positive. During wetter-than-average years, less area was disturbed. Over 20\% of the landscape burned only in timesteps during which the climate parameter was at least 0.63\todo{this isn't clear}. However, over 50\% of the landscape burned in several timesteps when the climate parameter was less than 1, which is the average value over the historical period. Overall we observe that as climate shifts from wet to drought, the disturbed area increases. Fire size is also influenced by vegetation susceptibility and the specified disturbance size distribution. For this reason, large areas may burn in relatively ``wet'' years. Figure \ref{fig:compare_clim_darea} illustrates the climate parameter values and disturbed area proportion of the landscape for a subset of timesteps during the simulation\todo{clarify what is meant}.
 
 \begin{figure}[!htbp]
   \centering
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_climdarea.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_climdarea.png}
   \caption{Plot of the climate parameter and disturbed area value for each timestep of the simulation (excluding the equilibration period). A linear model has been fit to the data and is shown as a blue line; the grey shaded area represents the 95\% confidence interval around the mean.}
   \label{fig:climate_darea}
 \end{figure}
@@ -254,39 +252,7 @@ Fire size is also influenced by vegetation susceptibility and the specified dist
 \clearpage
 
 
-\subsubsection{Effect of Topographic Position}
 
-The topographic position index value for a given cell acts as an input into the susceptibility and mortality values otherwise defined for that cover type and condition class combination. In general, cells with smaller TPI values had reduced susceptibility and mortality. Early development and open canopy conditions tend to result from fire, and we predicted that an increase in fires and in the likelihood of high mortality fire would lead to a decrease in the average canopy cover values for cells with large TPI values. Table~\ref{tab:tpi_cc} in Appendix \ref{app:full-results} displays the results for this simulation for the nine most common cover types. All  show decreased average canopy cover as TPI increases, with the decrease ranging from 5.7\% in xeric mixed evergreen forest to 28.8\% in ultramafic oak-conifer forests. Figure \ref{fig:tpi_cc_smc} shows the plotted data and fitted linear regression line for mesic and xeric sierran mixed conifer forests. Figure \ref{fig:averagecc} is a map displaying average canopy cover across the landscape for the full simulated HRV timeframe, excluding the equilibration period. In general, return intervals and canopy cover varied spatially across the forest and decreased with increasing TPI, reflecting our parameterization, which was based on the theory that higher, more southerly aspects are drier and more susceptible to fires. In mesic mixed conifer forests, canopy cover decreased by about 13\% when comparing minimum to maximum TPI, from an average of 49\% to an average of 43\%. In xeric mixed conifer forests, canopy cover decreased by about 25\% when comparing minimum to maximum TPI, from an average of 36\% to an average of 27\% (Table~\ref{tab:tpi_cc_smc}).
-
-% figure redone
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/maps/hrv_tpi.pdf}
-\caption{Smoothed visualization of the average canopy cover across the project area over the course of the simulation. Higher percent cover is shown in dark blue, transitioning to red where average percent cover was low. Water is shown in blue; barren is shown in grey.}
-\label{fig:averagecc}
-\end{figure}
-
-% figure redone
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/tpi/hrv-facet-smc.png}
-\caption{Average canopy cover for Sierran Mixed Conifer Mesic and Xeric during the simulated HRV. Each blue point represents one pixel of an individual cover type on the landscape grid. The black line is the result of a linear regression fit to the data. Table \ref{tab:tpi_cc} provides the numerical representation of the shift from minimum to maximum TPI values for each cover type. (a) Sierran Mixed Conifer - Mesic; (b) Sierran Mixed Conifer - Xeric.} 
-\label{fig:tpi_cc_smc}
-\end{figure}
-
-
-%redone 9/15
-\begin{table}[!htbp]
-\centering
-\caption{The percent change in canopy cover from the minimum TPI value for that cover type to the maximum TPI value. Results for Sierran Mixed Conifer Mesic and Xeric shown here; results for other focal cover types available in Appendix~\ref{app:full-results}}.
-\label{tab:tpi_cc_smcs}
-\begin{tabular}{@{}lrrrrr@{}}
-\toprule
-\small \textbf{\begin{tabular}[c]{@{}l@{}}Cover \\ Name\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Minimum \\ TPI\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Maximum \\ TPI\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Average Canopy \\Cover at \\ Minimum TPI\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Average Canopy \\ Cover at \\ Maximum TPI\end{tabular}}  & \small \textbf{\begin{tabular}[c]{@{}l@{}}Percent \\ Change in \\ Canopy \\ Cover\end{tabular}} \\ \midrule
-\textsc{smc\_m   }    & -300                 & 300                  & 55.5       & 50.4              & -9.3      \\
-\textsc{smc\_x   }    & -300                 & 300                  & 27.6       & 21.9              & -20.5     \\ \bottomrule
-\end{tabular}
-\end{table}
 
 \newpage
 \subsubsection{Fire Rotation} 
@@ -307,7 +273,7 @@ As described in Chapter \ref{ch:methods}, we calibrated the model by adjusting s
 
 
 \subsubsection{Population Return Interval}
-Overall, the point-specific return interval (grand mean) for all eligible cells ranged from 17 years to \textgreater 2500 years (cells that never burned during the simulation) for both classes of wildfire mortality (Figure \ref{fig:preturn}). The median return interval across all cover types was 42 years for low mortality fire, 111 year for high mortality fire, and 29 years for any fire. The population return interval plots and maps specific to Sierran Mixed Conifer Mesic and Xeric follow (Figures~\ref{fig:preturn_smcm} and \ref{fig:preturn_smcx}). Under this wildfire regime, the grand mean return interval between fires (of any mortality level) for both of these mixed conifer forest types varied widely from about 17 years to over 500 years, with medians of 28 years (for mesic) and 23 years (for xeric) (Figures~\ref{fig:preturn_smcm} and \ref{fig:preturn_smcx}). The other seven focal cover types are included in Appendix~\ref{app:full-results}. 
+Overall, the point-specific return interval for an individual cell ranged from 17 years to \textgreater 2500 years (cells that never burned during the simulation) for both classes of wildfire mortality (Figure \ref{fig:preturn}). The grand mean return interval across all cover types was 42 years for low mortality fire, 111 year for high mortality fire, and 29 years for any fire. The population return interval plots and maps specific to Sierran Mixed Conifer Mesic and Xeric follow (Figures~\ref{fig:preturn_smcm} and \ref{fig:preturn_smcx}). Under this wildfire regime, the point-specific return interval for an individual cell between fires (of any mortality level) for both of these mixed conifer forest types varied widely from about 17 years to over 500 years, with grand means of 28 years (for mesic) and 23 years (for xeric) (Figures~\ref{fig:preturn_smcm} and \ref{fig:preturn_smcx}). The other seven focal cover types are included in Appendix~\ref{app:full-results}. 
 
 
 
@@ -369,6 +335,41 @@ Overall, the point-specific return interval (grand mean) for all eligible cells 
 \subsection{Vegetation Response}
 \label{subsec:HRVvegresponse}
 
+\subsubsection{Effect of Topographic Position}
+
+The\todo{Becky thinks this also has lots of discussion} topographic position index value for a given cell acts as an input into the susceptibility and mortality values otherwise defined for that cover type and condition class combination. In general, cells with smaller TPI values had reduced susceptibility and mortality. Early development and open canopy conditions tend to result from fire, and we predicted that an increase in fires and in the likelihood of high mortality fire would lead to a decrease in the average canopy cover values for cells with large TPI values. Table~\ref{tab:tpi_cc} in Appendix \ref{app:full-results} displays the results for this simulation for the nine most common cover types. All  show decreased average canopy cover as TPI increases, with the decrease ranging from 5.7\% in xeric mixed evergreen forest to 28.8\% in ultramafic oak-conifer forests. Figure \ref{fig:tpi_cc_smc} shows the plotted data and fitted linear regression line for mesic and xeric sierran mixed conifer forests. Figure \ref{fig:averagecc} is a map displaying average canopy cover across the landscape for the full simulated HRV timeframe, excluding the equilibration period. In general, return intervals and canopy cover varied spatially across the forest and decreased with increasing TPI, reflecting our parameterization, which was based on the theory that higher, more southerly aspects are drier and more susceptible to fires. In mesic mixed conifer forests, canopy cover decreased by about 13\% when comparing minimum to maximum TPI, from an average of 49\% to an average of 43\%. In xeric mixed conifer forests, canopy cover decreased by about 25\% when comparing minimum to maximum TPI, from an average of 36\% to an average of 27\% (Table~\ref{tab:tpi_cc_smc}).
+
+% figure redone
+\todo{this figure should have grey for water/barren; looks like high canopy cover now}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/maps/hrv_tpi.pdf}
+\caption{Smoothed visualization of the average canopy cover across the project area over the course of the simulation. Higher percent cover is shown in dark blue, transitioning to red where average percent cover was low. Water is shown in blue; barren is shown in grey.}
+\label{fig:averagecc}
+\end{figure}
+
+% figure redone
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/tpi/hrv-facet-smc.png}
+\caption{Average canopy cover for Sierran Mixed Conifer Mesic and Xeric during the simulated HRV. Each blue point represents one pixel of an individual cover type on the landscape grid. The black line is the result of a linear regression fit to the data. Table \ref{tab:tpi_cc} provides the numerical representation of the shift from minimum to maximum TPI values for each cover type. (a) Sierran Mixed Conifer - Mesic; (b) Sierran Mixed Conifer - Xeric.} 
+\label{fig:tpi_cc_smc}
+\end{figure}
+
+
+%redone 9/15
+\begin{table}[!htbp]
+\centering
+\caption{The percent change in canopy cover from the minimum TPI value for that cover type to the maximum TPI value. Results for Sierran Mixed Conifer Mesic and Xeric shown here; results for other focal cover types available in Appendix~\ref{app:full-results}}.
+\label{tab:tpi_cc_smcs}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\small \textbf{\begin{tabular}[c]{@{}l@{}}Cover \\ Name\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Minimum \\ TPI\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Maximum \\ TPI\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Average Canopy \\Cover at \\ Minimum TPI\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Average Canopy \\ Cover at \\ Maximum TPI\end{tabular}}  & \small \textbf{\begin{tabular}[c]{@{}l@{}}Percent \\ Change in \\ Canopy \\ Cover\end{tabular}} \\ \midrule
+\textsc{smc\_m   }    & -300                 & 300                  & 55.5       & 50.4              & -9.3      \\
+\textsc{smc\_x   }    & -300                 & 300                  & 27.6       & 21.9              & -20.5     \\ \bottomrule
+\end{tabular}
+\end{table}
+
 \subsubsection{Landscape Composition} 
 
 % fixed plots - equilibration line is hard coded in. ocfwu calibration changed; now seems okay by ts 40. potentially could even have cut off equilibration at ts 20 but it's arbitrary. good to keep in mind for future stuff though.
@@ -390,7 +391,7 @@ The seral stage distribution for each cover type varied over time, but did appea
     \centering
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/maps/hrv-covcondseq-8.pdf}
   }%
-  \caption{A sequence of four timesteps during the middle of the simulation, showing changes in condition classes over time. Here we highlight the dominant cover type, Sierran Mixed Conifer - Mesic, and its classes, in order to illustrate the dynamics that play out over many years. (a) Timestep 1 (b) Timestep 2 (c) Timestep 3 (d) Timestep 4.}
+  \caption{A sequence of four timesteps during the middle of the simulation, showing changes in condition classes over time. Here we highlight the dominant cover type, Sierran Mixed Conifer - Mesic, and its classes, in order to illustrate the dynamics that play out over many years. (a) Timestep 1 (b) Timestep 2 (c) Timestep 3 (d) Timestep 4. Patches in shades of brown and tan below to other cover types.}
   \label{fig:covcondmaps}
 \end{figure}
 
@@ -470,7 +471,7 @@ The seral-stage distribution appeared to be in dynamic equilibrium (i.e., the pe
   \label{fig:covcond_smcx}
 \end{figure}
 
-The distribution of area among stand conditions within xeric mixed conifer forests fluctuated over time, as expected (Figure~\ref{fig:covcond_smcx}). For example, the percentage of xeric mixed conifer forests in the Early Development varied from 25\% to 43\%, reflecting the dynamic nature of this cover type (Table~\ref{tab:covcond_smcx}). During the simulation, Early Development (which includes post-fire chaparral fields) and Mid Development - Open conditions dominated, in contrast to the current distribution, which is somewhat even across classes (although late development, open canopy stands are currently quite rare).  %
+The distribution of area among stand conditions within xeric mixed conifer forests fluctuated over time, as expected (Figure~\ref{fig:covcond_smcx}). For example, the percentage of xeric mixed conifer forests in the Early Development varied from 25\% to 43\%, reflecting the dynamic nature of this cover type (Table~\ref{tab:covcond_smcx}). During the simulation, Early Development (which includes post-fire chaparral fields) and Mid Development - Open conditions dominated, in contrast to the current distribution, which is somewhat even across classes (although late development, open canopy stands are currently quite rare).\todo{comment from becky I don't understand: "I think you should just include this in the methods."}  %
 
 The seral-stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each stand condition varied about a stable mean). The current seral-stage distribution was never observed under the simulated HRV (Table~\ref{tab:covcond_smcx}). In fact, only Late Development - Moderate had a distribution within the simulated HRV (at the $94^{\text{th}}$ percentile). The most dramatic departure was the increase in Early Development and Mid Development - Open during the simulated HRV compared to the current landscape (currently at 19\% and 11\%, respectively). We also observed a much lower proportion of xeric mixed conifer forest in Late Development - Closed during the simulation than in the current landscape (25\%). 
 
@@ -507,16 +508,8 @@ The seral-stage distribution appeared to be in dynamic equilibrium (i.e., the pe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Landscape Configuration}
-One of the principal purposes of gaining a better quantitative understanding of the historic reference period is to know whether recent human activities have caused landscapes to move outside their historic range of variability (Landres et al.1999, Swetnam et al. 1999). We summarized the structure and patterns in the landscape using a suite of statistical measures calculated using \textsc{Fragstats}. Table \ref{tab:fragland} shows the range of variability for the simulation period as well as the current value, SRV percentile for the current value (``Current SRV Percentile''), and the departure index. We show here a subset of metrics most useful for understanding patch characteristics in the study area. See Appendix \ref{app:metricdescriptions} for a detailed description of \textsc{Fragstats} metrics. At the landscape-level, most computed metrics have values outside the HRV. In Figures \ref{fig:fragland_areashape}, \ref{fig:fragland_contagsiei}, and \ref{fig:fragland_core} we highlight a further subset of the metrics from Table \ref{tab:fragland} for the purposes of discussing the landscape under the simulated historic period as compared to the present day. %Figures for all metrics are included in \todo{the appendix?}. *I don't think we need to include all the figures
+One of the principal purposes of gaining a better quantitative understanding of the historic reference period is to know whether recent human activities have caused landscapes to move outside their historic range of variability (Landres et al.1999, Swetnam et al. 1999). We summarized the structure and patterns in the landscape using a suite of statistical measures calculated using \textsc{Fragstats}. Table \ref{tab:fragland} shows the range of variability for the simulation period as well as the current value, SRV percentile for the current value (``Current SRV Percentile''), and the departure index. We show here a subset of metrics most useful for understanding patch characteristics in the study area. See Appendix \ref{app:metricdescriptions} for a detailed description of \textsc{Fragstats} metrics. At the landscape-level, most computed metrics have values outside the HRV. In Figures \ref{fig:fragland_areashape}, \ref{fig:fragland_contagsiei}, and \ref{fig:fragland_core} we highlight a further subset of the metrics from Table \ref{tab:fragland} for the purposes of discussing the landscape under the simulated historic period as compared to the present day\todo{Becky says this is also discussion, and that results need to be better presented (but no suggestion how)}. %Figures for all metrics are included in \todo{the appendix?}. *I don't think we need to include all the figures
 
-
-%%% Decided that this departure index didn't make sense
-%The departure index indicates the distance from the 50$^{\text{th}}$ percentile value. This provides an uncapped index, allowing for interpretation of ``how far'' outside the 90\% range of variability a current landscape metric is. 
-%If the current value is less than the median from the simulation, the departure index is given by:
-%$$ \frac{ \text{observed} - \text{median} }{ \text{median} - 5^{th} \text{percentile} }  $$
-%If the current value is greater than the median from the simulation, the departure index is given by:
-%$$ \frac{ \text{observed} - \text{median} }{95^{th} \text{percentile} - \text{median}  }  $$
-%If the current value is outside the HRV, its departure index value will be greater than 100 or less than -100. 
 
 % repaired table 9/13
 %\begin{landscape}
