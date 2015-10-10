@@ -11,7 +11,7 @@
 \usepackage{multirow}
 \usepackage{changepage}
 \usepackage{amsmath}
-\usepackage[]{todonotes}%[textwidth=1in]
+\usepackage[textwidth=0.8in]{todonotes}
 \usepackage{siunitx}
 \usepackage[figuresright]{rotating}
 \usepackage[format=hang,labelfont=bf,size=small]{caption}
@@ -61,7 +61,7 @@
 \include{Ch3_FRV} 
 
 
-%\include{App_Inputs-CovDesc}
+\include{App_Inputs-CovDesc}
 %\include{App_MoreResults}
 %\include{App_ExtraCovResults}
 %\include{App_FragDesc}
@@ -72,6 +72,7 @@
 %\include{glossary} 
 %\include{notat} 
 \bibliographystyle{humannat}%amsalpha} %The style you want to use for references. 
+\interlinepenalty=10000
 \bibliography{bibliography.bib} %The files containing all the articles and books you ever referenced. 
 \setcitestyle{notesep={:},aysep={}} 
 %\begin{Appendices}

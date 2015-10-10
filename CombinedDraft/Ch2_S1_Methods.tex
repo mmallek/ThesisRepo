@@ -8,7 +8,7 @@
 \begin{figure}[!htbp]
 \includegraphics[width=\textwidth]{/Users/mmallek/Tahoe/Report3/images/studyarea.png}
 \caption{The Sierra Nevada Ecoregion is outlined in brown. The project landscape (outlined in black) is located in the northern extent of the Sierra Nevada on the Tahoe National Forest, comprising the Yuba River watershed.}
-\label{projectarea}
+\label{projectarea-ch2}
 \end{figure}
 
 The Sierra Nevada is a major North American mountain range, located east of California's Central Valley and extending from Fredonyer Pass in the north to southern Kern County in the south. Much of the Sierra Nevada is reserved as federally-held public land, managed by the U.S. Forest Service, Bureau of Land Management, and the National Park Service. The Plumas and Tahoe National Forests are located in the northern portion of the Sierra Nevada. The project landscape (see Figure~\ref{projectarea}) is located on the northern part of the Tahoe National Forest, on the Yuba River and Sierraville Ranger Districts, and comprises about 181,550 hectares. It is composed of a set of three HUC-5 watersheds, the Upper North Yuba River, the Middle Yuba River, and the Lower North Yuba River, collectively referred to in this document as the Upper Yuba River watershed. HUCs are Hydrologic Unit Codes that refer to a nested system of watersheds in the United States, defined by the United States Geological Survey. The HUC-2 watershed scale includes the largest defined watersheds, which are then subdivided down to a smallest level of HUC-16. HUCs are commomnly used by agencies like the Forest Service to organize land management.
@@ -21,6 +21,7 @@ Prior to European settlement, wildfire was a major source of disturbance on the 
 
 From Becky, in response to previous sentence: ``This isn't necessarily the case.  Those areas that were succeeded to old growth were areas that wouldn't have burned as regularly (lower slopes, canyon bottoms).  With frequent fire the surrounding landscapes were maintained in a low fuel condition so fires wouldn't have spread into them.  With fire suppression, the density of these forests have increased across the board and this has resulted in altered fire spread and intensity patterns.''
 
+% I think this should go into management recommendations as context... but it sort of explains why the HRV is gone. Hm. :()
 The\todo{Becky crossed a lot of this stuff out. I think the idea is to focus only on the history here. Save what the forest is like now for discussion on how to deal with results. I still think it's important context.} arrival of Europeans in the 1850s sparked a transformation of this landscape as people harvested timber, extracted gold using hydraulic mining techniques, and suppressed wildfires \citep{Storer1963}. Forestry, mining, grazing, and dozens of recreational activities, including hunting, mountain biking, and hiking continue to take place on the Tahoe National Forest. Fifteen allotments exist within the project area for both cattle and sheep grazing. In addition, 231,368 hectares inside of the project area have non-Forest Service ownership. Many of these lands were privately held, often by timber companies, before the Forest was created. In addition, many public lands were given to the Central Pacific Railroad in the late 19th century, and this ``checkerboard'' ownership pattern persists today (Figure~\ref{ownership}). Mining of gold and other minerals also continues. These activities affect and interact with ongoing vegetation succession and disturbance processes in the area \citep{USDAForestService2014}.
 
 \begin{figure}[!htbp]
@@ -45,7 +46,7 @@ For the xeric forest types within this landscape, frequent fires (usually having
 \subsubsection{RMLands}
 \textsc{RMLands} is a spatially-explicit, stochastic, landscape-level disturbance and succession model capable of simulating fine-grained processes over large spatial and long temporal extents \citep{McGarigal2005}. It is grid-based but simulates disturbance and succession at the patch level, and employs a dichotomous high vs. low mortality effect of fire in place of the uniformly low, mixed, and high severity regimes used elsewhere \citep{McGarigal2012}. That is, we recognize that all fires form a mosaic of high mortality (over 75\% of overstory trees killed) and low mortality (less than 75\% of overstory trees killed)\todo{I think I rewrote this for FRV} patches, with the ratio varying depending on several factors, including vegetation type, seral sage, topography, and climate.
 
-\textsc{RMLands} was originally developed to simulate Rocky Mountain Landscapes (hence the name), specifically the San Juan National Forest. Historical range of variability analyses were completed in 2005 for the San Juan National Forest and the Uncompaghre Plateau (McGarigal and Romme 2005a, McGarigal and Romme 2005b). \textsc{RMLands} has also been used to simulate wildfire and vegetation succession in northern Idaho \citep{Cushman2011}. Outputs from the model are readable by the landscape pattern analysis software \textsc{Fragstats}, which facilitates the landscape configuration analysis.
+\textsc{RMLands} was originally developed to simulate Rocky Mountain Landscapes (hence the name), specifically the San Juan National Forest. Historical range of variability analyses were completed in 2005 for the San Juan National Forest and the Uncompaghre Plateau \citep{McGarigal2005,McGarigal2005a}. \textsc{RMLands} has also been used to simulate wildfire and vegetation succession in northern Idaho \citep{Cushman2011}. Outputs from the model are readable by the landscape pattern analysis software \textsc{Fragstats}, which facilitates the landscape configuration analysis.
 
 Because this study relied on the use of computer models, we note here some limitations that should be understood before applying the results in a management context. First, while it is important to recognize the many advantages of models, it is critical to understand that models are abstract and simplified representations of reality. \textsc{RMLands}, in particular, simulates wildfires, but does not simulate all of the disturbance processes or all of the complex interactions among them that characterize real landscapes. Ultimately, the results of a model are constrained by the quality of input data, which are not perfect. For example, the vegetation cover layer is subject to human interpretation errors and objective classification errors, and is further limited by the spatial resolution of the grid. The most appropriate use of the results is therefore to help identify the most influential factors driving landscape change, implications of our simulated disturbance and succession regime, and areas where further research is needed to delineate key parameters.
 
@@ -98,8 +99,9 @@ As Table~\ref{covertable} shows, most cover types occupy a small extent of the p
 %%%%%%%%%%%%%%%%%%%%%%
 %%% COVER TABLE %%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
-\small
+
 \begin{table}[!htbp]
+\small
 \caption{List of land cover types developed for this project. Included are the cover type abbreviation, full cover type name, and total area in the buffered project landscape in both acres and hectares.}
 \label{covertable}
 \begin{tabular}{@{}lllll@{}}
@@ -152,6 +154,7 @@ Extensive geoprocessing was required to prepare this layer for \textsc{RMLands}.
 %%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[!htbp]
+\small
 \centering
 \caption{List of condition classes developed for this project. Condition classes describe developmental stage (e.g. ``early'') and canopy closure (e.g. ``open''). Included are the condition class codes, abbreviations, and full names.}
 \label{condtable}
@@ -529,6 +532,7 @@ During the calibration phase of the model, a typical simulation would be three r
 
 % Maybe don't need the abbreviations. They are used in the the tables and figures later though.
 \begin{table}[]
+\small
 \centering
 \caption{All \textsc{Fragstats} metrics computed for the study area during the simulated HRV. An `X' in the landscape or class column denotes whether that metric is calculated at that level. Metrics in bold are those we selected to emphasize in order to provide a parsimonious explanation of the variability in landscape structure during the simulated HRV.}
 \label{tab:fraglist}

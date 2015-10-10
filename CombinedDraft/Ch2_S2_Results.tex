@@ -13,21 +13,20 @@
 % check math using Wildfire_darea_trajectory.csv
 % redone 9/15
 
-\todo{Becky feels like this is also discussion}
-Approximately 96\% of the landscape was eligible for wildfire disturbance (all cover types except Barren and Water)\footnote{In this section we report values based on percent of eligible landscape. There are 181,550 hectares in the core project area, and 174,830 remain after excluding Barren and Water.}. As expected, the frequency and extent of simulated wildfires varied across timesteps (Figure~\ref{fig:darea}). Also, given the rotation interval and percent mortality expected over time on this landscape, large proportions of the project area burned each (5-year) timestep. High mortality fires do include the burning of early development vegetation, including chaparral, when it resets the successional process. In general, within a given timestep about a third of the disturbed area burned as high mortality. We further summarize the disturbance regime in Tables \ref{tab:darea_atleast} and \ref{tab:darea}. Figures~\ref{fig:darea_min_map}--\ref{fig:darea_mean_map} depict wildfire disturbances during the timesteps representing the $5^{th}$ percentile, $50^{th}$ percentile, $95^{th}$ percentile, and mean area burned. 
+Approximately 96\% of the landscape was eligible for wildfire disturbance (all cover types except Barren and Water)\footnote{In this section we report values based on percent of eligible landscape. There are 181,550 hectares in the core project area, and 174,830 remain after excluding Barren and Water.}. As expected, the frequency and extent of simulated wildfires varied across timesteps (Figure~\ref{fig:darea}). Also, given the rotation interval and percent mortality expected over time on this landscape, large proportions of the project area burned each (5-year) timestep. High mortality fires do include the burning of early development vegetation, including chaparral, when it resets the successional process. During most timesteps, about one third of the disturbed area burned at high severity. We further summarize the disturbance regime in Tables \ref{tab:darea_atleast} and \ref{tab:darea}. Figures~\ref{fig:darea_min_map}--\ref{fig:darea_mean_map} depict wildfire disturbances during the timesteps representing the $5^{th}$ percentile, $50^{th}$ percentile, $95^{th}$ percentile, and mean area burned. 
 
 % created 9/17
 \begin{table}[!htbp]
 \centering
-\caption{Summary of disturbed area in terms of proportion of the landscape burned (inclusive of both high and low mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\caption{Summary of disturbed area in terms of proportion of the landscape burned during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned (at either high or low mortality), the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
 \label{tab:darea_atleast}
 \begin{tabular}{@{}lllll@{}}
 \toprule
 \textbf{Proportion of Landscape Burned} & \textbf{1\%+}     & \textbf{10\%+}    & \textbf{25\%+}    & \textbf{50\%+} \\ \midrule
-Number of timesteps        & 459              & 313              & 115              & 13            \\
-Proportion of timesteps    & 1.00             & 0.68             & 0.25             & 0.03          \\
-Interval (timesteps)       & 1.00             & 1.47             & 4.01             & 35.46         \\
-Interval (years)           & 5.02             & 7.36             & 20.04            & 177.31        \\ \bottomrule
+Number of timesteps ($n$)        & 459              & 313              & 115              & 13            \\
+Proportion of timesteps ($p = n/500$)    & 1.00             & 0.68             & 0.25             & 0.03          \\
+Interval (timesteps) ($t = 1/p$)      & 1.00             & 1.47             & 4.01             & 35.46         \\
+Interval (years)    ($y = t * 5$)       & 5.02             & 7.36             & 20.04            & 177.31        \\ \bottomrule
 \end{tabular}
 \end{table}\todo{Need to improve this caption}
 
@@ -130,7 +129,7 @@ $95^{th}$ percentile        &   31.29 (54,703)      & 21.43 (37,461)   &    45.8
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \paragraph{Sierran Mixed Conifer - Mesic}
-Sierran Mixed Conifer - Mesic (\textsc{smc\_m}) is the dominant cover type within the core project area, encompassing 57,853 ha and comprising roughly 32\% of the project area. Wildfire was prevalent in this cover type. The frequency and extent of burned area is similar to that for the landscape as a whole (Figure \ref{fig:darea_smcm}). We summarize the disturbance regime in Tables \ref{tab:darea_smcm} and \ref{tab:darea_atleast_smcm}.
+Sierran Mixed Conifer - Mesic (\textsc{smc\_m}) is the dominant cover type within the core project area, encompassing 57,853 ha and comprising roughly 32\% of the project area. Wildfire was prevalent in this cover type. The frequency and extent of burned area is similar to that for the landscape as a whole (Figure \ref{fig:darea_smcm}). We summarize the disturbance regime in Tables\todo{make caption refer to original table for explanation} \ref{tab:darea_smcm} and \ref{tab:darea_atleast_smcm}.
 
 % plots redone
 \begin{figure}[!htbp]
@@ -231,7 +230,9 @@ Interval (years)        & 5.00         & 6.64          & 15.57         & 85.37  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Effect of Climate} 
-Climate has a positive relationship with disturbed area (Figure \ref{fig:climate_darea}). A regression line is plotted, but note the heteroskedastic variance about the mean. The relationship is weakly positive. During wetter-than-average years, less area was disturbed. Over 20\% of the landscape burned only in timesteps during which the climate parameter was at least 0.63\todo{this isn't clear}. However, over 50\% of the landscape burned in several timesteps when the climate parameter was less than 1, which is the average value over the historical period. Overall we observe that as climate shifts from wet to drought, the disturbed area increases. Fire size is also influenced by vegetation susceptibility and the specified disturbance size distribution. For this reason, large areas may burn in relatively ``wet'' years. Figure \ref{fig:compare_clim_darea} illustrates the climate parameter values and disturbed area proportion of the landscape for a subset of timesteps during the simulation\todo{clarify what is meant}.
+%todo add more clarifying text
+% fire size sentence is discussion
+Climate has a positive relationship with disturbed area (Figure \ref{fig:climate_darea}). A regression line is plotted, but note the heteroskedastic variance about the mean. The relationship is weakly positive. During wetter-than-average years, less area was disturbed. For example, no more than 20\% of the landscape burned in timesteps during which the climate parameter was below 0.63. However, over 50\% of the landscape burned in several timesteps when the climate parameter was less than 1. The climate parameter is defined such that 1 is the average value over the historical period. Overall we observe that as climate shifts from wet to drought, the disturbed area increases. Fire size is also influenced by vegetation susceptibility and the specified disturbance size distribution. For this reason, large areas may burn in relatively ``wet'' years. Figure \ref{fig:compare_clim_darea} illustrates the climate parameter values and disturbed area proportion of the landscape for a subset of timesteps during the simulation\todo{clarify what is meant}.
 
 \begin{figure}[!htbp]
   \centering
@@ -336,8 +337,9 @@ Overall, the point-specific return interval for an individual cell ranged from 1
 \label{subsec:HRVvegresponse}
 
 \subsubsection{Effect of Topographic Position}
-
-The\todo{Becky thinks this also has lots of discussion} topographic position index value for a given cell acts as an input into the susceptibility and mortality values otherwise defined for that cover type and condition class combination. In general, cells with smaller TPI values had reduced susceptibility and mortality. Early development and open canopy conditions tend to result from fire, and we predicted that an increase in fires and in the likelihood of high mortality fire would lead to a decrease in the average canopy cover values for cells with large TPI values. Table~\ref{tab:tpi_cc} in Appendix \ref{app:full-results} displays the results for this simulation for the nine most common cover types. All  show decreased average canopy cover as TPI increases, with the decrease ranging from 5.7\% in xeric mixed evergreen forest to 28.8\% in ultramafic oak-conifer forests. Figure \ref{fig:tpi_cc_smc} shows the plotted data and fitted linear regression line for mesic and xeric sierran mixed conifer forests. Figure \ref{fig:averagecc} is a map displaying average canopy cover across the landscape for the full simulated HRV timeframe, excluding the equilibration period. In general, return intervals and canopy cover varied spatially across the forest and decreased with increasing TPI, reflecting our parameterization, which was based on the theory that higher, more southerly aspects are drier and more susceptible to fires. In mesic mixed conifer forests, canopy cover decreased by about 13\% when comparing minimum to maximum TPI, from an average of 49\% to an average of 43\%. In xeric mixed conifer forests, canopy cover decreased by about 25\% when comparing minimum to maximum TPI, from an average of 36\% to an average of 27\% (Table~\ref{tab:tpi_cc_smc}).
+% early development sentence can go in discussion
+% move whole section to methods?
+The\todo{Becky thinks this also has lots of discussion} topographic position index value for a given cell acts as an input into the susceptibility and mortality values otherwise defined for that cover type and condition class combination. Early development and open canopy conditions tend to result from fire, and we predicted that an increase in fires and in the likelihood of high mortality fire would lead to a decrease in the average canopy cover values for cells with large TPI values. Table~\ref{tab:tpi_cc} in Appendix \ref{app:full-results} displays the results for this simulation for the nine most common cover types. All show decreased average canopy cover as TPI increases, with the decrease ranging from 5.7\% in xeric mixed evergreen forest to 28.8\% in ultramafic oak-conifer forests. Figure \ref{fig:tpi_cc_smc} shows the plotted data and fitted linear regression line for mesic and xeric sierran mixed conifer forests. Figure \ref{fig:averagecc} is a map displaying average canopy cover across the landscape for the full simulated HRV timeframe, excluding the equilibration period. In general, return intervals and canopy cover varied spatially across the forest and decreased with increasing TPI, reflecting our parameterization, which was based on the theory that higher, more southerly aspects are drier and more susceptible to fires. In mesic mixed conifer forests, canopy cover decreased by about 13\% when comparing minimum to maximum TPI, from an average of 49\% to an average of 43\%. In xeric mixed conifer forests, canopy cover decreased by about 25\% when comparing minimum to maximum TPI, from an average of 36\% to an average of 27\% (Table~\ref{tab:tpi_cc_smc}).
 
 % figure redone
 \todo{this figure should have grey for water/barren; looks like high canopy cover now}
@@ -373,7 +375,7 @@ The\todo{Becky thinks this also has lots of discussion} topographic position ind
 \subsubsection{Landscape Composition} 
 
 % fixed plots - equilibration line is hard coded in. ocfwu calibration changed; now seems okay by ts 40. potentially could even have cut off equilibration at ts 20 but it's arbitrary. good to keep in mind for future stuff though.
-The seral stage distribution for each cover type varied over time, but did appear to be in dynamic equilibrium. Evidence of both high mortality fire, which triggers a transition to early development conditions for all cover types, and low mortality fire, which can thin a stand and cause a transition to a more open canopy condition (within the same developmental stage), are visible in examining the output grids. Figure \ref{fig:covcondmaps} illustrates these changes for a sequence of four timesteps during the simulation. The seral stage dynamics and current seral stage distribution plots specific to Sierran Mixed Conifer Mesic and Xeric follow (Figures~\ref{fig:covcond_smcm} and \ref{fig:covcond_smcx}).  We compare the current landscape's seral stage distribution to the simulated distribution and compute the HRV departure index in Figures~\ref{fig:covcond_smcm_boxplots} and \ref{fig:covcond_smcx_boxplots} and in Tables \ref{tab:covcond1} and \ref{tab:covcond2}. Plots and tabular results for the other seven focal types are included in Appendix~\ref{app:full-results}, section~\ref{app:sec:seraldynamics}.
+The seral stage distribution for each cover type varied over time, but did appear to be in dynamic equilibrium. Evidence of both high mortality fire, which triggers a transition to early development conditions for all cover types, and low mortality fire, which can thin a stand and cause a transition to a more open canopy condition (within the same developmental stage), are visible in examining the output grids. Figure \ref{fig:covcondmaps} illustrates these changes for a sequence of four timesteps during the simulation. The seral stage dynamics and current seral stage distribution plots specific to Sierran Mixed Conifer Mesic and Xeric follow (Figures~\ref{fig:covcond_smcm} and \ref{fig:covcond_smcx})\todo{merge two figures with parts a,b,c}.  We compare the current landscape's seral stage distribution to the simulated distribution and compute the HRV departure index in Figures~\ref{fig:covcond_smcm_boxplots} and \ref{fig:covcond_smcx_boxplots} and in Tables \ref{tab:covcond1} and \ref{tab:covcond2}. Plots and tabular results for the other seven focal types are included in Appendix~\ref{app:full-results}, section~\ref{app:sec:seraldynamics}.
 
 % new plots 2015-09-18
 \begin{figure}[!htbp]
@@ -471,7 +473,7 @@ The seral-stage distribution appeared to be in dynamic equilibrium (i.e., the pe
   \label{fig:covcond_smcx}
 \end{figure}
 
-The distribution of area among stand conditions within xeric mixed conifer forests fluctuated over time, as expected (Figure~\ref{fig:covcond_smcx}). For example, the percentage of xeric mixed conifer forests in the Early Development varied from 25\% to 43\%, reflecting the dynamic nature of this cover type (Table~\ref{tab:covcond_smcx}). During the simulation, Early Development (which includes post-fire chaparral fields) and Mid Development - Open conditions dominated, in contrast to the current distribution, which is somewhat even across classes (although late development, open canopy stands are currently quite rare).\todo{comment from becky I don't understand: "I think you should just include this in the methods."}  %
+The distribution of area among stand conditions within xeric mixed conifer forests fluctuated over time, as expected (Figure~\ref{fig:covcond_smcx}). For example, the percentage of xeric mixed conifer forests in the Early Development varied from 25\% to 43\%, reflecting the dynamic nature of this cover type (Table~\ref{tab:covcond_smcx}). During the simulation, Early Development (which includes post-fire chaparral fields) and Mid Development - Open conditions dominated, in contrast to the current distribution, which is somewhat even across classes (although Late Development - Open canopy stands are currently quite rare).\todo{becky: "I think you should just include this in the methods." - maybe merge with next para.}  %
 
 The seral-stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each stand condition varied about a stable mean). The current seral-stage distribution was never observed under the simulated HRV (Table~\ref{tab:covcond_smcx}). In fact, only Late Development - Moderate had a distribution within the simulated HRV (at the $94^{\text{th}}$ percentile). The most dramatic departure was the increase in Early Development and Mid Development - Open during the simulated HRV compared to the current landscape (currently at 19\% and 11\%, respectively). We also observed a much lower proportion of xeric mixed conifer forest in Late Development - Closed during the simulation than in the current landscape (25\%). 
 
@@ -508,8 +510,39 @@ The seral-stage distribution appeared to be in dynamic equilibrium (i.e., the pe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Landscape Configuration}
-One of the principal purposes of gaining a better quantitative understanding of the historic reference period is to know whether recent human activities have caused landscapes to move outside their historic range of variability (Landres et al.1999, Swetnam et al. 1999). We summarized the structure and patterns in the landscape using a suite of statistical measures calculated using \textsc{Fragstats}. Table \ref{tab:fragland} shows the range of variability for the simulation period as well as the current value, SRV percentile for the current value (``Current SRV Percentile''), and the departure index. We show here a subset of metrics most useful for understanding patch characteristics in the study area. See Appendix \ref{app:metricdescriptions} for a detailed description of \textsc{Fragstats} metrics. At the landscape-level, most computed metrics have values outside the HRV. In Figures \ref{fig:fragland_areashape}, \ref{fig:fragland_contagsiei}, and \ref{fig:fragland_core} we highlight a further subset of the metrics from Table \ref{tab:fragland} for the purposes of discussing the landscape under the simulated historic period as compared to the present day\todo{Becky says this is also discussion, and that results need to be better presented (but no suggestion how)}. %Figures for all metrics are included in \todo{the appendix?}. *I don't think we need to include all the figures
+One of the principal purposes of gaining a better quantitative understanding of the historic reference period is to know whether recent human activities have caused landscapes to move outside their historic range of variability (Landres et al.\ 1999, Swetnam et al.\ 1999). We summarized the structure and patterns in the landscape using a suite of statistical measures calculated using \textsc{Fragstats}. Table \ref{tab:fragland} shows the range of variability for the simulation period as well as the current value, SRV percentile for the current value (``Current SRV Percentile'')\todo{fix variable name srv}, and the departure index. We show here a subset of metrics most useful for understanding patch characteristics in the study area. See Appendix \ref{app:metricdescriptions} for a detailed description of \textsc{Fragstats} metrics. At the landscape-level, most computed metrics have values outside the HRV. In Figures \ref{fig:fragland_areashape}, \ref{fig:fragland_contagsiei}, and \ref{fig:fragland_core} we highlight a further subset of the metrics from Table \ref{tab:fragland} to illustrate departure of the present day landscape from the simulated historic period as compared to the present day. In fact, for these five metrics, the current landscape is fully departed from the historical range of variability. The average patch size is larger, and the average patch shape more complex, than the current landscape. During the HRV, the average patch contains more core area than in the current landscape. The landscape during the HRV is much more contagious than the current landscape. Values for Simpson's Evenness are near 1 during the HRV and in the present landscape, but the HRV values are well below the current conditions.
 
+% plots updated 2015-09
+
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    %\centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/AREA_AM1.png}
+    \label{fig:fragland_area}
+  }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/SHAPE_AM1.png}
+    \label{fig:fragland_area}
+  } \\
+  \subfloat[][]{
+    %\centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/CONTAG1.png}
+    \label{fig:fragland_contag}
+  }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/SIEI1.png}
+    \label{fig:fragland_siei}
+  } \\
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/CORE_AM1.png}
+    \label{fig:fragland_core}
+    }
+\caption{Landscape \textsc{Fragstats} Metrics. (a) Area-weighted Mean Patch Area, a measure of patch size (b) Area-weighted Mean Shape, a measure of patch shape complexity (c) Contagion, a measure of patch dispersion and interspersion (d) Simpson's Evenness Index, a measure of diversity, or evenness, across all landscape patches (e) Area-weighted Mean Core Area, a measure of interior habitat available at the patch level.}
+\label{fig:fragland}
+\end{figure}
+
+%\clearpage
 
 % repaired table 9/13
 %\begin{landscape}
@@ -548,40 +581,8 @@ One of the principal purposes of gaining a better quantitative understanding of 
 \end{table}
 %\end{landscape}
 
-% plots updated 2015-09
-\clearpage
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-\includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/AREA_AM1.png}
-    }%
-  \subfloat[][]{
-\includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/SHAPE_AM1.png}
-  }
-\caption{Landscape \textsc{Fragstats} Metrics. Left, Area-weighted Mean Patch Area. Right, Area-weighted Mean Shape. We use the area-weighted metrics to reduce the influence of the many extremely small patches. The average patch size is larger, and the average patch shape more complex, than the current landscape.} 
-\label{fig:fragland_areashape}
-\end{figure}
 
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-\includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/CONTAG1.png}
-    }%
-  \subfloat[][]{
-\includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/SIEI1.png}
-  }
-\caption{Landscape \textsc{Fragstats} Metrics. (a) Contagion, a metric describing patch dispersion and interspersion. The landscape during the HRV is much more contagious than the current landscape. (b) Simpson's Evenness Index, which indicates the distance from maximum diversity, or evenness, in the landscape patches. Values for Simpson's Evenness are near 1 during the HRV and in the present landscape, but the HRV values are well below the current conditions.} 
-\label{fig:fragland_contagsiei}
-\end{figure}
 
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/CORE_AM1.png}
-\caption{Landscape \textsc{Fragstats} Metrics. Results for the Area-weighted Mean Core Area, a measure of interior habitat available at the patch level. During the HRV, the average patch contains more core area than in the current landscape.} 
-\label{fig:fragland_core}
-\end{figure}
 
 \clearpage
 
@@ -593,9 +594,9 @@ In addition to the landscape-level results, we also summarized structure and pat
 
 
 \subparagraph{Sierran Mixed Conifer - Mesic} %updated analysis 2015-09-20
-The spatial configuration of stand conditions fluctuated markedly over time, although there was considerable variation in the magnitude of variability among configuration metrics. Early seral and mid development patches in this cover type tended to have wide ranges of variability in metric outcomes, and were larger, more aggregated, more geometrically complex, and had more core area during the HRV than during the current conditions. Metric values for these seral stages tended to be completely or nearly outside the simulated HRV. 
+The spatial configuration of stand conditions fluctuated markedly over time, although there was considerable variation in the magnitude of variability among configuration metrics\todo{B: defense question: why is there more patch area for mid closed. more early makes sense}. Early seral and mid development patches in this cover type tended to have wide ranges of variability in metric outcomes, and were larger, more aggregated, more geometrically complex, and had more core area during the HRV than during the current conditions. Metric values for these seral stages tended to be completely or nearly outside the simulated HRV. 
 
-In contrast, the other seral stages all fall within the simulated HRV in terms of patch size and core area. Results for geometric complexity and aggregation were less consistent across the other seral stages. While late open stands were more geometrically complex during the HRV than on the current landscape, mid moderate, mid late, and late moderate patches were all less geometrically complex. Late closed patches currently fall within the simulated HRV. Meanwhile, the open canopy seral stages are currently within the HRV in terms of aggregation, while the mid moderate, late closed, and late moderate stages are all currently outside the range of variability and less aggregated today than during the simulated HRV.  
+In contrast\todo{B: good results writing}, the other seral stages all fall within the simulated HRV in terms of patch size and core area. Results for geometric complexity and aggregation were less consistent across the other seral stages. While late open stands were more geometrically complex during the HRV than on the current landscape, mid moderate, mid late, and late moderate patches were all less geometrically complex. Late closed patches currently fall within the simulated HRV. Meanwhile, the open canopy seral stages are currently within the HRV in terms of aggregation, while the mid moderate, late closed, and late moderate stages are all currently outside the range of variability and less aggregated today than during the simulated HRV.  
 
 % figures updated 2015-09-20
 \begin{figure}[!htbp]
