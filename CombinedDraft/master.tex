@@ -11,7 +11,8 @@
 \usepackage{multirow}
 \usepackage{changepage}
 \usepackage{amsmath}
-\usepackage[textwidth=0.8in]{todonotes}
+%\usepackage[textwidth=0.8in]{todonotes}
+\usepackage[disable]{todonotes}
 \usepackage{siunitx}
 \usepackage[figuresright]{rotating}
 \usepackage[format=hang,labelfont=bf,size=small]{caption}
@@ -19,7 +20,6 @@
 \usepackage[modulo]{lineno}
 \usepackage{hanging}
 \usepackage{changepage}
-\usepackage{bold-extra}
 
 \usepackage{hyperref}
 %\usepackage{cleverref}
@@ -61,12 +61,12 @@
 \include{Ch3_FRV} 
 
 
-%\include{App_Inputs-CovDesc}
-%\include{App_MoreResults}
-%\include{App_ExtraCovResults}
-%\include{App_FragDesc}
-%\include{App_Fragland}
-%\include{App_Fragclass}
+\include{App_Inputs-CovDesc}
+\include{App_MoreResults}
+\include{App_ExtraCovResults}
+\include{App_FragDesc}
+\include{App_Fragland}
+\include{App_Fragclass}
 
 \backmatter 
 %\include{glossary} 
@@ -75,8 +75,7 @@
 \interlinepenalty=10000
 \bibliography{bibliography.bib} %The files containing all the articles and books you ever referenced. 
 \setcitestyle{notesep={:},aysep={}} 
-%\begin{Appendices}
-%\end{Appendices}  
+
 %\printindex %Make an index AUTOMATICALLY 
 
 \end{document} 
