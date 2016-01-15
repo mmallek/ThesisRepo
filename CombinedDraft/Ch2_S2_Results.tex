@@ -10,13 +10,17 @@
 % check math using Wildfire_darea_trajectory.csv
 % redone 9/15
 
-Approximately 96\% of the landscape was eligible for wildfire disturbance (all cover types except Barren and Water)\footnote{In this section we report values based on percent of eligible landscape. There are 181,550 hectares in the core project area, and 174,830 remain after excluding Barren and Water.}. As expected, the frequency and extent of simulated wildfires varied across timesteps (Figure~\ref{fig:darea}). Also, given the rotation interval and percent mortality expected over time on this landscape, large proportions of the project area burned each (5-year) timestep. High mortality fires do include the burning of early development vegetation, including chaparral, when it resets the successional process. During most timesteps, about one third of the disturbed area burned at high severity. We further summarize the disturbance regime in Tables \ref{tab:darea_atleast} and \ref{tab:darea}. Figures~\ref{fig:darea_min_map}--\ref{fig:darea_mean_map} depict wildfire disturbances during the timesteps representing the $5^{\text{th}}$ percentile, $50^{\text{th}}$ percentile, $95^{\text{th}}$ percentile, and mean area burned. 
+In this section the same results are presented in multiple ways; although this is obviously redundant, it is done with the intent of being as inclusive as possible with respect to the potential audience. The HRV analysis presented here forms the backbone of a formal report submitted to the U.S. Forest Service for use in understanding and planning future management actions. In my experience, variations in the training and background of individuals affects how they understand and interpret different values. For some, probabilistic results are the only ones that make sense or appear valid. For others, results expressed in real terms rather than model outputs are the most useful. In order to not privilege either perspective, I have included a range of information translated in different ways. My goal is to facilitate understanding of the results for both academic and professional audiences.
+
+Approximately 96\% of the landscape was eligible for wildfire disturbance (all cover types except Barren and Water)\footnote{In this section I report values based on percent of eligible landscape. There are 181,550 hectares in the core project area, and 174,830 remain after excluding Barren and Water.}. As expected, the frequency and extent of simulated wildfires varied across timesteps. This variability is illustrated in Figure~\ref{fig:darea-a}. The same data is also represented as a histogram (Figure~\ref{fig:darea-b}) because it can be difficult to see the timesteps with small values. The histogram of the time series data to highlight the rarity of extremely expansive wildfire damage. It was more common during the simulation for fire to burn across 5--20\% of the landscape.
+
+Also, given the specified rotation interval and percent mortality expected over time on this landscape, large proportions of the project area burned each (5-year) timestep. As detailed in Table \ref{tab:darea_atleast}, not only did fire occur in every timestep of the simulation, but it also extended across over 10\% of the landscape during most timesteps. Although wildfire was common and covered a lot of area on a regular basis, very large events were relatively rare under the historical scenario. However, it is important to keep in mind that the simulation covers a very large spatial extent, and thus results in many more acres of fire burning per timestep than typically burn today. In the median timestep (Table \ref{tab:darea}), about 14\% of the landscape burned, which may seem like a low number, but actually translates into a 24,500 hectares of burned land, 6,600 hectares of which burned at high mortality (though not necessarily contiguously). High mortality fires do include the burning of early development vegetation, including chaparral, when it resets the successional process. Further details on the percent of the full landscape that burned, and the breakdown of low versus high mortality outcomes, are included in Tables \ref{tab:darea_atleast} and \ref{tab:darea}.
 
 % created 9/17
 \begin{table}[!htbp]
 \small
 \centering
-\caption{Summary of disturbed area in terms of proportion of the landscape burned during the simulation (after the equilibration period). For each benchmark proportion (1,10, 25, or 50+) of the landscape that burns, we provide a few representations of the data intended to support different ways of considering the results, that we hope will serve both modelers' and managers' perspectives. First, we counted the number of timesteps during the simulation when that extent burned at either high or low mortality ($n$). Then we calculate the proportion of timesteps that represents ($p = n/500$). The inverse of this is the interval in timesteps, i.e., approximately every 4 timesteps, at least 25\% of the landscape burned. ($t = 1/p$). Finally, we convert the interval in timesteps to the interval in years ($y = t * 5$).}
+\caption{Summary of disturbed area in terms of proportion of the landscape burned during the simulation (after the equilibration period). For each benchmark proportion (1,10, 25, or 50+) of the landscape that burns, I provide a few representations of the data intended to support different ways of considering the results, that I hope will serve both modelers' and managers' perspectives. First, I counted the number of timesteps during the simulation when that extent burned at either high or low mortality ($n$). Then I calculated the proportion of timesteps that represents ($p = n/500$). The inverse of this is the interval in timesteps, i.e., approximately every 4 timesteps, at least 25\% of the landscape burned. ($t = 1/p$). Finally, I converted the interval in timesteps to the interval in years ($y = t * 5$).}
 \label{tab:darea_atleast}
 \begin{tabular}{@{}lllll@{}}
 \toprule
@@ -48,19 +52,25 @@ $95^{\text{th}}$ percentile        &   31.29 (54,703)      & 21.43 (37,461)   & 
 
 %redone 9/13
 
+
 \begin{figure}[!htbp]
   \centering
   \subfloat[][]{
     \centering
 \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_all.png}
     }%
+    \label{fig:darea-a}
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_newhist_all.png}
     }
+    \label{fig:darea-b}
   \caption{\small (a) Disturbance trajectory for wildfire during the simulation. The first timestep is 40 because we excluded earlier timesteps as equilibration. Red bars represent high mortality fire, while green bars represent low mortality fire and are stacked on top of high mortality. (b) Histogram of the percent of the landscape burned per timestep.} 
   \label{fig:darea}
 \end{figure}
 \clearpage
+
+While the tables and figures above represent the data aspatially, it can also be helpful to look at individual timesteps during the simulation. Because \textsc{RMLands} is spatially explicit in its wildfire generation processes, the burned areas generated within the model look like fire perimeter maps created following actual wildfire events, and occur in the areas on the landscape anticipated to be the most susceptible to wildfire. The extent of burned area observed during the simulation is far above what has been observed in recent decades\todo{cite this}. Beyond saying it is much greater, however, it can be difficult to imagine and conceptualize what fire covering, for example, 50\% of the study area looks like. To facilitate understanding of the statistical outcomes of this work, I created maps displaying the mortality outcomes from wildfires at four key timesteps: the minimum, maximum, median, and mean area burned (because the exact mean area burned value did not correspond to any timestep, I display the one with the closest value for the ``any mortality'' category) in Figures~\ref{fig:darea_min_map}--\ref{fig:darea_mean_map}. During timesteps when a large amount of fire is recorded, multiple individual fires can ``run together'' on the landscape. Each timestep in the model represents five years, and the model does not differentiate between individual fire seasons below this level. Thus the included individual fire map (right-hand figures) offers a visualization of fires over the short term.
+
 
 % background color 24, 15, 41, 0
 \begin{figure}[!htbp]
@@ -74,7 +84,7 @@ $95^{\text{th}}$ percentile        &   31.29 (54,703)      & 21.43 (37,461)   & 
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/maps/hrv-distid-5th.pdf}
     \label{fig:distid_min}
   }
-  \caption{Maps of area burned during the timestep in the \textbf{$5^{th}$ percentile for area burned (3.54\%)} during the simulation. (a) Map by mortality level. Red indicates high mortality fire, while orange indicates low mortality fire. (b) Map showing each individual fire in a different color.}
+  \caption{Maps of area burned during the timestep in the \textbf{$5^{\text{th}}$ percentile for area burned (3.54\%)} during the simulation. (a) Map by mortality level. Red indicates high mortality fire, while orange indicates low mortality fire. (b) Map showing each individual fire in a different color.}
   \label{fig:darea_min_map}
 \end{figure}
 
@@ -89,7 +99,7 @@ $95^{\text{th}}$ percentile        &   31.29 (54,703)      & 21.43 (37,461)   & 
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/maps/hrv-distid-95th.pdf}
     \label{fig:distid_max}
   }
-  \caption{Maps of area burned during the timestep with the \textbf{$95^{th}$ percentile for area burned (45.88\%)} during the simulation. (a) Map by mortality level. Red indicates high mortality fire, while orange indicates low mortality fire. (b) Map showing each individual fire in a different color.}
+  \caption{Maps of area burned during the timestep with the \textbf{$95^{\text{th}}$ percentile for area burned (45.88\%)} during the simulation. (a) Map by mortality level. Red indicates high mortality fire, while orange indicates low mortality fire. (b) Map showing each individual fire in a different color.}
   \label{fig:darea_max_map}
 \end{figure}
 
@@ -128,7 +138,7 @@ $95^{\text{th}}$ percentile        &   31.29 (54,703)      & 21.43 (37,461)   & 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \paragraph{Sierran Mixed Conifer - Mesic}
-Sierran Mixed Conifer - Mesic (\textsc{smc\_m}) is the dominant cover type within the core project area, encompassing 57,853 ha and comprising roughly 32\% of the project area. Wildfire was prevalent in this cover type. The frequency and extent of burned area is similar to that for the landscape as a whole (Figure \ref{fig:darea_smcm}). We summarize the disturbance regime in Tables~\ref{tab:darea_smcm} and \ref{tab:darea_atleast_smcm}.
+Sierran Mixed Conifer - Mesic (\textsc{smc\_m}) is the dominant cover type within the core project area, encompassing 57,853 ha and comprising roughly 32\% of the project area. Wildfire was prevalent in this cover type. I again present figures and tables that incorporate some redundancy in order to facilitate understanding by a broad audience, as described in the beginning of this section (Figure \ref{fig:darea_smcm}). I summarize the disturbance regime in Tables~\ref{tab:darea_smcm} and \ref{tab:darea_atleast_smcm}. The frequency and extent of burned area is similar to that for the landscape as a whole.
 
 % plots redone
 \begin{figure}[!htbp]
@@ -181,7 +191,7 @@ Interval (years)        & 5.03         & 7.41          & 18.29         & 153.67 
 
 
 \paragraph{Sierran Mixed Conifer - Xeric}
-Sierran Mixed Conifer - Xeric (\textsc{smc\_x}) is the second most dominant cover type within the core project area, encompassing 52,198 ha and comprising roughly 29\% of the project area. Wildfire was prevalent in this cover type. The frequency and extent of burned area is similar to that for the landscape as a whole (Figure \ref{fig:darea_smcx}). We summarize the disturbance regime in Tables \ref{tab:darea_smcx} and \ref{tab:darea_atleast_smcx}
+Sierran Mixed Conifer - Xeric (\textsc{smc\_x}) is the second most dominant cover type within the core project area, encompassing 52,198 ha and comprising roughly 29\% of the project area. Wildfire was prevalent in this cover type. I again present figures and tables that incorporate some redundancy in order to facilitate understanding by a broad audience, as described in the beginning of this section (Figure \ref{fig:darea_smcx}). I summarize the disturbance regime in Tables \ref{tab:darea_smcx} and \ref{tab:darea_atleast_smcx}. Both low and high mortality fires were more common on the xeric mixed conifer forests than in mesic mixed conifer forests or the study area as a whole. High mortality wildfire on xeric mixed conifer forests extended over a larger mean and median proportion compared to the overall landscape, although the $95^{\text{th}}$ percentile for high mortality fire in xeric mixed conifer forests was 3.2\% less.
 
 % updated 2015-09
 \begin{figure}[!htbp]
@@ -262,7 +272,7 @@ Climate has a positive relationship with disturbed area (Figure \ref{fig:climate
 
 \newpage
 \subsubsection{Fire Rotation} 
-As described in Chapter \ref{sec:hrvmethods}, we calibrated the model by adjusting seral stage-specific susceptibility values until the nine cover types with more than 1000 ha extent across the study area were within about 10\% of their target fire rotation. We present here the results for Sierran Mixed Conifer Mesic and Xeric. Full results are presented in Appendix \ref{app:full-results}. 
+As described in Chapter \ref{sec:hrvmethods}, I calibrated the model by adjusting seral stage-specific susceptibility values until the nine cover types with more than 1000 ha extent across the study area were within about 10\% of their target fire rotation. I present here the results for Sierran Mixed Conifer Mesic and Xeric. Full results are presented in Appendix \ref{app:full-results}. 
 
 % updated 2015-09
 \begin{table}[!htbp]
@@ -470,7 +480,7 @@ The current seral stage distribution was never observed under the simulated HRV,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Landscape Configuration}
-One of the principal purposes of gaining a better quantitative understanding of the historic reference period is to know whether recent human activities have caused landscapes to move outside their historic range of variability (Landres et al.\ 1999, Swetnam et al.\ 1999). We summarized the structure and patterns in the landscape using a suite of statistical measures calculated using \textsc{Fragstats}. Table \ref{tab:fragland} shows the range of variability for the simulation period as well as the current value, \%RV for the current value, and the departure index. We show here a subset of metrics most useful for understanding patch characteristics in the study area. See Appendix \ref{app:metricdescriptions} for a detailed description of \textsc{Fragstats} metrics. At the landscape-level, most computed metrics have values outside the HRV. 
+I summarized the structure and patterns in the landscape using a suite of statistical measures calculated using \textsc{Fragstats}. Table \ref{tab:fragland} shows the range of variability for the simulation period as well as the current value, the current percentile range of variability (\%RV) for that proportion, and the departure index. I show here a subset of metrics most useful for understanding patch characteristics in the study area. See Appendix \ref{app:metricdescriptions} for a detailed description of \textsc{Fragstats} metrics. At the landscape-level, most computed metrics have values outside the HRV. 
 
 In Figure~\ref{fig:fragland} we graphically display the results from Table \ref{tab:fragland} For these six metrics, the current landscape is fully departed from the historical range of variability. The average patch size is larger, and the average patch shape more complex, than the current landscape. Patches during the HRV had more edge. During the HRV, the average patch contains more core area than in the current landscape. The landscape during the HRV is much more contagious than the current landscape. Values for Simpson's Evenness are near 1 during the HRV and in the present landscape, but the HRV values are well below the current conditions.
 
