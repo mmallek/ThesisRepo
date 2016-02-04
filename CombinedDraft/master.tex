@@ -20,6 +20,7 @@
 \usepackage[modulo]{lineno}
 \usepackage{hanging}
 \usepackage{changepage}
+\usepackage{lipsum}
 
 \usepackage{hyperref}
 %\usepackage{cleverref}
@@ -43,27 +44,31 @@
 
 \author{Maritza Mallek}
 \title{Modeling Historical Range of Variability and Future Climate Change in the Yuba River Watershed, Tahoe National Forest}
-\date{October 2015}
-
-
+\date{March 2016}
 
 \maketitle
+
+\section*{Abstract}
+In California's northern Sierra Nevada mountains, the historical processes of fire-dependent forest ecosystems have been interrupted and altered by changing human land use and fire suppression policies. In directing National Forest units to plan for a future that includes multiple use and restoration of resilient ecosystems, Forest Service policy directs land managers to explore the range of variability of ecological processes at multiple scales, and to use the results as a tool in restoration and planning. Quantifying the degree to which human actions may shift a system out of its natural range of variability is an important part of such evaluations. Climate also underlies and influences ecosystem processes related to wildfires and forest succession. A changing climate means that cycles of drought and wet periods are shifting, and some climate variables will shift from oscillation around a steady mean to changing along a positive trajectory.
+
+In this thesis, I adapted the Rocky Mountain Landscape Simulator (\textsc{RMLands}), a spatially explicit, stochastic, landscape disturbance and succession model, for use in the Sierra Nevada. I merged theoretical ecosystem concepts with empirical data to generate inputs to \textsc{RMLands} and simulate landscape change on a portion of the Tahoe National Forest in California. I simulated wildfire and forest succession under the historical climate settings and under a set of alternative climate trajectories based on the Representative Concentration Pathway RCP8.5 prjoections. I then quantified the historical and the future range of variability in the disturbance regime, seral stage distrbution, and patch configuration, and assessed departure of the current landscape from the ranges of variability using R and \textsc{Fragstats} statistical software.
+
+I found that fire burned more frequently and across larger extents during the simulated historical period than in the last 100 years, and that burned area and the proportion of high severity burned area increased with increasingly warm and dry climate scenarios. Results from both the historical range of variability and future range of variability analysis indicate that overall, the current landscape departs from either historical or future conditions across a range of statistical measures, due to the effects of fire on the vegetation. Based on these findings, I suggest managers implement more aggressive restoration efforts and utilize mitigation measures where the consequences of changing fire regimes are socially unacceptable. Managers and the public will be faced with decisions about how to balance the needs of different ecosystems as well as the communities that inhabit them. My study results can be used to inform goals and specific strategies in restoration planning and help project-level planners think about impacts at the landscape scale. Once restoration activities have been implemented, the study landscape can be re-analyzed to assess success in shifting the landscape to conditions more typical of those in the range(s) of variability. [456 words, max is 350]
+
 \frontmatter 
+
+
 \tableofcontents 
-%\listoffigures
-%\listoftables
+\listoffigures
+\listoftables
 %\include{preface}
 
 \mainmatter 
 
-%Abstract
-In my study area, the natural processes of fire-dependent ecosystems have been interrupted.
-Forest Service policy now directs land managers to explore the range of variability of these ecosystems, and use the results as a tool in restoration and planning
-Climate change means that a historical analysis alone is insufficient.
-In this project, I
-Simulated wildfire and succession under a set of alternative climate trajectories using RMLands.
-Quantified future range of variability in disturbance regime, seral stage distribution and early seral patch configuration.
-Identified management implications based on the results
+
+
+
+
 
 
 \include{Ch1_Introduction} 

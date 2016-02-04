@@ -57,20 +57,21 @@ $95^{\text{th}}$ percentile        &   31.29 (54,703)      & 21.43 (37,461)   & 
   \centering
   \subfloat[][]{
     \centering
-\includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_all.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_all.png}
+    \label{fig:darea-a} 
     }%
-    \label{fig:darea-a}
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_newhist_all.png}
     }
     \label{fig:darea-b}
-  \caption{\small (a) Disturbance trajectory for wildfire during the simulation. The first timestep is 40 because we excluded earlier timesteps as equilibration. Red bars represent high mortality fire, while green bars represent low mortality fire and are stacked on top of high mortality. (b) Histogram of the percent of the landscape burned per timestep.} 
+  \caption{(a) Disturbance trajectory for wildfire during the simulation. The first timestep is 40 because we excluded earlier timesteps as equilibration. Red bars represent high mortality fire, while green bars represent low mortality fire and are stacked on top of high mortality. (b) Histogram of the percent of the landscape burned per timestep.} 
   \label{fig:darea}
 \end{figure}
 \clearpage
 
 While the tables and figures above represent the data aspatially, it can also be helpful to look at individual timesteps during the simulation. Because \textsc{RMLands} is spatially explicit in its wildfire generation processes, the burned areas generated within the model look like fire perimeter maps created following actual wildfire events, and occur in the areas on the landscape anticipated to be the most susceptible to wildfire. The extent of burned area observed during the simulation is far above what has been observed in recent decades\todo{cite this}. Beyond saying it is much greater, however, it can be difficult to imagine and conceptualize what fire covering, for example, 50\% of the study area looks like. To facilitate understanding of the statistical outcomes of this work, I created maps displaying the mortality outcomes from wildfires at four key timesteps: the minimum, maximum, median, and mean area burned (because the exact mean area burned value did not correspond to any timestep, I display the one with the closest value for the ``any mortality'' category) in Figures~\ref{fig:darea_min_map}--\ref{fig:darea_mean_map}. During timesteps when a large amount of fire is recorded, multiple individual fires can ``run together'' on the landscape. Each timestep in the model represents five years, and the model does not differentiate between individual fire seasons below this level. Thus the included individual fire map (right-hand figures) offers a visualization of fires over the short term.
 
+\newpage
 
 % background color 24, 15, 41, 0
 \begin{figure}[!htbp]
@@ -186,7 +187,7 @@ Interval (years)        & 5.03         & 7.41          & 18.29         & 153.67 
 \end{tabular}
 \end{table}
 
-\clearpage
+%\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -194,7 +195,7 @@ Interval (years)        & 5.03         & 7.41          & 18.29         & 153.67 
 Sierran Mixed Conifer - Xeric (\textsc{smc\_x}) is the second most dominant cover type within the core project area, encompassing 52,198 ha and comprising roughly 29\% of the project area. Wildfire was prevalent in this cover type. I again present figures and tables that incorporate some redundancy in order to facilitate understanding by a broad audience, as described in the beginning of this section (Figure \ref{fig:darea_smcx}). I summarize the disturbance regime in Tables \ref{tab:darea_smcx} and \ref{tab:darea_atleast_smcx}. Both low and high mortality fires were more common on the xeric mixed conifer forests than in mesic mixed conifer forests or the study area as a whole. High mortality wildfire on xeric mixed conifer forests extended over a larger mean and median proportion compared to the overall landscape, although the $95^{\text{th}}$ percentile for high mortality fire in xeric mixed conifer forests was 3.2\% less.
 
 % updated 2015-09
-\begin{figure}[!htbp]
+\begin{figure}[!hbp]
   \centering
   \subfloat[][]{
     \centering
@@ -245,7 +246,6 @@ Interval (years)        & 5.00         & 6.64          & 15.57         & 85.37  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Effect of Climate} 
-%todo add more clarifying text
 % fire size sentence is discussion
 Climate has a positive relationship with disturbed area (Figure \ref{fig:climate_darea}). A regression line is plotted, but note the heteroskedastic variance about the mean. The relationship is weakly positive, in that as climate shifts from wet to drought, the disturbed area increases. The climate parameter is defined such that 1 is the average value over the historical period.During wetter-than-average years, less area was disturbed. For example, no more than 20\% of the landscape burned in timesteps during which the climate parameter was below 0.63. However, over 50\% of the landscape burned in several timesteps when the climate parameter was less than 1. Figure \ref{fig:compare_clim_darea} illustrates the climate parameter values and disturbed area proportion of the landscape for a subset of timesteps during the simulation to illustrate that in some years, a high climate parameter occurs with a higher disturbed area percentage, but in other years a low climate parameter occurs with a higher disturbed area percentage.
 
@@ -260,7 +260,7 @@ Climate has a positive relationship with disturbed area (Figure \ref{fig:climate
 % updated 9/13
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/climate_darea_vert.png}
+\includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/climate_darea_vert.png}
 \caption{Climate parameter and proportion of eligible landscape disturbed by wildfire for timesteps 250 to 310 of the simulation, illustrating the wide variability in both climate parameter values and disturbed area per timestep. Purple lines are intended to aid in visualization of the climate paramter value and proportion of landscape burned during a particular timestep.}
 \label{fig:compare_clim_darea}
 \end{figure}
@@ -482,7 +482,7 @@ The current seral stage distribution was never observed under the simulated HRV,
 \subsubsection{Landscape Configuration}
 I summarized the structure and patterns in the landscape using a suite of statistical measures calculated using \textsc{Fragstats}. Table \ref{tab:fragland} shows the range of variability for the simulation period as well as the current value, the current percentile range of variability (\%RV) for that proportion, and the departure index. I show here a subset of metrics most useful for understanding patch characteristics in the study area. See Appendix \ref{app:metricdescriptions} for a detailed description of \textsc{Fragstats} metrics. At the landscape-level, most computed metrics have values outside the HRV. 
 
-In Figure~\ref{fig:fragland} we graphically display the results from Table \ref{tab:fragland} For these six metrics, the current landscape is fully departed from the historical range of variability. The average patch size is larger, and the average patch shape more complex, than the current landscape. Patches during the HRV had more edge. During the HRV, the average patch contains more core area than in the current landscape. The landscape during the HRV is much more contagious than the current landscape. Values for Simpson's Evenness are near 1 during the HRV and in the present landscape, but the HRV values are well below the current conditions.
+In Figures~\ref{fig:fragland1} and \ref{fig:fragland2} we graphically display the results from Table \ref{tab:fragland} For these six metrics, the current landscape is fully departed from the historical range of variability. The average patch size is larger, and the average patch shape more complex, than the current landscape. Patches during the HRV had more edge. During the HRV, the average patch contains more core area than in the current landscape. The landscape during the HRV is much more contagious than the current landscape. Values for Simpson's Evenness are near 1 during the HRV and in the present landscape, but the HRV values are well below the current conditions.
 
 % plots updated 2015-09
 
@@ -503,7 +503,16 @@ In Figure~\ref{fig:fragland} we graphically display the results from Table \ref{
     \label{fig:fragland_shape}
   } 
   \subfloat[][]{
-    %\centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/CORE_AM1.png}
+    \label{fig:fragland_core}
+    }
+\caption{Landscape \textsc{Fragstats} Metrics. (a) Edge Density, a measure of patch perimeter complexity, (b) Area-weighted Mean Patch Area, a measure of patch size (c) Area-weighted Mean Shape, a measure of patch shape complexity (d) Area-weighted Mean Core Area, a measure of interior habitat available at the patch level. The red line indicates the current condition, the dotted lines indicate the 5th and 95th percentiles of the simulated data, the dashed line indicates the 50th percentile of the simulated data, and the blue line indicates the value for that metric at each timestep of the simulation.}
+\label{fig:fragland1}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/CONTAG1.png}
     \label{fig:fragland_contag}
   } \\
@@ -511,12 +520,8 @@ In Figure~\ref{fig:fragland} we graphically display the results from Table \ref{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/SIEI1.png}
     \label{fig:fragland_siei}
   } 
-  \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragland-hrv/CORE_AM1.png}
-    \label{fig:fragland_core}
-    }
-\caption{Landscape \textsc{Fragstats} Metrics. (a) Edge Density, a measure of patch perimeter complexity, (b) Area-weighted Mean Patch Area, a measure of patch size (c) Area-weighted Mean Shape, a measure of patch shape complexity (d) Contagion, a measure of patch dispersion and interspersion (e) Simpson's Evenness Index, a measure of diversity, or evenness, across all landscape patches (f) Area-weighted Mean Core Area, a measure of interior habitat available at the patch level. The red line indicates the current condition, the dotted lines indicate the 5th and 95th percentiles of the simulated data, the dashed line indicates the 50th percentile of the simulated data, and the blue line indicates the value for that metric at each timestep of the simulation.}
-\label{fig:fragland}
+\caption{Landscape \textsc{Fragstats} Metrics. (a) Contagion, a measure of patch dispersion and interspersion (b) Simpson's Evenness Index, a measure of diversity, or evenness, across all landscape patches. The red line indicates the current condition, the dotted lines indicate the 5th and 95th percentiles of the simulated data, the dashed line indicates the 50th percentile of the simulated data, and the blue line indicates the value for that metric at each timestep of the simulation.}
+\label{fig:fragland2}
 \end{figure}
 
 %\clearpage
