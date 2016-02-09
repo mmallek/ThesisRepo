@@ -1,27 +1,34 @@
 % !TEX root = master.tex
-\chapter{Disturbance Regime and Seral Stage Dynamics Expanded Results}
+\chapter{Expanded HRV Results}
+%\chapter{Disturbance Regime and Seral Stage Dynamics Expanded Results}
 \label{app:full-results}
 
-\section{Disturbance Regime}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Disturbance Regime}
+
+% Took this section out 2016-02-06 because this image is in the main report. Probably this appendix shouldn't contain repeated results of the full landscape.
+
 %redone 9/13
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_darea_hist.png}
-\caption{Histogram of percent of landscape disturbed by wildfire during the simulation. The distribution is substantially right-skewed, and most fires burn less than 20\% of the eligible landscape.}
-\label{fig:darea_hist}
-\end{figure}
+%\begin{figure}[!htbp]
+%\centering
+%\includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_darea_hist.png}
+%\caption{Histogram of percent of landscape disturbed by wildfire during the simulation. The distribution is substantially right-skewed, and most fires burn less than 20\% of the eligible landscape.}
+%\label{fig:darea_hist}
+%\end{figure}
 
 
 \section{Average Canopy Cover and Topographic Position}
-% redone
+Table~\ref{tab:tpi_cc} shows the relationship between canopy cover and topographic position (as measured by the topographic position index (TPI)) for the 9 most extensive cover types in the study area. Figure~\ref{fig:tpi_cc} shows a linear regression fit to a sample of points from each cover type across the TPI and average canopy cover grids.
+
+% redone with results from 2015-09-04. File saved in /Users/mmallek/Tahoe/RMLands/results/results20150904/tpi
 \begin{table}[!htbp]
 \footnotesize
-\caption{For each cover type on the landscape, the percent change in canopy cover from the minimum TPI value for that cover type to the maximum TPI value.}
+\caption{For each cover type on the landscape, the percent change in canopy cover from the minimum TPI value for that cover type to the maximum TPI value. For condition class abbreviations, see Table \ref{condtable}.}
 \label{tab:tpi_cc}
 %\rotatebox{90}{
 \begin{tabular}{@{}lrrrrr@{}}
-\toprule
-\small \textbf{\begin{tabular}[c]{@{}l@{}}Cover \\ Name\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Minimum \\ TPI\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Maximum \\ TPI\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Average Canopy \\Cover at \\ Minimum TPI\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Average Canopy \\ Cover at \\ Maximum TPI\end{tabular}}  & \small \textbf{\begin{tabular}[c]{@{}l@{}}Percent \\ Change in \\ Canopy \\ Cover\end{tabular}} \\ \midrule
+\toprule 
+ \textbf{\begin{tabular}[c]{@{}l@{}}Cover \\ Name\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Minimum \\ TPI\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Maximum \\ TPI\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Average Canopy \\Cover at \\ Minimum TPI\end{tabular}} & \small \textbf{\begin{tabular}[c]{@{}l@{}}Average Canopy \\ Cover at \\ Maximum TPI\end{tabular}}  & \small \textbf{\begin{tabular}[c]{@{}l@{}}Percent \\ Change in \\ Canopy \\ Cover\end{tabular}} \\ \midrule
 \textsc{meg\_m   }    & -300                 & 300   & 73.7       & 67.0     & -9.0      \\
 \textsc{meg\_x   }    & -299                 & 300   & 72.7       & 68.5     & -5.7      \\
 \textsc{ocfw     }    & -300                 & 300   & 50.0       & 45.6     & -8.7       \\
@@ -35,14 +42,15 @@
 %}
 \end{table}
 
-%redone
+%redone 2015-09-14
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/tpi/hrv_facet.png}
+\includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/tpi/hrv-facet-2.png}
 \caption{Average canopy cover for the nine focal cover types during the simulated. Each blue point represents one pixel of an individual cover type on the landscape grid. The black line is the result of a linear regression fit to the data. Table \ref{tab:tpi_cc} provides the numerical representation of the shift from minimum to maximum TPI values for each cover type. (a) Mixed Evergreen - Mesic; (b) Mixed Evergreen - Xeric; (c) Oak-Conifer Forest and Woodland; (d) Oak-Conifer Forest and Woodland - Ultramafic; (e) Red Fir - Mesic; (f) Red Fir - Xeric; (g) Sierran Mixed Conifer - Mesic; (h) Sierran Mixed Conifer - Ultramafic; (i) Sierran Mixed Conifer - Xeric.} 
 \label{fig:tpi_cc}
 \end{figure}
 
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,38 +58,38 @@
 
 \section{Fire Rotation}
 
-% redone 9/15
+% redone 2016-02-06; file saved to /Users/mmallek/Documents/Thesis/Results/rotation-hrv.csv
 \begin{table}[!htbp]
 \caption{Full fire rotation results for all cover types present within the core project area.}
-\small
-\begin{tabular}{@{}lllll@{}}
+\footnotesize
+\begin{tabular}{@{}lrrrr@{}}
 \toprule
 	& 		&		\multicolumn{3}{c}{\textbf{Rotation Period (Years)}} \\
 \textbf{Cover Type}  & \textbf{Area (ha)} & \textbf{Low Mortality} & \textbf{High Mortality} & \textbf{Any Mortality} \\ \midrule
-Agriculture                                  & 16       & 1634      & 74       & 71  \\
-Curl-leaf Mountain Mahogany                  & 18       & 278       & 139      & 93  \\
-Grassland                                    & 1379     & 583       & 66       & 59  \\
-Lodgepole Pine                               & 837      & 67        & 290      & 55  \\
-Lodgepole Pine with Aspen                    & 8        & 50        & 211      & 40  \\
-Meadow                                       & 1201     & 1413      & 57       & 55  \\
-Mixed Evergreen - Mesic                      & 7273     & 58        & 493      & 52  \\
-Mixed Evergreen - Ultramafic                 & 604      & 145       & 1338     & 131 \\
-Mixed Evergreen - Xeric                      & 6768     & 45        & 394      & 41  \\
-Montane Riparian                             & 732      & 94        & 110      & 51  \\
-Oak Woodland                                 & 19       & 39        & 119      & 29  \\
-Oak-Conifer Forest and Woodland              & 23279    & 28        & 105      & 22  \\
+Agriculture                                  & 16       & 1634      &   74    &  71 \\
+Curl-leaf Mountain Mahogany                  & 18       &  278      &  139    &  93 \\
+Grassland                                    & 1379     &  583      &   66    &  59 \\
+Lodgepole Pine                               & 837      &   67      &  290    &  55 \\
+Lodgepole Pine with Aspen                    & 8        &   50      &  211    &  40 \\
+Meadow                                       & 1201     & 1413      &   57    &  55 \\
+Mixed Evergreen - Mesic                      & 7273     &   58      &  493    &  52 \\
+Mixed Evergreen - Ultramafic                 & 604      &  145      & 1338    & 131 \\
+Mixed Evergreen - Xeric                      & 6768     &   45      &  394    &  41 \\
+Montane Riparian                             & 732      &   94      &  110    &  51 \\
+Oak Woodland                                 & 19       &   39      &  119    &  29 \\
+Oak-Conifer Forest and Woodland              & 23279    &   28      &  105    &  22 \\
 \begin{tabular}[c]{@{}l@{}}Oak-Conifer Forest and Woodland\\  - Ultramafic\end{tabular}  & 1060     & 64        & 268      & 51  \\
-Red Fir - Mesic                              & 8563     & 104       & 159      & 63  \\
-Red Fir - Ultramafic                         & 294      & 181       & 302      & 113 \\
-Red Fir - Xeric                              & 7493     & 60        & 101      & 38  \\
-Red Fir with Aspen                           & 31       & 79        & 190      & 56  \\
-Sierran Mixed Conifer - Mesic                & 57853    & 35        & 113      & 27  \\
-Sierran Mixed Conifer - Ultramafic           & 4124     & 100       & 196      & 66  \\
-Sierran Mixed Conifer - Xeric                & 52198    & 34        & 72       & 23  \\
-Sierran Mixed Conifer with Aspen             & 58       & 41        & 132      & 31  \\
-Subalpine Conifer                            & 638      & 866       & 234      & 184 \\
-Urban                                        & 114      & 1641      & 79       & 76  \\
-Western White Pine                           & 273      & 104       & 563      & 88  \\
+Red Fir - Mesic                              & 8563     &  104      & 159      &  63 \\
+Red Fir - Ultramafic                         & 294      &  181      & 302      & 113 \\
+Red Fir - Xeric                              & 7493     &   60      & 101      &  38 \\
+Red Fir with Aspen                           & 31       &   79      & 190      &  56 \\
+Sierran Mixed Conifer - Mesic                & 57853    &   35      & 113      &  27 \\
+Sierran Mixed Conifer - Ultramafic           & 4124     &  100      & 196      &  66 \\
+Sierran Mixed Conifer - Xeric                & 52198    &   34      &  72      &  23 \\
+Sierran Mixed Conifer with Aspen             & 58       &   41      & 132      &  31 \\
+Subalpine Conifer                            & 638      &  866      & 234      & 184 \\
+Urban                                        & 114      & 1641      &  79      &  76 \\
+Western White Pine                           & 273      &  104      & 563      &  88 \\
 \textbf{Total}       			& \textbf{174830}    & \textbf{38}   & \textbf{103}   & \textbf{28}                                                                                \\ \bottomrule
 \end{tabular}
 \end{table}
@@ -90,13 +98,17 @@ Western White Pine                           & 273      & 104       & 563      &
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Population Return Interval}\todo{needs an intro?}
+\section{Population Return Interval}
+
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. The following plots are from the 9 most extensive cover types in the study area.
+
+%redid plots (remove titles) 2015-02-07
 
 \begin{figure}[!htbp]
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/preturn_megm.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-megm.png}
     }%
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_megm.png}
@@ -109,7 +121,7 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/preturn_megx.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-megx.png}
     }%
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_megx.png}
@@ -122,7 +134,7 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/preturn_ocfw.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-ocfw.png}
     }%
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_ocfw.png}
@@ -135,7 +147,7 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/preturn_ocfwu.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-ocfwu.png}
     }%
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_ocfwu.png}
@@ -148,7 +160,7 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/preturn_rfrm.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-rfrm.png}
     }%
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_rfrm.png}
@@ -161,7 +173,7 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/preturn_rfrx.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-rfrx.png}
     }%
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_rfrx.png}
@@ -174,7 +186,7 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/preturn_smcm.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-smcm.png}
     }%
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_smcm.png}
@@ -187,7 +199,7 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/preturn_smcu.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-smcu.png}
     }%
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_smcu.png}
@@ -200,7 +212,7 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/preturn_smcx.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-smcx.png}
     }%
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_smcx.png}
@@ -221,13 +233,16 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/hrv-covcond-megm.png}
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/MEGM.pdf}
     }%
   \subfloat[][]{
   \centering
   \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_megm.png}
-    }
-  \caption{(a) Cover-Condition dynamics for Mixed Evergreen - Mesic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Mixed Evergreen - Mesic.}
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/MEGM-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Mixed Evergreen - Mesic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Mixed Evergreen - Mesic. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.}
 \label{fig:covcond_megm}
 \end{figure}
 
@@ -235,12 +250,15 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/hrv-covcond-megx.png}
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/MEGX.pdf}
     }%
   \subfloat[][]{
     \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_megx.png}
-    }
-  \caption{(a) Cover-Condition dynamics for Mixed Evergreen - Xeric. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Mixed Evergreen - Xeric.} 
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/MEGX-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Mixed Evergreen - Xeric. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Mixed Evergreen - Xeric. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
   \label{fig:covcond_megx}
 \end{figure}
 
@@ -248,12 +266,15 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/hrv-covcond-ocfw.png}
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/OCFW.pdf}
     }%
   \subfloat[][]{
     \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_ocfw.png}
-    }
-  \caption{(a) Cover-Condition dynamics for Oak-Conifer Forest and Woodland. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Oak-Conifer Forest and Woodland.} 
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/OCFW-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Oak-Conifer Forest and Woodland. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Oak-Conifer Forest and Woodland. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
   \label{fig:covcond_ocfw}
 \end{figure}
 
@@ -261,12 +282,15 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/hrv-covcond-ocfwu.png}
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/OCFWU.pdf}
     }%
   \subfloat[][]{
     \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_ocfwu.png}
-    }
-  \caption{(a) Cover-Condition dynamics for Oak-Conifer Forest and Woodland - Ultramafic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Oak-Conifer Forest and Woodland - Ultramafic.} 
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/OCFWU-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Oak-Conifer Forest and Woodland - Ultramafic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Oak-Conifer Forest and Woodland - Ultramafic. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
   \label{fig:covcond_ocfwu}
 \end{figure}
 
@@ -274,12 +298,15 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/hrv-covcond-rfrm.png}
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/RFRM.pdf}
     }%
   \subfloat[][]{
     \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_rfrm.png}
-    }
-  \caption{(a) Cover-Condition dynamics for Red Fir - Mesic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Red Fir - Mesic.} 
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/RFRM-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Red Fir - Mesic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Red Fir - Mesic. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
   \label{fig:covcond_rfrm}
 \end{figure}
 
@@ -287,12 +314,15 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/hrv-covcond-rfrx.png}
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/RFRX.pdf}
     }%
   \subfloat[][]{
     \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_rfrx.png}
-    }
-  \caption{(a) Cover-Condition dynamics for Red Fir - Xeric. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Red Fir - Xeric.} 
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/RFRX-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Red Fir - Xeric. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Red Fir - Xeric. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
   \label{fig:covcond_rfrx}
 \end{figure}
 
@@ -300,12 +330,15 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/hrv-covcond-smcm.png}
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/SMCM.pdf}
     }%
   \subfloat[][]{
     \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_smcm.png}
-    }
-  \caption{(a) Cover-Condition dynamics for Sierran Mixed Conifer - Mesic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Sierran Mixed Conifer - Mesic.} 
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/SMCM-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Sierran Mixed Conifer - Mesic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Sierran Mixed Conifer - Mesic. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
   \label{fig:covcond_smcm_app}
 \end{figure}
 
@@ -314,12 +347,15 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/hrv-covcond-smcu.png}
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/SMCU.pdf}
     }%
   \subfloat[][]{
     \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_smcu.png}
-    }
-  \caption{(a) Cover-Condition dynamics for Sierran Mixed Conifer - Ultramafic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Sierran Mixed Conifer - Ultramafic.} 
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/SMCU-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Sierran Mixed Conifer - Ultramafic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Sierran Mixed Conifer - Ultramafic. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
   \label{fig:covcond_smcu}
 \end{figure}
 
@@ -327,55 +363,61 @@ Western White Pine                           & 273      & 104       & 563      &
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/hrv-covcond-smcx.png}
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/SMCX.pdf}
     }%
   \subfloat[][]{
     \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_smcx.png}
-    }
-  \caption{(a) Cover-Condition dynamics for Sierran Mixed Conifer - Xeric. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Sierran Mixed Conifer - Xeric.} 
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/SMCX-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Sierran Mixed Conifer - Xeric. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Sierran Mixed Conifer - Xeric. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
   \label{fig:covcond_smcx_app}
 \end{figure}
+
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % redid these 2015-09-17
+% updated 2016-02-07 to adjust departure values
 \begin{landscape}
 \begin{table}[!htbp]
 \footnotesize
-\caption{Range of variation in landscape structure, illustrating the cover-condition class dynamics for Mixed Evergreen - Mesic (\textsc{meg\_m}), Mixed Evergreen - Xeric (\textsc{meg\_x}), Oak-Conifer Forest and Woodland (\textsc{ocfw}), and Oak-Conifer Forest and Woodland - Ultramafic (\textsc{ocfw\_u}). For condition class abbreviations, see Table \ref{condtable}.}
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Mixed Evergreen - Mesic (\textsc{meg\_m}), Mixed Evergreen - Xeric (\textsc{meg\_x}), Oak-Conifer Forest and Woodland (\textsc{ocfw}), and Oak-Conifer Forest and Woodland - Ultramafic (\textsc{ocfw\_u}). For condition class abbreviations, see Table \ref{condtable}.}
 \label{tab:covcond1}
 \begin{tabular}{@{}rrrrrrr|rrr@{}}
 \toprule
- \textbf{\begin{tabular}[c]{@{}l@{}}Land \\ Cover\\ Type\end{tabular}} &  \textbf{\begin{tabular}[c]{@{}l@{}}Condition \\ Class\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\\ Index\end{tabular}} \\ \midrule
- \textsc{meg\_m}      &  \textsc{early\_all}      &  1.19           &  2.22             &  3.55      &  5.04            &  7.58       &  8.21     &  98    &  96      \\
- \textsc{meg\_m}      &  \textsc{mid\_cl   }      &  0.01           &  0.08             &  0.29      &  0.77            &  2.57       &  36.53    &  100   &  100      \\
- \textsc{meg\_m}      &  \textsc{mid\_mod  }      &  0.69           &  1.35             &  2.14      &  3.48            &  6.01       &  9.76     &  100   &  100      \\
- \textsc{meg\_m}      &  \textsc{mid\_op   }      &  0.04           &  0.11             &  0.23      &  0.41            &  0.78       &  6.37     &  100   &  100      \\
- \textsc{meg\_m}      &  \textsc{late\_cl  }      &  53.97          &  64.51            &  70.81     &  76.28           &  81.97      &  29.31    &  0     &  -100      \\
- \textsc{meg\_m}      &  \textsc{late\_mod }      &  8.16           &  12.19            &  14.49     &  17.64           &  21.7       &  7.31     &  4     &  -92      \\
- \textsc{meg\_m}      &  \textsc{late\_op  }      &  2.66           &  4.96             &  7.16      &  10.38           &  14.99      &  2.5      &  4     &  -92      \\
- \textsc{meg\_x}      &  \textsc{early\_all}      &  1.68           &  3.32             &  4.58      &  6.06            &  8.64       &  10.88    &  99    &  98       \\
- \textsc{meg\_x}      &  \textsc{mid\_cl   }      &  0.01           &  0.08             &  0.31      &  0.87            &  2.37       &  48.8     &  100   &  100      \\
- \textsc{meg\_x}      &  \textsc{mid\_mod  }      &  1.07           &  1.97             &  2.98      &  4.27            &  6.47       &  9.39     &  100   &  100      \\
- \textsc{meg\_x}      &  \textsc{mid\_op   }      &  0.06           &  0.19             &  0.36      &  0.57            &  0.97       &  12.87    &  100   &  100      \\
- \textsc{meg\_x}      &  \textsc{late\_cl  }      &  52.93          &  61.01            &  67.58     &  71.66           &  77.74      &  12.84    &  0     &  -100      \\
- \textsc{meg\_x}      &  \textsc{late\_mod }      &  11.3           &  14.32            &  16.68     &  19.66           &  23.14      &  3.84     &  0     &  -100      \\
- \textsc{meg\_x}      &  \textsc{late\_op  }      &  3.07           &  5.35             &  7.12      &  9.77            &  12.88      &  1.38     &  0     &  -100      \\
- \textsc{ocfw}        &  \textsc{early\_all}      &  7.7            &  11.2             &  14.18     &  17.75           &  23.31      &  19.97    &  84    &  68      \\
- \textsc{ocfw}        &  \textsc{mid\_cl   }      &  3.33           &  7.35             &  11.3      &  15.03           &  19.39      &  37.36    &  100   &  100      \\
- \textsc{ocfw}        &  \textsc{mid\_mod  }      &  7.31           &  9.16             &  10.88     &  12.88           &  16.55      &  14.61    &  89    &  78      \\
- \textsc{ocfw}        &  \textsc{mid\_op   }      &  8.8            &  12.01            &  15.12     &  18.75           &  24.48      &  24.34    &  95    &  90       \\
- \textsc{ocfw}        &  \textsc{late\_cl  }      &  5.37           &  11.38            &  17.76     &  23.13           &  31.36      &  1.58     &  0     &  -100      \\
- \textsc{ocfw}        &  \textsc{late\_mod }      &  13.81          &  16.51            &  18.23     &  20.22           &  22.84      &  1.02     &  0     &  -100      \\
- \textsc{ocfw}        &  \textsc{late\_op  }      &  5.45           &  7.89             &  10.61     &  14.12           &  19.02      &  1.12     &  0     &  -100      \\
- \textsc{ocfw\_u}     &  \textsc{early\_all}      &  9.05           &  13.66            &  16.3      &  21              &  26.17      &  17.76    &  63    &  26       \\
- \textsc{ocfw\_u}     &  \textsc{mid\_cl   }      &  0.06           &  0.14             &  0.29      &  0.54            &  1.15       &  29.32    &  100   &  100      \\
- \textsc{ocfw\_u}     &  \textsc{mid\_mod  }      &  2.55           &  4.11             &  5.48      &  8.31            &  11.38      &  11.54    &  96    &  92       \\
- \textsc{ocfw\_u}     &  \textsc{mid\_op   }      &  14.79          &  19.29            &  22.49     &  26.11           &  30.28      &  33.49    &  100   &  100      \\
- \textsc{ocfw\_u}     &  \textsc{late\_cl  }      &  7.39           &  15.12            &  21.21     &  27.3            &  36.45      &  5.35     &  1     &  -98      \\
- \textsc{ocfw\_u}     &  \textsc{late\_mod }      &  15.06          &  18.62            &  20.99     &  23.86           &  29.17      &  2.2      &  0     &  -100    \\
- \textsc{ocfw\_u}     &  \textsc{late\_op  }      &  3.92           &  7.21             &  10.44     &  13.64           &  18.99      &  0.34     &  0     &  -100      \\
+ \textbf{\begin{tabular}[c]{@{}l@{}}Land \\ Cover\\ Type\end{tabular}} &  \textbf{\begin{tabular}[c]{@{}l@{}}Condition \\ Class\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
+ \textsc{meg\_m}      &  \textsc{early\_all}      &  1.19           &  2.22             &  3.55      &  5.04            &  7.58       &  8.21     &  98    &  complete      \\
+ \textsc{meg\_m}      &  \textsc{mid\_cl   }      &  0.01           &  0.08             &  0.29      &  0.77            &  2.57       &  36.53    &  100   &  complete      \\
+ \textsc{meg\_m}      &  \textsc{mid\_mod  }      &  0.69           &  1.35             &  2.14      &  3.48            &  6.01       &  9.76     &  100   &  complete      \\
+ \textsc{meg\_m}      &  \textsc{mid\_op   }      &  0.04           &  0.11             &  0.23      &  0.41            &  0.78       &  6.37     &  100   &  complete      \\
+ \textsc{meg\_m}      &  \textsc{late\_cl  }      &  53.97          &  64.51            &  70.81     &  76.28           &  81.97      &  29.31    &  0     &  complete      \\
+ \textsc{meg\_m}      &  \textsc{late\_mod }      &  8.16           &  12.19            &  14.49     &  17.64           &  21.7       &  7.31     &  4     &  complete      \\
+ \textsc{meg\_m}      &  \textsc{late\_op  }      &  2.66           &  4.96             &  7.16      &  10.38           &  14.99      &  2.5      &  4     &  complete      \\
+ \textsc{meg\_x}      &  \textsc{early\_all}      &  1.68           &  3.32             &  4.58      &  6.06            &  8.64       &  10.88    &  99    &  complete       \\
+ \textsc{meg\_x}      &  \textsc{mid\_cl   }      &  0.01           &  0.08             &  0.31      &  0.87            &  2.37       &  48.8     &  100   &  complete      \\
+ \textsc{meg\_x}      &  \textsc{mid\_mod  }      &  1.07           &  1.97             &  2.98      &  4.27            &  6.47       &  9.39     &  100   &  complete      \\
+ \textsc{meg\_x}      &  \textsc{mid\_op   }      &  0.06           &  0.19             &  0.36      &  0.57            &  0.97       &  12.87    &  100   &  complete      \\
+ \textsc{meg\_x}      &  \textsc{late\_cl  }      &  52.93          &  61.01            &  67.58     &  71.66           &  77.74      &  12.84    &  0     &  complete      \\
+ \textsc{meg\_x}      &  \textsc{late\_mod }      &  11.3           &  14.32            &  16.68     &  19.66           &  23.14      &  3.84     &  0     &  complete      \\
+ \textsc{meg\_x}      &  \textsc{late\_op  }      &  3.07           &  5.35             &  7.12      &  9.77            &  12.88      &  1.38     &  0     &  complete      \\
+ \textsc{ocfw}        &  \textsc{early\_all}      &  7.7            &  11.2             &  14.18     &  17.75           &  23.31      &  19.97    &  84    &  moderate      \\
+ \textsc{ocfw}        &  \textsc{mid\_cl   }      &  3.33           &  7.35             &  11.3      &  15.03           &  19.39      &  37.36    &  100   &  complete      \\
+ \textsc{ocfw}        &  \textsc{mid\_mod  }      &  7.31           &  9.16             &  10.88     &  12.88           &  16.55      &  14.61    &  89    &  moderate      \\
+ \textsc{ocfw}        &  \textsc{mid\_op   }      &  8.8            &  12.01            &  15.12     &  18.75           &  24.48      &  24.34    &  95    &  complete       \\
+ \textsc{ocfw}        &  \textsc{late\_cl  }      &  5.37           &  11.38            &  17.76     &  23.13           &  31.36      &  1.58     &  0     &  complete      \\
+ \textsc{ocfw}        &  \textsc{late\_mod }      &  13.81          &  16.51            &  18.23     &  20.22           &  22.84      &  1.02     &  0     &  complete      \\
+ \textsc{ocfw}        &  \textsc{late\_op  }      &  5.45           &  7.89             &  10.61     &  14.12           &  19.02      &  1.12     &  0     &  complete      \\
+ \textsc{ocfw\_u}     &  \textsc{early\_all}      &  9.05           &  13.66            &  16.3      &  21              &  26.17      &  17.76    &  63    &  none       \\
+ \textsc{ocfw\_u}     &  \textsc{mid\_cl   }      &  0.06           &  0.14             &  0.29      &  0.54            &  1.15       &  29.32    &  100   &  complete      \\
+ \textsc{ocfw\_u}     &  \textsc{mid\_mod  }      &  2.55           &  4.11             &  5.48      &  8.31            &  11.38      &  11.54    &  96    &  complete       \\
+ \textsc{ocfw\_u}     &  \textsc{mid\_op   }      &  14.79          &  19.29            &  22.49     &  26.11           &  30.28      &  33.49    &  100   &  complete      \\
+ \textsc{ocfw\_u}     &  \textsc{late\_cl  }      &  7.39           &  15.12            &  21.21     &  27.3            &  36.45      &  5.35     &  1     &  complete      \\
+ \textsc{ocfw\_u}     &  \textsc{late\_mod }      &  15.06          &  18.62            &  20.99     &  23.86           &  29.17      &  2.2      &  0     &  complete    \\
+ \textsc{ocfw\_u}     &  \textsc{late\_op  }      &  3.92           &  7.21             &  10.44     &  13.64           &  18.99      &  0.34     &  0     &  complete      \\
 \end{tabular}
 \end{table}
 \end{landscape}
@@ -383,40 +425,40 @@ Western White Pine                           & 273      & 104       & 563      &
 \begin{landscape}
 \begin{table}[!htbp]
 \footnotesize
-\caption{Range of variation in landscape structure, illustrating the cover-condition class dynamics for Red Fir - Mesic (\textsc{rfr\_m}), Red Fir - Xeric (\textsc{rfr\_x}), Sierran Mixed Conifer - Mesic (\textsc{smc\_m}), and Sierran Mixed Conifer - Ultramafic (\textsc{smc\_u}). For condition class abbreviations, see Table \ref{condtable}.}
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Red Fir - Mesic (\textsc{rfr\_m}), Red Fir - Xeric (\textsc{rfr\_x}), Sierran Mixed Conifer - Mesic (\textsc{smc\_m}), and Sierran Mixed Conifer - Ultramafic (\textsc{smc\_u}). For condition class abbreviations, see Table \ref{condtable}.}
 \label{tab:covcond2}
 \begin{tabular}{@{}rrrrrrr|rrr@{}}
 \toprule
- \textbf{\begin{tabular}[c]{@{}l@{}}Land \\ Cover\\ Type\end{tabular}} &  \textbf{\begin{tabular}[c]{@{}l@{}}Condition \\ Class\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}    &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\\ Index\end{tabular}} \\ \midrule
+ \textbf{\begin{tabular}[c]{@{}l@{}}Land \\ Cover\\ Type\end{tabular}} &  \textbf{\begin{tabular}[c]{@{}l@{}}Condition \\ Class\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}    &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
                                                                                   % 5th                           25th                 50th                        75th                      95th                      current value           current %ile            dep. index
- \textsc{rfr\_m}      &  \textsc{early\_all}        &   6.47        &  10.49   &  15.61     &  22.55            &  32.82     &  24.21    &  81    &  62      \\
- \textsc{rfr\_m}      &  \textsc{mid\_cl   }        &   20.6        &  29.15   &  34.73     &  41.06            &  48.77     &  3.63     &  0     &  -100      \\
- \textsc{rfr\_m}      &  \textsc{mid\_mod  }        &   0.79        &  1.16    &  1.46      &  1.95             &  2.62      &  18.67    &  100   &  100      \\
- \textsc{rfr\_m}      &  \textsc{mid\_op   }        &   0.36        &  0.64    &  0.91      &  1.32             &  2.17      &  16.7     &  100   &  100      \\
- \textsc{rfr\_m}      &  \textsc{late\_cl  }         &  26.29       &  33.03   &  39.48     &  45.47            &  53.47     &  10.7     &  0     &  -100      \\
- \textsc{rfr\_m}      &  \textsc{late\_mod }        &   2.31        &  3.2     &  4.19      &  5.2              &  6.95      &  21.96    &  100   &  100      \\
- \textsc{rfr\_m}      &  \textsc{late\_op  }        &   0.73        &  1.1     &  1.61      &  2.2              &  3.4       &  4.13     &  100   &  100     \\
- \textsc{rfr\_x}      &  \textsc{early\_all}         &  24.76       &  33.1    &  37        &  41.44            &  45.72     &  32.39    &  23    &  -54      \\
- \textsc{rfr\_x}      &  \textsc{mid\_cl   }        &   0.24        &  0.5     &  0.88      &  1.5              &  2.73      &  8.26     &  100   &  100      \\
- \textsc{rfr\_x}      &  \textsc{mid\_mod  }        &   3.12        &  5.33    &  7.02      &  9.25             &  12.11     &  18.66    &  100   &  100      \\
- \textsc{rfr\_x}      &  \textsc{mid\_op   }        &   13.47       &  17.52   &  19.98     &  22.6             &  27.2      &  12.58    &  3     &  -94      \\
- \textsc{rfr\_x}      &  \textsc{late\_cl  }        &   6.46        &  8.73    &  11.28     &  14.19            &  20.38     &  10.45    &  43    &  -14      \\
- \textsc{rfr\_x}      &  \textsc{late\_mod }        &   8.83        &  10.31   &  11.7      &  12.96            &  14.6      &  14.57    &  95    &  90      \\
- \textsc{rfr\_x}      &  \textsc{late\_op  }        &   6.2         &  8.92    &  11.04     &  13.38            &  16.26     &  3.1      &  0     &  -100     \\
- \textsc{smc\_m}      &  \textsc{early\_all}        &   7.75        &  12.34   &  15.11     &  18.68            &  24.74     &  14.98    &  48    &  -4      \\
- \textsc{smc\_m}      &  \textsc{mid\_cl   }        &   21.52       &  26.15   &  29.69     &  32.58            &  37.01     &  9.74     &  0     &  -100     \\
- \textsc{smc\_m}      &  \textsc{mid\_mod  }        &   6.8         &  7.98    &  9.03      &  10.3             &  12.63     &  17.97    &  100   &  100     \\
- \textsc{smc\_m}      &  \textsc{mid\_op   }        &   6.68        &  9.2     &  11.21     &  13.08            &  16.15     &  16.29    &  96    &  92     \\
- \textsc{smc\_m}      &  \textsc{late\_cl  }        &   5.31        &  9.54    &  12.87     &  17.2             &  22.91     &  23.23    &  97    &  94      \\
- \textsc{smc\_m}      &  \textsc{late\_mod }        &   8.56        &  10.32   &  11.24     &  12.56            &  14.41     &  14.18    &  95    &  90      \\
- \textsc{smc\_m}      &  \textsc{late\_op  }        &   4.96        &  7.39    &  9.26      &  12.12            &  14.95     &  3.6      &  1     &  -98      \\
- \textsc{smc\_u}      &  \textsc{early\_all}        &   26.04       &  29.09   &  32.15     &  34.42            &  37.5      &  48.7     &  100   &  100      \\
- \textsc{smc\_u}      &  \textsc{mid\_cl   }        &   1.27        &  1.84    &  2.23      &  2.69             &  3.51      &  2.99     &  85    &  70       \\
- \textsc{smc\_u}      &  \textsc{mid\_mod  }        &   5.76        &  6.77    &  7.68      &  8.78             &  10.93     &  6.77     &  25    &  -50    \\
- \textsc{smc\_u}      &  \textsc{mid\_op   }        &   17.82       &  20.95   &  22.69     &  24.83            &  27.45     &  5.33     &  0     &  -100      \\
- \textsc{smc\_u}      &  \textsc{late\_cl  }        &   9           &  11.89   &  14.25     &  16.78            &  21.36     &  24.43    &  99    &  98      \\
- \textsc{smc\_u}      &  \textsc{late\_mod }        &   9.14        &  10.14   &  11.04     &  11.89            &  13.92     &  8.51     &  1     &  -98      \\
- \textsc{smc\_u}      &  \textsc{late\_op  }        &   5.95        &  7.65    &  9.18      &  10.72            &  13.67     &  3.27     &  0     &  -100      \\
+ \textsc{rfr\_m}      &  \textsc{early\_all}        &   6.47        &  10.49   &  15.61     &  22.55            &  32.82     &  24.21    &  81    &  moderate      \\
+ \textsc{rfr\_m}      &  \textsc{mid\_cl   }        &   20.6        &  29.15   &  34.73     &  41.06            &  48.77     &  3.63     &  0     &  complete      \\
+ \textsc{rfr\_m}      &  \textsc{mid\_mod  }        &   0.79        &  1.16    &  1.46      &  1.95             &  2.62      &  18.67    &  100   &  complete      \\
+ \textsc{rfr\_m}      &  \textsc{mid\_op   }        &   0.36        &  0.64    &  0.91      &  1.32             &  2.17      &  16.7     &  100   &  complete      \\
+ \textsc{rfr\_m}      &  \textsc{late\_cl  }         &  26.29       &  33.03   &  39.48     &  45.47            &  53.47     &  10.7     &  0     &  complete      \\
+ \textsc{rfr\_m}      &  \textsc{late\_mod }        &   2.31        &  3.2     &  4.19      &  5.2              &  6.95      &  21.96    &  100   &  complete      \\
+ \textsc{rfr\_m}      &  \textsc{late\_op  }        &   0.73        &  1.1     &  1.61      &  2.2              &  3.4       &  4.13     &  100   &  complete     \\
+ \textsc{rfr\_x}      &  \textsc{early\_all}         &  24.76       &  33.1    &  37        &  41.44            &  45.72     &  32.39    &  23    &  none      \\
+ \textsc{rfr\_x}      &  \textsc{mid\_cl   }        &   0.24        &  0.5     &  0.88      &  1.5              &  2.73      &  8.26     &  100   &  complete      \\
+ \textsc{rfr\_x}      &  \textsc{mid\_mod  }        &   3.12        &  5.33    &  7.02      &  9.25             &  12.11     &  18.66    &  100   &  complete      \\
+ \textsc{rfr\_x}      &  \textsc{mid\_op   }        &   13.47       &  17.52   &  19.98     &  22.6             &  27.2      &  12.58    &  3     &  complete      \\
+ \textsc{rfr\_x}      &  \textsc{late\_cl  }        &   6.46        &  8.73    &  11.28     &  14.19            &  20.38     &  10.45    &  43    &  none      \\
+ \textsc{rfr\_x}      &  \textsc{late\_mod }        &   8.83        &  10.31   &  11.7      &  12.96            &  14.6      &  14.57    &  95    &  complete      \\
+ \textsc{rfr\_x}      &  \textsc{late\_op  }        &   6.2         &  8.92    &  11.04     &  13.38            &  16.26     &  3.1      &  0     &  complete     \\
+ \textsc{smc\_m}      &  \textsc{early\_all}        &   7.75        &  12.34   &  15.11     &  18.68            &  24.74     &  14.98    &  48    &  none      \\
+ \textsc{smc\_m}      &  \textsc{mid\_cl   }        &   21.52       &  26.15   &  29.69     &  32.58            &  37.01     &  9.74     &  0     &  complete     \\
+ \textsc{smc\_m}      &  \textsc{mid\_mod  }        &   6.8         &  7.98    &  9.03      &  10.3             &  12.63     &  17.97    &  100   &  complete     \\
+ \textsc{smc\_m}      &  \textsc{mid\_op   }        &   6.68        &  9.2     &  11.21     &  13.08            &  16.15     &  16.29    &  96    &  complete     \\
+ \textsc{smc\_m}      &  \textsc{late\_cl  }        &   5.31        &  9.54    &  12.87     &  17.2             &  22.91     &  23.23    &  97    &  complete      \\
+ \textsc{smc\_m}      &  \textsc{late\_mod }        &   8.56        &  10.32   &  11.24     &  12.56            &  14.41     &  14.18    &  95    &  complete      \\
+ \textsc{smc\_m}      &  \textsc{late\_op  }        &   4.96        &  7.39    &  9.26      &  12.12            &  14.95     &  3.6      &  1     &  complete      \\
+ \textsc{smc\_u}      &  \textsc{early\_all}        &   26.04       &  29.09   &  32.15     &  34.42            &  37.5      &  48.7     &  100   &  complete      \\
+ \textsc{smc\_u}      &  \textsc{mid\_cl   }        &   1.27        &  1.84    &  2.23      &  2.69             &  3.51      &  2.99     &  85    &  moderate       \\
+ \textsc{smc\_u}      &  \textsc{mid\_mod  }        &   5.76        &  6.77    &  7.68      &  8.78             &  10.93     &  6.77     &  25    &  none    \\
+ \textsc{smc\_u}      &  \textsc{mid\_op   }        &   17.82       &  20.95   &  22.69     &  24.83            &  27.45     &  5.33     &  0     &  complete      \\
+ \textsc{smc\_u}      &  \textsc{late\_cl  }        &   9           &  11.89   &  14.25     &  16.78            &  21.36     &  24.43    &  99    &  complete      \\
+ \textsc{smc\_u}      &  \textsc{late\_mod }        &   9.14        &  10.14   &  11.04     &  11.89            &  13.92     &  8.51     &  1     &  complete      \\
+ \textsc{smc\_u}      &  \textsc{late\_op  }        &   5.95        &  7.65    &  9.18      &  10.72            &  13.67     &  3.27     &  0     &  complete      \\
 \end{tabular}
 \end{table}
 \end{landscape}
@@ -424,18 +466,18 @@ Western White Pine                           & 273      & 104       & 563      &
 \begin{landscape}
 \begin{table}[!htbp]
 \footnotesize
-\caption{Range of variation in landscape structure, illustrating the cover-condition class dynamics for Sierran Mixed Conifer -~Xeric (\textsc{smc\_x}). For condition class abbreviations, see Table \ref{condtable}.}
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Sierran Mixed Conifer -~Xeric (\textsc{smc\_x}). For condition class abbreviations, see Table \ref{condtable}.}
 \label{tab:covcond3}
 \begin{tabular}{@{}rrrrrrr|rrr@{}}
 \toprule
- \textbf{\begin{tabular}[c]{@{}l@{}}Land \\ Cover\\ Type\end{tabular}} &  \textbf{\begin{tabular}[c]{@{}l@{}}Condition \\ Class\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\\ Index\end{tabular}} \\ \midrule
- \textsc{smc\_x}      &  \textsc{early\_all}      &  25.2          &  29.63          &  34.53    &  38.95    &  42.82          &  19.48       &   0      &  -100    \\
- \textsc{smc\_x}      &  \textsc{mid\_cl   }      &  0.02          &  0.06           &  0.13     &  0.36     &  1.07           &  11.96       &   100    &  100      \\
- \textsc{smc\_x}      &  \textsc{mid\_mod  }      &  0.9           &  1.62           &  2.88     &  4.35     &  7.6            &  14.92       &   100    &  100    \\
- \textsc{smc\_x}      &  \textsc{mid\_op   }      &  26.55         &  30.59          &  33.79    &  36.58    &  39.36          &  11.48       &   0      &  -100    \\
- \textsc{smc\_x}      &  \textsc{late\_cl  }      &  1.19          &  2.51           &  3.81     &  5.99     &  8.69           &  24.72       &   100    &  100      \\
- \textsc{smc\_x}      &  \textsc{late\_mod }      &  5.83          &  7.49           &  9.16     &  10.71    &  13.03          &  13.31       &   97     &  94     \\
- \textsc{smc\_x}      &  \textsc{late\_op  }      &  9.39          &  12.4           &  15       &  17.42    &  22.45          &  4.13        &   0     &   -100  \\ \bottomrule 
+ \textbf{\begin{tabular}[c]{@{}l@{}}Land \\ Cover\\ Type\end{tabular}} &  \textbf{\begin{tabular}[c]{@{}l@{}}Condition \\ Class\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
+ \textsc{smc\_x}      &  \textsc{early\_all}      &  25.2          &  29.63          &  34.53    &  38.95    &  42.82          &  19.48       &   0      &  complete    \\
+ \textsc{smc\_x}      &  \textsc{mid\_cl   }      &  0.02          &  0.06           &  0.13     &  0.36     &  1.07           &  11.96       &   100    &  complete      \\
+ \textsc{smc\_x}      &  \textsc{mid\_mod  }      &  0.9           &  1.62           &  2.88     &  4.35     &  7.6            &  14.92       &   100    &  complete    \\
+ \textsc{smc\_x}      &  \textsc{mid\_op   }      &  26.55         &  30.59          &  33.79    &  36.58    &  39.36          &  11.48       &   0      &  complete    \\
+ \textsc{smc\_x}      &  \textsc{late\_cl  }      &  1.19          &  2.51           &  3.81     &  5.99     &  8.69           &  24.72       &   100    &  complete      \\
+ \textsc{smc\_x}      &  \textsc{late\_mod }      &  5.83          &  7.49           &  9.16     &  10.71    &  13.03          &  13.31       &   97     &  complete     \\
+ \textsc{smc\_x}      &  \textsc{late\_op  }      &  9.39          &  12.4           &  15       &  17.42    &  22.45          &  4.13        &   0     &   complete  \\ \bottomrule 
 \end{tabular}
 \end{table}
 \end{landscape}
