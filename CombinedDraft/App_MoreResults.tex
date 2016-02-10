@@ -4,19 +4,6 @@
 \label{app:full-results}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Disturbance Regime}
-
-% Took this section out 2016-02-06 because this image is in the main report. Probably this appendix shouldn't contain repeated results of the full landscape.
-
-%redone 9/13
-%\begin{figure}[!htbp]
-%\centering
-%\includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_darea_hist.png}
-%\caption{Histogram of percent of landscape disturbed by wildfire during the simulation. The distribution is substantially right-skewed, and most fires burn less than 20\% of the eligible landscape.}
-%\label{fig:darea_hist}
-%\end{figure}
-
-
 \section{Average Canopy Cover and Topographic Position}
 Table~\ref{tab:tpi_cc} shows the relationship between canopy cover and topographic position (as measured by the topographic position index (TPI)) for the 9 most extensive cover types in the study area. Figure~\ref{fig:tpi_cc} shows a linear regression fit to a sample of points from each cover type across the TPI and average canopy cover grids.
 
@@ -54,6 +41,21 @@ Table~\ref{tab:tpi_cc} shows the relationship between canopy cover and topograph
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Disturbance Regime}
+
+% Took this section out 2016-02-06 because this image is in the main report. Probably this appendix shouldn't contain repeated results of the full landscape.
+
+%redone 9/13
+%\begin{figure}[!htbp]
+%\centering
+%\includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_darea_hist.png}
+%\caption{Histogram of percent of landscape disturbed by wildfire during the simulation. The distribution is substantially right-skewed, and most fires burn less than 20\% of the eligible landscape.}
+%\label{fig:darea_hist}
+%\end{figure}
+
+
+
 
 
 \section{Fire Rotation}
@@ -98,6 +100,168 @@ Western White Pine                           & 273      &  104      & 563      &
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Individual Cover Type Results}
+
+The discussion that follows focuses on seven of the nine cover types found within the core project area that were treated as dynamic in the model and that occurred over an extent of at least 1000 ha in the project area. For each of these cover types, we briefly describe the simulated disturbance regime (i.e., spatial extent and distribution, frequency and temporal variability) associated with each relevant disturbance process, the vegetation dynamics resulting from the interplay between these disturbance processes and succession, and an examination of the cover type’s current departure from the simulated HRV. The cover types are presented in descending order by total area within the project landscape. Results for Sierran Mixed Conifer Mesic and Xeric can be found in Chapter~\ref{sec:hrvresults}
+
+\subsection{Oak-Conifer Forest and Woodland}
+% figures updated 2015-09
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_ocfw.png}
+    }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_hist_ocfw.png}
+    }
+  \caption{\small (a) Disturbance trajectory for Oak-Conifer Forest and Woodland. High mortality fire in dark blue; low mortality fire in light blue. (b) Histogram of disturbed hectares with density curve overlaid.} 
+  \label{fig:darea_ocfw}
+\end{figure}
+
+Oak-Conifer Forest and Woodland (\textsc{ocfw})is the third most common cover type within the core project area, encompassing 23,279 ha and comprising roughly 13\% of the project area. The frequency and extent of simulated wildfires in oak-conifer forests and woodlands varied markedly across the landscape (Figure~\ref{fig:darea_ocfw}). Wildfire was quite prevalent in this cover type. We summarize the disturbance regime in Tables~\ref{tab:darea_ocfw} and \ref{tab:darea_atleast_ocfw}.
+
+
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{ Disturbed area summary statistics for Oak-Conifer Forest and Woodland. Proportions shown are relative to the total area of Oak-Conifer Forest and Woodland.}
+\label{tab:darea_ocfw}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{\begin{tabular}[c]{@{}l@{}}Summary Statistic \\ (disturbed area/timestep)\end{tabular}} & \textbf{Low Mortality} & \textbf{High Mortality} & \textbf{Any Mortality} \\ \midrule
+$5^{\text{th}}$ percentile         & 3.39  & 0.70  & 4.35   \\
+$50^{\text{th}}$ percentile        & 13.92 & 3.63  & 17.82  \\
+$95^{\text{th}}$ percentile        & 45.42 & 13.61 & 58.63  \\
+Mean                               & 17.61 & 4.78  & 22.39  \\
+\textbf{Fire Rotation} & 28       & 105       & 22 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{ocfw} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\label{tab:darea_atleast_ocfw}
+\begin{tabular}{@{}lllll@{}}
+                        & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
+Number of timesteps     & 460          & 344           & 156           & 42           \\
+Proportion of timesteps & 1.00         & 0.75          & 0.34          & 0.09         \\
+Interval (timesteps)    & 1.00         & 1.34          & 2.96          & 10.98        \\
+Interval (years)        & 5.01         & 6.70          & 14.78         & 54.88        \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-ocfw.png}
+    }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_ocfw.png}
+    }
+  \caption{(a) Distribution of point-specific fire rotations for Oak-Conifer Forest and Woodland. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Oak-Conifer Forest and Woodland are partially obscured in grey.}
+\label{fig:preturn_ocfw}
+\end{figure}
+
+The age structure and dynamics of oak-conifer forests and woodlands illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+%
+The distribution of area among stand conditions within oak-conifer forests and woodlands fluctuated considerably over time, as expected (Figure~\ref{fig:covcond_ocfw}). %For example, the percentage of oak-conifer forests and woodlands in the Late Development - Closed condition varied from 7\% to 35\%, reflecting the dynamic nature of this cover type (Table~\ref{tab:covcond1}). %
+Surprisingly for a cover type in which fuels are the largest contributor to disturbance and fire is relatively frequent, the late development, open canopy conditions were relatively uncommon, though more so than on the current landscape.
+%
+
+
+
+The seral-stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each stand condition varied about a stable mean). Our calculated current seral-stage distribution was never observed under the simulated HRV (Table~\ref{tab:covcond_ocfw}). The most notable departure was the shift from Mid Development conditions, which are dominant in the current landscape, to Late Development conditions, which are almost nonexistent on the current landscape. The current proportions of all Late Development canopy cover levels are lower than at any point during the HRV.  The Early Development and Mid Development - Moderate conditions are within the HRV, but the other five stages are completely departed from the HRV.
+
+% figures updated 2015-09, and again 2016-02
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/OCFW.pdf}
+    }%
+  \subfloat[][]{
+    \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_ocfw.png}
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/OCFW-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Oak-Conifer Forest and Woodland. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Oak-Conifer Forest and Woodland. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
+  \label{fig:covcond_ocfw}
+\end{figure}
+
+\begin{table}[!htbp]
+\footnotesize
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Oak-Conifer Forest and Woodland (\textsc{ocfw}). For condition class abbreviations, see Table \ref{condtable}.}
+\label{tab:covcond1}
+\begin{tabular}{@{}lrrrrr|rrr@{}}
+\toprule
+\textbf{\begin{tabular}[c]{@{}l@{}}Condition \\ Class\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
+\textsc{early\_all}      &  7.7            &  11.2             &  14.18     &  17.75           &  23.31      &  19.97    &  84    &  moderate      \\
+\textsc{mid\_cl   }      &  3.33           &  7.35             &  11.3      &  15.03           &  19.39      &  37.36    &  100   &  complete      \\
+\textsc{mid\_mod  }      &  7.31           &  9.16             &  10.88     &  12.88           &  16.55      &  14.61    &  89    &  moderate      \\
+\textsc{mid\_op   }      &  8.8            &  12.01            &  15.12     &  18.75           &  24.48      &  24.34    &  95    &  complete       \\
+\textsc{late\_cl  }      &  5.37           &  11.38            &  17.76     &  23.13           &  31.36      &  1.58     &  0     &  complete      \\
+\textsc{late\_mod }      &  13.81          &  16.51            &  18.23     &  20.22           &  22.84      &  1.02     &  0     &  complete      \\
+\textsc{late\_op  }      &  5.45           &  7.89             &  10.61     &  14.12           &  19.02      &  1.12     &  0     &  complete      \\
+\end{tabular}
+\end{table}
+
+
+The spatial configuration of stand conditions fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). Area-weighted patch and core area exhibited the greatest variability over time. Because Late Development conditions across canopy cover are nearly absent from the current landscape, configuration metrics consistently differ between current conditions and the simulated HRV. While some conditions and metrics fall completely outside the HRV, others are well within it. The HRV results for class-level metrics are consistent for six of the seven seral stages, in the sense of their deviation from current conditions (Mid Development - Closed is the outlier). For example, patches are currently smaller, with less core area and geometric complexity, compared to the simulated period. Early development and middle development, open canopy patches tended to be less aggregated during the HRV, while the other condition classes were more aggregated. Only late development moderate and open canopy classes were outside the HRV for the \textsc{clumpy} metric, however.
+
+
+% figures updated 2015-09-20
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/OCFW-AREA_AM-boxplots.png}
+  \caption{Fragstats class-level results for Oak-Conifer Forest and Woodland and area-weighted mean patch area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:ocfw_areaam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/OCFW-CORE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Oak-Conifer Forest and Woodland and area-weighted mean core area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:ocfw_coream}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/OCFW-SHAPE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Oak-Conifer Forest and Woodland and area-weighted mean shape index. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:ocfw_shapeam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/OCFW-CLUMPY-boxplots.png}
+  \caption{Fragstats class-level results for Oak-Conifer Forest and Woodland and clumpiness. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:ocfw_clumpy}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Population Return Interval}
 
 Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. The following plots are from the 9 most extensive cover types in the study area.
@@ -130,18 +294,7 @@ Visualizing the point-specific fire rotation calls attention to the variability 
 \label{fig:preturn_megx}
 \end{figure}
 
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-ocfw.png}
-    }%
-  \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_ocfw.png}
-    }
-  \caption{(a) Distribution of point-specific fire rotations for Oak-Conifer Forest and Woodland. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Oak-Conifer Forest and Woodland are partially obscured in grey.}
-\label{fig:preturn_ocfw}
-\end{figure}
+
 
 \begin{figure}[!htbp]
   \centering
@@ -262,21 +415,7 @@ Visualizing the point-specific fire rotation calls attention to the variability 
   \label{fig:covcond_megx}
 \end{figure}
 
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/OCFW.pdf}
-    }%
-  \subfloat[][]{
-    \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_ocfw.png}
-    }\\
-  \subfloat[][]{
-    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/OCFW-HRV-boxplots-.png}
-  }
-  \caption{(a) Seral Stage dynamics for Oak-Conifer Forest and Woodland. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Oak-Conifer Forest and Woodland. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
-  \label{fig:covcond_ocfw}
-\end{figure}
+
 
 \begin{figure}[!htbp]
   \centering
