@@ -10,7 +10,7 @@ Table~\ref{tab:tpi_cc} shows the relationship between canopy cover and topograph
 % redone with results from 2015-09-04. File saved in /Users/mmallek/Tahoe/RMLands/results/results20150904/tpi
 \begin{table}[!htbp]
 \footnotesize
-\caption{For each cover type on the landscape, the percent change in canopy cover from the minimum TPI value for that cover type to the maximum TPI value. For condition class abbreviations, see Table \ref{condtable}.}
+\caption{For each cover type on the landscape, the percent change in canopy cover from the minimum TPI value for that cover type to the maximum TPI value. For seral stage abbreviations, see Table \ref{condtable}.}
 \label{tab:tpi_cc}
 %\rotatebox{90}{
 \begin{tabular}{@{}lrrrrr@{}}
@@ -102,6 +102,11 @@ Western White Pine                           & 273      &  104      & 563      &
 
 \section{Individual Cover Type Results}
 
+% preturn redone 
+% updated 2016-02-07 to adjust departure values
+% updated 2016-02-10 to merge App_ExtraCovResults into this document
+
+
 The discussion that follows focuses on seven of the nine cover types found within the core project area that were treated as dynamic in the model and that occurred over an extent of at least 1000 ha in the project area. For each of these cover types, we briefly describe the simulated disturbance regime (i.e., spatial extent and distribution, frequency and temporal variability) associated with each relevant disturbance process, the vegetation dynamics resulting from the interplay between these disturbance processes and succession, and an examination of the cover type’s current departure from the simulated HRV. The cover types are presented in descending order by total area within the project landscape. Results for Sierran Mixed Conifer Mesic and Xeric can be found in Chapter~\ref{sec:hrvresults}
 
 \subsection{Oak-Conifer Forest and Woodland}
@@ -171,13 +176,10 @@ Visualizing the point-specific fire rotation calls attention to the variability 
 
 The age structure and dynamics of oak-conifer forests and woodlands illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
 %
-The distribution of area among stand conditions within oak-conifer forests and woodlands fluctuated considerably over time, as expected (Figure~\ref{fig:covcond_ocfw}). %For example, the percentage of oak-conifer forests and woodlands in the Late Development - Closed condition varied from 7\% to 35\%, reflecting the dynamic nature of this cover type (Table~\ref{tab:covcond1}). %
-Surprisingly for a cover type in which fuels are the largest contributor to disturbance and fire is relatively frequent, the late development, open canopy conditions were relatively uncommon, though more so than on the current landscape.
+The distribution of area among seral stages within oak-conifer forests and woodlands fluctuated considerably over time, as expected (Figure~\ref{fig:covcond_ocfw}). Surprisingly for a cover type in which fuels are the largest contributor to disturbance and fire is relatively frequent, the Late--Open seral stage was relatively uncommon, though more so than on the current landscape.
 %
 
-
-
-The seral-stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each stand condition varied about a stable mean). Our calculated current seral-stage distribution was never observed under the simulated HRV (Table~\ref{tab:covcond_ocfw}). The most notable departure was the shift from Mid Development conditions, which are dominant in the current landscape, to Late Development conditions, which are almost nonexistent on the current landscape. The current proportions of all Late Development canopy cover levels are lower than at any point during the HRV.  The Early Development and Mid Development - Moderate conditions are within the HRV, but the other five stages are completely departed from the HRV.
+The seral stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each seral stage varied about a stable mean). Our calculated current seral stage distribution was never observed under the simulated HRV (Table~\ref{tab:covcond_ocfw}). The most notable departure was the shift from the Mid Development stages, which are dominant in the current landscape, to Late Development stages, which are almost nonexistent on the current landscape. The current proportions of all Late Development canopy cover levels are lower than at any point during the HRV.  The Early Development and Mid--Moderate proportions are within the HRV, but the other five stages are completely departed from the HRV.
 
 % figures updated 2015-09, and again 2016-02
 \begin{figure}[!htbp]
@@ -198,11 +200,11 @@ The seral-stage distribution appeared to be in dynamic equilibrium (i.e., the pe
 
 \begin{table}[!htbp]
 \footnotesize
-\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Oak-Conifer Forest and Woodland (\textsc{ocfw}). For condition class abbreviations, see Table \ref{condtable}.}
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Oak-Conifer Forest and Woodland (\textsc{ocfw}). For seral stage abbreviations, see Table \ref{condtable}.}
 \label{tab:covcond1}
 \begin{tabular}{@{}lrrrrr|rrr@{}}
 \toprule
-\textbf{\begin{tabular}[c]{@{}l@{}}Condition \\ Class\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
+\textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
 \textsc{early\_all}      &  7.7            &  11.2             &  14.18     &  17.75           &  23.31      &  19.97    &  84    &  moderate      \\
 \textsc{mid\_cl   }      &  3.33           &  7.35             &  11.3      &  15.03           &  19.39      &  37.36    &  100   &  complete      \\
 \textsc{mid\_mod  }      &  7.31           &  9.16             &  10.88     &  12.88           &  16.55      &  14.61    &  89    &  moderate      \\
@@ -214,7 +216,7 @@ The seral-stage distribution appeared to be in dynamic equilibrium (i.e., the pe
 \end{table}
 
 
-The spatial configuration of stand conditions fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). Area-weighted patch and core area exhibited the greatest variability over time. Because Late Development conditions across canopy cover are nearly absent from the current landscape, configuration metrics consistently differ between current conditions and the simulated HRV. While some conditions and metrics fall completely outside the HRV, others are well within it. The HRV results for class-level metrics are consistent for six of the seven seral stages, in the sense of their deviation from current conditions (Mid Development - Closed is the outlier). For example, patches are currently smaller, with less core area and geometric complexity, compared to the simulated period. Early development and middle development, open canopy patches tended to be less aggregated during the HRV, while the other condition classes were more aggregated. Only late development moderate and open canopy classes were outside the HRV for the \textsc{clumpy} metric, however.
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). Area-weighted patch and core area exhibited the greatest variability over time. Because all the Late Development stages are nearly absent from the current landscape, configuration metrics consistently differ between the current seral stage distrbution and that observed during the simulated HRV. While some seral stages and metrics fall completely outside the HRV, others are well within it. The HRV results for class-level metrics are consistent for six of the seven seral stages, in the sense of their deviation from their current proportion (Mid--Closed is the outlier). For example, patches are currently smaller, with less core area and geometric complexity, compared to the simulated period. Early development and middle development, open canopy patches tended to be less aggregated during the HRV, while the other seral stages were more aggregated. Only late development moderate and open canopy classes were outside the HRV for the \textsc{clumpy} metric, however.
 
 
 % figures updated 2015-09-20
@@ -256,58 +258,57 @@ The spatial configuration of stand conditions fluctuated markedly over time as w
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Population Return Interval}
-
-Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. The following plots are from the 9 most extensive cover types in the study area.
-
-%redid plots (remove titles) 2015-02-07
-
+\clearpage
+\subsection{Red Fir - Mesic} 
+% figures updated 2015-09
 \begin{figure}[!htbp]
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-megm.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_rfrm.png}
     }%
   \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_megm.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_hist_rfrm.png}
     }
-  \caption{(a) Distribution of point-specific fire rotations for Mixed Evergreen - Mesic. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Mixed Evergreen - Mesic are partially obscured in grey.}
-    \label{fig:preturn_megm}
+  \caption{\small (a) Disturbance trajectory for Red Fir - Mesic. High mortality fire in dark blue; low mortality fire in light blue. (b) Histogram of disturbed hectares with density curve overlaid.} 
+  \label{fig:darea_rfrm}
 \end{figure}
 
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-megx.png}
-    }%
-  \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_megx.png}
-    }
-  \caption{(a) Distribution of point-specific fire rotations for Mixed Evergreen - Xeric. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Mixed Evergreen - Xeric are partially obscured in grey.}
-\label{fig:preturn_megx}
-\end{figure}
+Red Fir - Mesic (\textsc{rfr\_m})is a somewhat common cover type within the core project area, encompassing 8,563 ha and comprising roughly 5\% of the project area. Wildfire was fairly common in this cover type. The frequency and extent of simulated wildfires in mesic red fir forests varied markedly across the landscape (Figure~\ref{fig:darea_rfrm}). We summarize the disturbance regime in Tables~\ref{tab:darea_rfrm} and \ref{tab:darea_atleast_rfrm}.
 
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{\small Disturbed area summary statistics for Red Fir - Mesic. Proportions shown are relative to the total area of Red Fir - Mesic.}
+\label{tab:darea_rfrm}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{\begin{tabular}[c]{@{}l@{}}Summary Statistic \\ (disturbed area/timestep)\end{tabular}} & \textbf{Low Mortality} & \textbf{High Mortality} & \textbf{Any Mortality} \\ \midrule
+$5^{\text{th}}$ percentile         & 0.20  & 0.06  & 0.30  \\
+$50^{\text{th}}$ percentile        & 2.70  & 1.53  & 4.31  \\
+$95^{\text{th}}$ percentile        & 18.75 & 12.74 & 31.17 \\
+Mean                               & 4.80  & 3.14  & 7.94  \\
+\textbf{Fire Rotation} & 104      & 159       & 63 \\ \bottomrule
+\end{tabular}
+\end{table}
 
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{rfr\_m} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\label{tab:darea_atleast_rfrm}
+\begin{tabular}{@{}lllll@{}}
+                        & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
+Number of timesteps     & 380          & 116           & 36            & 1          \\
+Proportion of timesteps & 0.82         & 0.25          & 0.08          & 0          \\
+Interval (timesteps)    & 1.21         & 3.97          & 12.81         & 461        \\
+Interval (years)        & 6.07         & 19.87         & 64.03         & 2305      \\ \bottomrule
+\end{tabular}
+\end{table}
 
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-ocfwu.png}
-    }%
-  \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_ocfwu.png}
-    }
-  \caption{(a) Distribution of point-specific fire rotations for Oak-Conifer Forest and Woodland - Ultramafic. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Oak-Conifer Forest and Woodland - Ultramafic are partially obscured in grey.}
-\label{fig:preturn_ocfwu}
-\end{figure}
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
 
 \begin{figure}[!htbp]
   \centering
@@ -322,116 +323,11 @@ Visualizing the point-specific fire rotation calls attention to the variability 
 \label{fig:preturn_rfrm}
 \end{figure}
 
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-rfrx.png}
-    }%
-  \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_rfrx.png}
-    }
-  \caption{(a) Distribution of point-specific fire rotations for Red Fir - Xeric. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Red Fir - Xeric are partially obscured in grey.}
-\label{fig:preturn_rfrx}
-\end{figure}
+The age structure and dynamics of mesic red fir forests illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
 
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-smcm.png}
-    }%
-  \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_smcm.png}
-    }
-  \caption{(a) Distribution of point-specific fire rotations for Sierran Mixed Conifer - Mesic. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Sierran Mixed Conifer - Mesic are partially obscured in grey.}
-\label{fig:preturn_smcm_app}
-\end{figure}
+The distribution of area among seral stages within mesic red fir forests fluctuated over time, but the moderate and open canopy cover seral stages are remarkable for having an extremely small range of variability (Figure~\ref{fig:covcond_rfrm}). As expected for mesic red fir forests (Appendix~\ref{app:covertypedesc}), closed canopies predominated. Early Development, which includes post-fire chaparral fields, was the next most extensive cover type. %
 
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-smcu.png}
-    }%
-  \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_smcu.png}
-    }
-  \caption{(a) Distribution of point-specific fire rotations for Sierran Mixed Conifer - Ultramafic. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Sierran Mixed Conifer - Ultramafic are partially obscured in grey.}
-\label{fig:preturn_smcu}
-\end{figure}
-
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-smcx.png}
-    }%
-  \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_smcx.png}
-    }
-  \caption{(a) Distribution of point-specific fire rotations for Sierran Mixed Conifer - Xeric. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Sierran Mixed Conifer - Xeric are partially obscured in grey.}
-\label{fig:preturn_smcx_app}
-\end{figure}
-
-\clearpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Seral Stage Dynamics}
-\label{app:sec:seraldynamics}
-
-% all covcond plots redone
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/MEGM.pdf}
-    }%
-  \subfloat[][]{
-  \centering
-  \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_megm.png}
-    }\\
-  \subfloat[][]{
-    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/MEGM-HRV-boxplots-.png}
-  }
-  \caption{(a) Seral Stage dynamics for Mixed Evergreen - Mesic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Mixed Evergreen - Mesic. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.}
-\label{fig:covcond_megm}
-\end{figure}
-
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/MEGX.pdf}
-    }%
-  \subfloat[][]{
-    \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_megx.png}
-    }\\
-  \subfloat[][]{
-    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/MEGX-HRV-boxplots-.png}
-  }
-  \caption{(a) Seral Stage dynamics for Mixed Evergreen - Xeric. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Mixed Evergreen - Xeric. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
-  \label{fig:covcond_megx}
-\end{figure}
-
-
-
-\begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/OCFWU.pdf}
-    }%
-  \subfloat[][]{
-    \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_ocfwu.png}
-    }\\
-  \subfloat[][]{
-    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/OCFWU-HRV-boxplots-.png}
-  }
-  \caption{(a) Seral Stage dynamics for Oak-Conifer Forest and Woodland - Ultramafic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Oak-Conifer Forest and Woodland - Ultramafic. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
-  \label{fig:covcond_ocfwu}
-\end{figure}
+The seral stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each seral stages varied about a stable mean). Our calculated current seral stage distribution was never observed under the simulated HRV (Table~\ref{tab:covcond2}). The most notable departure was a shift from moderate canopy cover to closed canopy cover. Current levels of moderate canopy cover are much higher, and current levels of closed canopy cover much lower, than during the simulated HRV. Early Development and Late Development - Open are both somewhat departed from the HRV. The other five seral stages are completely departed from the HRV. 
 
 \begin{figure}[!htbp]
   \centering
@@ -449,6 +345,138 @@ Visualizing the point-specific fire rotation calls attention to the variability 
   \label{fig:covcond_rfrm}
 \end{figure}
 
+\begin{landscape}
+\begin{table}[!htbp]
+\footnotesize
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Red Fir - Mesic (\textsc{rfr\_m}). For seral stage abbreviations, see Table \ref{condtable}.}
+\label{tab:covcond2}
+\begin{tabular}{@{}rrrrrr|rrr@{}}
+\toprule
+\textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}    &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
+                            % 5th         25th        50th         75th                  95th      current value  current %ile  dep. index
+\textsc{early\_all}        &   6.47        &  10.49   &  15.61     &  22.55            &  32.82     &  24.21    &  81    &  moderate      \\
+\textsc{mid\_cl   }        &   20.6        &  29.15   &  34.73     &  41.06            &  48.77     &  3.63     &  0     &  complete      \\
+\textsc{mid\_mod  }        &   0.79        &  1.16    &  1.46      &  1.95             &  2.62      &  18.67    &  100   &  complete      \\
+\textsc{mid\_op   }        &   0.36        &  0.64    &  0.91      &  1.32             &  2.17      &  16.7     &  100   &  complete      \\
+\textsc{late\_cl  }         &  26.29       &  33.03   &  39.48     &  45.47            &  53.47     &  10.7     &  0     &  complete      \\
+\textsc{late\_mod }        &   2.31        &  3.2     &  4.19      &  5.2              &  6.95      &  21.96    &  100   &  complete      \\
+\textsc{late\_op  }        &   0.73        &  1.1     &  1.61      &  2.2              &  3.4       &  4.13     &  100   &  complete     \\
+\end{tabular}
+\end{table}
+\end{landscape}
+
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). Several metrics exhibited high variability over time, including the area-weighted patch and core area, edge and patch density, radius of gyration, and contrast-weighted edge density. The narrow range of variability observed in some seral stages is repeated in the configuration metrics. In general, current values for the class metrics are often completely outside or near the extremes of the simulated HRV. The direction of the departure depends on seral stage. The early development and closed canopy seral stages tend to be smaller in both area and core area, less aggregated, and less geometrically complex now than during the HRV. In contrast, the moderate and open canopy seral stages tend to be larger, with more core area, more aggregation, and more complexity now than during the HRV. The fact that the closed canopies dominated the HRV cover-seral stages distribution explains this divergence.
+
+% figures updated 2015-09-20
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/RFR_M-AREA_AM-boxplots.png}
+  \caption{Fragstats class-level results for Red Fir - Mesic and area-weighted mean patch area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:rfrm_areaam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/RFR_M-CORE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Red Fir - Mesic and area-weighted mean core area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:rfrm_coream}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/RFR_M-SHAPE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Red Fir - Mesic and area-weighted mean shape index. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:rfrm_shapeam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/RFR_M-CLUMPY-boxplots.png}
+  \caption{Fragstats class-level results for Red Fir - Mesic and clumpiness. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:rfrm_clumpy}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Red Fir - Xeric} 
+
+% figures updated 2015-09
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_rfrx.png}
+    }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_hist_rfrx.png}
+    }
+  \caption{\small (a) Disturbance trajectory for Red Fir - Xeric. High mortality fire in dark blue; low mortality fire in light blue. (b) Histogram of disturbed hectares with density curve overlaid.} 
+  \label{fig:darea_rfrx}
+\end{figure}
+
+Red Fir - Xeric (\textsc{rfr\_x})is a somewhat common cover type within the core project area, encompassing 7,493 ha and comprising roughly 5\% of the project area. Wildfire was fairly common in this cover type, and occurred more frequently on average than in mesic red fir forests.
+The frequency and extent of simulated wildfires in xeric red fir forests varied markedly across the landscape (Figure~\ref{fig:darea_rfrx}). We summarize the disturbance regime in Tables~\ref{tab:darea_rfrx} and \ref{tab:darea_atleast_rfrx}.
+
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{Disturbed area summary statistics for Red Fir - Xeric. Proportions shown are relative to the total area of Red Fir - Xeric.}
+\label{tab:darea_rfrx}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{\begin{tabular}[c]{@{}l@{}}Summary Statistic \\ (disturbed area/timestep)\end{tabular}} & \textbf{Low Mortality} & \textbf{High Mortality} & \textbf{Any Mortality} \\ \midrule
+$5^{\text{th}}$ percentile         & 0.34  & 0.17  & 0.56  \\ 
+$50^{\text{th}}$ percentile        & 4.47  & 2.77  & 7.21  \\ 
+$95^{\text{th}}$ percentile        & 30.60 & 18.39 & 47.14 \\ 
+Mean                               & 8.29  & 4.96  & 13.25  \\
+\textbf{Fire Rotation} & 60       & 101       & 38  \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\small
+\centering
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{rfr\_x} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\label{tab:darea_atleast_rfrx}
+\begin{tabular}{@{}lllll@{}}
+                        & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
+Number of timesteps     & 422          & 188           & 77            & 21            \\
+Proportion of timesteps & 0.92         & 0.41          & 0.17          & 0.05          \\
+Interval (timesteps)    & 1.09         & 2.45          & 5.99          & 21.95         \\
+Interval (years)        & 5.46         & 12.26         & 29.94         & 109.76       \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-rfrx.png}
+    }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_rfrx.png}
+    }
+  \caption{(a) Distribution of point-specific fire rotations for Red Fir - Xeric. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Red Fir - Xeric are partially obscured in grey.}
+\label{fig:preturn_rfrx}
+\end{figure}
+
+The age structure and dynamics of xeric red fir forests illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+
+The distribution of area among seral stages within xeric red fir forests fluctuated over time, but less dramatically than many other cover types (Figure~\ref{fig:covcond_rfrx}). Interestingly, although open canopies dominated during middle development, the distribution of the three Late Development seral stages was roughly equal. This shift towards higher canopy closure may be due to an increasing resilience to wildfire disturbances by stands of that age: wildfires may burn the understory without significantly affecting overstory canopy cover. Early Development, which includes post-fire chaparral fields, was the single most extensive cover type. The current proportion of Early Development is somewhat departed from the simulated HRV. %
+
+The seral stage distribution appeared to be in dynamic equilibrium. Our calculated current seral stage distribution was never observed under the simulated HRV (Table~\ref{tab:covcond2}). Although the late closed stage is not currently departed from the HRV, and the early development stage is moderately departed, the other stages are completely departed from the HRV.
+
 \begin{figure}[!htbp]
   \centering
   \subfloat[][]{
@@ -465,160 +493,643 @@ Visualizing the point-specific fire rotation calls attention to the variability 
   \label{fig:covcond_rfrx}
 \end{figure}
 
+\begin{landscape}
+\begin{table}[!htbp]
+\footnotesize
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Red Fir -  Xeric (\textsc{rfr\_x}). For seral stage abbreviations, see Table \ref{condtable}.}
+\label{tab:rfrx_ss}
+\begin{tabular}{@{}rrrrrr|rrr@{}}
+\toprule
+\textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}    &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
+                          % 5th           25th       50th          75th          95th             current value current %ile dep. index
+\textsc{early\_all}         &  24.76       &  33.1    &  37        &  41.44            &  45.72     &  32.39    &  23    &  none      \\
+\textsc{mid\_cl   }        &   0.24        &  0.5     &  0.88      &  1.5              &  2.73      &  8.26     &  100   &  complete      \\
+\textsc{mid\_mod  }        &   3.12        &  5.33    &  7.02      &  9.25             &  12.11     &  18.66    &  100   &  complete      \\
+\textsc{mid\_op   }        &   13.47       &  17.52   &  19.98     &  22.6             &  27.2      &  12.58    &  3     &  complete      \\
+\textsc{late\_cl  }        &   6.46        &  8.73    &  11.28     &  14.19            &  20.38     &  10.45    &  43    &  none      \\
+\textsc{late\_mod }        &   8.83        &  10.31   &  11.7      &  12.96            &  14.6      &  14.57    &  95    &  complete      \\
+\textsc{late\_op  }        &   6.2         &  8.92    &  11.04     &  13.38            &  16.26     &  3.1      &  0     &  complete     \\
+\end{tabular}
+\end{table}
+\end{landscape}
+
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). In general most seral stages were not departed or moderately departed from the HRV, across metrics. However, middle development, open canopy stages were often completely departed from the HRV, or otherwise moderately departed. These patches were larger, more aggregated, more geometrically complex, and contained more core area during the simulation than in the current landscape.
+
+In general, current values for the class metrics are often completely outside or near the extremes of the simulated HRV. The direction of the departure depends on seral stage. The early development and closed canopies tend to be smaller in both area and core area, less aggregated, and less geometrically complex now than during the HRV. In contrast, the moderate and open canopiy seral stages tend to be larger, with more core area, more aggregation, and more complexity now than during the HRV. The fact that the closed canopy seral stages dominated the HRV cover-seral stages distribution explains this divergence. Specifically, current patches tend to be smaller in both area and core area and more numerous, with less complex geometries and more edge than patches during the simulated HRV.
+
+
+% figures updated 2015-09-20
 \begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/SMCM.pdf}
-    }%
-  \subfloat[][]{
-    \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_smcm.png}
-    }\\
-  \subfloat[][]{
-    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/SMCM-HRV-boxplots-.png}
-  }
-  \caption{(a) Seral Stage dynamics for Sierran Mixed Conifer - Mesic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Sierran Mixed Conifer - Mesic. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
-  \label{fig:covcond_smcm_app}
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/RFR_X-AREA_AM-boxplots.png}
+  \caption{Fragstats class-level results for Red Fir - Xeric and area-weighted mean patch area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:rfrx_areaam}
 \end{figure}
 
 
 \begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/SMCU.pdf}
-    }%
-  \subfloat[][]{
-    \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_smcu.png}
-    }\\
-  \subfloat[][]{
-    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/SMCU-HRV-boxplots-.png}
-  }
-  \caption{(a) Seral Stage dynamics for Sierran Mixed Conifer - Ultramafic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Sierran Mixed Conifer - Ultramafic. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
-  \label{fig:covcond_smcu}
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/RFR_X-CORE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Red Fir - Xeric and area-weighted mean core area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:rfrx_coream}
 \end{figure}
 
+
 \begin{figure}[!htbp]
-  \centering
-  \subfloat[][]{
-    \centering
-    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/SMCX.pdf}
-    }%
-  \subfloat[][]{
-    \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_smcx.png}
-    }\\
-  \subfloat[][]{
-    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/SMCX-HRV-boxplots-.png}
-  }
-  \caption{(a) Seral Stage dynamics for Sierran Mixed Conifer - Xeric. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Sierran Mixed Conifer - Xeric. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
-  \label{fig:covcond_smcx_app}
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/RFR_X-SHAPE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Red Fir - Xeric and area-weighted mean shape index. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:rfrx_shapeam}
 \end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/RFR_X-CLUMPY-boxplots.png}
+  \caption{Fragstats class-level results for Red Fir - Xeric and clumpiness. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:rfrx_clumpy}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
+\subsection{Mixed Evergreen - Mesic} 
+% figures updated 2015-09
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_megm.png}
+    }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_hist_megm.png}
+    }
+  \caption{(a) \small Disturbance trajectory for Mixed Evergreen - Mesic. High mortality fire in dark blue; low mortality fire in light blue. (b) Histogram of disturbed hectares with density curve overlaid.} 
+  \label{fig:darea_megm}
+\end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Mixed Evergreen - Mesic (\textsc{meg\_m}) is a somewhat common cover type within the core project area, encompassing 7,273 ha and comprising roughly 4\% of the project area. Wildfire was prevalent in mesic mixed evergreen forest. The frequency and extent of simulated wildfires  varied markedly across the landscape (Figure~\ref{fig:darea_megm}). We summarize the disturbance regime in Tables~\ref{tab:darea_megm} and \ref{tab:darea_atleast_megm}.
 
-% redid these 2015-09-17
-% updated 2016-02-07 to adjust departure values
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{Disturbed area summary statistics for Mixed Evergreen - Mesic. Proportions shown are relative to the total area of Mixed Evergreen - Mesic.}
+\label{tab:darea_megm}
+  \begin{tabular}{@{}llll@{}} 
+  \toprule
+  \textbf{\begin{tabular}[c]{@{}l@{}}Summary Statistic \\ (disturbed area/timestep)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Low  Mortality\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}High  Mortality\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Any  Mortality\end{tabular}} \\ \midrule
+$5^{\text{th}}$ percentile    &  0.59          & 0.04          & 0.61     \\
+$50^{\text{th}}$ percentile   &  5.13          & 0.54          & 5.84     \\
+$95^{\text{th}}$ percentile   &  27.91         & 3.75          & 31.76    \\
+  Mean                        &  8.62          & 1.01          & 9.63     \\
+  \textbf{Fire Rotation}  & 58       & 493       & 52 \\  \bottomrule
+  \end{tabular}
+\end{table}
+       
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{meg\_m} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\label{tab:darea_atleast_megm}
+\begin{tabular}{@{}lllll@{}}
+                        & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
+Number of timesteps     & 422          & 155           & 43            & 4             \\
+Proportion of timesteps & 0.92         & 0.34          & 0.09          & 0.01          \\
+Interval (timesteps)    & 1.09         & 2.97          & 10.72         & 115.25        \\
+Interval (years)        & 5.46         & 14.87         & 53.60         & 576.25       \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-megm.png}
+    }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_megm.png}
+    }
+  \caption{(a) Distribution of point-specific fire rotations for Mixed Evergreen - Mesic. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Mixed Evergreen - Mesic are partially obscured in grey.}
+    \label{fig:preturn_megm}
+\end{figure}
+
+The age structure and dynamics of mesic mixed evergreen forest illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+
+The distribution of area among seral stages within mesic mixed evergreen forest fluctuated very little over time (Figure~\ref{fig:covcond_megm}). Because high mortality fire is very rare in this cover type, and the time to reaching a Late Development stage is relatively short (Appendix \ref{app:covertypedesc}), the vast majority of the cover type's extent was in the Late Development - Closed stage during the simulation (Table~\ref{tab:covcond1}). %
+
+The seral stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each seral stages varied about a stable mean). The most notable departure was the shift from Mid Development to Late Development seral stages. About 52\% of the current landscape is comprised of the mesic mixed evergreen forest in mid development seral stages, but the late development seral stages were always dominant under the simulated HRV. 
+
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/MEGM.pdf}
+    }%
+  \subfloat[][]{
+  \centering
+  \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_megm.png}
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/MEGM-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Mixed Evergreen - Mesic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Mixed Evergreen - Mesic. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.}
+\label{fig:covcond_megm}
+\end{figure}
+
 \begin{landscape}
 \begin{table}[!htbp]
 \footnotesize
-\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Mixed Evergreen - Mesic (\textsc{meg\_m}), Mixed Evergreen - Xeric (\textsc{meg\_x}), Oak-Conifer Forest and Woodland (\textsc{ocfw}), and Oak-Conifer Forest and Woodland - Ultramafic (\textsc{ocfw\_u}). For condition class abbreviations, see Table \ref{condtable}.}
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Mixed Evergreen - Mesic (\textsc{meg\_m}), Mixed Evergreen - Xeric (\textsc{meg\_x}), Oak-Conifer Forest and Woodland (\textsc{ocfw}), and Oak-Conifer Forest and Woodland - Ultramafic (\textsc{ocfw\_u}). For seral stage abbreviations, see Table \ref{condtable}.}
 \label{tab:covcond1}
-\begin{tabular}{@{}rrrrrrr|rrr@{}}
+\begin{tabular}{@{}rrrrrr|rrr@{}}
 \toprule
- \textbf{\begin{tabular}[c]{@{}l@{}}Land \\ Cover\\ Type\end{tabular}} &  \textbf{\begin{tabular}[c]{@{}l@{}}Condition \\ Class\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
- \textsc{meg\_m}      &  \textsc{early\_all}      &  1.19           &  2.22             &  3.55      &  5.04            &  7.58       &  8.21     &  98    &  complete      \\
- \textsc{meg\_m}      &  \textsc{mid\_cl   }      &  0.01           &  0.08             &  0.29      &  0.77            &  2.57       &  36.53    &  100   &  complete      \\
- \textsc{meg\_m}      &  \textsc{mid\_mod  }      &  0.69           &  1.35             &  2.14      &  3.48            &  6.01       &  9.76     &  100   &  complete      \\
- \textsc{meg\_m}      &  \textsc{mid\_op   }      &  0.04           &  0.11             &  0.23      &  0.41            &  0.78       &  6.37     &  100   &  complete      \\
- \textsc{meg\_m}      &  \textsc{late\_cl  }      &  53.97          &  64.51            &  70.81     &  76.28           &  81.97      &  29.31    &  0     &  complete      \\
- \textsc{meg\_m}      &  \textsc{late\_mod }      &  8.16           &  12.19            &  14.49     &  17.64           &  21.7       &  7.31     &  4     &  complete      \\
- \textsc{meg\_m}      &  \textsc{late\_op  }      &  2.66           &  4.96             &  7.16      &  10.38           &  14.99      &  2.5      &  4     &  complete      \\
- \textsc{meg\_x}      &  \textsc{early\_all}      &  1.68           &  3.32             &  4.58      &  6.06            &  8.64       &  10.88    &  99    &  complete       \\
- \textsc{meg\_x}      &  \textsc{mid\_cl   }      &  0.01           &  0.08             &  0.31      &  0.87            &  2.37       &  48.8     &  100   &  complete      \\
- \textsc{meg\_x}      &  \textsc{mid\_mod  }      &  1.07           &  1.97             &  2.98      &  4.27            &  6.47       &  9.39     &  100   &  complete      \\
- \textsc{meg\_x}      &  \textsc{mid\_op   }      &  0.06           &  0.19             &  0.36      &  0.57            &  0.97       &  12.87    &  100   &  complete      \\
- \textsc{meg\_x}      &  \textsc{late\_cl  }      &  52.93          &  61.01            &  67.58     &  71.66           &  77.74      &  12.84    &  0     &  complete      \\
- \textsc{meg\_x}      &  \textsc{late\_mod }      &  11.3           &  14.32            &  16.68     &  19.66           &  23.14      &  3.84     &  0     &  complete      \\
- \textsc{meg\_x}      &  \textsc{late\_op  }      &  3.07           &  5.35             &  7.12      &  9.77            &  12.88      &  1.38     &  0     &  complete      \\
- \textsc{ocfw}        &  \textsc{early\_all}      &  7.7            &  11.2             &  14.18     &  17.75           &  23.31      &  19.97    &  84    &  moderate      \\
- \textsc{ocfw}        &  \textsc{mid\_cl   }      &  3.33           &  7.35             &  11.3      &  15.03           &  19.39      &  37.36    &  100   &  complete      \\
- \textsc{ocfw}        &  \textsc{mid\_mod  }      &  7.31           &  9.16             &  10.88     &  12.88           &  16.55      &  14.61    &  89    &  moderate      \\
- \textsc{ocfw}        &  \textsc{mid\_op   }      &  8.8            &  12.01            &  15.12     &  18.75           &  24.48      &  24.34    &  95    &  complete       \\
- \textsc{ocfw}        &  \textsc{late\_cl  }      &  5.37           &  11.38            &  17.76     &  23.13           &  31.36      &  1.58     &  0     &  complete      \\
- \textsc{ocfw}        &  \textsc{late\_mod }      &  13.81          &  16.51            &  18.23     &  20.22           &  22.84      &  1.02     &  0     &  complete      \\
- \textsc{ocfw}        &  \textsc{late\_op  }      &  5.45           &  7.89             &  10.61     &  14.12           &  19.02      &  1.12     &  0     &  complete      \\
- \textsc{ocfw\_u}     &  \textsc{early\_all}      &  9.05           &  13.66            &  16.3      &  21              &  26.17      &  17.76    &  63    &  none       \\
- \textsc{ocfw\_u}     &  \textsc{mid\_cl   }      &  0.06           &  0.14             &  0.29      &  0.54            &  1.15       &  29.32    &  100   &  complete      \\
- \textsc{ocfw\_u}     &  \textsc{mid\_mod  }      &  2.55           &  4.11             &  5.48      &  8.31            &  11.38      &  11.54    &  96    &  complete       \\
- \textsc{ocfw\_u}     &  \textsc{mid\_op   }      &  14.79          &  19.29            &  22.49     &  26.11           &  30.28      &  33.49    &  100   &  complete      \\
- \textsc{ocfw\_u}     &  \textsc{late\_cl  }      &  7.39           &  15.12            &  21.21     &  27.3            &  36.45      &  5.35     &  1     &  complete      \\
- \textsc{ocfw\_u}     &  \textsc{late\_mod }      &  15.06          &  18.62            &  20.99     &  23.86           &  29.17      &  2.2      &  0     &  complete    \\
- \textsc{ocfw\_u}     &  \textsc{late\_op  }      &  3.92           &  7.21             &  10.44     &  13.64           &  18.99      &  0.34     &  0     &  complete      \\
+ \textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
+\textsc{early\_all}      &  1.19           &  2.22             &  3.55      &  5.04            &  7.58       &  8.21     &  98    &  complete      \\
+\textsc{mid\_cl   }      &  0.01           &  0.08             &  0.29      &  0.77            &  2.57       &  36.53    &  100   &  complete      \\
+\textsc{mid\_mod  }      &  0.69           &  1.35             &  2.14      &  3.48            &  6.01       &  9.76     &  100   &  complete      \\
+\textsc{mid\_op   }      &  0.04           &  0.11             &  0.23      &  0.41            &  0.78       &  6.37     &  100   &  complete      \\
+\textsc{late\_cl  }      &  53.97          &  64.51            &  70.81     &  76.28           &  81.97      &  29.31    &  0     &  complete      \\
+\textsc{late\_mod }      &  8.16           &  12.19            &  14.49     &  17.64           &  21.7       &  7.31     &  4     &  complete      \\
+\textsc{late\_op  }      &  2.66           &  4.96             &  7.16      &  10.38           &  14.99      &  2.5      &  4     &  complete      \\
 \end{tabular}
 \end{table}
 \end{landscape}
 
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). Because the landscape is so dominated by the Late--Closed and Late--Moderate seral stages, we focus on the configuration metrics for these classes. In general, the current landscape contains fewer, smaller, and more clumped patches than existed under the simulated HRV. Current patches in Late--Closed are less geometrically complex and have less area in cores than during the simulated HRV.
+
+
+% figures updated 2015-09-20
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/MEG_M-AREA_AM-boxplots.png}
+  \caption{Fragstats class-level results for Mixed Evergreen - Mesic and area-weighted mean patch area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:megm_areaam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/MEG_M-CORE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Mixed Evergreen - Mesic and area-weighted mean core area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:megm_coream}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/MEG_M-SHAPE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Mixed Evergreen - Mesic and area-weighted mean shape index. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:megm_shapeam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/MEG_M-CLUMPY-boxplots.png}
+  \caption{Fragstats class-level results for Mixed Evergreen - Mesic and clumpiness. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:megm_clumpy}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Mixed Evergreen - Xeric} 
+% figures updated 2015-09
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_megx.png}
+    }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_hist_megx.png}
+    }
+  \caption{\small (a) Disturbance trajectory for Mixed Evergreen - Xeric. High mortality fire in dark blue; low mortality fire in light blue. (b) Histogram of disturbed hectares with density curve overlaid.} 
+  \label{fig:darea_megx}
+\end{figure}
+
+Mixed Evergreen - Xeric (\textsc{meg\_x})is a somewhat common cover type within the core project area, encompassing 6,768 ha and comprising roughly 4\% of the project area. Wildfire was prevalent in xeric mixed evergreen forest. The frequency and extent of simulated wildfires varied markedly across the landscape (Figure~\ref{fig:darea_megx}). We summarize the disturbance regime in Tables~\ref{tab:darea_megx} and \ref{tab:darea_atleast_megx}.
+
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{Disturbed area summary statistics for Mixed Evergreen - Xeric. Proportions shown are relative to the total area of Mixed Evergreen - Xeric.}
+\label{tab:darea_megx}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{\begin{tabular}[c]{@{}l@{}}Summary Statistic \\ (disturbed area/timestep)\end{tabular}} & \textbf{Low Mortality} & \textbf{High Mortality} & \textbf{Any Mortality} \\ \midrule
+$5^{\text{th}}$ percentile     & 0.92          & 0.06          & 1.01  \\ 
+$50^{\text{th}}$ percentile    & 7.68          & 0.76          & 8.73  \\ 
+$95^{\text{th}}$ percentile    & 29.05         & 3.91          & 32.27 \\ 
+Mean                           & 11.03         & 1.27          & 12.30 \\
+\textbf{Fire Rotation}  & 45       & 394       & 41 \\ \bottomrule
+\end{tabular}
+\end{table}
+     
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{meg\_x} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\label{tab:darea_atleast_megx}
+\begin{tabular}{@{}lllll@{}}
+                        & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
+Number of timesteps     & 439          & 211           & 62            & 5             \\
+Proportion of timesteps & 0.95         & 0.46          & 0.13          & 0.01          \\
+Interval (timesteps)    & 1.05         & 2.18          & 7.44          & 92.20         \\
+Interval (years)        & 5.25         & 10.92         & 37.18         & 461.00       \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-megx.png}
+    }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_megx.png}
+    }
+  \caption{(a) Distribution of point-specific fire rotations for Mixed Evergreen - Xeric. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Mixed Evergreen - Xeric are partially obscured in grey.}
+\label{fig:preturn_megx}
+\end{figure}
+
+The age structure and dynamics of xeric mixed evergreen forest illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+
+The distribution of area among seral stages within xeric mixed evergreen forest fluctuated over time (Figure~\ref{fig:covcond_megx}). Because high mortality fire is very rare in this cover type, and the time to reaching a Late Development stage is relatively short (Appendix~\ref{app:covertypedesc}), the vast majority of the landscape was in the Late--Closed seral stage during the simulation (Table~\ref{tab:covcond1}).  %
+
+The seral stage distribution appeared to be in dynamic equilibrium. The most notable departure was the shift from Mid--Closed to the Late Development seral stages, especially Late--Closed. The current landscape contains 71\% of the xeric mixed evergreen forest in mid development stages, but the late development stages were always dominant under the simulated HRV. 
+
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/MEGX.pdf}
+    }%
+  \subfloat[][]{
+    \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_megx.png}
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/MEGX-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Mixed Evergreen - Xeric. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Mixed Evergreen - Xeric. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
+  \label{fig:covcond_megx}
+\end{figure}
+
 \begin{landscape}
 \begin{table}[!htbp]
 \footnotesize
-\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Red Fir - Mesic (\textsc{rfr\_m}), Red Fir - Xeric (\textsc{rfr\_x}), Sierran Mixed Conifer - Mesic (\textsc{smc\_m}), and Sierran Mixed Conifer - Ultramafic (\textsc{smc\_u}). For condition class abbreviations, see Table \ref{condtable}.}
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Mixed Evergreen - Xeric (\textsc{meg\_x}),. For seral stage abbreviations, see Table \ref{condtable}.}
+\label{tab:covcond1}
+\begin{tabular}{@{}rrrrrr|rrr@{}}
+\toprule
+ \textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
+\textsc{early\_all}      &  1.68           &  3.32             &  4.58      &  6.06            &  8.64       &  10.88    &  99    &  complete       \\
+\textsc{mid\_cl   }      &  0.01           &  0.08             &  0.31      &  0.87            &  2.37       &  48.8     &  100   &  complete      \\
+\textsc{mid\_mod  }      &  1.07           &  1.97             &  2.98      &  4.27            &  6.47       &  9.39     &  100   &  complete      \\
+\textsc{mid\_op   }      &  0.06           &  0.19             &  0.36      &  0.57            &  0.97       &  12.87    &  100   &  complete      \\
+\textsc{late\_cl  }      &  52.93          &  61.01            &  67.58     &  71.66           &  77.74      &  12.84    &  0     &  complete      \\
+\textsc{late\_mod }      &  11.3           &  14.32            &  16.68     &  19.66           &  23.14      &  3.84     &  0     &  complete      \\
+\textsc{late\_op  }      &  3.07           &  5.35             &  7.12      &  9.77            &  12.88      &  1.38     &  0     &  complete      \\
+\end{tabular}
+\end{table}
+\end{landscape}
+
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). Area-weighted patch and core area, patch density, and radius of gyration exhibited the greatest variability over time. Because the landscape is so dominated by the late development, closed canopy cover seral stage, we use its configuration metrics as a proxy for the cover tyep as a whole. In general, the current landscape contains fewer, smaller, and more isolated patches than existed under the simulated HRV. Patches in Late Development - Closed are less geometrically complex and have less area in cores in the current landscape than during the simulated HRV. This stage is completely departed from the HRV for all these metrics.
+
+% figures updated 2015-09-20
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/MEG_X-AREA_AM-boxplots.png}
+  \caption{Fragstats class-level results for Mixed Evergreen - Xeric and area-weighted mean patch area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:megx_areaam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/MEG_X-CORE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Mixed Evergreen - Xeric and area-weighted mean core area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:megx_coream}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/MEG_X-SHAPE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Mixed Evergreen - Xeric and area-weighted mean shape index. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:megx_shapeam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/MEG_X-CLUMPY-boxplots.png}
+  \caption{Fragstats class-level results for Mixed Evergreen - Xeric and clumpiness. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:megx_clumpy}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\subsection{Sierran Mixed Conifer - Ultramafic} 
+% figures updated 2015-09
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_smcu.png}
+    }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_hist_smcu.png}
+    }
+  \caption{\small (a) Disturbance trajectory for Sierran Mixed Conifer - Ultramafic. High mortality fire in dark blue; low mortality fire in light blue. (b) Histogram of disturbed hectares with density curve overlaid.} 
+  \label{fig:darea_smcu}
+\end{figure}
+
+Sierran Mixed Conifer - Ultramafic (\textsc{smc\_u})is a relatively uncommon cover type within the core project area, encompassing 4,124 ha and comprising roughly 2\% of the project area. Wildfire is much less common in this cover type compared to non-ultramafic sierran mixed conifer forests. Ultramafic soils support scattered, but rarely dense stands of trees and shrubs, creating fuel discontinuities that stop fires from spreading easily. The frequency and extent of simulated wildfires in ultramafic sierran mixed conifer forests varied markedly across the landscape (Figure~\ref{fig:darea_smcu}).  We summarize the disturbance regime in Tables~\ref{tab:darea_smcu} and \ref{tab:darea_atleast_smcu}.
+
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{Disturbed area summary statistics for Sierran Mixed Conifer - Ultramafic. Proportions shown are relative to the total area of Sierran Mixed Conifer - Ultramafic.}
+\label{tab:darea_smcu}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{\begin{tabular}[c]{@{}l@{}}Summary Statistic \\ (disturbed area/timestep)\end{tabular}} & \textbf{Low Mortality} & \textbf{High Mortality} & \textbf{Any Mortality} \\ \midrule
+$5^{\text{th}}$ percentile    & 0.08          & 0.04          & 0.14  \\
+$50^{\text{th}}$ percentile   & 3.09          & 1.48          & 4.81  \\
+$95^{\text{th}}$ percentile   & 15.54         & 9.13          & 24.45 \\
+Mean                          & 5.01          & 2.55          & 7.56  \\
+\textbf{Fire Rotation} & 100       & 196       & 66 \\  \bottomrule
+\end{tabular}
+\end{table}
+      
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{smc\_u} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\label{tab:darea_atleast_smcu}
+\begin{tabular}{@{}lllll@{}}
+                        & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
+Number of timesteps     & 364          & 128           & 21            & 1        \\
+Proportion of timesteps & 0.79         & 0.28          & 0.05          & 0        \\
+Interval (timesteps)    & 1.27         & 3.60          & 21.95         & 461      \\
+Interval (years)        & 6.33         & 18.01         & 109.76        & 2305    \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-ocfwu.png}
+    }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_ocfwu.png}
+    }
+  \caption{(a) Distribution of point-specific fire rotations for Oak-Conifer Forest and Woodland - Ultramafic. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Oak-Conifer Forest and Woodland - Ultramafic are partially obscured in grey.}
+\label{fig:preturn_ocfwu}
+\end{figure}
+
+The age structure and dynamics of ultramafic mixed conifer forests illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+
+The distribution of area among seral stages within ultramafic mixed conifer forests fluctuated narrowly over time (Figure~\ref{fig:covcond_smcu_boxplots}). Interestingly, although open canopy seral stages dominated during middle development, the distribution of the three Late Development stages was roughly equal. Ultramafic soils present a challenge to vegetation, which may explain the dominance of open canopies at the Mid Development stage. However, because fire is relatively uncommon, the shift in dominance at the Late Development stage may reflect the additional time available to vegetation to grow into a closed canopy (Appendix~\ref{app:covertypedesc}). %
+
+The seral stage distribution appeared to be in dynamic equilibrium. The most notable departures were the decrease in area classified as Early Development, currently at 49\% of the landscape, and the increase in area classified as Mid Development - Open, currently at 5\%. The only seral stages not completely departed from the HRV were Mid--Closed and Mid--Moderate.
+
+\begin{landscape}
+\begin{table}[!htbp]
+\footnotesize
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Red Fir - Mesic (\textsc{rfr\_m}), Red Fir - Xeric (\textsc{rfr\_x}), Sierran Mixed Conifer - Mesic (\textsc{smc\_m}), and Sierran Mixed Conifer - Ultramafic (\textsc{smc\_u}). For seral stage abbreviations, see Table \ref{condtable}.}
 \label{tab:covcond2}
-\begin{tabular}{@{}rrrrrrr|rrr@{}}
+\begin{tabular}{@{}rrrrrr|rrr@{}}
 \toprule
- \textbf{\begin{tabular}[c]{@{}l@{}}Land \\ Cover\\ Type\end{tabular}} &  \textbf{\begin{tabular}[c]{@{}l@{}}Condition \\ Class\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}    &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
-                                                                                  % 5th                           25th                 50th                        75th                      95th                      current value           current %ile            dep. index
- \textsc{rfr\_m}      &  \textsc{early\_all}        &   6.47        &  10.49   &  15.61     &  22.55            &  32.82     &  24.21    &  81    &  moderate      \\
- \textsc{rfr\_m}      &  \textsc{mid\_cl   }        &   20.6        &  29.15   &  34.73     &  41.06            &  48.77     &  3.63     &  0     &  complete      \\
- \textsc{rfr\_m}      &  \textsc{mid\_mod  }        &   0.79        &  1.16    &  1.46      &  1.95             &  2.62      &  18.67    &  100   &  complete      \\
- \textsc{rfr\_m}      &  \textsc{mid\_op   }        &   0.36        &  0.64    &  0.91      &  1.32             &  2.17      &  16.7     &  100   &  complete      \\
- \textsc{rfr\_m}      &  \textsc{late\_cl  }         &  26.29       &  33.03   &  39.48     &  45.47            &  53.47     &  10.7     &  0     &  complete      \\
- \textsc{rfr\_m}      &  \textsc{late\_mod }        &   2.31        &  3.2     &  4.19      &  5.2              &  6.95      &  21.96    &  100   &  complete      \\
- \textsc{rfr\_m}      &  \textsc{late\_op  }        &   0.73        &  1.1     &  1.61      &  2.2              &  3.4       &  4.13     &  100   &  complete     \\
- \textsc{rfr\_x}      &  \textsc{early\_all}         &  24.76       &  33.1    &  37        &  41.44            &  45.72     &  32.39    &  23    &  none      \\
- \textsc{rfr\_x}      &  \textsc{mid\_cl   }        &   0.24        &  0.5     &  0.88      &  1.5              &  2.73      &  8.26     &  100   &  complete      \\
- \textsc{rfr\_x}      &  \textsc{mid\_mod  }        &   3.12        &  5.33    &  7.02      &  9.25             &  12.11     &  18.66    &  100   &  complete      \\
- \textsc{rfr\_x}      &  \textsc{mid\_op   }        &   13.47       &  17.52   &  19.98     &  22.6             &  27.2      &  12.58    &  3     &  complete      \\
- \textsc{rfr\_x}      &  \textsc{late\_cl  }        &   6.46        &  8.73    &  11.28     &  14.19            &  20.38     &  10.45    &  43    &  none      \\
- \textsc{rfr\_x}      &  \textsc{late\_mod }        &   8.83        &  10.31   &  11.7      &  12.96            &  14.6      &  14.57    &  95    &  complete      \\
- \textsc{rfr\_x}      &  \textsc{late\_op  }        &   6.2         &  8.92    &  11.04     &  13.38            &  16.26     &  3.1      &  0     &  complete     \\
- \textsc{smc\_m}      &  \textsc{early\_all}        &   7.75        &  12.34   &  15.11     &  18.68            &  24.74     &  14.98    &  48    &  none      \\
- \textsc{smc\_m}      &  \textsc{mid\_cl   }        &   21.52       &  26.15   &  29.69     &  32.58            &  37.01     &  9.74     &  0     &  complete     \\
- \textsc{smc\_m}      &  \textsc{mid\_mod  }        &   6.8         &  7.98    &  9.03      &  10.3             &  12.63     &  17.97    &  100   &  complete     \\
- \textsc{smc\_m}      &  \textsc{mid\_op   }        &   6.68        &  9.2     &  11.21     &  13.08            &  16.15     &  16.29    &  96    &  complete     \\
- \textsc{smc\_m}      &  \textsc{late\_cl  }        &   5.31        &  9.54    &  12.87     &  17.2             &  22.91     &  23.23    &  97    &  complete      \\
- \textsc{smc\_m}      &  \textsc{late\_mod }        &   8.56        &  10.32   &  11.24     &  12.56            &  14.41     &  14.18    &  95    &  complete      \\
- \textsc{smc\_m}      &  \textsc{late\_op  }        &   4.96        &  7.39    &  9.26      &  12.12            &  14.95     &  3.6      &  1     &  complete      \\
- \textsc{smc\_u}      &  \textsc{early\_all}        &   26.04       &  29.09   &  32.15     &  34.42            &  37.5      &  48.7     &  100   &  complete      \\
- \textsc{smc\_u}      &  \textsc{mid\_cl   }        &   1.27        &  1.84    &  2.23      &  2.69             &  3.51      &  2.99     &  85    &  moderate       \\
- \textsc{smc\_u}      &  \textsc{mid\_mod  }        &   5.76        &  6.77    &  7.68      &  8.78             &  10.93     &  6.77     &  25    &  none    \\
- \textsc{smc\_u}      &  \textsc{mid\_op   }        &   17.82       &  20.95   &  22.69     &  24.83            &  27.45     &  5.33     &  0     &  complete      \\
- \textsc{smc\_u}      &  \textsc{late\_cl  }        &   9           &  11.89   &  14.25     &  16.78            &  21.36     &  24.43    &  99    &  complete      \\
- \textsc{smc\_u}      &  \textsc{late\_mod }        &   9.14        &  10.14   &  11.04     &  11.89            &  13.92     &  8.51     &  1     &  complete      \\
- \textsc{smc\_u}      &  \textsc{late\_op  }        &   5.95        &  7.65    &  9.18      &  10.72            &  13.67     &  3.27     &  0     &  complete      \\
+ \textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}    &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
+\textsc{early\_all}        &   26.04       &  29.09   &  32.15     &  34.42            &  37.5      &  48.7     &  100   &  complete      \\
+\textsc{mid\_cl   }        &   1.27        &  1.84    &  2.23      &  2.69             &  3.51      &  2.99     &  85    &  moderate       \\
+\textsc{mid\_mod  }        &   5.76        &  6.77    &  7.68      &  8.78             &  10.93     &  6.77     &  25    &  none    \\
+\textsc{mid\_op   }        &   17.82       &  20.95   &  22.69     &  24.83            &  27.45     &  5.33     &  0     &  complete      \\
+\textsc{late\_cl  }        &   9           &  11.89   &  14.25     &  16.78            &  21.36     &  24.43    &  99    &  complete      \\
+\textsc{late\_mod }        &   9.14        &  10.14   &  11.04     &  11.89            &  13.92     &  8.51     &  1     &  complete      \\
+\textsc{late\_op  }        &   5.95        &  7.65    &  9.18      &  10.72            &  13.67     &  3.27     &  0     &  complete      \\
 \end{tabular}
 \end{table}
 \end{landscape}
+
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). The class-level metrics for ultramafic mixed conifer forests for early development, mid development open, and late development closed and moderate typically fall completely outside the simulated HRV. Of these, middle development open is currently characterized by smaller, less complex patches with less core area and less aggregation than the same type during the simulated HRV. The other classes have the opposite result. The remaining classes (middle development closed and moderate canopy, late development open canopy) are either not departed or moderately departed from the HRV.
+
+
+% figures updated 2015-09-20
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_U-AREA_AM-boxplots.png}
+  \caption{Fragstats class-level results for Sierran Mixed Conifer - Ultramafic and area-weighted mean patch area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:smcu_areaam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_U-CORE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Sierran Mixed Conifer - Ultramafic and area-weighted mean core area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:smcu_coream}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_U-SHAPE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Sierran Mixed Conifer - Ultramafic and area-weighted mean shape index. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:smcu_shapeam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_U-CLUMPY-boxplots.png}
+  \caption{Fragstats class-level results for Sierran Mixed Conifer - Ultramafic and clumpiness. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:smcu_clumpy}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\clearpage
+\subsection{Oak-Conifer Forest and Woodland - Ultramafic} 
+% figures updated 2015-09
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_ocfwu.png}
+    }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_hist_ocfwu.png}
+    }
+  \caption{\small (a) Disturbance trajectory for Oak-Conifer Forest and Woodland - Ultramafic. High mortality fire in dark blue; low mortality fire in light blue. (b) Histogram of disturbed hectares with density curve overlaid.} 
+  \label{fig:darea_ocfwu}
+\end{figure}
+
+Oak-Conifer Forest and Woodland - Ultramafic (\textsc{ocfw\_u})is a relatively uncommon cover type within the core project area, encompassing 1,060 ha and comprising roughly 0.6\% of the project area. Wildfire is much less common in this cover type compared to its non-ultramafic oak-conifer forests and woodlands. Ultramafic soils support scattered, but rarely dense stands of trees and shrubs, creating fuel discontinuities that stop fires from spreading easily. The frequency and extent of simulated wildfires in ultramafic oak-conifer forests and woodlands varied markedly across the landscape (Figure~\ref{fig:darea_ocfwu}). We summarize the disturbance regime in Tables~\ref{tab:darea_ocfwu} and \ref{tab:darea_atleast_ocfwu}.
+
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{Disturbed area summary statistics for Oak-Conifer Forest and Woodland - Ultramafic. Proportions shown are relative to the total area of Oak-Conifer Forest and Woodland - Ultramafic.}
+\label{tab:darea_ocfwu}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{\begin{tabular}[c]{@{}l@{}}Summary Statistic \\ (disturbed area/timestep)\end{tabular}} & \textbf{Low Mortality} & \textbf{High Mortality} & \textbf{Any Mortality} \\ \midrule
+$5^{\text{th}}$ percentile    & 0.06          & 0.00          & 0.06     \\
+$50^{\text{th}}$ percentile   & 4.16          & 0.77          & 4.74     \\
+$95^{\text{th}}$ percentile   & 31.08         & 7.11          & 36.12    \\
+Mean                          & 7.86          & 1.87          & 9.72     \\
+\textbf{Fire Rotation} & 64       & 268      & 51 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+% updated 2015-09-28
+\begin{table}[!htbp]
+\small
+\centering
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{ocfw\_u} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\label{tab:darea_atleast_ocfwu}
+\begin{tabular}{@{}lllll@{}}
+                        & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
+Number of timesteps     & 355          & 149           & 51            & 5         \\
+Proportion of timesteps & 0.77         & 0.32          & 0.11          & 0.01      \\
+Interval (timesteps)    & 1.30         & 3.09          & 9.04          & 92.20     \\
+Interval (years)        & 6.49         & 15.47         & 45.20         & 461   \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-smcu.png}
+    }%
+  \subfloat[][]{
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_smcu.png}
+    }
+  \caption{(a) Distribution of point-specific fire rotations for Sierran Mixed Conifer - Ultramafic. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Sierran Mixed Conifer - Ultramafic are partially obscured in grey.}
+\label{fig:preturn_smcu}
+\end{figure}
+
+The age structure and dynamics of ultramafic oak-conifer forests and woodlands illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+
+The distribution of area among seral stages within ultramafic oak-conifer forests and woodlands fluctuated narrowly over time (Figure~\ref{fig:covcond_ocfwu_boxplots}). Late development stages are rare on the current landscape, but well represented during the HRV. Conversely, mid closed is currently quite common, but is virtually absent during the HRV. The current amount of early development vegetation is near the median value during the HRV, and is the only stage not completely departed from the HRV. Ultramafic soils present a challenge to vegetation, which may explain the dominance of open canopies at the Mid Development stage. However, because fire is relatively uncommon, the shift in dominance at the Late Development stage may reflect the additional time available to vegetation to grow into a closed canopy (Appendix~\ref{app:covertypedesc}). %
+
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/OCFWU.pdf}
+    }%
+  \subfloat[][]{
+    \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_ocfwu.png}
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/OCFWU-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Oak-Conifer Forest and Woodland - Ultramafic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Oak-Conifer Forest and Woodland - Ultramafic. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
+  \label{fig:covcond_ocfwu}
+\end{figure}
+
+
 
 \begin{landscape}
 \begin{table}[!htbp]
 \footnotesize
-\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Sierran Mixed Conifer -~Xeric (\textsc{smc\_x}). For condition class abbreviations, see Table \ref{condtable}.}
-\label{tab:covcond3}
-\begin{tabular}{@{}rrrrrrr|rrr@{}}
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Mixed Evergreen - Mesic (\textsc{meg\_m}), Mixed Evergreen - Xeric (\textsc{meg\_x}), Oak-Conifer Forest and Woodland (\textsc{ocfw}), and Oak-Conifer Forest and Woodland - Ultramafic (\textsc{ocfw\_u}). For seral stage abbreviations, see Table \ref{condtable}.}
+\label{tab:covcond1}
+\begin{tabular}{@{}rrrrrr|rrr@{}}
 \toprule
- \textbf{\begin{tabular}[c]{@{}l@{}}Land \\ Cover\\ Type\end{tabular}} &  \textbf{\begin{tabular}[c]{@{}l@{}}Condition \\ Class\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
- \textsc{smc\_x}      &  \textsc{early\_all}      &  25.2          &  29.63          &  34.53    &  38.95    &  42.82          &  19.48       &   0      &  complete    \\
- \textsc{smc\_x}      &  \textsc{mid\_cl   }      &  0.02          &  0.06           &  0.13     &  0.36     &  1.07           &  11.96       &   100    &  complete      \\
- \textsc{smc\_x}      &  \textsc{mid\_mod  }      &  0.9           &  1.62           &  2.88     &  4.35     &  7.6            &  14.92       &   100    &  complete    \\
- \textsc{smc\_x}      &  \textsc{mid\_op   }      &  26.55         &  30.59          &  33.79    &  36.58    &  39.36          &  11.48       &   0      &  complete    \\
- \textsc{smc\_x}      &  \textsc{late\_cl  }      &  1.19          &  2.51           &  3.81     &  5.99     &  8.69           &  24.72       &   100    &  complete      \\
- \textsc{smc\_x}      &  \textsc{late\_mod }      &  5.83          &  7.49           &  9.16     &  10.71    &  13.03          &  13.31       &   97     &  complete     \\
- \textsc{smc\_x}      &  \textsc{late\_op  }      &  9.39          &  12.4           &  15       &  17.42    &  22.45          &  4.13        &   0     &   complete  \\ \bottomrule 
+ \textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
+\textsc{early\_all}      &  9.05           &  13.66            &  16.3      &  21              &  26.17      &  17.76    &  63    &  none       \\
+\textsc{mid\_cl   }      &  0.06           &  0.14             &  0.29      &  0.54            &  1.15       &  29.32    &  100   &  complete      \\
+\textsc{mid\_mod  }      &  2.55           &  4.11             &  5.48      &  8.31            &  11.38      &  11.54    &  96    &  complete       \\
+\textsc{mid\_op   }      &  14.79          &  19.29            &  22.49     &  26.11           &  30.28      &  33.49    &  100   &  complete      \\
+\textsc{late\_cl  }      &  7.39           &  15.12            &  21.21     &  27.3            &  36.45      &  5.35     &  1     &  complete      \\
+\textsc{late\_mod }      &  15.06          &  18.62            &  20.99     &  23.86           &  29.17      &  2.2      &  0     &  complete    \\
+\textsc{late\_op  }      &  3.92           &  7.21             &  10.44     &  13.64           &  18.99      &  0.34     &  0     &  complete      \\
 \end{tabular}
 \end{table}
 \end{landscape}
 
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). Area-weighted patch and core area, patch density, mean similarity, and radius of gyration all exhibited high variability over time. For the most part, the current landscape's values fall within the HRV, although the middle development, closed canopy and late development, open canopy patches usually fell outside of it. Patches and their cores are larger, more complex, and more numerous now compared to the simulated HRV. The current landscape also has more aggregated patches. However, we caution against drawing firm conclusions, since this type did not reach equilibrium until halfway through the simulation, and is small in extent with less consistent results than the other cover types.
 
+% figures updated 2015-09-20
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/OCFW_U-AREA_AM-boxplots.png}
+  \caption{Fragstats class-level results for Oak-Conifer Forest and Woodland - Ultramafic and area-weighted mean patch area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:ocfwu_areaam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/OCFW_U-CORE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Oak-Conifer Forest and Woodland - Ultramafic and area-weighted mean core area. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:ocfwu_coream}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/OCFW_U-SHAPE_AM-boxplots.png}
+  \caption{Fragstats class-level results for Oak-Conifer Forest and Woodland - Ultramafic and area-weighted mean shape index. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:ocfwu_shapeam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/OCFW_U-CLUMPY-boxplots.png}
+  \caption{Fragstats class-level results for Oak-Conifer Forest and Woodland - Ultramafic and clumpiness. Boxplot whiskers extend to the 5th and 95th percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
+  \label{fig:ocfwu_clumpy}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
