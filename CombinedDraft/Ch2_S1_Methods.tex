@@ -70,7 +70,7 @@ As Table~\ref{covertable} demonstrates, most cover types occupy a small extent o
 %%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[!htbp]
-\small
+\footnotesize
 \centering
 \caption{List of land cover types developed for this project. Included are the cover type abbreviation, full cover type name, and total area in the buffered project landscape in both acres and hectares. Cover types are listed in descending order based on area within the core study area only. Cover types that undergo succession appear in the first group, while static cover types appear in the second group. I use the cover type abbreviation in tables and figures for space.}
 \label{covertable}
@@ -97,7 +97,7 @@ As Table~\ref{covertable} demonstrates, most cover types occupy a small extent o
 \rowcolor[HTML]{CAD6BA} \textsc{cmm     }     & Curl-leaf Mountain Mahogany                  & 18          & 41        \\
                         \textsc{lpn\_asp}     & Lodgepole Pine with Aspen                    & 8             & 31   \\
 \rowcolor[HTML]{CAD6BA} \textsc{rfr\_asp}     & Red Fir with Aspen                           & 0                    & 34             \\
-                        \textsc{sage    }     & Big Safebrush                                & 0                    & 1,600          \\
+                        \textsc{sage    }     & Big Sagebrush                                & 0                    & 1,600          \\
 \rowcolor[HTML]{CAD6BA} \textsc{lsg     }     & Black and Low Sagebrush                      & 0           & 5         \\
                         \textsc{scn\_asp}     & Subalpine Conifer with Aspen                 & 0                    & 6              \\
 \rowcolor[HTML]{CAD6BA} \textsc{ypn     }     & Yellow Pine                                  & 0                    & 10,499         \\
@@ -126,7 +126,7 @@ Extensive geoprocessing was required to prepare this layer for \textsc{RMLands}.
 %%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[!htbp]
-\small
+\footnotesize
 \centering
 \caption{List of seral stages developed for this project. Seral stages describe developmental stage (e.g. ``early'') and canopy closure (e.g. ``open''). The non-seral ``stage'' applies to land cover types for which I do not simulate succession (Barren, Grassland, Urban, Agriculture, Water, and Meadow). Included are the seral stage abbreviations, and full names.}
 \label{condtable}
@@ -163,7 +163,7 @@ Seral stage-Age represents the age since transitioning to the current seral stag
 
 
 \paragraph{Topographic Position Index}
-Our topographic position index (TPI) combines heat load, which is based on aspect and slope, with slope position (Figure~\ref{fig:tpimap}), and ranges from -300 to 300. High values for TPI are correlated with locations on steep, south and west-facing, upper slopes. Low values are correlated with locations on gentle, north and east-facing, valley bottoms. Values in between occur along a gradient of these characteristics. The TPI is scaled to the project area and the region immediately surrounding it, and is therefore a local index only. I implemented this in order to better mimic fire behavior on the landscape. Past research has indicated that fires generally burn more frequently on southerly, steep slopes than on gentle, northerly slopes. Because they are drier and more exposed, and because of the way fuels allow preheating and ready ignition of vegetation as fire travels uphill \citep{Rothermel1983}, the likelihood of overstory tree mortality increases with increasing TPI (these statements may also be interpreted as the inverse, wetter valley bottoms are less likely to produce a crown fire) \citep{North2012,Taylor2003a,}. I use TPI to adjust vegetation susceptibility and mortality, as described in the model parameterization section. As part of model calibration, I plot the average canopy cover (over the simulated period) against TPI and calculate the proportional effect of TPI on cover.
+Our topographic position index (TPI) combines heat load, which is based on aspect and slope, with slope position (Figure~\ref{fig:tpimap}), and ranges from -300 to 300. High values for TPI are correlated with locations on steep, south and west-facing, upper slopes. Low values are correlated with locations on gentle, north and east-facing, valley bottoms. Values in between occur along a gradient of these characteristics. The TPI is scaled to the project area and the region immediately surrounding it, and is therefore a local index only. I implemented this in order to better mimic fire behavior on the landscape. Past research has indicated that fires generally burn more frequently on southerly, steep slopes than on gentle, northerly slopes. Because they are drier and more exposed, and because of the way fuels allow preheating and ready ignition of vegetation as fire travels uphill \citep{Rothermel1983}, the likelihood of overstory tree mortality increases with increasing TPI (these statements may also be interpreted as the inverse, wetter valley bottoms are less likely to produce a crown fire) \citep{North2012,Taylor2003a}. I use TPI to adjust vegetation susceptibility and mortality, as described in the model parameterization section. As part of model calibration, I plot the average canopy cover (over the simulated period) against TPI and calculate the proportional effect of TPI on cover.
 
 
 
@@ -261,35 +261,31 @@ All burned cells are evaluated probabilitistically and assigned to a high severi
 
 To derive probabilities for post-fire transitions, both for transitions to the Early seral stage or to a more open seral stage, I used the VDDT models associated with the Biophysical Settings Models from the LandFire project. From the VDDT models, I used the probabilities of a transition to the early seral stage, a more open canopy seral stage, or of no transition. I ignored the classified type of fire (as replacement, mixed, or low severity), focusing instead on the outcome from fire in terms of the seral stage, if any, to which a cell transitioned after wildfire. High mortality fires are those that result in conversion to early seral (regardless of whether they are called ``replacement'' or ``mixed''). All other fires are considered low mortality. The probability of a high mortality outcome from fire was calculated by dividing the summed probabilities of high mortality fires as defined above by the summed probabilities of all fires.  I also used LandFire data to derive probabilities of succession. I then evaluated and refined the probabilities with input from local experts to capture subtle changes in succession and transition at the project scale.
 
-
-
-To illustrate the parameterization, in the following tables I present values for the Sierran Mixed Conifer - Mesic cover type model. The target fire rotation for this cover type is 29 years. A fire return interval index is used as the parameter controlling the relative susceptibility to fire of the seral stages within an individual cover type. In addition, the probability of high severity fire leading to at least 75\% overstory mortality is specified for each seral stage (Table~\ref{smcm_fri_phm}). I also specified transition probabilities for natural succession between the early, middle, and late stages of development, as well as between closed, moderate, and open canopy cover. This type of succession also depends on the time in the current seral stage both in terms of the early-middle-late sequence (\emph{Development-Age}) and the specific stage-canopy cover combination (\emph{Seral Stage-Age}) (Table~\ref{smcm_vegtrans}). Finally, probabilities are specified for vegetation transitions after wildfire (Table~\ref{smcm_firetrans}).
-
+To illustrate the parameterization, in the following tables I present values for the Sierran Mixed Conifer - Mesic cover type model. The target fire rotation for this cover type is 29 years. A fire rotation index is used as the parameter controlling the relative susceptibility to fire of the seral stages within an individual cover type. In addition, the probability of high severity fire leading to at least 75\% overstory mortality is specified for each seral stage (Table~\ref{smcm_fri_phm}). I also specified transition probabilities for natural succession between the early, middle, and late stages of development, as well as between closed, moderate, and open canopy cover. This type of succession also depends on the time in the current seral stage both in terms of the early-middle-late sequence (\emph{Development-Age}) and the specific stage-canopy cover combination (\emph{Seral Stage-Age}) (Table~\ref{smcm_vegtrans}). Finally, probabilities are specified for vegetation transitions after wildfire (Table~\ref{smcm_firetrans}).
 
 
 % edited 2015-9
 \begin{table}[htbp]
-\small
+\footnotesize
 \centering
-\caption{Relative susceptibility to fire and proportion of high severity fire (at least 75\% overstory tree mortality) probabilities for Sierran Mixed Conifer - Mesic.}
+\caption{Fire rotation index values and probability of high severity fire (at least 75\% overstory tree mortality) for Sierran Mixed Conifer - Mesic. The seral stage that is most susceptible to fire (i.e., has the lowest predicted fire rotation) has a fire rotation index value of 1. Higher values correspond with lower likelihoods of experiencing wildfire. The values are relative only within an individual seral stage and should not be compared against other land cover types.}
 \label{smcm_fri_phm}
 \begin{tabular}{lcc}
 \hline
-\textbf{Seral Stage}    & \textbf{\begin{tabular}[c]{@{}c@{}}Relative Susceptibility \\ to Fire\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Probability of \\ High Severity Fire\end{tabular}} \\ \hline
-Early (All)     			& 5.5        & 1                 \\
+ \textbf{Seral Stage}    & \textbf{\begin{tabular}[c]{@{}c@{}}Fire Rotation \\ Index\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Probability of \\ High Severity Fire\end{tabular}} \\ \hline
+Early (All)     			& 5.4        & 1.0                 \\
 Mid--Closed    				& 2.4        & 0.23              \\
 Mid--Moderate  				& 1.6        & 0.17              \\
 Mid--Open      				& 1.3        & 0.14              \\
 Late--Closed   				& 4.3        & 0.37              \\
 Late--Moderate 				& 1.6        & 0.14              \\
-Late--Open     				& 1          & 0.09              \\ 
-\emph{Target Fire Rotation}    			& \emph{29 years}  &   \\ \hline
+Late--Open     				& 1.0          & 0.09              \\ 
+\emph{Target Fire Rotation}    		& \emph{29 years}  &   \\ \hline
 \end{tabular}
-
 \end{table}
 
 \begin{table}[!htbp]
-\small
+\footnotesize
 \centering
 \caption{Timeframes for transitions between seral stages in \textsc{RMLands} for Sierran Mixed Conifer - Mesic. ``Early to Mid'' and ``Mid to Late'' times are based on the time in a developmental stage, regardless of disturbance history. ``Open to Moderate'' and ``Moderate to Closed'' times are based on the time in a seral stage since a disturbance.}
 \label{smcm_vegtrans}
@@ -305,7 +301,7 @@ Mid to Late 	& 100     & 113     & 150     \\
 
 
 \begin{table}[!htbp]
-\small
+\footnotesize
 \centering
 \caption{Transition probabilities for Sierran Mixed Conifer - Mesic following low mortality fire.}
 \label{smcm_firetrans}
@@ -313,10 +309,10 @@ Mid to Late 	& 100     & 113     & 150     \\
 \hline
 \textbf{Seral Stage Transition} & \textbf{Probability}\\
 \hline
-Mid--Closed to Mid--Moderate     	& 0.53   	\\
-Mid--Moderate to Mid--Open    	& 0.36		\\
-Late--Closed to Late--Moderate	& 0.54    \\
-Late--Moderate to Late--Open     	& 0.24    \\
+Mid--Closed to Mid--Moderate    & 0.17 \\ %0.53 
+Mid--Moderate to Mid--Open    	& 0.24 \\ %0.36
+Late--Closed to Late--Moderate	& 0.54 \\
+Late--Moderate to Late--Open    & 0.24 \\
 \hline
 \end{tabular}
 \end{table}
@@ -364,7 +360,7 @@ In this way, when the TPI Susceptibility Factor = 1, TPI has no effect. This hap
 
 
 \begin{table}[htbp]
-\small
+\footnotesize
 \centering
 \caption{Cover types whose susceptibility is modified by Topographic Position Index. All cover types are modified in the same way.}
 \label{covtpi}
@@ -372,15 +368,15 @@ In this way, when the TPI Susceptibility Factor = 1, TPI has no effect. This hap
 \hline
 \multicolumn{2}{c}{\textbf{Cover Types with TPI Adjustment}} \\
 \hline
-Grassland     									& Red Fir - Mesic   					\\
-Lodgepole Pine    								& Red Fir - Ultramafic					\\
-Mixed Evergreen - Mesic							& Red Fir - Xeric    					\\
-Mixed Evergreen - Ultramafic     				& Sierran Mixed Conifer - Mesic    		\\
-Mixed Evergreen - Xeric 						& Sierran Mixed Conifer - Ultramafic 	\\
-Montane Riparian								& Sierran Mixed Conifer - Xeric 		\\
-Oak Woodland 									& Western White Pine					\\
-Oak-Conifer Forest and Woodland 				& Yellow Pine 							\\
-Oak-Conifer Forest and Woodland - Ultramafic 	&										\\
+Grassland     					& Red Fir - Mesic   			\\
+Lodgepole Pine    				& Red Fir - Ultramafic			\\
+Mixed Evergreen - Mesic				& Red Fir - Xeric    			\\
+Mixed Evergreen - Ultramafic     		& Sierran Mixed Conifer - Mesic    	\\
+Mixed Evergreen - Xeric 			& Sierran Mixed Conifer - Ultramafic 	\\
+Montane Riparian				& Sierran Mixed Conifer - Xeric 	\\
+Oak Woodland 					& Western White Pine			\\
+Oak-Conifer Forest and Woodland 		& Yellow Pine 				\\
+Oak-Conifer Forest and Woodland - Ultramafic 	&					\\
 \hline
 \end{tabular}
 
@@ -389,29 +385,29 @@ Oak-Conifer Forest and Woodland - Ultramafic 	&										\\
 Seral stage further modifies susceptibility. I used the Weibull cumulative distribution function and specify a scale parameter $\lambda$ (mean return interval), shape parameter $k$, and the reset point for the function (\emph{age since high mortality disturbance} or \emph{age since any disturbance}). The fire return index for the seral stage is used as a calibration parameter and was initially set as equal to the mean return interval values provided in analogous LandFire Biophysical Setting types \citep{Landfire2007}. Some modifications were made based on consultation with Forest Service staff. All fire index values within a cover type were modified as a group and kept relative to one another even as the magnitude of the index was adjusted. The relative difference for Sierra Mixed Conifer - Mesic is shown in Table~\ref{smcm_fri_phm}; these values for each cover type are included in the cover type description documents (Appendix \ref{app:covertypedesc}). I set $k=3$ for all cover types and seral stages. I selected between (\emph{age since high mortality disturbance} and \emph{age since any disturbance}) based on whether wildfires in that cover type are climate-driven (in which case I selected the former) or fuels-driven (in which case I selected the latter) (Figure~\ref{howdriven}).
 
 \begin{table}[htbp]
-\small
+\footnotesize
 \centering
 \caption{Cover types sorted by whether wildfire disturbance in them is characterized by fuels present or overarching climatic conditions. If the likelihood of wildfire depends on the accumulation of fuels, the value of $x$ (``time since'') reverts to 0 after any disturbance. If the likelihood of wildfire depends primarily on climate and weather conditions, the value of $x$ reverts to 0 only after a high mortality disturbance.}
 \label{howdriven}
 \begin{tabular}{ll}
 \hline
-\textbf{Fuel-Driven Cover Types} 				& \textbf{Climate-Driven Cover Types}	\\
+ \textbf{Fuel-Driven Cover Types} 	& \textbf{Climate-Driven Cover Types}	\\
 \hline
-Curl-leaf Mountain Mahogany 					& Agriculture   						\\
-Grassland     									& Big Sagebrush 						\\
-Lodgepole Pine    								& Black and Low Sagebrush				\\
-Meadow											& Lodgepole Pine with Aspen 			\\
-Mixed Evergreen - Mesic							& Montane Riparian						\\
-Mixed Evergreen - Ultramafic     				& Red Fir with Aspen   					\\
-Mixed Evergreen - Xeric 						& Red Fir - Mesic    					\\
-Oak Woodland 									& Red Fir - Ultramafic 					\\
-Oak-Conifer Forest and Woodland 				& Red Fir - Xeric 						\\ 	
-Oak-Conifer Forest and Woodland - Ultramafic 	& Subalpine Conifer 					\\
-Sierran Mixed Conifer - Ultramafic 				& Subalpine Conifer with Aspen 			\\
-Sierran Mixed Conifer - Xeric 					& Sierran Mixed Conifer with Aspen 		\\
-Urban 											& Sierran Mixed Conifer - Mesic 		\\
-Yellow Pine 									& Western White Pine 					\\
-												& Yellow Pine with Aspen 				\\
+Curl-leaf Mountain Mahogany 	        & Agriculture   			\\
+Grassland     			        & Big Sagebrush 			\\
+Lodgepole Pine                          & Black and Low Sagebrush		\\
+Meadow				        & Lodgepole Pine with Aspen 		\\
+Mixed Evergreen - Mesic			& Montane Riparian			\\
+Mixed Evergreen - Ultramafic            & Red Fir with Aspen   			\\
+Mixed Evergreen - Xeric 		& Red Fir - Mesic    			\\
+Oak Woodland 				& Red Fir - Ultramafic 			\\
+Oak-Conifer Forest and Woodland 	& Red Fir - Xeric 			\\
+Oak-Conifer Forest and Woodland - Ultramafic 	& Subalpine Conifer 		\\
+Sierran Mixed Conifer - Ultramafic 	& Subalpine Conifer with Aspen 		\\
+Sierran Mixed Conifer - Xeric 		& Sierran Mixed Conifer with Aspen 	\\
+Urban 					& Sierran Mixed Conifer - Mesic 	\\
+Yellow Pine 				& Western White Pine 			\\
+					& Yellow Pine with Aspen 		\\
 \hline
 \end{tabular}
 \end{table}
@@ -427,13 +423,14 @@ Yellow Pine 									& Western White Pine 					\\
 %\noindent 
 \item \emph{Spread:} The probability of fire spread in \textsc{RMLands} is a function of climate, susceptibility to wildfire, potential wildfire size, wind, spotting, relative elevation, and presence of streams. The first two are described above. The disturbance size distribution that regulates potential fire size was created by analyzing the size distribution of all mapped fires in the Northern Sierra \textsc{calveg} mapping zone and west of the Sierran crest, available from the Forest Service and the California Department of Forestry and Fire Protection, which goes back to approximately 1900. 
 
-Wind is incorporated in two parts. First, a prevailing wind direction for the fire is selected probabilistically from the eight cardinal directions. To compute the wind distribution values, I first consulted local experts to determine the dates of fire season (May 15 to October 15) and burning period times (1000 hours to 1800 hours). I then downloaded all available historic wind direction data from 6 local weather stations (Rice Canyon, Saddleback, Downieville, White Cloud, Emigrant Gap, and Blue Canyon, Figure~\ref{weather}). Data from all weather stations was weighted equally. After the wind direction is selected, fires are able to grow in all directions, but are relatively more likely to spread with wind than against it. I parameterized the influence of \emph{relative wind} as a reduction in spread likelihood. Thus, spread in the same direction as wind has a neutral effect, spread at $\ang{45}$ angles is reduced by 30\%, spread at $\ang{90}$  angles is reduced by 70\%, spread at $\ang{135}$ angles is reduced by 90\%, and spread opposite the prevailing wind direction is reduced by 95\%. 
+\begin{minipage}{\linewidth}
+ \centering
+ \includegraphics[width=10cm]{/Users/mmallek/Tahoe/Report3/images/weather.png}
+  \captionof{figure}{Weather stations used to inform wind direction parameters. Weather stations are denoted by red circles. A black boundary line identifies the study area.}
+  \label{weather}
+\end{minipage}
 
-\begin{wrapfigure}{R}{0.5\textwidth} % use a capital R to allow figure to float
-\includegraphics[width=0.5\textwidth]{/Users/mmallek/Tahoe/Report3/images/weather.png}
-\caption{Weather stations used to inform wind direction parameters. Weather stations are denoted by red circles. A black boundary line identifies the study area.} 
-\label{weather}
-\end{wrapfigure}
+Wind is incorporated in two parts. First, a prevailing wind direction for the fire is selected probabilistically from the eight cardinal directions. To compute the wind distribution values, I first consulted local experts to determine the dates of fire season (May 15 to October 15) and burning period times (1000 hours to 1800 hours). I then downloaded all available historic wind direction data from 6 local weather stations (Rice Canyon, Saddleback, Downieville, White Cloud, Emigrant Gap, and Blue Canyon, Figure~\ref{weather}). Data from all weather stations was weighted equally. After the wind direction is selected, fires are able to grow in all directions, but are relatively more likely to spread with wind than against it. I parameterized the influence of \emph{relative wind} as a reduction in spread likelihood. Thus, spread in the same direction as wind has a neutral effect, spread at $\ang{45}$ angles is reduced by 30\%, spread at $\ang{90}$  angles is reduced by 70\%, spread at $\ang{135}$ angles is reduced by 90\%, and spread opposite the prevailing wind direction is reduced by 95\%. 
 
 Relative elevation also modifies spreading potential. I parameterized the model such that spread downhill is extremely unlikely. Spotting and the extent to which streams act as barriers to spread are affected by the fire size. As fires become larger, their probability of spotting and spotting distance increases. Similarly, streams function as a barrier to smaller fires, but large fires are able to spread past streams regardless of size. This decision is based on the idea that large fires are more influenced by wind and climatic conditions. Stream size does impact smaller fires; the largest streams and rivers are usually an effective barrier to smaller fires, although even fairly small fires often spread past intermittent and small perennial streams. 
 
@@ -451,7 +448,7 @@ $$\text{TPI Mortality Factor} = 0.7 + \frac{0.3}{1+e^{-x}}$$
 In this way, when the TPI Mortality Factor = 1, TPI has no effect. This happens only when the TPI value at an individual cell is zero. The effect of this is that areas with low TPI (generally north-facing and flatter slopes) are less likely to be high severity than areas with high TPI (generally south-facing and steeper slopes).
 
 \begin{table}[htbp]
-\small
+\footnotesize
 \centering
 \caption{Cover types whose mortality is modified by Topographic Position Index.}
 \label{covtpi_mort}
@@ -459,15 +456,15 @@ In this way, when the TPI Mortality Factor = 1, TPI has no effect. This happens 
 \hline
 \multicolumn{2}{c}{\textbf{Cover Types with TPI Adjustment}} \\
 \hline
-Grassland     									& Red Fir - Mesic   					\\
-Lodgepole Pine    								& Red Fir - Ultramafic					\\
-Mixed Evergreen - Mesic							& Red Fir - Xeric    					\\
-Mixed Evergreen - Ultramafic     				& Sierran Mixed Conifer - Mesic    		\\
-Mixed Evergreen - Xeric 						& Sierran Mixed Conifer - Ultramafic 	\\
-Montane Riparian								& Sierran Mixed Conifer - Xeric 		\\
-Oak Woodland 									& Western White Pine					\\
-Oak-Conifer Forest and Woodland 				& Yellow Pine 							\\
-Oak-Conifer Forest and Woodland - Ultramafic 	&										\\
+Grassland     					& Red Fir - Mesic   			\\
+Lodgepole Pine    				& Red Fir - Ultramafic			\\
+Mixed Evergreen - Mesic				& Red Fir - Xeric    			\\
+Mixed Evergreen - Ultramafic     		& Sierran Mixed Conifer - Mesic    	\\
+Mixed Evergreen - Xeric 			& Sierran Mixed Conifer - Ultramafic 	\\
+Montane Riparian				& Sierran Mixed Conifer - Xeric 	\\
+Oak Woodland 					& Western White Pine			\\
+Oak-Conifer Forest and Woodland 		& Yellow Pine 				\\
+Oak-Conifer Forest and Woodland - Ultramafic 	&					\\
 \hline
 \end{tabular}
 \end{table}
@@ -482,7 +479,7 @@ Seral stage further modifies mortality. I extracted the likelihood of mortality 
 \subsection{Model Calibration}
 Although \textsc{RMLands} is a process-based model with parameters sourced from the literature, my team had greater confidence in some parameters than others, especially as to how they function within the \textsc{RMLands} framework. Consequently, I calibrated, or verified, the model by iteratively adjusting certain parameters in which there was less confidence about the appropriate values until the outputs were tuned to a set of parameters in which the team had high confidence. Specifically, I manipulated the ignition calibration coefficient and the fire return index and measured calibration success based on conformity to pre-specified rotation values at the cover type level. Fire return index values were changed by a constant multiplier across all seral stages of a given cover type; cover types were modified as groups but the index ratios within them were maintained. I set our calibration target as rotation values for the nine focal cover types within 10\% of the original target rotations. Target values were based on empirical published values and local expert opinion. I chose rotation as the calibration target because targets were available from the literature and because fire rotation is a fundamental measurement that \textsc{RMLands} was designed to capture. In addition, using rotation ties calibration to a parameter that is relateable to Forest Service staff and that can be used at the landscape scale as a target by managers in various programs.
 
-For example, while calibrating, the target rotation for Sierran Mixed Conifer - Mesic was 29 years. I adjusted the input seral stage fire return index by multiplying it by different constants, eventually arriving at an increase by a factor of 24 from the original calculated ratio values. That is, each initial scale parameter value was multiplied by 24 in order to modify its susceptibility to fire without changing the relative susceptibility among its seral stages. 
+For example, while calibrating, the target rotation for Sierran Mixed Conifer - Mesic was 29 years. I adjusted the input seral stage fire return index by multiplying it by different constants, eventually arriving at an increase by a factor of 25 from the original calculated ratio values. That is, each initial scale parameter value was multiplied by 25 in order to modify its susceptibility to fire without changing the relative susceptibility among its seral stages (see Table~\ref{smcm_fri_phm} for final relative susceptibility values). 
 
 
 
@@ -498,7 +495,7 @@ For example, while calibrating, the target rotation for Sierran Mixed Conifer - 
 
 
 \subsubsection{Model Execution}
-During the calibration phase of the model, a typical simulation was three runs of 200 timesteps each. The equilibration period of 40 timesteps was chosen based on visual analysis of the disturbed area and rotation plots from the combined runs. Once calibration was complete, I conducted one run of 500 timesteps in order to capture multiple disturbance and succession cycles across the most common cover types. Each timestep represents five years. The five-year timestep was chosen based on the short fire return intervals (how frequently fire occurred in the same location) recorded from dendrochronology analysis in the literature and our desire to capture these very short return intervals in the simulation.
+During the calibration phase of the model, a typical simulation was three runs of 200 timesteps each. The equilibration period of 40 timesteps was chosen based on visual analysis of the disturbed area and rotation plots from the combined runs. Once calibration was complete, I conducted one run of 500 timesteps in order to capture multiple disturbance and succession cycles across the most common cover types. Each timestep represents five years. The five-year timestep was chosen based on the short fire rotations (how frequently fire occurred in the same location) recorded from dendrochronology analysis in the literature and our desire to capture these very short rotations in the simulation.
 
 \subsection{Data Analysis}
 \label{subsec:dataanalysis}
@@ -508,17 +505,17 @@ Sierra Nevada vegetation is extremely diverse and complex, both ecologically and
 \subsubsection{Disturbance Regime} I quantified the following overall temporal and spatial characteristics of the wildfire disturbance regime:
 \begin{itemize}
 	\item \emph{Disturbed Area:} I calculated disturbed area for each timestep, divided into low mortality and high mortality disturbance, and summed to produce an ``any mortality'' statistic. I summarize the results for minimum, maximum, mean, and median area disturbed as a proportion of the total area eligible for disturbance for the full simulation excluding the equilibration period (460 timesteps, or 2300 years). Because it can be difficult to visualize what our quantitative results look like, I include several maps that illustrate the results, demonstrating that model results are spatially-explicit and realistic. To do this, I include maps of the landscape illustrating the $5^{\text{th}}$, $50^{\text{th}}$, $95^{\text{th}}$, and mean area burned during the simulation, plus a example 4-timestep sequence illustrating changes to the seral stage pattern for mesic mixed conifer forests due to successional and disturbance procceses. Finally, I use a histogram to display the distribution of wildfire extents during the simulation, excluding the equilibration period.
-	\item \emph{Disturbance Frequency:} I calculated the number of years between disturbances exceeding a particular threshold in total disturbed area. I report the frequency of timesteps during which thresholds of at least 10\%, 25\%, or 50\% of the landscape experienced wildfire.
+	\item \emph{Disturbance Frequency:} I calculated the number of years between disturbances exceeding a particular threshold in total disturbed area. I report the frequency of timesteps during which thresholds of at least 10\%, 25\%, or 50\% of the landscape experienced wildfire.\todo{revisit what I actually do}
 	\item \emph{Climate Effect:} Climate interacts with several components of the model. I present plots illustrating the value of the climate parameter by timesteps concurrently with the area disturbed per timestep. It is not practical to further illustrate its effect everywhere, and in some cases its influence is not easily separated from the other inputs to the model. 
-	\item \emph{Rotation Period:} I calculated the rotation period---the number of years required to burn an area equivalent to the total eligible area---for each cover type within the project area. I report the rotation values for low mortality fire, high mortality fire, and any fire for each of the nine focal cover types individually and the study area as a whole.
-	\item \emph{Return Interval:} I summarized the cell-specific population mean fire return interval---the average number of years between disturbances at a single cell---and present it as the distribution of the percentage of eligible cells that experienced each possible mean return interval. I use histograms to visualize the distribution of this return interval for low mortality fire, high mortality fire, and any fire, along with their median values. This method is based on the full landscape results and is equivalent to the cell-specific grand mean return interval for a given cover type across the landscape. I also display this result spatially as a map showing the fire return interval for each raster cell across the landscape.
+	\item \emph{Rotation Period:} I calculated the rotation period---the number of years required to burn an area equivalent to the total eligible area---for each cover type within the project area. I report the rotation values for low mortality fire, high mortality fire, and any fire for each of the nine focal cover types individually and the study area as a whole. \todo{edit for precision}
+	\item \emph{Return Interval:} I summarized the cell-specific population mean fire return interval\todo{edit}---the average number of years between disturbances at a single cell---and present it as the distribution of the percentage of eligible cells that experienced each possible mean return interval. I use histograms to visualize the distribution of this return interval for low mortality fire, high mortality fire, and any fire, along with their median values. This method is based on the full landscape results and is equivalent to the cell-specific grand mean return interval for a given cover type across the landscape. I also display this result spatially as a map showing the fire return interval for each raster cell across the landscape. \todo{edit}
 \end{itemize}
 
 \subsubsection{Vegetation Response} 
 
 \emph{Landscape Composition:} I quantified the distribution and dynamics of landscape composition by cover type. For the single 2500 year simulation (with 200 year equilibration period), I summarized the results in a table and graphically. For the tabular results, I present the $5^{\text{th}}$, $25^{\text{th}}$, $50^{\text{th}}$, $75^{\text{th}}$, and $95^{\text{th}}$ percentiles of the distribution. I compared the current landscape seral stage distribution to this simulated historic range of variability to determine whether the current landscape deviates, and to what degree, from the HRV. 
 
-Using a stacked bar plot, I visualized the proportion of the total area of a given cover type occurring at each seral stage, for each timestep in the model. In addition, I showed a bar plot of the current seral stage distribution, allowing a visual comparison between current conditions and the historical range of variability in the distribution of the seral stages. While the bar plots are useful for visualizing the cover-seral stage dynamics, box plots more simply $5^{\text{th}}--95^{\text{th}}$ percentile distribution of interest and compare that to the current landscape values.
+Using a stacked bar plot, I visualized the proportion of the total area of a given cover type occurring at each seral stage, for each timestep in the model. In addition, I showed a bar plot of the current seral stage distribution, allowing a visual comparison between current conditions and the historical range of variability in the distribution of the seral stages. While the bar plots are useful for visualizing the cover-seral stage dynamics, box plots facilitate a visual comparison of the $5^{\text{th}}--95^{\text{th}}$ percentile distribution to the current landscape values.
 
 \emph{Landscape Structure and Patterns:} I used \textsc{Fragstats} \citep{Fragstats2012} to compute several landscape-level and class-level metrics that summarize landscape structure over the course of the simulation. I present the results in a series of tables and figures. 
 
@@ -603,7 +600,7 @@ A second method of model evaluation was a visual inspection of the output grids 
   \label{fig:dsize}
 \end{figure}
 
-As a further effort toward model evaluation, I examined the results of implementating the topographic position index (TPI). The TPI value for a given cell acts as an input into the susceptibility and mortality values otherwise defined for that cover type and seral stage combination. Early development and open canopy seral stages tend to result from fire, and I predicted that an increase in fires and in the likelihood of high mortality fire would lead to a decrease in the average canopy cover values for cells with large TPI values. Table~\ref{tab:tpi_cc} in Appendix \ref{app:full-results} displays the results for this simulation for the nine most common cover types. All show decreased average canopy cover as TPI increases. Figure \ref{fig:tpi_cc_smc} shows the plotted data and fitted linear regression line for mesic and xeric sierran mixed conifer forests. Figure~\ref{fig:averagecc} is a map displaying average canopy cover across the landscape for the full simulated HRV timeframe, excluding the equilibration period. In general, return intervals and canopy cover varied spatially across the forest and decreased with increasing TPI, reflecting empirical observations that higher, more southerly aspects are drier and more susceptible to fires. In mesic mixed conifer forests, canopy cover decreased by about 13\% when comparing minimum to maximum TPI, from an average of 49\% to an average of 43\%. In xeric mixed conifer forests, canopy cover decreased by about 25\% when comparing minimum to maximum TPI, from an average of 36\% to an average of 27\% (Table~\ref{tab:tpi_cc_smcs}).
+As a further effort toward model evaluation, I examined the results of implementating the topographic position index (TPI). The TPI value for a given cell acts as an input into the susceptibility and mortality values otherwise defined for that cover type and seral stage combination. Early development and open canopy seral stages tend to result from fire, and I predicted that an increase in fires and in the likelihood of high mortality fire would lead to a decrease in the average canopy cover values for cells with large TPI values. Table~\ref{tab:tpi_cc} in Appendix \ref{app:full-results} displays the results for this simulation for the nine most common cover types. All show decreased average canopy cover as TPI increases. Figure \ref{fig:tpi_cc_smc} shows the plotted data and fitted linear regression line for mesic and xeric sierran mixed conifer forests. Figure~\ref{fig:averagecc} is a map displaying average canopy cover across the landscape for the full simulated HRV timeframe, excluding the equilibration period. In general, rotations and canopy cover varied spatially across the forest and decreased with increasing TPI, reflecting empirical observations that higher, more southerly aspects are drier and more susceptible to fires. In mesic mixed conifer forests, canopy cover decreased by about 13\% when comparing minimum to maximum TPI, from an average of 49\% to an average of 43\%. In xeric mixed conifer forests, canopy cover decreased by about 25\% when comparing minimum to maximum TPI, from an average of 36\% to an average of 27\% (Table~\ref{tab:tpi_cc_smcs}).
 
 % figure redone
 \begin{figure}[!htbp]
@@ -623,6 +620,7 @@ As a further effort toward model evaluation, I examined the results of implement
 
 %redone 9/15
 \begin{table}[!htbp]
+\footnotesize
 \centering
 \caption{The percent change in canopy cover from the minimum TPI value for that cover type to the maximum TPI value. Results for Sierran Mixed Conifer Mesic and Xeric shown here; results for other focal cover types available in Appendix~\ref{app:full-results}}.
 \label{tab:tpi_cc_smcs}

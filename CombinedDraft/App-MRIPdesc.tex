@@ -56,18 +56,19 @@ Estimates of fire rotations are available from the LandFire project and a review
 
 
 
-\begin{table}[]
-\small
+\begin{table}[!htbp]
+\footnotesize
 \centering
-\caption{Fire rotation (years) and proportion of high (versus low) mortality fires. Values were derived from VDDT model 0611520 (LandFire 2007) and Van de Water and Safford (2011). }
+\caption{Fire rotation index values and probability of high severity fire (at least 75\% overstory tree mortality) probabilities. The seral stage that is most susceptible to fire (i.e., has the lowest predicted fire rotation) has a fire rotation index value of 1. Higher values correspond with lower likelihoods of experiencing wildfire. The values are relative only within an individual seral stage and should not be compared against other land cover types. Values were derived from VDDT model 0611520 (LandFire 2007) and Van de Water and Safford (2011). }
 \label{tab:mripdesc_fire}
 \begin{tabular}{@{}lcc@{}}
 \toprule
-\textbf{Condition}         & \multicolumn{1}{l}{\textbf{Fire Rotation}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Proportion \\ High Mortality\end{tabular}}} \\ \midrule
-Target                     & 53  & n/a      \\
-Early Development - All    & 50  & 1        \\
-Mid Development - Open & 50  & 0.5        \\
-Late Development - Closed  & 50  & 0.5      \\ \bottomrule
+ \textbf{Seral Stage}    & \textbf{\begin{tabular}[c]{@{}c@{}}Fire Rotation \\ Index\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Probability of \\ High Severity Fire\end{tabular}} \\ \hline
+Early (All)       & 1.0  & 1        \\
+Mid--Open   		& 1.0  & 0.5        \\
+Late--Closed      & 1.0  & 0.5      \\ 
+\emph{Target Fire Rotation}    			& \emph{53 years}  &   \\ 
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -124,7 +125,7 @@ We recognize three separate seral stages for MRIP: Early Development (ED), Mid D
 
 \subsection*{Seral Stage Classification}
 \begin{table}[hbp]
-\small
+\footnotesize
 \centering
 \caption{Classification of seral stage for MEG. Diameter at Breast Height (DBH) and Cover From Above (CFA) values taken from EVeg polygons. DBH categories are: null, 0-0.9'', 1-4.9'', 5-9.9'', 10-19.9'', 20-29.9'', 30''+. CFA categories are null, 0-10\%, 10-20\%, \dots , 90-100\%. Each row in the table below should be read with a boolean AND across each column.}
 \label{mrip_classification}

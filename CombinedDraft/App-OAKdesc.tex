@@ -61,22 +61,23 @@ Estimates of fire rotations are available from the LandFire project and Mallek e
 
 
 
-\begin{table}[]
-\small
+\begin{table}[!htbp]
+\footnotesize
 \centering
-\caption{Fire rotations (years) and probability of high versus low mortality fires. Values were derived from BpS model 0610800 (LandFire 2007), Van de Water and Safford (2011), and Safford (pers. comm. 2013).}
+\caption{Fire rotation index values and probability of high severity fire (at least 75\% overstory tree mortality) probabilities. The seral stage that is most susceptible to fire (i.e., has the lowest predicted fire rotation) has a fire rotation index value of 1. Higher values correspond with lower likelihoods of experiencing wildfire. The values are relative only within an individual seral stage and should not be compared against other land cover types. Values were derived from BpS model 0610800 (LandFire 2007), Van de Water and Safford (2011), and Safford (pers. comm. 2013).}
 \label{tab:oakdesc_fire}
 \begin{tabular}{@{}lcc@{}}
 \toprule
-\textbf{Condition}         & \multicolumn{1}{l}{\textbf{Fire Rotation}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Proportion \\ High Mortality\end{tabular}}} \\ \midrule
-Target                      & 26            & n/a                           \\
-Early Development - All     & 10            & 0.01                          \\
-Mid Development - Closed    & 12            & 0.07                          \\
-Mid Development - Moderate  & 10            & 0.06                          \\
-Mid Development - Open      & 10            & 0.05                          \\
-Late Development - Closed   & 25            & 0.5                           \\
-Late Development - Moderate & 12            & 0.18                          \\
-Late Development - Open     & 8             & 0.08       \\ \bottomrule
+ \textbf{Seral Stage}    & \textbf{\begin{tabular}[c]{@{}c@{}}Fire Rotation \\ Index\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Probability of \\ High Severity Fire\end{tabular}} \\ \hline
+Early (All)     		 & 1.3           & 0.01                          \\
+Mid--Closed    			 & 1.5           & 0.07                          \\
+Mid--Moderate  			 & 1.4           & 0.06                          \\
+Mid--Open      			 & 1.2           & 0.05                          \\
+Late--Closed   			 & 3.3           & 0.5                           \\
+Late--Moderate 			 & 1.5           & 0.18                          \\
+Late--Open     			 & 1.0             & 0.08       \\ 
+\emph{Target Fire Rotation}    			& \emph{26 years}  &   \\ 
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -170,7 +171,7 @@ We recognize seven separate seral stages for OAK: Early Development (ED), Mid De
 %\clearpage
 \subsection*{Seral Stage Classification}
 \begin{table}[hbp]
-\small
+\footnotesize
 \centering
 \caption{Classification of seral stage for OAK. Diameter at Breast Height (DBH) and Cover From Above (CFA) values taken from EVeg polygons. DBH categories are: null, 0-0.9'', 1-4.9'', 5-9.9'', 10-19.9'', 20-29.9'', 30''+. CFA categories are null, 0-10\%, 10-20\%, \dots , 90-100\%. Each row in the table below should be read with a boolean AND across each column.}
 \label{oak_classification}

@@ -23,8 +23,8 @@ Crosswalks
 \end{itemize}
 
 
-\noindent Modifiers \\
-\medskip
+\noindent \textbf{Modifiers} \\
+\begin{adjustwidth}{2cm}{}
 \noindent \textbf{Mesic Modifier } This type is created by intersecting a binary xeric/mesic layer with the existing vegetation layer. RFR cells that intersect with mesic cells are assigned to the mesic modifier.
 \begin{itemize}
 	\item LandFire BpS Model
@@ -48,6 +48,8 @@ Crosswalks
 		\item 0710220 Klamath-Siskiyou Upper Montane Serpentine Mixed Conifer Woodland
 	\end{itemize}
 \end{itemize}
+
+\begin{adjustwidth}
 
 \noindent \textbf{Red Fir with Aspen (RFR\_ASP)} This type is created by overlaying the NRIS TERRA Inventory of Aspen on top of the EVeg layer. Where it intersects with RFR it is assigned to RFR-ASP.
 
@@ -125,77 +127,81 @@ Estimates of fire rotations for these variants are available from the LandFire p
 \noindent \textbf{Red Fir with Aspen} Sites supporting \emph{P. tremuloides} are maintained by stand-replacing disturbances that allow regeneration from below-ground suckers. Upland clones are impaired or suppressed by conifer ingrowth and overtopping and intensive grazing that inhibits growth. In a reference condition scenario, a few stands will advance toward conifer dominance. In the current landscape scenario, where fire has been reduced from reference conditions, there are many more conifer-dominated mixed aspen stands (LandFire 2007c, Verner 1988).
 
 
-\begin{table}[]
-\small
+\begin{table}[!htbp]
+\footnotesize
 \centering
-\caption{Fire rotation (years) and proportion of high (versus low) mortality fires for Red Fir – Mesic. Values were derived from VDDT model 0610322 (LandFire 2007b), Mallek et al. (2013), and Safford and Estes (personal communication).}
+\caption{Fire rotation index values and probability of high severity fire (at least 75\% overstory tree mortality) probabilities for Red Fir – Mesic. The seral stage that is most susceptible to fire (i.e., has the lowest predicted fire rotation) has a fire rotation index value of 1. Higher values correspond with lower likelihoods of experiencing wildfire. The values are relative only within an individual seral stage and should not be compared against other land cover types. Values were derived from VDDT model 0610322 (LandFire 2007b), Mallek et al. (2013), and Safford and Estes (personal communication).}
 \label{tab:rfrmdesc_fire}
 \begin{tabular}{@{}lcc@{}}
 \toprule
-\textbf{Condition}         & \multicolumn{1}{l}{\textbf{Fire Rotation}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Proportion \\ High Mortality\end{tabular}}} \\ \midrule
-Target                      & 60            & n/a                           \\
-Early Development – All     & 58            & 1                             \\
-Mid Development – Closed    & 55            & 0.35                          \\
-Mid Development – Moderate  & 34            & 0.17                          \\
-Mid Development – Open      & 25            & 0.09                          \\
-Late Development – Closed   & 52            & 0.41                          \\
-Late Development – Moderate & 32            & 0.16                          \\
-Late Development – Open     & 23            & 0.05                  \\ \bottomrule
+ \textbf{Seral Stage}    & \textbf{\begin{tabular}[c]{@{}c@{}}Fire Rotation \\ Index\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Probability of \\ High Severity Fire\end{tabular}} \\ \hline
+Early (All)     		 & 2.6            & 1.0                             \\
+Mid--Closed    			 & 2.4            & 0.35                          \\
+Mid--Moderate  			 & 1.5            & 0.17                          \\
+Mid--Open      			 & 1.1            & 0.09                          \\
+Late--Closed   			 & 2.3            & 0.41                          \\
+Late--Moderate 			 & 1.4            & 0.16                          \\
+Late--Open     			 & 1.0            & 0.05                  \\ 
+\emph{Target Fire Rotation}    			& \emph{60 years}  &   \\ 
+\bottomrule
 \end{tabular}
 \end{table}
 
-\begin{table}[]
-\small
+\begin{table}[!htbp]
+\footnotesize
 \centering
-\caption{Fire rotation (years) and proportion of high (versus low) mortality fires for Red Fir – Xeric. Values were derived from VDDT model 0610321 (LandFire 2007a), and Safford and Estes (personal communication). }
+\caption{Fire rotation index values and probability of high severity fire (at least 75\% overstory tree mortality) probabilities for Red Fir – Xeric. The seral stage that is most susceptible to fire (i.e., has the lowest predicted fire rotation) has a fire rotation index value of 1. Higher values correspond with lower likelihoods of experiencing wildfire. The values are relative only within an individual seral stage and should not be compared against other land cover types. Values were derived from VDDT model 0610321 (LandFire 2007a), and Safford and Estes (personal communication). }
 \label{tab:rfrxdesc_fire}
 \begin{tabular}{@{}lcc@{}}
 \toprule
-\textbf{Condition}         & \multicolumn{1}{l}{\textbf{Fire Rotation}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Proportion \\ High Mortality\end{tabular}}} \\ \midrule
-Target                      & 40            & n/a                           \\
-Early Development – All     & 50            & 1                             \\
-Mid Development – Closed    & 94            & 0.50                          \\
-Mid Development – Moderate  & 65            & 0.25                          \\
-Mid Development – Open      & 50            & 0.13                          \\
-Late Development – Closed   & 74            & 0.38                          \\
-Late Development – Moderate & 55            & 0.19                          \\
-Late Development – Open     & 43            & 0.09                  \\ \bottomrule
+ \textbf{Seral Stage}    & \textbf{\begin{tabular}[c]{@{}c@{}}Fire Rotation \\ Index\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Probability of \\ High Severity Fire\end{tabular}} \\ \hline
+Early (All)     		 & 1.2            & 1.0                             \\
+Mid--Closed    			 & 2.2            & 0.50                          \\
+Mid--Moderate  			 & 1.5            & 0.25                          \\
+Mid--Open      			 & 1.2            & 0.13                          \\
+Late--Closed   			 & 1.7           & 0.38                          \\
+Late--Moderate 			 & 1.3            & 0.19                          \\
+Late--Open     			 & 1.0            & 0.09                  \\ 
+\emph{Target Fire Rotation}    			& \emph{40 years}  &   \\ 
+\bottomrule
 \end{tabular}
 \end{table}
 
-\begin{table}[]
-\small
+\begin{table}[!htbp]
+\footnotesize
 \centering
-\caption{Fire rotation (years) and proportion of high (versus low) mortality fires for Red Fir – Ultramafic. Values were derived from VDDT model 0610322 (LandFire 2007b), and Safford and Estes (personal communication). }
+\caption{Fire rotation index values and probability of high severity fire (at least 75\% overstory tree mortality) probabilities for Red Fir – Ultramafic. The seral stage that is most susceptible to fire (i.e., has the lowest predicted fire rotation) has a fire rotation index value of 1. Higher values correspond with lower likelihoods of experiencing wildfire. The values are relative only within an individual seral stage and should not be compared against other land cover types. Values were derived from VDDT model 0610322 (LandFire 2007b), and Safford and Estes (personal communication). }
 \label{tab:rfrudesc_fire}
 \begin{tabular}{@{}lcc@{}}
 \toprule
-\textbf{Condition}         & \multicolumn{1}{l}{\textbf{Fire Rotation}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Proportion \\ High Mortality\end{tabular}}} \\ \midrule
-Target                      & 120           & n/a                           \\
-Early Development – All     & 117           & 1                             \\
-Mid Development – Closed    & 110           & 0.35                          \\
-Mid Development – Moderate  & 69            & 0.17                          \\
-Mid Development – Open      & 50            & 0.09                          \\
-Late Development – Closed   & 104           & 0.41                          \\
-Late Development – Moderate & 63            & 0.16                          \\
-Late Development – Open     & 46            & 0.05                  \\ \bottomrule
+ \textbf{Seral Stage}    & \textbf{\begin{tabular}[c]{@{}c@{}}Fire Rotation \\ Index\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Probability of \\ High Severity Fire\end{tabular}} \\ \hline
+Early (All)     		 & 2.6           & 1.0                             \\
+Mid--Closed    			 & 2.4           & 0.35                          \\
+Mid--Moderate  			 & 1.5           & 0.17                          \\
+Mid--Open      			 & 1.1           & 0.09                          \\
+Late--Closed   			 & 2.3           & 0.41                          \\
+Late--Moderate 			 & 1.4           & 0.16                          \\
+Late--Open     			 & 1.0           & 0.05                  \\ 
+\emph{Target Fire Rotation}    			& \emph{120 years}  &   \\ 
+\bottomrule
 \end{tabular}
 \end{table}
 
-\begin{table}[]
-\small
+\begin{table}[!htbp]
+\footnotesize
 \centering
-\caption{Fire rotation (years) and proportion of high (versus low) mortality fires for Red Fir – Aspen type. Values were derived from VDDT model 0610610 (LandFire 2007) and Van de Water and Safford (pers. comm. 2013).}
+\caption{Fire rotation index values and probability of high severity fire (at least 75\% overstory tree mortality) probabilities for Red Fir – Aspen type. The seral stage that is most susceptible to fire (i.e., has the lowest predicted fire rotation) has a fire rotation index value of 1. Higher values correspond with lower likelihoods of experiencing wildfire. The values are relative only within an individual seral stage and should not be compared against other land cover types. Values were derived from VDDT model 0610610 (LandFire 2007) and Van de Water and Safford (pers. comm. 2013).}
 \label{tab:rfr-aspdesc_fire}
 \begin{tabular}{@{}lcc@{}}
 \toprule
-\textbf{Condition}         & \multicolumn{1}{l}{\textbf{Fire Rotation}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Proportion \\ High Mortality\end{tabular}}} \\ \midrule
-Target                           & 60            & n/a                           \\
-Early Development – Aspen        & 58            & 0.03                          \\
-Mid Development – Aspen          & 55            & 0.41                          \\
-Mid Development – Aspen-Conifer  & 34            & 0.15                          \\
-Late Development – Conifer-Aspen & 32            & 0.13                          \\
-Late Development – Closed        & 52            & 0.26                  \\ \bottomrule
+ \textbf{Seral Stage}    & \textbf{\begin{tabular}[c]{@{}c@{}}Fire Rotation \\ Index\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Probability of \\ High Severity Fire\end{tabular}} \\ \hline
+Early--Aspen        & 1.8            & 0.03                          \\
+Mid--Aspen          & 1.7            & 0.41                          \\
+Mid--Aspen-Conifer  & 1.1            & 0.15                          \\
+Late--Conifer-Aspen & 1.0            & 0.13                          \\
+Late--Closed        & 1.6            & 0.26                  \\ 
+\emph{Target Fire Rotation}    			& \emph{60 years}  &   \\ 
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -302,7 +308,7 @@ On mesic sites, \emph{P. monticola} and \emph{P. contorta} ssp. \emph{murrayana}
 \noindent \textbf{Mesic Modifier } High mortality wildfire (17\% of fires in this seral stage) returns the patch to ED. Low mortality wildfire (83\%) opens the stand up to MDO 13\% of the time; otherwise, the patch remains in MDC. 
 
 \medskip
-\noindent \textbf{Xeric Modifier}  High mortality wildfire (25\% of fires in this seral stage) returns the patch to ED. Low mortality wildfire (75\%) opens the stand up to MDO 13\% of the time; otherwise, the patch remains in MDC.
+\noindent \textbf{Xeric Modifier}  High mortality wildfire (25\% of fires in this seral stage) returns the patch to ED. Low mortality wildfire (75\%) opens the stand up to MDO 19\% of the time; otherwise, the patch remains in MDC.
 
 \medskip
 \noindent \textbf{Ultramafic Modifier} High mortality wildfire (17\% of fires in this seral stage) returns the patch to ED. Low mortality wildfire (83\%) opens the stand up to MDO 13\% of the time; otherwise, the patch remains in MDC.
@@ -332,7 +338,7 @@ On mesic sites, \emph{P. monticola} and \emph{P. contorta} ssp. \emph{murrayana}
 \noindent \textbf{Mesic Modifier } High mortality wildfire (35\% of fires in this seral stage) returns the patch to ED. Low mortality wildfire (65\%) opens the stand up to MDM 17\% of the time; otherwise, the patch remains in MDC. 
 
 \medskip
-\noindent \textbf{Xeric Modifier} High mortality wildfire (50\% of fires in this seral stage) returns the patch to ED. Low mortality wildfire (50\%) opens the stand up to MDM 17\% of the time; otherwise, the patch remains in MDC.
+\noindent \textbf{Xeric Modifier} High mortality wildfire (50\% of fires in this seral stage) returns the patch to ED. Low mortality wildfire (50\%) opens the stand up to MDM 34\% of the time; otherwise, the patch remains in MDC.
 
 \medskip
 \noindent \textbf{Ultramafic Modifier} High mortality wildfire (35\% of fires in this seral stage) returns the patch to ED. Low mortality wildfire (65\%) opens the stand up to MDM 17\% of the time; otherwise, the patch remains in MDC.
@@ -363,13 +369,13 @@ On mesic sites, \emph{P. monticola} and \emph{P. contorta} ssp. \emph{murrayana}
 
 \paragraph{Wildfire Transition}
 \begin{adjustwidth}{2cm}{}
-\noindent \textbf{Mesic Modifier } High mortality wildfire (11\% of fires in this seral stage) returns the patch to early development. Low mortality wildfire (89\%) maintains LDO. 
+\noindent \textbf{Mesic Modifier } High mortality wildfire (5\% of fires in this seral stage) returns the patch to early development. Low mortality wildfire (95\%) maintains LDO. 
 
 \medskip
-\noindent \textbf{Xeric Modifier} High mortality wildfire (3\% of fires in this seral stage) returns the patch to early development. Low mortality wildfire (97\%) maintains LDO. 
+\noindent \textbf{Xeric Modifier} High mortality wildfire (9\% of fires in this seral stage) returns the patch to early development. Low mortality wildfire (91\%) maintains LDO. 
 
 \medskip
-\noindent \textbf{Ultramafic Modifier} High mortality wildfire (11\% of fires in this seral stage) returns the patch to early development. Low mortality wildfire (89\%) maintains LDO.
+\noindent \textbf{Ultramafic Modifier} High mortality wildfire (5\% of fires in this seral stage) returns the patch to early development. Low mortality wildfire (95\%) maintains LDO.
 
 \end{adjustwidth}
 
@@ -386,13 +392,13 @@ On mesic sites, \emph{P. monticola} is the primary associate, with some \emph{P.
 
 \paragraph{Wildfire Transition}
 \begin{adjustwidth}{2cm}{}
-\noindent \textbf{Mesic Modifier } High mortality wildfire (16\% of fires in this seral stage) will return the patch to Early Development. Low mortality wildfire (84\%) opens the stand up to LDO 15\% of the time; otherwise, the patch remains in LDM. 
+\noindent \textbf{Mesic Modifier } High mortality wildfire (16\% of fires in this seral stage) will return the patch to Early Development. Low mortality wildfire (84\%) opens the stand up to LDO 10\% of the time; otherwise, the patch remains in LDM. 
 
 \medskip
-\noindent \textbf{Xeric Modifier} High mortality wildfire (19\% of fires in this seral stage) will return the patch to Early Development. Low mortality wildfire (81\%) opens the stand up to LDO 15\% of the time; otherwise, the patch remains in LDM. 
+\noindent \textbf{Xeric Modifier} High mortality wildfire (19\% of fires in this seral stage) will return the patch to Early Development. Low mortality wildfire (81\%) opens the stand up to LDO 16\% of the time; otherwise, the patch remains in LDM. 
 
 \medskip
-\noindent \textbf{Ultramafic Modifier} High mortality wildfire (16\% of fires in this seral stage) will return the patch to Early Development. Low mortality wildfire (84\%) opens the stand up to LDO 15\% of the time; otherwise, the patch remains in LDM.
+\noindent \textbf{Ultramafic Modifier} High mortality wildfire (16\% of fires in this seral stage) will return the patch to Early Development. Low mortality wildfire (84\%) opens the stand up to LDO 10\% of the time; otherwise, the patch remains in LDM.
 
 \end{adjustwidth}
 
@@ -412,13 +418,13 @@ On mesic sites, \emph{P. monticola} is the primary associate, with some \emph{P.
 \paragraph{Wildfire Transition}
 
 \begin{adjustwidth}{2cm}{}
-\noindent \textbf{Mesic Modifier } High mortality wildfire (41\% of fires in this seral stage) will return the patch to Early Development. Low mortality wildfire (59\%) opens the stand up to LDM 10\% of the time; otherwise, the patch remains in LDC. 
+\noindent \textbf{Mesic Modifier } High mortality wildfire (41\% of fires in this seral stage) will return the patch to Early Development. Low mortality wildfire (59\%) opens the stand up to LDM 15\% of the time; otherwise, the patch remains in LDC. 
 
 \medskip
-\noindent \textbf{Xeric Modifier} High mortality wildfire (38\% of fires in this seral stage) will return the patch to Early Development. Low mortality wildfire (62\%) opens the stand up to LDM 10\% of the time; otherwise, the patch remains in LDC. 
+\noindent \textbf{Xeric Modifier} High mortality wildfire (38\% of fires in this seral stage) will return the patch to Early Development. Low mortality wildfire (62\%) opens the stand up to LDM 20\% of the time; otherwise, the patch remains in LDC. 
 
 \medskip
-\noindent \textbf{Ultramafic Modifier} High mortality wildfire (41\% of fires in this seral stage) will return the patch to Early Development. Low mortality wildfire (59\%) opens the stand up to LDM 10\% of the time; otherwise, the patch remains in LDC.
+\noindent \textbf{Ultramafic Modifier} High mortality wildfire (41\% of fires in this seral stage) will return the patch to Early Development. Low mortality wildfire (59\%) opens the stand up to LDM 15\% of the time; otherwise, the patch remains in LDC.
 
 \end{adjustwidth}
 
@@ -468,7 +474,7 @@ Following disturbance, succession proceeds rapidly from an herbaceous layer to s
 
 \paragraph{Succession Transition} In the absence of disturbance, patches in this seral stage will maintain, regardless of soil characteristics.
 
-\paragraph{Wildfire Transition} High mortality wildfire (41\% of fires in this seral stage) will return the patch to ED–A. Low mortality wildfire (59\%) usually has little effect, although 10\% of the time it opens the stand up to LD-CA.
+\paragraph{Wildfire Transition} High mortality wildfire (41\% of fires in this seral stage) will return the patch to ED–A. Low mortality wildfire (59\%) usually has little effect, although 15\% of the time it opens the stand up to LD-CA.
 
 \noindent\hrulefill
 
@@ -479,7 +485,7 @@ Following disturbance, succession proceeds rapidly from an herbaceous layer to s
 
 \paragraph{Succession Transition} LD-CA persists for 70 years in the absence of any fire, after which patches transition to LDC. 
 
-\paragraph{Wildfire Transition} High mortality wildfire (16\% of fires in this seral stage) returns the patch to ED-A. Low mortality wildfire (84\%) maintains the stand in LD-CA.
+\paragraph{Wildfire Transition} High mortality wildfire (16\% of fires in this seral stage) returns the patch to ED-A. Low mortality wildfire (84\%) maintains the stand in LD-CA. 
 
 \noindent\hrulefill
 
@@ -488,7 +494,7 @@ Following disturbance, succession proceeds rapidly from an herbaceous layer to s
 
 \subsection*{Seral Stage Classification}
 \begin{table}[hbp]
-\small
+\footnotesize
 \centering
 \caption{Classification of cover seral stage for RFR. Diameter at Breast Height (DBH) and Cover From Above (CFA) values taken from EVeg polygons. DBH categories are: null, 0-0.9'', 1-4.9'', 5-9.9'', 10-19.9'', 20-29.9'', 30''+. CFA categories are null, 0-10\%, 10-20\%, \dots , 90-100\%. Each row in the table below should be read with a boolean AND across each column of a row.}
 \label{rfr_classification}

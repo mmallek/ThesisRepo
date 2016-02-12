@@ -1,5 +1,5 @@
 % !TEX root = master.tex
-\chapter{Expanded HRV Results}
+\chapter{Expanded HRV Results and Analysis}
 %\chapter{Disturbance Regime and Seral Stage Dynamics Expanded Results}
 \label{app:full-results}
 
@@ -92,7 +92,8 @@ Sierran Mixed Conifer with Aspen             & 58       &   41      & 132      &
 Subalpine Conifer                            & 638      &  866      & 234      & 184 \\
 Urban                                        & 114      & 1641      &  79      &  76 \\
 Western White Pine                           & 273      &  104      & 563      &  88 \\
-\textbf{Total}       			& \textbf{174830}    & \textbf{38}   & \textbf{103}   & \textbf{28}                                                                                \\ \bottomrule
+\textbf{Total}       			& \textbf{174830}    & \textbf{38}   & \textbf{103}   & \textbf{28}  \\ 
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -101,13 +102,13 @@ Western White Pine                           & 273      &  104      & 563      &
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Individual Cover Type Results}
-
+\label{sec:indiv_cov_results}
 % preturn redone 
 % updated 2016-02-07 to adjust departure values
 % updated 2016-02-10 to merge App_ExtraCovResults into this document
 
 
-The discussion that follows focuses on seven of the nine cover types found within the core project area that were treated as dynamic in the model and that occurred over an extent of at least 1000 ha in the project area. For each of these cover types, we briefly describe the simulated disturbance regime (i.e., spatial extent and distribution, frequency and temporal variability) associated with each relevant disturbance process, the vegetation dynamics resulting from the interplay between these disturbance processes and succession, and an examination of the cover type’s current departure from the simulated HRV. The cover types are presented in descending order by total area within the project landscape. Results for Sierran Mixed Conifer Mesic and Xeric can be found in Chapter~\ref{sec:hrvresults}
+The discussion that follows focuses on seven of the nine cover types found within the core project area that were treated as dynamic in the model and that occurred over an extent of at least 1000 ha in the project area. For each of these cover types, I briefly describe the simulated disturbance regime (i.e., spatial extent and distribution, frequency and temporal variability) associated with each relevant disturbance process, the vegetation dynamics resulting from the interplay between these disturbance processes and succession, and an examination of the cover type’s current departure from the simulated HRV. The cover types are presented in descending order by total area within the project landscape. Results for Sierran Mixed Conifer Mesic and Xeric can be found in Chapter~\ref{sec:hrvresults}
 
 \subsection{Oak-Conifer Forest and Woodland}
 % figures updated 2015-09
@@ -124,14 +125,14 @@ The discussion that follows focuses on seven of the nine cover types found withi
   \label{fig:darea_ocfw}
 \end{figure}
 
-Oak-Conifer Forest and Woodland (\textsc{ocfw})is the third most common cover type within the core project area, encompassing 23,279 ha and comprising roughly 13\% of the project area. The frequency and extent of simulated wildfires in oak-conifer forests and woodlands varied markedly across the landscape (Figure~\ref{fig:darea_ocfw}). Wildfire was quite prevalent in this cover type. We summarize the disturbance regime in Tables~\ref{tab:darea_ocfw} and \ref{tab:darea_atleast_ocfw}.
+Oak-Conifer Forest and Woodland (\textsc{ocfw})is the third most common cover type within the core project area, encompassing 23,279 ha and comprising roughly 13\% of the project area. The frequency and extent of simulated wildfires in oak-conifer forests and woodlands varied markedly across the landscape (Figure~\ref{fig:darea_ocfw}). Wildfire was quite prevalent in this cover type. I summarize the disturbance regime in Tables~\ref{tab:darea_ocfw} and \ref{tab:darea_atleast_ocfw}.
 
 
 % updated 2015-09-28
 \begin{table}[!htbp]
 \small
 \centering
-\caption{ Disturbed area summary statistics for Oak-Conifer Forest and Woodland. Proportions shown are relative to the total area of Oak-Conifer Forest and Woodland.}
+\caption{Disturbed area summary statistics for Oak-Conifer Forest and Woodland. Proportions shown are relative to the total area of Oak-Conifer Forest and Woodland.}
 \label{tab:darea_ocfw}
 \begin{tabular}{@{}llll@{}}
 \toprule
@@ -148,7 +149,7 @@ Mean                               & 17.61 & 4.78  & 22.39  \\
 \begin{table}[!htbp]
 \small
 \centering
-\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{ocfw} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\caption{Summary of disturbed area in terms of proportion of the amount of Oak-Conifer Forest and Woodland burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, I list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
 \label{tab:darea_atleast_ocfw}
 \begin{tabular}{@{}lllll@{}}
                         & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
@@ -159,7 +160,7 @@ Interval (years)        & 5.01         & 6.70          & 14.78         & 54.88  
 \end{tabular}
 \end{table}
 
-Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area (Figure~\ref{fig:preturn_ocfw}). 
 
 \begin{figure}[!htbp]
   \centering
@@ -174,12 +175,12 @@ Visualizing the point-specific fire rotation calls attention to the variability 
 \label{fig:preturn_ocfw}
 \end{figure}
 
-The age structure and dynamics of oak-conifer forests and woodlands illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+The age structure and dynamics of oak-conifer forests and woodlands illustrates the interaction between disturbance and succession processes. I focus my analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for the simulation (excluding the equilibration period). %
 %
-The distribution of area among seral stages within oak-conifer forests and woodlands fluctuated considerably over time, as expected (Figure~\ref{fig:covcond_ocfw}). Surprisingly for a cover type in which fuels are the largest contributor to disturbance and fire is relatively frequent, the Late--Open seral stage was relatively uncommon, though more so than on the current landscape.
+The distribution of area among seral stages within oak-conifer forests and woodlands fluctuated considerably over time, as expected (Figure~\ref{fig:covcond_ocfw}). Surprisingly for a cover type in which fuels are the largest contributor to disturbance and fire is relatively frequent, the Late--Open seral stage was relatively uncommon during the simulated HRV, though it was more prevalent than on the current landscape.
 %
 
-The seral stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each seral stage varied about a stable mean). Our calculated current seral stage distribution was never observed under the simulated HRV (Table~\ref{tab:covcond_ocfw}). The most notable departure was the shift from the Mid Development stages, which are dominant in the current landscape, to Late Development stages, which are almost nonexistent on the current landscape. The current proportions of all Late Development canopy cover levels are lower than at any point during the HRV.  The Early Development and Mid--Moderate proportions are within the HRV, but the other five stages are completely departed from the HRV.
+The seral stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each seral stage varied about a stable mean). The calculated current seral stage distribution was never observed under the simulated HRV (Table~\ref{tab:ssdyn_ocfw}). The most notable departure was the shift from the Mid Development stages, which are dominant in the current landscape, to Late Development stages, which are almost nonexistent on the current landscape. The current proportions of all Late Development canopy cover levels are lower than at any point during the HRV.  The Early Development and Mid--Moderate proportions are within the HRV, but the other five stages are completely departed from the HRV.
 
 % figures updated 2015-09, and again 2016-02
 \begin{figure}[!htbp]
@@ -201,7 +202,7 @@ The seral stage distribution appeared to be in dynamic equilibrium (i.e., the pe
 \begin{table}[!htbp]
 \footnotesize
 \caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Oak-Conifer Forest and Woodland (\textsc{ocfw}). For seral stage abbreviations, see Table \ref{condtable}.}
-\label{tab:covcond1}
+\label{tab:ssdyn_ocfw}
 \begin{tabular}{@{}lrrrrr|rrr@{}}
 \toprule
 \textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
@@ -212,11 +213,12 @@ The seral stage distribution appeared to be in dynamic equilibrium (i.e., the pe
 \textsc{late\_cl  }      &  5.37           &  11.38            &  17.76     &  23.13           &  31.36      &  1.58     &  0     &  complete      \\
 \textsc{late\_mod }      &  13.81          &  16.51            &  18.23     &  20.22           &  22.84      &  1.02     &  0     &  complete      \\
 \textsc{late\_op  }      &  5.45           &  7.89             &  10.61     &  14.12           &  19.02      &  1.12     &  0     &  complete      \\
+\bottomrule
 \end{tabular}
 \end{table}
 
 
-The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). Area-weighted patch and core area exhibited the greatest variability over time. Because all the Late Development stages are nearly absent from the current landscape, configuration metrics consistently differ between the current seral stage distrbution and that observed during the simulated HRV. While some seral stages and metrics fall completely outside the HRV, others are well within it. The HRV results for class-level metrics are consistent for six of the seven seral stages, in the sense of their deviation from their current proportion (Mid--Closed is the outlier). For example, patches are currently smaller, with less core area and geometric complexity, compared to the simulated period. Early development and middle development, open canopy patches tended to be less aggregated during the HRV, while the other seral stages were more aggregated. Only late development moderate and open canopy classes were outside the HRV for the \textsc{clumpy} metric, however.
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Table~\ref{tab:fragclass_ocfw} in Appendix~\ref{app:full-class-results}). Area-weighted patch and core area exhibited the greatest variability over time. Because all the Late Development stages are nearly absent from the current landscape, configuration metrics consistently differ between the current seral stage distrbution and that observed during the simulated HRV. While some seral stages and metrics fall completely outside the HRV, others are well within it. The HRV results for class-level metrics are consistent for six of the seven seral stages, in the sense of their deviation from their current proportion (Mid--Closed is the outlier) (Figures~\ref{fig:ocfw_areaam}--\ref{fig:ocfw_clumpy}). For example, patches are currently smaller, with less core area and geometric complexity, compared to the simulated period. Early Development and Mid--Open canopy patches tended to be less aggregated during the HRV, while the other seral stages were more aggregated. Only the Late--Moderate and Late--Openseral stages were outside the HRV for the \textsc{clumpy} metric, however.
 
 
 % figures updated 2015-09-20
@@ -274,7 +276,7 @@ The spatial configuration of seral stages fluctuated markedly over time as well,
   \label{fig:darea_rfrm}
 \end{figure}
 
-Red Fir - Mesic (\textsc{rfr\_m})is a somewhat common cover type within the core project area, encompassing 8,563 ha and comprising roughly 5\% of the project area. Wildfire was fairly common in this cover type. The frequency and extent of simulated wildfires in mesic red fir forests varied markedly across the landscape (Figure~\ref{fig:darea_rfrm}). We summarize the disturbance regime in Tables~\ref{tab:darea_rfrm} and \ref{tab:darea_atleast_rfrm}.
+Red Fir - Mesic (\textsc{rfr\_m})is a somewhat common cover type within the core project area, encompassing 8,563 ha and comprising roughly 5\% of the project area. Wildfire was fairly common in this cover type. The frequency and extent of simulated wildfires in mesic red fir forests varied markedly across the landscape (Figure~\ref{fig:darea_rfrm}). I summarize the disturbance regime in Tables~\ref{tab:darea_rfrm} and \ref{tab:darea_atleast_rfrm}.
 
 % updated 2015-09-28
 \begin{table}[!htbp]
@@ -297,7 +299,7 @@ Mean                               & 4.80  & 3.14  & 7.94  \\
 \begin{table}[!htbp]
 \small
 \centering
-\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{rfr\_m} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{rfr\_m} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, I list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
 \label{tab:darea_atleast_rfrm}
 \begin{tabular}{@{}lllll@{}}
                         & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
@@ -308,7 +310,7 @@ Interval (years)        & 6.07         & 19.87         & 64.03         & 2305   
 \end{tabular}
 \end{table}
 
-Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area (Figure~\ref{fig:preturn_rfrm}). 
 
 \begin{figure}[!htbp]
   \centering
@@ -323,11 +325,11 @@ Visualizing the point-specific fire rotation calls attention to the variability 
 \label{fig:preturn_rfrm}
 \end{figure}
 
-The age structure and dynamics of mesic red fir forests illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+The age structure and dynamics of mesic red fir forests illustrates the interaction between disturbance and succession processes. I focus my analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for the simulation (excluding the equilibration period). %
 
 The distribution of area among seral stages within mesic red fir forests fluctuated over time, but the moderate and open canopy cover seral stages are remarkable for having an extremely small range of variability (Figure~\ref{fig:covcond_rfrm}). As expected for mesic red fir forests (Appendix~\ref{app:covertypedesc}), closed canopies predominated. Early Development, which includes post-fire chaparral fields, was the next most extensive cover type. %
 
-The seral stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each seral stages varied about a stable mean). Our calculated current seral stage distribution was never observed under the simulated HRV (Table~\ref{tab:covcond2}). The most notable departure was a shift from moderate canopy cover to closed canopy cover. Current levels of moderate canopy cover are much higher, and current levels of closed canopy cover much lower, than during the simulated HRV. Early Development and Late Development - Open are both somewhat departed from the HRV. The other five seral stages are completely departed from the HRV. 
+The seral stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each seral stages varied about a stable mean). Our calculated current seral stage distribution was never observed under the simulated HRV (Table~\ref{tab:ssdyn_rfrm}). The most notable departure was a shift from moderate canopy cover to closed canopy cover. Current levels of moderate canopy cover are much higher, and current levels of closed canopy cover much lower, than during the simulated HRV. Early Development and Late--Open are both somewhat departed from the HRV. The other five seral stages are completely departed from the HRV. 
 
 \begin{figure}[!htbp]
   \centering
@@ -345,11 +347,10 @@ The seral stage distribution appeared to be in dynamic equilibrium (i.e., the pe
   \label{fig:covcond_rfrm}
 \end{figure}
 
-\begin{landscape}
 \begin{table}[!htbp]
 \footnotesize
 \caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Red Fir - Mesic (\textsc{rfr\_m}). For seral stage abbreviations, see Table \ref{condtable}.}
-\label{tab:covcond2}
+\label{tab:ssdyn_rfrm}
 \begin{tabular}{@{}rrrrrr|rrr@{}}
 \toprule
 \textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}    &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
@@ -361,11 +362,11 @@ The seral stage distribution appeared to be in dynamic equilibrium (i.e., the pe
 \textsc{late\_cl  }         &  26.29       &  33.03   &  39.48     &  45.47            &  53.47     &  10.7     &  0     &  complete      \\
 \textsc{late\_mod }        &   2.31        &  3.2     &  4.19      &  5.2              &  6.95      &  21.96    &  100   &  complete      \\
 \textsc{late\_op  }        &   0.73        &  1.1     &  1.61      &  2.2              &  3.4       &  4.13     &  100   &  complete     \\
+\bottomrule
 \end{tabular}
 \end{table}
-\end{landscape}
 
-The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). Several metrics exhibited high variability over time, including the area-weighted patch and core area, edge and patch density, radius of gyration, and contrast-weighted edge density. The narrow range of variability observed in some seral stages is repeated in the configuration metrics. In general, current values for the class metrics are often completely outside or near the extremes of the simulated HRV. The direction of the departure depends on seral stage. The early development and closed canopy seral stages tend to be smaller in both area and core area, less aggregated, and less geometrically complex now than during the HRV. In contrast, the moderate and open canopy seral stages tend to be larger, with more core area, more aggregation, and more complexity now than during the HRV. The fact that the closed canopies dominated the HRV cover-seral stages distribution explains this divergence.
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Table~\ref{tab:fragclass_rfrm} in Appendix~\ref{app:full-class-results}). Several metrics exhibited high variability over time, including the area-weighted patch and core area, edge and patch density, radius of gyration, and contrast-weighted edge density (Figures~\ref{fig:rfrm_areaam}--\ref{fig:rfrm_clumpy}). The narrow range of variability observed in some seral stages is repeated in the configuration metrics. In general, current values for the class metrics are often completely outside or near the extremes of the simulated HRV. The direction of the departure depends on seral stage. The Early Development and closed canopy seral stages tend to be smaller in both area and core area, less aggregated, and less geometrically complex now than during the HRV. In contrast, the moderate and open canopy seral stages tend to be larger, with more core area, more aggregation, and more complexity now than during the HRV. The fact that the closed canopies dominated the HRV cover-seral stages distribution explains this divergence.
 
 % figures updated 2015-09-20
 \begin{figure}[!htbp]
@@ -423,7 +424,7 @@ The spatial configuration of seral stages fluctuated markedly over time as well,
 \end{figure}
 
 Red Fir - Xeric (\textsc{rfr\_x})is a somewhat common cover type within the core project area, encompassing 7,493 ha and comprising roughly 5\% of the project area. Wildfire was fairly common in this cover type, and occurred more frequently on average than in mesic red fir forests.
-The frequency and extent of simulated wildfires in xeric red fir forests varied markedly across the landscape (Figure~\ref{fig:darea_rfrx}). We summarize the disturbance regime in Tables~\ref{tab:darea_rfrx} and \ref{tab:darea_atleast_rfrx}.
+The frequency and extent of simulated wildfires in xeric red fir forests varied markedly across the landscape (Figure~\ref{fig:darea_rfrx}). I summarize the disturbance regime in Tables~\ref{tab:darea_rfrx} and \ref{tab:darea_atleast_rfrx}.
 
 % updated 2015-09-28
 \begin{table}[!htbp]
@@ -445,7 +446,7 @@ Mean                               & 8.29  & 4.96  & 13.25  \\
 \begin{table}[!htbp]
 \small
 \centering
-\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{rfr\_x} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{rfr\_x} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, I list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
 \label{tab:darea_atleast_rfrx}
 \begin{tabular}{@{}lllll@{}}
                         & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
@@ -456,7 +457,7 @@ Interval (years)        & 5.46         & 12.26         & 29.94         & 109.76 
 \end{tabular}
 \end{table}
 
-Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area (Figure~\ref{fig:preturn_rfrx}).
 
 \begin{figure}[!htbp]
   \centering
@@ -471,11 +472,11 @@ Visualizing the point-specific fire rotation calls attention to the variability 
 \label{fig:preturn_rfrx}
 \end{figure}
 
-The age structure and dynamics of xeric red fir forests illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+The age structure and dynamics of xeric red fir forests illustrates the interaction between disturbance and succession processes. I focus my analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for the simulation (excluding the equilibration period). %
 
-The distribution of area among seral stages within xeric red fir forests fluctuated over time, but less dramatically than many other cover types (Figure~\ref{fig:covcond_rfrx}). Interestingly, although open canopies dominated during middle development, the distribution of the three Late Development seral stages was roughly equal. This shift towards higher canopy closure may be due to an increasing resilience to wildfire disturbances by stands of that age: wildfires may burn the understory without significantly affecting overstory canopy cover. Early Development, which includes post-fire chaparral fields, was the single most extensive cover type. The current proportion of Early Development is somewhat departed from the simulated HRV. %
+The distribution of area among seral stages within xeric red fir forests fluctuated over time, but less dramatically than many other cover types (Figure~\ref{fig:covcond_rfrx}). Interestingly, although open canopies dominated during Mid Development, the distribution of the three Late Development seral stages was roughly equal. This shift towards higher canopy closure may be due to an increasing resilience to wildfire disturbances by stands of that age: wildfires may burn the understory without significantly affecting overstory canopy cover. Early Development, which includes post-fire chaparral fields, was the single most extensive cover type. The current proportion of Early Development is somewhat departed from the simulated HRV. %
 
-The seral stage distribution appeared to be in dynamic equilibrium. Our calculated current seral stage distribution was never observed under the simulated HRV (Table~\ref{tab:covcond2}). Although the late closed stage is not currently departed from the HRV, and the early development stage is moderately departed, the other stages are completely departed from the HRV.
+The seral stage distribution appeared to be in dynamic equilibrium. Our calculated current seral stage distribution was never observed under the simulated HRV (Table~\ref{tab:ssdyn_rfrx}). Although the Late--Closed stage is not currently departed from the HRV, and the Early Development stage is moderately departed, the other stages are completely departed from the HRV.
 
 \begin{figure}[!htbp]
   \centering
@@ -493,11 +494,10 @@ The seral stage distribution appeared to be in dynamic equilibrium. Our calculat
   \label{fig:covcond_rfrx}
 \end{figure}
 
-\begin{landscape}
 \begin{table}[!htbp]
 \footnotesize
 \caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Red Fir -  Xeric (\textsc{rfr\_x}). For seral stage abbreviations, see Table \ref{condtable}.}
-\label{tab:rfrx_ss}
+\label{tab:ssdyn_rfrx}
 \begin{tabular}{@{}rrrrrr|rrr@{}}
 \toprule
 \textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}    &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
@@ -509,13 +509,13 @@ The seral stage distribution appeared to be in dynamic equilibrium. Our calculat
 \textsc{late\_cl  }        &   6.46        &  8.73    &  11.28     &  14.19            &  20.38     &  10.45    &  43    &  none      \\
 \textsc{late\_mod }        &   8.83        &  10.31   &  11.7      &  12.96            &  14.6      &  14.57    &  95    &  complete      \\
 \textsc{late\_op  }        &   6.2         &  8.92    &  11.04     &  13.38            &  16.26     &  3.1      &  0     &  complete     \\
+\bottomrule
 \end{tabular}
 \end{table}
-\end{landscape}
 
-The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). In general most seral stages were not departed or moderately departed from the HRV, across metrics. However, middle development, open canopy stages were often completely departed from the HRV, or otherwise moderately departed. These patches were larger, more aggregated, more geometrically complex, and contained more core area during the simulation than in the current landscape.
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Table~\ref{tab:fragclass_rfrx} in Appendix~\ref{app:full-class-results}). In general most seral stages were not departed or moderately departed from the HRV, across metrics. However, the Mid Development and Late--Open stages were often completely departed from the HRV, or otherwise moderately departed. These patches were larger, more aggregated, more geometrically complex, and contained more core area during the simulation than in the current landscape.
 
-In general, current values for the class metrics are often completely outside or near the extremes of the simulated HRV. The direction of the departure depends on seral stage. The early development and closed canopies tend to be smaller in both area and core area, less aggregated, and less geometrically complex now than during the HRV. In contrast, the moderate and open canopiy seral stages tend to be larger, with more core area, more aggregation, and more complexity now than during the HRV. The fact that the closed canopy seral stages dominated the HRV cover-seral stages distribution explains this divergence. Specifically, current patches tend to be smaller in both area and core area and more numerous, with less complex geometries and more edge than patches during the simulated HRV.
+In general, current values for the class metrics are often completely outside or near the extremes of the simulated HRV. The direction of the departure depends on seral stage. The Early Development and closed canopy stages tend to be smaller in both area and core area, less aggregated, and less geometrically complex now than during the HRV (Figures~\ref{fig:rfrx_areaam}--\ref{fig:rfrx_clumpy}). In contrast, the moderate and open canopy seral stages tend to be larger, with more core area, more aggregation, and more complexity now than during the HRV. The fact that the closed canopy seral stages dominated the HRV cover-seral stage distribution explains this divergence. Specifically, current patches tend to be smaller in both area and core area and more numerous, with less complex geometries and more edge than patches during the simulated HRV.
 
 
 % figures updated 2015-09-20
@@ -574,7 +574,7 @@ In general, current values for the class metrics are often completely outside or
   \label{fig:darea_megm}
 \end{figure}
 
-Mixed Evergreen - Mesic (\textsc{meg\_m}) is a somewhat common cover type within the core project area, encompassing 7,273 ha and comprising roughly 4\% of the project area. Wildfire was prevalent in mesic mixed evergreen forest. The frequency and extent of simulated wildfires  varied markedly across the landscape (Figure~\ref{fig:darea_megm}). We summarize the disturbance regime in Tables~\ref{tab:darea_megm} and \ref{tab:darea_atleast_megm}.
+Mixed Evergreen - Mesic (\textsc{meg\_m}) is a somewhat common cover type within the core project area, encompassing 7,273 ha and comprising roughly 4\% of the project area. Wildfire was prevalent in mesic mixed evergreen forest. The frequency and extent of simulated wildfires  varied markedly across the landscape (Figure~\ref{fig:darea_megm}). I summarize the disturbance regime in Tables~\ref{tab:darea_megm} and \ref{tab:darea_atleast_megm}.
 
 % updated 2015-09-28
 \begin{table}[!htbp]
@@ -597,7 +597,7 @@ $95^{\text{th}}$ percentile   &  27.91         & 3.75          & 31.76    \\
 \begin{table}[!htbp]
 \small
 \centering
-\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{meg\_m} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{meg\_m} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, I list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
 \label{tab:darea_atleast_megm}
 \begin{tabular}{@{}lllll@{}}
                         & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
@@ -608,7 +608,7 @@ Interval (years)        & 5.46         & 14.87         & 53.60         & 576.25 
 \end{tabular}
 \end{table}
 
-Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area (Figure~\ref{fig:preturn_megm}).
 
 \begin{figure}[!htbp]
   \centering
@@ -623,11 +623,11 @@ Visualizing the point-specific fire rotation calls attention to the variability 
     \label{fig:preturn_megm}
 \end{figure}
 
-The age structure and dynamics of mesic mixed evergreen forest illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+The age structure and dynamics of mesic mixed evergreen forest illustrates the interaction between disturbance and succession processes. I focus my analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for the simulation (excluding the equilibration period). %
 
-The distribution of area among seral stages within mesic mixed evergreen forest fluctuated very little over time (Figure~\ref{fig:covcond_megm}). Because high mortality fire is very rare in this cover type, and the time to reaching a Late Development stage is relatively short (Appendix \ref{app:covertypedesc}), the vast majority of the cover type's extent was in the Late Development - Closed stage during the simulation (Table~\ref{tab:covcond1}). %
+The distribution of area among seral stages within mesic mixed evergreen forest fluctuated very little over time (Figure~\ref{fig:covcond_megm}). Because high mortality fire is very rare in this cover type, and the time to reaching a Late Development stage is relatively short (Appendix \ref{app:covertypedesc}), the vast majority of the cover type's extent was in the Late--Closed stage during the simulation (Table~\ref{tab:ssdyn_rfrm}). %
 
-The seral stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each seral stages varied about a stable mean). The most notable departure was the shift from Mid Development to Late Development seral stages. About 52\% of the current landscape is comprised of the mesic mixed evergreen forest in mid development seral stages, but the late development seral stages were always dominant under the simulated HRV. 
+The seral stage distribution appeared to be in dynamic equilibrium (i.e., the percentage in each seral stages varied about a stable mean). The most notable departure was the shift from Mid Development to Late Development seral stages. About 52\% of the current landscape is comprised of the mesic mixed evergreen forest in Mid Development seral stages, but the Late Development seral stages were always dominant under the simulated HRV. 
 
 \begin{figure}[!htbp]
   \centering
@@ -646,11 +646,10 @@ The seral stage distribution appeared to be in dynamic equilibrium (i.e., the pe
 \label{fig:covcond_megm}
 \end{figure}
 
-\begin{landscape}
 \begin{table}[!htbp]
 \footnotesize
-\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Mixed Evergreen - Mesic (\textsc{meg\_m}), Mixed Evergreen - Xeric (\textsc{meg\_x}), Oak-Conifer Forest and Woodland (\textsc{ocfw}), and Oak-Conifer Forest and Woodland - Ultramafic (\textsc{ocfw\_u}). For seral stage abbreviations, see Table \ref{condtable}.}
-\label{tab:covcond1}
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Mixed Evergreen - Mesic (\textsc{meg\_m}). For seral stage abbreviations, see Table \ref{condtable}.}
+\label{tab:ssdyn_megm}
 \begin{tabular}{@{}rrrrrr|rrr@{}}
 \toprule
  \textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
@@ -661,11 +660,11 @@ The seral stage distribution appeared to be in dynamic equilibrium (i.e., the pe
 \textsc{late\_cl  }      &  53.97          &  64.51            &  70.81     &  76.28           &  81.97      &  29.31    &  0     &  complete      \\
 \textsc{late\_mod }      &  8.16           &  12.19            &  14.49     &  17.64           &  21.7       &  7.31     &  4     &  complete      \\
 \textsc{late\_op  }      &  2.66           &  4.96             &  7.16      &  10.38           &  14.99      &  2.5      &  4     &  complete      \\
+\bottomrule
 \end{tabular}
 \end{table}
-\end{landscape}
 
-The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). Because the landscape is so dominated by the Late--Closed and Late--Moderate seral stages, we focus on the configuration metrics for these classes. In general, the current landscape contains fewer, smaller, and more clumped patches than existed under the simulated HRV. Current patches in Late--Closed are less geometrically complex and have less area in cores than during the simulated HRV.
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Table~\ref{tab:fragclass_megm} in Appendix~\ref{app:full-class-results}). Because the landscape is so dominated by the Late--Closed and Late--Moderate seral stages, I focus on the configuration metrics for these classes. In general, the current landscape contains fewer, smaller, and more clumped patches than existed under the simulated HRV (Figures~\ref{fig:megm_areaam}--\ref{fig:megm_clumpy}). Current patches in Late--Closed are less geometrically complex and have less area in cores than during the simulated HRV.
 
 
 % figures updated 2015-09-20
@@ -722,7 +721,7 @@ The spatial configuration of seral stages fluctuated markedly over time as well,
   \label{fig:darea_megx}
 \end{figure}
 
-Mixed Evergreen - Xeric (\textsc{meg\_x})is a somewhat common cover type within the core project area, encompassing 6,768 ha and comprising roughly 4\% of the project area. Wildfire was prevalent in xeric mixed evergreen forest. The frequency and extent of simulated wildfires varied markedly across the landscape (Figure~\ref{fig:darea_megx}). We summarize the disturbance regime in Tables~\ref{tab:darea_megx} and \ref{tab:darea_atleast_megx}.
+Mixed Evergreen - Xeric (\textsc{meg\_x})is a somewhat common cover type within the core project area, encompassing 6,768 ha and comprising roughly 4\% of the project area. Wildfire was prevalent in xeric mixed evergreen forest. The frequency and extent of simulated wildfires varied markedly across the landscape (Figure~\ref{fig:darea_megx}). I summarize the disturbance regime in Tables~\ref{tab:darea_megx} and \ref{tab:darea_atleast_megx}.
 
 % updated 2015-09-28
 \begin{table}[!htbp]
@@ -745,7 +744,7 @@ Mean                           & 11.03         & 1.27          & 12.30 \\
 \begin{table}[!htbp]
 \small
 \centering
-\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{meg\_x} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{meg\_x} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, I list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
 \label{tab:darea_atleast_megx}
 \begin{tabular}{@{}lllll@{}}
                         & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
@@ -756,7 +755,7 @@ Interval (years)        & 5.25         & 10.92         & 37.18         & 461.00 
 \end{tabular}
 \end{table}
 
-Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area (Figure~\ref{fig:preturn_megx}).
 
 \begin{figure}[!htbp]
   \centering
@@ -771,11 +770,11 @@ Visualizing the point-specific fire rotation calls attention to the variability 
 \label{fig:preturn_megx}
 \end{figure}
 
-The age structure and dynamics of xeric mixed evergreen forest illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+The age structure and dynamics of xeric mixed evergreen forest illustrates the interaction between disturbance and succession processes. I focus my analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for the simulation (excluding the equilibration period). %
 
-The distribution of area among seral stages within xeric mixed evergreen forest fluctuated over time (Figure~\ref{fig:covcond_megx}). Because high mortality fire is very rare in this cover type, and the time to reaching a Late Development stage is relatively short (Appendix~\ref{app:covertypedesc}), the vast majority of the landscape was in the Late--Closed seral stage during the simulation (Table~\ref{tab:covcond1}).  %
+The distribution of area among seral stages within xeric mixed evergreen forest fluctuated over time (Figure~\ref{fig:covcond_megx}). Because high mortality fire is very rare in this cover type, and the time to reaching a Late Development stage is relatively short (Appendix~\ref{app:covertypedesc}), the vast majority of the landscape was in the Late--Closed seral stage during the simulation (Table~\ref{tab:ssdyn_megx}).  %
 
-The seral stage distribution appeared to be in dynamic equilibrium. The most notable departure was the shift from Mid--Closed to the Late Development seral stages, especially Late--Closed. The current landscape contains 71\% of the xeric mixed evergreen forest in mid development stages, but the late development stages were always dominant under the simulated HRV. 
+The seral stage distribution appeared to be in dynamic equilibrium. The most notable departure was the shift from Mid--Closed to the Late Development seral stages, especially Late--Closed. The current landscape contains 71\% of the xeric mixed evergreen forest in Mid Development stages, but the Late Development stages were always dominant under the simulated HRV. 
 
 \begin{figure}[!htbp]
   \centering
@@ -793,11 +792,10 @@ The seral stage distribution appeared to be in dynamic equilibrium. The most not
   \label{fig:covcond_megx}
 \end{figure}
 
-\begin{landscape}
 \begin{table}[!htbp]
 \footnotesize
 \caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Mixed Evergreen - Xeric (\textsc{meg\_x}),. For seral stage abbreviations, see Table \ref{condtable}.}
-\label{tab:covcond1}
+\label{tab:ssdyn_megx}
 \begin{tabular}{@{}rrrrrr|rrr@{}}
 \toprule
  \textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
@@ -808,11 +806,11 @@ The seral stage distribution appeared to be in dynamic equilibrium. The most not
 \textsc{late\_cl  }      &  52.93          &  61.01            &  67.58     &  71.66           &  77.74      &  12.84    &  0     &  complete      \\
 \textsc{late\_mod }      &  11.3           &  14.32            &  16.68     &  19.66           &  23.14      &  3.84     &  0     &  complete      \\
 \textsc{late\_op  }      &  3.07           &  5.35             &  7.12      &  9.77            &  12.88      &  1.38     &  0     &  complete      \\
+\bottomrule
 \end{tabular}
 \end{table}
-\end{landscape}
 
-The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). Area-weighted patch and core area, patch density, and radius of gyration exhibited the greatest variability over time. Because the landscape is so dominated by the late development, closed canopy cover seral stage, we use its configuration metrics as a proxy for the cover tyep as a whole. In general, the current landscape contains fewer, smaller, and more isolated patches than existed under the simulated HRV. Patches in Late Development - Closed are less geometrically complex and have less area in cores in the current landscape than during the simulated HRV. This stage is completely departed from the HRV for all these metrics.
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Table~\ref{tab:fragclass_megx} in Appendix~\ref{app:full-class-results}). Area-weighted patch and core area, patch density, and radius of gyration exhibited the greatest variability over time (Figures~\ref{fig:megx_areaam}--\ref{fig:megx_clumpy}). Because the landscape is so dominated by the Late--Closed seral stage, I use its configuration metrics as a proxy for the cover type as a whole. In general, the current landscape contains fewer, smaller, and more isolated patches than existed under the simulated HRV. Patches in Late--Closed are less geometrically complex and have less area in cores in the current landscape than during the simulated HRV. This stage is completely departed from the HRV for all these metrics.
 
 % figures updated 2015-09-20
 \begin{figure}[!htbp]
@@ -868,7 +866,7 @@ The spatial configuration of seral stages fluctuated markedly over time as well,
   \label{fig:darea_smcu}
 \end{figure}
 
-Sierran Mixed Conifer - Ultramafic (\textsc{smc\_u})is a relatively uncommon cover type within the core project area, encompassing 4,124 ha and comprising roughly 2\% of the project area. Wildfire is much less common in this cover type compared to non-ultramafic sierran mixed conifer forests. Ultramafic soils support scattered, but rarely dense stands of trees and shrubs, creating fuel discontinuities that stop fires from spreading easily. The frequency and extent of simulated wildfires in ultramafic sierran mixed conifer forests varied markedly across the landscape (Figure~\ref{fig:darea_smcu}).  We summarize the disturbance regime in Tables~\ref{tab:darea_smcu} and \ref{tab:darea_atleast_smcu}.
+Sierran Mixed Conifer - Ultramafic (\textsc{smc\_u})is a relatively uncommon cover type within the core project area, encompassing 4,124 ha and comprising roughly 2\% of the project area. Wildfire is much less common in this cover type compared to non-ultramafic sierran mixed conifer forests. Ultramafic soils support scattered, but rarely dense stands of trees and shrubs, creating fuel discontinuities that stop fires from spreading easily. The frequency and extent of simulated wildfires in ultramafic sierran mixed conifer forests varied markedly across the landscape (Figure~\ref{fig:darea_smcu}).  I summarize the disturbance regime in Tables~\ref{tab:darea_smcu} and \ref{tab:darea_atleast_smcu}.
 
 % updated 2015-09-28
 \begin{table}[!htbp]
@@ -891,7 +889,7 @@ Mean                          & 5.01          & 2.55          & 7.56  \\
 \begin{table}[!htbp]
 \small
 \centering
-\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{smc\_u} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{smc\_u} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, I list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
 \label{tab:darea_atleast_smcu}
 \begin{tabular}{@{}lllll@{}}
                         & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
@@ -902,32 +900,47 @@ Interval (years)        & 6.33         & 18.01         & 109.76        & 2305   
 \end{tabular}
 \end{table}
 
-Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area (Figure~\ref{fig:preturn_smcu}).
 
 \begin{figure}[!htbp]
   \centering
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-ocfwu.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn/not-called-preturn/hrv-smcu.png}
     }%
   \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_ocfwu.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_smcu.png}
     }
-  \caption{(a) Distribution of point-specific fire rotations for Oak-Conifer Forest and Woodland - Ultramafic. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Oak-Conifer Forest and Woodland - Ultramafic are partially obscured in grey.}
-\label{fig:preturn_ocfwu}
+  \caption{(a) Distribution of point-specific fire rotations for Sierran Mixed Conifer - Ultramafic. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Sierran Mixed Conifer - Ultramafic are partially obscured in grey.}
+\label{fig:preturn_smcu}
 \end{figure}
 
-The age structure and dynamics of ultramafic mixed conifer forests illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+The age structure and dynamics of ultramafic mixed conifer forests illustrates the interaction between disturbance and succession processes. I focus my analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for the simulation (excluding the equilibration period). %
 
-The distribution of area among seral stages within ultramafic mixed conifer forests fluctuated narrowly over time (Figure~\ref{fig:covcond_smcu_boxplots}). Interestingly, although open canopy seral stages dominated during middle development, the distribution of the three Late Development stages was roughly equal. Ultramafic soils present a challenge to vegetation, which may explain the dominance of open canopies at the Mid Development stage. However, because fire is relatively uncommon, the shift in dominance at the Late Development stage may reflect the additional time available to vegetation to grow into a closed canopy (Appendix~\ref{app:covertypedesc}). %
+The distribution of area among seral stages within ultramafic mixed conifer forests fluctuated narrowly over time (Figure~\ref{fig:covcond_smcu}). Interestingly, although open canopy seral stages dominated during Middle Development, the distribution of the three Late Development stages was roughly equal (Table~\ref{tab:ssdyn_smcu}. Ultramafic soils present a challenge to vegetation, which may explain the dominance of open canopies at the Mid Development stage. However, because fire is relatively uncommon, the shift in dominance at the Late Development stage may reflect the additional time available to vegetation to grow into a closed canopy (Appendix~\ref{app:covertypedesc}). %
 
-The seral stage distribution appeared to be in dynamic equilibrium. The most notable departures were the decrease in area classified as Early Development, currently at 49\% of the landscape, and the increase in area classified as Mid Development - Open, currently at 5\%. The only seral stages not completely departed from the HRV were Mid--Closed and Mid--Moderate.
+The seral stage distribution appeared to be in dynamic equilibrium. The most notable departures were the decrease in area classified as Early Development, currently at 49\% of the landscape, and the increase in area classified as Mid--Open, currently at 5\%. The only seral stages not completely departed from the HRV were Mid--Closed and Mid--Moderate.
 
-\begin{landscape}
+\begin{figure}[!htbp]
+  \centering
+  \subfloat[][]{
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-dynamics/notcalledcovcond/SMCU.pdf}
+    }%
+  \subfloat[][]{
+    \includegraphics[height=2.65in]{/Users/mmallek/Tahoe/R/Rplots/November2014/covcond_current_smcu.png}
+    }\\
+  \subfloat[][]{
+    \includegraphics[width=\textwidth]{/Users/mmallek/Documents/Thesis/Plots/covcond-bycover/SMCU-HRV-boxplots-.png}
+  }
+  \caption{(a) Seral Stage dynamics for Sierran Mixed Conifer - Ultramafic. The black vertical line at 40 timesteps marks the end of the equilibration period used in this study. (b) Current seral stage distribution for Sierran Mixed Conifer - Ultramafic. (c) Boxplots showing the range of variability for each seral stage over the course of the simulation, excluding the equilibration period. Boxplots were modified so that whiskers extend from the $5^{\text{th}} - 95^{\text{th}}$ percentiles of the observed results. Thick black bars in line with the boxplots denote the current proportion of mesic mixed conifer forests in a given seral stage.} 
+  \label{fig:covcond_smcu}
+\end{figure}
+
 \begin{table}[!htbp]
 \footnotesize
-\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Red Fir - Mesic (\textsc{rfr\_m}), Red Fir - Xeric (\textsc{rfr\_x}), Sierran Mixed Conifer - Mesic (\textsc{smc\_m}), and Sierran Mixed Conifer - Ultramafic (\textsc{smc\_u}). For seral stage abbreviations, see Table \ref{condtable}.}
-\label{tab:covcond2}
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Sierran Mixed Conifer - Ultramafic (\textsc{smc\_u}). For seral stage abbreviations, see Table \ref{condtable}.}
+\label{tab:ssdyn_smcu}
 \begin{tabular}{@{}rrrrrr|rrr@{}}
 \toprule
  \textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}    &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
@@ -938,11 +951,11 @@ The seral stage distribution appeared to be in dynamic equilibrium. The most not
 \textsc{late\_cl  }        &   9           &  11.89   &  14.25     &  16.78            &  21.36     &  24.43    &  99    &  complete      \\
 \textsc{late\_mod }        &   9.14        &  10.14   &  11.04     &  11.89            &  13.92     &  8.51     &  1     &  complete      \\
 \textsc{late\_op  }        &   5.95        &  7.65    &  9.18      &  10.72            &  13.67     &  3.27     &  0     &  complete      \\
+\bottomrule
 \end{tabular}
 \end{table}
-\end{landscape}
 
-The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). The class-level metrics for ultramafic mixed conifer forests for early development, mid development open, and late development closed and moderate typically fall completely outside the simulated HRV. Of these, middle development open is currently characterized by smaller, less complex patches with less core area and less aggregation than the same type during the simulated HRV. The other classes have the opposite result. The remaining classes (middle development closed and moderate canopy, late development open canopy) are either not departed or moderately departed from the HRV.
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Table~\ref{tab:fragclass_smcu} in Appendix~\ref{app:full-class-results}). The class-level metrics for ultramafic mixed conifer forests for Early Development, Mid--Open, Late--Closed, and Late--Moderate typically fall completely outside the simulated HRV (Figures~\ref{fig:smcu_areaam}--\ref{fig:smcu_clumpy}). Of these, Mid--Open is currently characterized by smaller, less complex patches with less core area and less aggregation than the same type during the simulated HRV. The other classes have the opposite result. The remaining classes (Mid--Closed, Mid--Moderate, Late--Open) are either not departed or moderately departed from the HRV.
 
 
 % figures updated 2015-09-20
@@ -1001,7 +1014,7 @@ The spatial configuration of seral stages fluctuated markedly over time as well,
   \label{fig:darea_ocfwu}
 \end{figure}
 
-Oak-Conifer Forest and Woodland - Ultramafic (\textsc{ocfw\_u})is a relatively uncommon cover type within the core project area, encompassing 1,060 ha and comprising roughly 0.6\% of the project area. Wildfire is much less common in this cover type compared to its non-ultramafic oak-conifer forests and woodlands. Ultramafic soils support scattered, but rarely dense stands of trees and shrubs, creating fuel discontinuities that stop fires from spreading easily. The frequency and extent of simulated wildfires in ultramafic oak-conifer forests and woodlands varied markedly across the landscape (Figure~\ref{fig:darea_ocfwu}). We summarize the disturbance regime in Tables~\ref{tab:darea_ocfwu} and \ref{tab:darea_atleast_ocfwu}.
+Oak-Conifer Forest and Woodland - Ultramafic (\textsc{ocfw\_u})is a relatively uncommon cover type within the core project area, encompassing 1,060 ha and comprising roughly 0.6\% of the project area. Wildfire is much less common in this cover type compared to its non-ultramafic oak-conifer forests and woodlands. Ultramafic soils support scattered, but rarely dense stands of trees and shrubs, creating fuel discontinuities that stop fires from spreading easily. The frequency and extent of simulated wildfires in ultramafic oak-conifer forests and woodlands varied markedly across the landscape (Figure~\ref{fig:darea_ocfwu}). I summarize the disturbance regime in Tables~\ref{tab:darea_ocfwu} and \ref{tab:darea_atleast_ocfwu}.
 
 % updated 2015-09-28
 \begin{table}[!htbp]
@@ -1024,7 +1037,7 @@ Mean                          & 7.86          & 1.87          & 9.72     \\
 \begin{table}[!htbp]
 \small
 \centering
-\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{ocfw\_u} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, we list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
+\caption{Summary of disturbed area in terms of proportion of the amount of \textsc{ocfw\_u} burned (any level of mortality) during the simulation (after the equilibration period). For each benchmark proportion of the landscape, I list the number of timesteps during the simulation when that extent burned, the proportion of timesteps that represents, the interval in timesteps calculated from the proportion (i.e. approximately every 4 timesteps, at least 25\% of the landscape burned.), and the interval in years calculated from the interval in timesteps (5 years to a timestep).}
 \label{tab:darea_atleast_ocfwu}
 \begin{tabular}{@{}lllll@{}}
                         & at least 1\% & at least 10\% & at least 25\% & at least 50\% \\ \midrule
@@ -1035,7 +1048,7 @@ Interval (years)        & 6.49         & 15.47         & 45.20         & 461   \
 \end{tabular}
 \end{table}
 
-Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area. 
+Visualizing the point-specific fire rotation calls attention to the variability in wildfire recurrence across the study area. I use barplots to show the spread and underlying values in the distribution of point-specific fire rotations, and maps to demonstrate the spatial variability in this metric across the study area (Figure~\ref{fig:preturn_ocfwu}).
 
 \begin{figure}[!htbp]
   \centering
@@ -1046,13 +1059,13 @@ Visualizing the point-specific fire rotation calls attention to the variability 
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/preturn-maps/fri_smcu.png}
     }
-  \caption{(a) Distribution of point-specific fire rotations for Sierran Mixed Conifer - Ultramafic. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Sierran Mixed Conifer - Ultramafic are partially obscured in grey.}
-\label{fig:preturn_smcu}
+  \caption{(a) Distribution of point-specific fire rotations for Oak-Conifer Forest and Woodland - Ultramafic. The point-specific fire rotation is the average interval between fires over the length of the simulation, excluding the equilibration period. (b) Spatially-explicit depiction of these point-specific fire rotations across the landscape. Cover types other than Oak-Conifer Forest and Woodland - Ultramafic are partially obscured in grey.}
+\label{fig:preturn_ocfwu}
 \end{figure}
 
-The age structure and dynamics of ultramafic oak-conifer forests and woodlands illustrates the interaction between disturbance and succession processes. We focus our analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for our simulation (excluding the equilibration period). %
+The age structure and dynamics of ultramafic oak-conifer forests and woodlands illustrates the interaction between disturbance and succession processes. I focus my analysis on the 5$^{\text{th}}$ to 95$^{\text{th}}$ percentile range of variability for the simulation (excluding the equilibration period). %
 
-The distribution of area among seral stages within ultramafic oak-conifer forests and woodlands fluctuated narrowly over time (Figure~\ref{fig:covcond_ocfwu_boxplots}). Late development stages are rare on the current landscape, but well represented during the HRV. Conversely, mid closed is currently quite common, but is virtually absent during the HRV. The current amount of early development vegetation is near the median value during the HRV, and is the only stage not completely departed from the HRV. Ultramafic soils present a challenge to vegetation, which may explain the dominance of open canopies at the Mid Development stage. However, because fire is relatively uncommon, the shift in dominance at the Late Development stage may reflect the additional time available to vegetation to grow into a closed canopy (Appendix~\ref{app:covertypedesc}). %
+The distribution of area among seral stages within ultramafic oak-conifer forests and woodlands fluctuated narrowly over time (Figure~\ref{fig:covcond_ocfwu}). Late Development stages are rare on the current landscape, but well represented during the HRV (Table~\ref{tab:ssdyn_ocfwu}). Conversely, mid closed is currently quite common, but is virtually absent during the HRV. The current amount of Early Development vegetation is near the median value during the HRV, and is the only stage not completely departed from the HRV. Ultramafic soils present a challenge to vegetation, which may explain the dominance of open canopies at the Mid Development stage. However, because fire is relatively uncommon, the shift in dominance at the Late Development stage may reflect the additional time available to vegetation to grow into a closed canopy (Appendix~\ref{app:covertypedesc}). %
 
 \begin{figure}[!htbp]
   \centering
@@ -1072,11 +1085,10 @@ The distribution of area among seral stages within ultramafic oak-conifer forest
 
 
 
-\begin{landscape}
 \begin{table}[!htbp]
 \footnotesize
-\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Mixed Evergreen - Mesic (\textsc{meg\_m}), Mixed Evergreen - Xeric (\textsc{meg\_x}), Oak-Conifer Forest and Woodland (\textsc{ocfw}), and Oak-Conifer Forest and Woodland - Ultramafic (\textsc{ocfw\_u}). For seral stage abbreviations, see Table \ref{condtable}.}
-\label{tab:covcond1}
+\caption{Range of variation in landscape structure, illustrating the seral stage dynamics for Oak-Conifer Forest and Woodland - Ultramafic (\textsc{ocfw\_u}). For seral stage abbreviations, see Table \ref{condtable}.}
+\label{tab:ssdyn_ocfwu}
 \begin{tabular}{@{}rrrrrr|rrr@{}}
 \toprule
  \textbf{\begin{tabular}[c]{@{}l@{}}Seral \\ Stage\end{tabular}}  &  \textbf{srv5\%} &  \textbf{srv25\%} &  \textbf{srv50\%} &  \textbf{srv75\%} &  \textbf{srv95\%}  &  \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%cover\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%srv\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
@@ -1087,11 +1099,11 @@ The distribution of area among seral stages within ultramafic oak-conifer forest
 \textsc{late\_cl  }      &  7.39           &  15.12            &  21.21     &  27.3            &  36.45      &  5.35     &  1     &  complete      \\
 \textsc{late\_mod }      &  15.06          &  18.62            &  20.99     &  23.86           &  29.17      &  2.2      &  0     &  complete    \\
 \textsc{late\_op  }      &  3.92           &  7.21             &  10.44     &  13.64           &  18.99      &  0.34     &  0     &  complete      \\
+\bottomrule
 \end{tabular}
 \end{table}
-\end{landscape}
 
-The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Appendix \ref{app:full-class-results}). Area-weighted patch and core area, patch density, mean similarity, and radius of gyration all exhibited high variability over time. For the most part, the current landscape's values fall within the HRV, although the middle development, closed canopy and late development, open canopy patches usually fell outside of it. Patches and their cores are larger, more complex, and more numerous now compared to the simulated HRV. The current landscape also has more aggregated patches. However, we caution against drawing firm conclusions, since this type did not reach equilibrium until halfway through the simulation, and is small in extent with less consistent results than the other cover types.
+The spatial configuration of seral stages fluctuated markedly over time as well, although there was considerable variation in the magnitude of variability among configuration metrics (Table~\ref{tab:fragclass_ocfwu} in Appendix~\ref{app:full-class-results}). Area-weighted patch and core area, patch density, mean similarity, and radius of gyration all exhibited high variability over time (Figures~\ref{fig:ocfwu_areaam}--\ref{fig:ocfwu_clumpy}). For the most part, the current landscape's values fall within the HRV, although the Mid--Closed and Late--Open patches usually fell outside of it. Patches and their cores are larger, more complex, and more numerous now compared to the simulated HRV. The current landscape also has more aggregated patches. 
 
 % figures updated 2015-09-20
 \begin{figure}[!htbp]

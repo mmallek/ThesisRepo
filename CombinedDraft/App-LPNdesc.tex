@@ -63,40 +63,42 @@ Estimates of fire rotations for these variants are available from the LandFire p
 
 
 
-\begin{table}[]
+\begin{table}[!htbp]
 \centering
-\caption{Fire rotation (years) and proportion of high (versus low) mortality fires for Lodgepole Pine type. Values were derived from VDDT model 0610790 (LandFire 2007), Mallek et al. (2013), and Estes (personal communication). }
+\caption{Fire rotation index values and probability of high severity fire (at least 75\% overstory tree mortality) probabilities for Lodgepole Pine type. The seral stage that is most susceptible to fire (i.e., has the lowest predicted fire rotation) has a fire rotation index value of 1. Higher values correspond with lower likelihoods of experiencing wildfire. The values are relative only within an individual seral stage and should not be compared against other land cover types. Values were derived from VDDT model 0610790 (LandFire 2007), Mallek et al. (2013), and Estes (personal communication). }
 \label{tab:lpndesc_fire}
 \begin{tabular}{@{}lcc@{}}
 \toprule
-\textbf{Condition}          & \textbf{Fire Rotation} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Proportion \\ High Mortality\end{tabular}}} \\ \midrule
-Target                      & 52    & n/a        \\
-Early Development - All     & 29    & 0.03       \\
-Mid Development - Closed    & 59    & 0.41       \\
-Mid Development - Moderate  & 27    & 0.15       \\
-Mid Development - Open      & 18    & 0.07       \\
-Late Development - Closed   & 37    & 0.26       \\
-Late Development - Moderate & 24    & 0.13       \\
-Late Development - Open     & 18    & 0.07       \\ \bottomrule
+ \textbf{Seral Stage}    & \textbf{\begin{tabular}[c]{@{}c@{}}Fire Rotation \\ Index\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Probability of \\ High Severity Fire\end{tabular}} \\ \hline
+Early (All)     		 & 1.7    & 0.03       \\
+Mid--Closed    			 & 3.4    & 0.41       \\
+Mid--Moderate  			 & 1.5    & 0.15       \\
+Mid--Open      			 & 1.0    & 0.07       \\
+Late--Closed   			 & 2.1    & 0.26       \\
+Late--Moderate 			 & 1.4    & 0.13       \\
+Late--Open     			 & 1.0    & 0.07       \\ 
+\emph{Target Fire Rotation}    			& \emph{52 years}  &   \\ 
+\bottomrule
 \end{tabular}
 \end{table}
 
-\begin{table}[]
+\begin{table}[!htbp]
 \centering
-\caption{Fire rotation (years) and proportion of high (versus low) mortality fires for Lodgepole Pine - Aspen type. Values were derived from VDDT model 0610790 (LandFire 2007) and Van de Water and Safford (pers. comm. 2013).}
+\caption{Fire rotation index values and probability of high severity fire (at least 75\% overstory tree mortality) probabilities for Lodgepole Pine - Aspen type. The seral stage that is most susceptible to fire (i.e., has the lowest predicted fire rotation) has a fire rotation index value of 1. Higher values correspond with lower likelihoods of experiencing wildfire. The values are relative only within an individual seral stage and should not be compared against other land cover types. Values were derived from VDDT model 0610790 (LandFire 2007) and Van de Water and Safford (pers. comm. 2013).}
 \label{tab:lpnaspdesc_fire}
 \begin{tabular}{@{}lcc@{}}
 \toprule
-\textbf{Condition}               & \textbf{Fire Rotation} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Proportion \\ High Mortality\end{tabular}}} \\ \midrule
-Target                           & 52     & n/a        \\
-Early Development - Aspen        & 29     & 0.03       \\
-Mid Development - Aspen          & 59     & 0.41       \\
-Mid Development - Aspen-Conifer  & 27     & 0.15       \\
-Late Development - Conifer-Aspen & 24     & 0.13       \\
-Late Development - Closed        & 37     & 0.26       \\ \bottomrule
+ \textbf{Seral Stage}    & \textbf{\begin{tabular}[c]{@{}c@{}}Fire Rotation \\ Index\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Probability of \\ High Severity Fire\end{tabular}} \\ \hline
+Early--Aspen        & 1.2     & 0.03       \\
+Mid--Aspen          & 2.5     & 0.41       \\
+Mid--Aspen-Conifer  & 1.1     & 0.15       \\
+Late--Conifer-Aspen & 1 .0    & 0.13       \\
+Late--Closed        & 1.6     & 0.26       \\ 
+\emph{Target Fire Rotation}    			& \emph{52 years}  &   \\ 
+\bottomrule
 \end{tabular}
 \end{table}
-
+   
 \subsubsection{Other Disturbance}
 Other disturbances are not currently modeled, but may, depending on the seral stage affected and mortality levels, reset patches to early development, maintain existing seral stages, or shift/accelerate succession to a more open seral stage. 
 
@@ -272,7 +274,7 @@ Following disturbance, succession proceeds rapidly from an herbaceous layer to s
 \subsection*{Condition Classification}
 
 \begin{table}[hbp]
-\small
+\footnotesize
 \centering
 \caption{Classification of seral stage for LPN. Diameter at Breast Height (DBH) and Cover From Above (CFA) values taken from EVeg polygons. DBH categories are: null, 0-0.9'', 1-4.9'', 5-9.9'', 10-19.9'', 20-29.9'', 30''+. CFA categories are null, 0-10\%, 10-20\%, \dots , 90-100\%. Each row in the table below should be read with a boolean AND across each column.}
 \label{lpn_classification}
