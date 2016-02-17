@@ -1,7 +1,6 @@
 % !TEX root = master.tex
 
 % checked 2015-02-08, these numbers are right
-\begin{landscape}
 
 \section{Full \textsc{Fragstats} Landscape Results}
 \label{app:full-land-results}
@@ -34,8 +33,17 @@
 }
 \label{tab:fragland-all}
 \begin{tabular}{@{}lrrrrr|rrr@{}}
-\toprule
-\textbf{\begin{tabular}[c]{@{}l@{}}Landscape\\ Metric\end{tabular}} & \textbf{srv5\%} & \textbf{srv25\%} & \textbf{srv50\%} & \textbf{srv75\%} & \textbf{srv100\%}  & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ Value\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%SRV\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\ \midrule
+ \toprule
+\textbf{\begin{tabular}[c]{@{}l@{}}Landscape\\ Metric\end{tabular}} & 
+\textbf{$5^{\text{th}}$ \%} &   
+\textbf{$25^{\text{th}}$ \%} &   
+\textbf{$50^{\text{th}}$ \%} &   
+\textbf{$75^{\text{th}}$ \%} &   
+\textbf{$95^{\text{th}}$ \%}  &  
+\textbf{\begin{tabular}[c]{@{}l@{}}Current\\ Value\end{tabular}} & 
+\textbf{\begin{tabular}[c]{@{}l@{}}Current\\ \%SRV\end{tabular}} & 
+\textbf{\begin{tabular}[c]{@{}l@{}}Departure\end{tabular}} \\
+ \midrule
 \textsc{pd        } & 19.774   & 20.271   & 20.625   & 20.975   & 21.417   & 19.507   & 2   & complete  \\ 
 \textsc{ed        } & 120.581  & 121.88   & 122.903  & 123.691  & 124.813  & 128.875  & 100 & complete  \\
 \textsc{area\_mn  } & 4.669    & 4.768    & 4.848    & 4.933    & 5.057    & 5.126    & 99  & complete   \\
@@ -59,4 +67,3 @@
 \textsc{ai        } & 81.531   & 81.699   & 81.821   & 81.974   & 82.168   & 80.963   & 0   & complete \\ \bottomrule
 \end{tabular}
 \end{table}
-\end{landscape}
