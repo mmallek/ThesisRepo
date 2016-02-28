@@ -5,11 +5,11 @@
 \chapter{Input Layers to \textsc{RMLands}}
 \label{app:inputs}
 
-\paragraph{Technical details on \textsc{RMLands} Data Structure}
+\paragraph*{Technical details on \textsc{RMLands} Data Structure}
 \label{app:rmlspecs}
 \textsc{RMLands} uses raster GeoTiffs (.tif files) as its data structure. Rasters are based on uniform square units called cells (or pixels). Each cell represents an actual portion of geographic space. In this application, I use the Universal Transverse Mercator (UTM) projection, Zone 10 North. The extent of the raster is rectangular although the area of study is not. Cells outside of the buffered project area are assigned a null value.\footnote{Latitude and longitude are commonly pictured when describing coordinates. In such cases the X value refers to longitude and Y refers to latitude. However, because I use UTMs in this project, the correct convention is actually that the X value is the Easting and the Y value is the Northing. For simplicity I only discuss X and Y  in this document.} In the Yuba River watershed landscape, each grid cell is 30 meters on a side (i.e., 900 m$^2$ or 0.09 ha), and the input grid measures 2910 by 2245 pixels. \textsc{RMLands} requires that all input grids are perfectly aligned. I accomplished this by setting the Extent and Snap Raster to the same parameters whenever I manipulated the layers in ArcMap. This ``base'' spatial layer was created by taking the primary elevation layer used on the Tahoe National Forest, resampling it to a 30 meter grid, and clipping its extent to match that of the buffered project area. Each cell is assigned a single class value, where valid class values are positive non-zero integers. Integer values are mapped to more descriptive class names using csv files with names identical to the grid name. All grids are created in ArcMap and saved as GeoTiff files before being loaded into to the model. 
 
-\section{Input Layer Maps}
+\section*{Input Layer Maps}
 \label{app:sec:inputmaps}
 
 Large size versions of the maps presented in the methods section of the HRV chapter (\ref{sec:hrvmethods}). Each map (Figures~\ref{fig:covermap}--\ref{streamsmap}) is a visualization of a characteristic or set of features in the study area, and are included here for enhanced display of this spatial information. The raster layer underlying each map was used in TIFF form as an input to \textsc{RMLands}.
