@@ -112,15 +112,17 @@
 
 
 \backmatter 
+\renewcommand*{\bibfont}{\raggedright}
 %\include{glossary} 
 %\include{notat} 
 %\bibliographystyle{humannat}%amsalpha} %The style you want to use for references. \
 \bibliographystyle{chicago}
 %\bibliographystyle{umassthesis}
 \interlinepenalty=10000
+%\begin{flushleft}
 \bibliography{bibliography.bib} %The files containing all the articles and books you ever referenced. 
 \setcitestyle{notesep={:},aysep={}} 
-
+%\end{flushleft}
 %\printindex %Make an index AUTOMATICALLY 
 
 \end{document} 
