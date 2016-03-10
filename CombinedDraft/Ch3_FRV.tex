@@ -33,7 +33,7 @@ Early successional habitats are not a major focus of forest ecology research, in
 
 
 \subsection*{Objectives}
-In this study, my objectives were to simulate wildfires and vegetation succession under a set of potential future climate scenarios, compare the results to the current landscape across metrics describing landscape composition and configuration, and assess management implications. To do this, I simulated forest fires and succession using \textsc{RMLands}, holding all model parameters except the climate parameter constant. The climate parameter incorporated Palmer Drought Severity Index (PDSI) values from a suite of seven climate trajectories developed by the National Center for Atmospheric Research (USA) and the Canadian Centre for Climate Modelling and Analysis to the year 2100 \citep{Cook2014}. I used \textsc{Fragstats} and R software and to analyze outputs and report the 90\% range of variability for simulated future metrics \citep{Fragstats2012,RCoreTeam2013}. Ultimately, I evaluated the results from a series of simulations of these future scenarios and compared them to the current conditions, using the conclusions to assess implications for restoration and forest planning.
+In this study, my objectives were to simulate wildfires and vegetation succession under a set of potential future climate scenarios, compare the results to the current landscape across metrics describing landscape composition and configuration, and assess management implications. To do this, I simulated forest fires and succession using \textsc{RMLands}, holding all model parameters except the climate parameter constant. The climate parameter incorporated Palmer Drought Severity Index (PDSI) values from a suite of seven climate trajectories developed by the National Center for Atmospheric Research (USA) and the Canadian Centre for Climate Modelling and Analysis to the year 2100 \citep{Cook2014}. I used \textsc{Fragstats} and R software and to analyze outputs and report the 90\% range of variability for simulated future metrics \citep{Fragstats2012,RCoreTeam2013}. Ultimately, I evaluated the results from a series of simulations of these future scenarios and compared them to current conditions, using the conclusions to assess implications for restoration and forest planning.
 
 
 
@@ -125,7 +125,7 @@ Six PDSI sequences based on the \textsc{ccsm4} model were available, so I treate
 
 
 \subsection*{Evaluating Future Range of Variability}
-I evaluated the range of variability in the wildfire regime across the future scenarios by calculating and comparing the median area burned on the landscape for each across severity levels for the full landscape and the two most prevalent cover types in the study area, Sierran Mixed Conifer - Mesic and Sierran Mixed Conifer - Xeric. %\todo{compared to what we'd expect based on proportional difference?}
+I evaluated the range of variability in the wildfire regime across the future scenarios by calculating and comparing the median area burned on the landscape for each across severity levels for the full landscape and the two most prevalent cover types in the study area, Sierran Mixed Conifer - Mesic and Sierran Mixed Conifer - Xeric (Figure~\ref{fig:dareacomp}). %\todo{compared to what we'd expect based on proportional difference?}
 I also computed the fire rotation, defined as the time it takes to burn an area equivalent to the area under study \citep{Agee1993}, for those two cover types, and compared the simulated future scenario results to the historical fire rotation (Figure~\ref{fig:frotation}). 
 %
 
@@ -149,8 +149,7 @@ My input cover type and seral stage data was the best available, but is not perf
 
 In addition, I did not simulate changes in the spatial configuration of land cover types. That is, I did not model upward movement of forest types or type conversions after fire or drought events. Such change is likely to take place in the next 100 years and has already occurred in the region \citep{Bachelet2001}. Because of this, my results do not predict a specific future outcome, and should be used in conjunction with other studies, especially on range shifts, to anticipate future vegetation patterns and manage accordingly. 
 
-Finally, the climate parameter used in \textsc{RMLands} is a proxy for climate, not a direct measure of it. It incorporates two key pieces of climate data, temperature and precipitation, that closely relate to wildfire as a disturbance process \citep{Cushman2011}. It is based on the PDSI \citep{HeimJr2002}, but I removed some of the variability and extremes present in the raw PDSI in order to make it compatible with the model. Specifically, I collapsed the projected PDSI data into 5-year summer averages and rescaled it \citep{Cushman2011}. In addition, I utilized a single RCP, 8.5, which is the scenario projecting the most significant change in climate, after \citet{Cook2014}. It represents a ``business as usual'' storyline, and thus may not accurately predict the change to the landscape range of variability in the future if significant action is taken to reduce greenhouse gas outputs and slow the rate of climate change in the next few decades \citep{Riahi2011}.
-
+Finally, the climate parameter used in \textsc{RMLands} is a proxy for climate, not a direct measure of it. It incorporates two key pieces of climate data, temperature and precipitation, that closely relate to wildfire as a disturbance process \citep{Cushman2011}. It is based on the PDSI \citep{HeimJr2002}, but I removed some of the variability and extremes present in the raw PDSI in order to make it compatible with the model. Specifically, I collapsed the projected PDSI data into 5-year summer averages and rescaled it \citep{Cushman2011}. In addition, I utilized a single RCP, 8.5, which is the scenario projecting the most significant change in climate, after \citet{Cook2014}. It represents a ``business as usual'' storyline, and thus may not accurately predict the change to the landscape range of variability in the future if significant action is taken to reduce greenhouse gas outputs and slow the rate of climate change in the next few decades \citep{Riahi2011}. Further, the ``business as usual'' scenario is \emph{not} a worst-case scenario. Events such as methane releases from the ocean and arctic lakes, thawing permafrost, and more, larger tundra fires could affect the rate of parameters associated with climate change such as temperature, as well as the eventual sum of greenhouse gases in the atmosphere \citep{Shakova2010,Schuur2009,Higuera2008,Racine2004,Hu2015}.
 
 
 
@@ -177,25 +176,25 @@ The median area of land burned by wildfire during simulations of seven alternati
   \centering
     \subfloat[][]{
 	\centering
-	\includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea-allfmodels.png}
+	\includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea-allfmodels-combo.png}
 	\label{fig:darea_modelcomp}
 	} \\
   \subfloat[][]{
     \centering
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea-allfmodels-smcm.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea-allfmodels-smcm.png}
     \label{fig:dareacomp_smcm}
   } 
   \subfloat[][]{
   \centering
-    \includegraphics[width=0.4\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea-allfmodels-smcx.png}
+    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/darea-allfmodels-smcx.png}
     \label{fig:dareacomp_smcx}
   }
-    \caption{Barplots showing (a) proportion of the full study landscape, (b) proportion of Sierran Mixed Conifer - Mesic, and (c) proportion of Sierran Mixed Conifer - Xeric burned at low, high, and any mortality, across the historical simulation and the seven future climate scenarios. Future scenarios presented in order of increasing median value for climate parameter. From left to right, scenarios are presented in order of increasing median climate parameter value.}
+    \caption{Barplots showing (a) proportion of the full study landscape, (b) proportion of Sierran Mixed Conifer - Mesic, and (c) proportion of Sierran Mixed Conifer - Xeric burned at low, high, and any mortality, across the seven future climate scenarios. From left to right, scenarios are presented in order of increasing median climate parameter value.}
   \label{fig:dareacomp}
 \end{figure}
 
 % Fire rotation
-I also calculated the fire rotation for each scenario, and plotted these results across all scenarios (Figure~\ref{fig:frotation}). The historical rotation values for both mixed conifer forest types are always within the range of rotations from the seven future climate scenarios. Although there is considerable variability in the results for all scenarios, as the climate parameter values increase, rotation values decrease for high mortality events. As with the disturbed area, changes to the low mortality rotations are slight, but generally seem to increase proportionately to decreases in high mortality rotations, such that the ``any mortality'' rotation decline is modest.
+I also calculated the fire rotation for each scenario, and plotted these results across all scenarios (Figure~\ref{fig:frotation}). Empirically-derived historical rotation values, used for calibrating the initial model, were always within the range of median rotation values across the seven future climate scenarios. Although there is considerable variability in the results for all scenarios, as the climate parameter values increase, rotation values decrease for high mortality events. As with the disturbed area, changes to the low mortality rotations are slight, but generally seem to increase proportionately to decreases in high mortality rotations, such that the ``any mortality'' rotation decline is modest.
 
 
 
@@ -290,9 +289,9 @@ I observe clear trends in three seral stages across both cover types (Figures~\r
 %or could write as focused on one cover type at a time. 
 I also evaluated the degree to which current distributions depart from the simulated FRV.%
 %
-In the mesic mixed conifer cover type, as the climate parameter increased, the current seral stage distribution shifted from falling within the projected future range of variability to falling outside it. The larger increase in the proportion of the landscape in the Early Development and Mid--Open stages comes at the expense of all the Late Development stages, which decline with increasing climate parameter ranges.
+In the mesic mixed conifer cover type, as the climate parameter increased, the current seral stage distribution shifted from falling within the projected future range of variability to falling outside it. The larger increase in the proportion of the landscape in the Early Development and Mid--Open stages comes at the expense of all the Late Development stages, which decline with increasing climate parameter ranges.\todo{I think the fragclass results aren't explained well - for the table I'm guessing I collapsed results from all scenarios, but the captions don't say that explicitly.}
 %
-In the xeric mixed conifer type, the results were even more dramatic. As Figure~\ref{fig:covcond_smcx} shows, I observed a substantial increase in the proportion of Early Development, while all other stages showed a declining trend. After Early Development, the Mid-Open and Late--Open stages were the next most common, and were fairly prevalent on the landscape. Thus I observed complete departure of the current landscape from each seral stage, across all scenarios.
+In the xeric mixed conifer type, the results were even more dramatic. As Figure~\ref{fig:covcond_smcx} shows, I observed a substantial increase in the proportion of Early Development, while all other stages showed a declining trend. After Early Development, the Mid-Open and Late--Open stages were the next most common, and were fairly prevalent on the landscape. Thus I observed complete departure of the current landscape from all seral stages across all scenarios. The exceptions to this pattern were the Late--Moderate seral stage, for which the current proportion was either within or moderately departed from the FRV, and the Mid--Open seral stage in the \textsc{gfdl-esm2m} model, for which the current proportion was moderately departed from the FRV.
 
 \begin{figure}[htbp]
  \captionsetup[subfigure]{labelformat=empty}
