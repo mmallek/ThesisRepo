@@ -10,7 +10,7 @@
 % check math using Wildfire_darea_trajectory.csv
 % redone 9/15
 
-In this section the same results are presented in multiple ways; although this is obviously redundant, it is done with the intent of being as inclusive as possible with respect to the potential audience. The HRV analysis presented here forms the backbone of a formal report submitted to the U.S. Forest Service for use in understanding and planning future management actions. In my experience, variations in the training and background of individuals affects how they understand and interpret different values. For some, probabilistic results are the only ones that make sense or appear valid. For others, results expressed in real terms rather than model outputs are the most useful. In order to not privilege either perspective, I have included a range of information translated in different ways. My goal is to facilitate understanding of the results for both academic and professional audiences.
+In this section the same results are presented in multiple ways; although this is obviously redundant, it is done with the intent of being as inclusive as possible with respect to the potential audience. The HRV analysis presented here forms the backbone of a formal report submitted to the U.S. Forest Service for use in understanding and planning future management actions. In my experience, variations in the training and background of individuals affects how they understand and interpret different values. Some prefer probabilistic results while others find results tied to real terms most useful. In order to not privilege either perspective, I have included a range of information translated in different ways. My goal is to facilitate understanding of the results for both academic and professional audiences.
 
 Approximately 96\% of the landscape was eligible for wildfire disturbance (all cover types except Barren and Water).\footnote{In this section I report values based on percent of eligible landscape. There are 181,550 hectares in the core study area, and 174,830 remain after excluding Barren and Water.} As expected, the frequency and extent of simulated wildfires varied across timesteps. This variability is illustrated in Figure~\ref{fig:darea-a}. The same data is also represented as a histogram (Figure~\ref{fig:darea-b}) because it can be difficult to see the timesteps with small values. The histogram of the time series data to highlight the rarity of extremely expansive wildfire damage. It was more common during the simulation for fire to burn across 5--20\% of the landscape.
 
@@ -257,14 +257,15 @@ Climate has a positive relationship with disturbed area (Figure \ref{fig:climate
     \centering
   \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/hrv_climdarea.png}
     \label{fig:climate_darea}
-  } \\
+  } 
   \subfloat[][]{
     \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/darea/climate_darea_vert.png}
     \label{fig:compare_clim_darea}
-  } %\\
+  } 
   \caption{(a) Plot of the climate parameter and disturbed area value for each timestep of the simulation (excluding the equilibration period). A linear model has been fit to the data and is shown as a blue line; the grey shaded area represents the 95\% confidence interval around the mean. (b) Climate parameter and proportion of eligible landscape disturbed by wildfire for timesteps 250 to 310 of the simulation, illustrating the wide variability in both climate parameter values and disturbed area per timestep. Purple lines are intended to aid in visualization of the climate paramter value and proportion of landscape burned during a particular timestep.}
   \label{fig:climate_darea}
 \end{figure}
+
 
 %\begin{figure}[!htbp]
 %  \centering
@@ -372,7 +373,7 @@ Visualizing the point (cell)-specific fire rotation (return interval) calls atte
 \subsubsection*{Landscape Composition} 
 
 % fixed plots - equilibration line is hard coded in. ocfwu calibration changed; now seems okay by ts 40. potentially could even have cut off equilibration at ts 20 but it's arbitrary. good to keep in mind for future stuff though.
-The seral stage distribution for each cover type varied over time, but did appear to be in dynamic equilibrium. Evidence of both high mortality fire, which triggers a transition to the Early Development seral stage for all cover types, and low mortality fire, which can thin a stand and cause a transition to a more open canopy seral stage (within the same development level), are visible in examining the output grids. Figure \ref{fig:covcondmaps} illustrates these changes for a sequence of four timesteps during the simulation. The seral stage dynamics and current seral stage distribution plots specific to Sierran Mixed Conifer - Mesic and Sierran Mixed Conifer - Xeric follow (Figures~\ref{fig:hrv-covcond_smcm} and \ref{fig:hrv-covcond_smcx}). I compare the current landscape's seral stage distribution to the simulated distribution and asess the current landscape's departure frmo the HRV in Tables~\ref{tab:covcond_smcm} and \ref{tab:covcond_smcx}. Plots and tabular results for the other seven focal types are included in Appendix~\ref{sec:indiv_cov_results}.
+The seral stage distribution for each cover type varied over time, but did appear to be in dynamic equilibrium \citep{Diamond1969}. Evidence of both high mortality fire, which triggers a transition to the Early Development seral stage for all cover types, and low mortality fire, which can thin a stand and cause a transition to a more open canopy seral stage (within the same development level), are visible in examining the output grids. Figure \ref{fig:covcondmaps} illustrates these changes for a sequence of four timesteps during the simulation. The seral stage dynamics and current seral stage distribution plots specific to Sierran Mixed Conifer - Mesic and Sierran Mixed Conifer - Xeric follow (Figures~\ref{fig:hrv-covcond_smcm} and \ref{fig:hrv-covcond_smcx}). I compare the current landscape's seral stage distribution to the simulated distribution and asess the current landscape's departure frmo the HRV in Tables~\ref{tab:covcond_smcm} and \ref{tab:covcond_smcx}. Plots and tabular results for the other seven focal types are included in Appendix~\ref{sec:indiv_cov_results}.
 
 % new plots 2015-09-18
 \begin{figure}[!htbp]
@@ -425,7 +426,7 @@ The current seral-stage distribution was never observed under the simulated HRV 
 \begin{table}[!htbp]
 \footnotesize
 \centering
-\caption{Range of variability in landscape structure, illustrating the cover type-seral stage class dynamics for Sierran Mixed Conifer - Mesic. Included are the $5^{\text{th}}$ percentile, $25^{\text{th}}$ percentile, $50^{\text{th}}$ percentile, $75^{\text{th}}$ percentile, and $95^{\text{th}}$ percentiles of the distribution, as well as the current landscape proportion, the curent percentile range of variability (\%RV) for that proportion, and the departure classification. For seral stage abbreviations, see Table \ref{condtable}.}
+\caption{Range of variability in landscape structure, illustrating the cover type-seral stage class dynamics for Sierran Mixed Conifer - Mesic. Included are the $5^{\text{th}}$ percentile, $25^{\text{th}}$ percentile, $50^{\text{th}}$ percentile, $75^{\text{th}}$ percentile, and $95^{\text{th}}$ percentiles of the distribution, as well as the current landscape proportion, the curent percentile range of variability (\%RV) for that proportion, and the departure classification. For seral stage abbreviations, see Table \ref{condtable}. Departure is classified as follows: if the current landscape metric value falls within the $25^{\text{th}}-75^{\text{th}}$ percentile range (the box in my boxplots), it is considered not departed (Departure is ``none'' in the table). If it falls within the $5^{\text{th}}-25^{\text{th}}$ percentile range or the $75^{\text{th}}-95^{\text{th}}$ percentile range (the whiskers in my boxplots), it is moderately departed (Departure is ``moderate'' in the table). If it falls outside that range, it is completely departed (Departure is ``complete'' in the table).}
 \label{tab:covcond_smcm}
 \begin{tabular}{@{}lrrrrr|rrr@{}}
 \toprule
@@ -435,7 +436,7 @@ The current seral-stage distribution was never observed under the simulated HRV 
 \textsc{mid\_mod  }        &   6.8         &  7.98    &  9.03      &  10.3    &  12.63     &  17.97    &  100   &  complete     \\
 \textsc{mid\_op   }        &   6.68        &  9.2     &  11.21     &  13.08   &  16.15     &  16.29    &  96    &  complete     \\
 \textsc{late\_cl  }        &   5.31        &  9.54    &  12.87     &  17.2    &  22.91     &  23.23    &  97    &  complete      \\
-\textsc{late\_mod }        &   8.56        &  10.32   &  11.24     &  12.56   &  14.41     &  14.18    &  95    &  complete      \\
+\textsc{late\_mod }        &   8.56        &  10.32   &  11.24     &  12.56   &  14.41     &  14.18    &  95    &  moderate      \\
 \textsc{late\_op  }        &   4.96        &  7.39    &  9.26      &  12.12   &  14.95     &  3.6      &  1     &  complete      \\
 \bottomrule
 \end{tabular}
@@ -475,7 +476,7 @@ The current seral stage distribution was never observed under the simulated HRV,
 \begin{table}[!htbp]
 \footnotesize
 \centering
-\caption{Range of variability in landscape structure, illustrating the cover type-seral stage dynamics for Sierran Mixed Conifer - Xeric. Included are the $5^{\text{th}}$ percentile, $25^{\text{th}}$ percentile, $50^{\text{th}}$ percentile, $75^{\text{th}}$ percentile, and $95^{\text{th}}$ percentiles of the distribution, as well as the current landscape proportion, the current percentile range of variability (\%RV) for that proportion, and the departure classification. For seral stage abbreviations, see Table \ref{condtable}.}
+\caption{Range of variability in landscape structure, illustrating the cover type-seral stage dynamics for Sierran Mixed Conifer - Xeric. Included are the $5^{\text{th}}$ percentile, $25^{\text{th}}$ percentile, $50^{\text{th}}$ percentile, $75^{\text{th}}$ percentile, and $95^{\text{th}}$ percentiles of the distribution, as well as the current landscape proportion, the current percentile range of variability (\%RV) for that proportion, and the departure classification. For seral stage abbreviations, see Table \ref{condtable}. Departure is classified as follows: if the current landscape metric value falls within the $25^{\text{th}}-75^{\text{th}}$ percentile range (the box in my boxplots), it is considered not departed (Departure is ``none'' in the table). If it falls within the $5^{\text{th}}-25^{\text{th}}$ percentile range or the $75^{\text{th}}-95^{\text{th}}$ percentile range (the whiskers in my boxplots), it is moderately departed (Departure is ``moderate'' in the table). If it falls outside that range, it is completely departed (Departure is ``complete'' in the table).}
 \label{tab:covcond_smcx}
 \begin{tabular}{@{}lrrrrr|rrr@{}}
 \toprule
