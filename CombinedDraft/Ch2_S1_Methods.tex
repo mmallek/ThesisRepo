@@ -16,15 +16,16 @@ A partial introduction to \textsc{RMLands} is included in Chapter~\ref{sec:model
 
 All input layers to \textsc{RMLands} must be custom-built to work with the software. For technical details on the data structure requirements of \textsc{RMLands}, see Appendix \ref{app:inputs}. A brief overview of each input layer is included below.
 
-\paragraph*{Cover} Cover type is based on the potential or current natural vegetation of a site and includes both natural and anthropogenic cover types. For example, cover types include not only Lodgepole Pine, Sierran Mixed Conifer, and Red Fir, but also Barren and Agriculture. Succession pathways are defined uniquely for each cover type and susceptibility to natural disturbances varies among cover types. Because this gird is fixed, it provides a fixed template upon which disturbance and succession processes play out. 
-
-The source for the cover layer is the Region 5 Existing Vegetation Map (``EVeg'') \citep{USDAForestService2009}. Generally, specific cover type names were derived from the California Fire Return Interval Departure (FRID) report by \citet{VandeWater2011}. Information from \emph{A Guide to Wildlife Habitats of California}, popularly known as the ``Wildlife Habitat Relationship'' (WHR) cover types, also informed cover type definition \citep{WHR1988}.\todo{image credit for calveg} 
-
 \begin{wrapfigure}{R}{0.5\textwidth} % use a capital R to allow figure to float
-\includegraphics[width=0.5\textwidth]{/Users/mmallek/Tahoe/Report3/images/CALVEGmappingzones.png}
+\includegraphics[width=0.45\textwidth]{/Users/mmallek/Tahoe/Report3/images/CALVEGmappingzones.png}
 \caption{\small \textsc{calveg} Mapping Zones. These zones meet U.S. Forest Service standards at national and regional levels. These ecological provinces are associated with dozens of vegetation alliances, which are used to classify vegetation in spatial data products. I used vegetation alliance definitions for the North Sierra zone to classify the land cover spatial data shared by the U.S. Forest Service \citep{calvegphoto}.} 
 \label{calveg}
 \end{wrapfigure}
+
+\paragraph*{Cover} Cover type is based on the potential or current natural vegetation of a site and includes both natural and anthropogenic cover types. For example, cover types include not only Lodgepole Pine, Sierran Mixed Conifer, and Red Fir, but also Barren and Agriculture. Succession pathways are defined uniquely for each cover type and susceptibility to natural disturbances varies among cover types. Because this gird is fixed, it provides a fixed template upon which disturbance and succession processes play out. 
+
+The source for the cover layer is the Region 5 Existing Vegetation Map (``EVeg'') \citep{USDAForestService2009}. Generally, specific cover type names were derived from the California Fire Return Interval Departure (FRID) report by \citet{VandeWater2011}. Information from \emph{A Guide to Wildlife Habitats of California}, popularly known as the ``Wildlife Habitat Relationship'' (WHR) cover types, also informed cover type definition \citep{WHR1988}.
+
 
 \subparagraph*{Alternative Cover Layers}
 The original intent of project partners was to utilize two separate cover layers: one for the historical reference period, and one for the current period (to be used in projections of future scenarios). Two layers were identified as potentially suitable for the historical analysis. The first was based on a map created from forest survey and inventory efforts under Albert Wieslander, which were conducted between 1928 and 1940 (``Wieslander'') \citep{Thorne2006}. The second was a map of Potential Natural Vegetation (PNV) created by a U.S. Forest Service Enterprise Team for the Tahoe National Forest in the 2000s (U.S. Forest Service corporate spatial data). The intent was to use the PNV, Wieslander, or a combination thereof to derive the land cover layer for the HRV phase of the project. 
@@ -60,7 +61,7 @@ I used Python \citep{Python26} scripts and ArcGIS \citepalias{ESRI2010} to condu
 
 Spatial data on aspen stands were obtained by project partners using the U.S. Forest Service Natural Resource Information System (NRIS) database to select identified aspen stands. The resulting GIS polygon shapefile included a mix of old data that only contained location information, and newer data that included supporting information. I merged this layer with the cover type layer, using ArcGIS tools and Python scripts to create Aspen variants of forested cover types (``[type] - Aspen'') where appropriate.
 
-Spatial data on meadows were obtained from UC--Davis \cite{Fryjoff-Hung2012} and also merged with the cover type layer. Where the Aspen types and Meadow classification overlapped, priority was given to Aspen.
+Spatial data on meadows were obtained from UC--Davis \citep{Fryjoff-Hung2012} and also merged with the cover type layer. Where the Aspen types and Meadow classification overlapped, priority was given to Aspen.
 
 Areas mapped as a vegetation type characteristic of early successional forest (e.g. chaparral) were remapped using ArcGIS tools and Python scripts to an appropriate forest cover type, based on the cover types in the area immediately adjacent to the area determined to be in an early successional stage. 
 
@@ -203,7 +204,7 @@ Streams represents linear hydrological features, classified as small, medium or 
 
 
 \paragraph*{Buffer/Core} 
-This layer identifies and distinguishes the ``core'' study area from the 10 km ``buffer,'' which allows wildfires to initiate outside of and burn beyond the formal study area. Without a buffer, edge effects would alter results for all aspects of the disturbance regime, as well as resulting landscape composition and configuration. A 10 km buffer was selected arbitrarily, but has in the past been sufficient to offset edge effects \citep{Cushman2011}\todo{should this be cushman or sanjuan/mcgarigal?}. Because the simulation plays out on the full extent of the core plus the buffer, all input grids are developed to that larger extent as well. To create this raster, the original study area polygon was buffered by 10 km, then converted to raster. The buffer and core are easily distinguished in the subfigures of Figures~\ref{fig:inputlayermaps1} and \ref{fig:inputlayermaps2}: the core is the interior area delineated by a thick black line, while the buffer is the area outside of this line, displayed at a decreased brightness level.
+This layer identifies and distinguishes the ``core'' study area from the 10 km ``buffer,'' which allows wildfires to initiate outside of and burn beyond the formal study area. Without a buffer, edge effects would alter results for all aspects of the disturbance regime, as well as resulting landscape composition and configuration. A 10 km buffer was selected arbitrarily, but has in the past been sufficient to offset edge effects \citep{Cushman2011}. Because the simulation plays out on the full extent of the core plus the buffer, all input grids are developed to that larger extent as well. To create this raster, the original study area polygon was buffered by 10 km, then converted to raster. The buffer and core are easily distinguished in the subfigures of Figures~\ref{fig:inputlayermaps1} and \ref{fig:inputlayermaps2}: the core is the interior area delineated by a thick black line, while the buffer is the area outside of this line, displayed at a decreased brightness level.
 
 
 \begin{figure}[!htbp]
@@ -680,6 +681,7 @@ As a further effort toward model evaluation, I examined the results of implement
 %\end{table}
 
 \begin{table}[!htbp]
+\centering
 \footnotesize
 \caption{For the eight most common cover types on the landscape, the percent change in canopy cover from the minimum TPI value for that cover type to the maximum TPI value. For seral stage abbreviations, see Table \ref{condtable}.}
 \label{tab:tpi_cc}

@@ -24,11 +24,11 @@ As a result, the specified rotation interval and percent mortality expected over
 \label{tab:darea_atleast}
 \begin{tabular}{@{}lllll@{}}
 \toprule
-\textbf{Proportion of Landscape Burned} & \textbf{$>1$\%}     & \textbf{$>10$\%}    & \textbf{$>25$\%}    & \textbf{$>50$\%} \\ \midrule
+ \textbf{Proportion of Landscape Burned} & \textbf{$\mathbf{>1}$\%}     & \textbf{$\mathbf{>10}$\%}    & \textbf{$\mathbf{>25}$\%}    & \textbf{$\mathbf{>50}$\%} \\ \midrule
 Number of timesteps ($n$)        & 459              & 313              & 115              & 13            \\
 Proportion of timesteps ($p = n/500$)    & 1.00             & 0.68             & 0.25             & 0.03          \\
 Interval (timesteps) ($t = 1/p$)      & 1.00             & 1.47             & 4.01             & 35.46         \\
-Interval (years)    ($y = t * 5$)       & 5.02             & 7.36             & 20.04            & 177.31        \\ \bottomrule
+Interval (years)    ($y = 5t$)       & 5.02             & 7.36             & 20.04            & 177.31        \\ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -179,13 +179,15 @@ Mean                              & 14.42 & 4.42  & 18.83 \\
 \label{tab:darea_atleast_smcm}
 \begin{tabular}{@{}lllll@{}}
 \toprule
-\textbf{Proportion of SMC\_M Burned} & \textbf{$>1$\%}     & \textbf{$>10$\%}    & \textbf{$>25$\%}    & \textbf{$>50$\%} \\ \midrule
-Number of timesteps     & 458          & 311           & 126           & 15            \\
-Proportion of timesteps & 0.99         & 0.67          & 0.27          & 0.03          \\
-Interval (timesteps)    & 1.01         & 1.48          & 3.66          & 30.73         \\
-Interval (years)        & 5.03         & 7.41          & 18.29         & 153.67       \\ \bottomrule
+ \textbf{Proportion of SMC\_M Burned} & \textbf{$\mathbf{>1}$\%}     & \textbf{$\mathbf{>10}$\%}    & \textbf{$\mathbf{>25}$\%}    & \textbf{$\mathbf{>50}$\%} \\ \midrule
+Number of timesteps ($n$)    & 458          & 311           & 126           & 15            \\
+Proportion of timesteps ($p = n/500$) & 0.99         & 0.67          & 0.27          & 0.03          \\
+Interval (timesteps) ($t = 1/p$)   & 1.01         & 1.48          & 3.66          & 30.73         \\
+Interval (years) ($y = 5t$)       & 5.03         & 7.41          & 18.29         & 153.67       \\ \bottomrule
 \end{tabular}
 \end{table}
+
+
 
 %\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -232,14 +234,13 @@ Mean                          & 14.88 & 6.95  & 21.83 \\  \bottomrule
 \label{tab:darea_atleast_smcx}
 \begin{tabular}{@{}lllll@{}}
  \toprule
-\textbf{Proportion of SMC\_X Burned} & \textbf{$>1$\%}     & \textbf{$>10$\%}    & \textbf{$>25$\%}    & \textbf{$>50$\%} \\ \midrule
-Number of timesteps     & 461          & 347           & 148           & 27            \\
-Proportion of timesteps & 1.00         & 0.75          & 0.32          & 0.06          \\
-Interval (timesteps)    & 1.00         & 1.33          & 3.11          & 17.07         \\
-Interval (years)        & 5.00         & 6.64          & 15.57         & 85.37         \\ \bottomrule
+\textbf{Proportion of SMC\_X Burned} & \textbf{$\mathbf{>1}$\%}     & \textbf{$\mathbf{>10}$\%}    & \textbf{$\mathbf{>25}$\%}    & \textbf{$\mathbf{>50}$\%} \\ \midrule
+Number of timesteps ($n$)             & 461          & 347           & 148           & 27            \\
+Proportion of timesteps ($p = n/500$) & 1.00         & 0.75          & 0.32          & 0.06          \\
+Interval (timesteps) ($t = 1/p$)      & 1.00         & 1.33          & 3.11          & 17.07         \\
+Interval (years)    ($y = 5t$)        & 5.00         & 6.64          & 15.57         & 85.37         \\ \bottomrule
 \end{tabular}
 \end{table}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -260,21 +261,21 @@ Climate has a positive relationship with disturbed area. The climate parameter i
     \label{fig:compare_clim_darea}
   } 
   \caption{(a) Scatterplot of the climate parameter and disturbed area value for each timestep of the simulation (excluding the equilibration period). A linear model has been fit to the data and is shown as a blue line; the grey shaded area represents the 95\% confidence interval around the mean. (b) Climate parameter and proportion of eligible landscape disturbed by wildfire for timesteps 250 to 310 of the simulation, illustrating the wide variability in both climate parameter values and disturbed area per timestep. The purple shaded area helps map the climate parameter value and proportion of landscape burned during the same individual timestep.}
-  \label{fig:climate_darea}
+  \label{fig:climate_darea_combofig}
 \end{figure}
 
 \clearpage
 
 \newpage
 \subsubsection*{Rotation Period} 
-As described in Chapter \ref{sec:hrvmethods}, I calibrated the model by adjusting seral stage-specific susceptibility values until the nine cover types with more than 1000 ha extent across the study area were within 10\% of their target fire rotation. I present here the results for the nine focal cover types. Full results for all cover types in the study area are presented in Table~\ref{tab:all-rotations}. 
+As described in Chapter \ref{sec:hrvmethods}, I calibrated the model by adjusting seral stage-specific susceptibility values until the nine cover types with more than 1000 ha extent across the study area were within 10\% of their target fire rotation. I present here the results for the two focal cover types and the full study area. Full results for all cover types in the study area are presented in Table~\ref{tab:all-rotations}. 
 
 % updated 2015-09
 \begin{table}[!htbp]
 \footnotesize
 \centering
 \caption{Fire rotation for Sierran Mixed Conifer - Mesic, Sierran Mixed Conifer - Xeric, and the full landscape.}
-\label{tab:all-rotations}
+\label{tab:ch2-rotations}
 \begin{tabular}{@{}lrrr@{}}
 \toprule
 \begin{tabular}[c]{@{}l@{}}Land Cover \\ Type\end{tabular}     & \begin{tabular}[c]{@{}l@{}}Low Mortality \\ Fire Rotation\end{tabular} & \begin{tabular}[c]{@{}l@{}}High Mortality \\ Fire Rotation\end{tabular} & \begin{tabular}[c]{@{}l@{}}All Fires \\ Rotation\end{tabular} \\ \midrule
@@ -581,21 +582,21 @@ In contrast, the other seral stages all fall within the simulated HRV in terms o
   \centering
   \subfloat[][]{
     %\centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_M-AREA_AM-boxplots.png}
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_M-AREA_AM-boxplots.png}
     \label{fig:smcm_areaam}
-  } 
+  } \\
   \subfloat[][]{
     %\centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_M-CORE_AM-boxplots.png}
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_M-CORE_AM-boxplots.png}
     \label{fig:smcm_coream}
   } \\
   \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_M-SHAPE_AM-boxplots.png}
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_M-SHAPE_AM-boxplots.png}
     \label{fig:smcm_shapeam}
-  } 
+  } \\
   \subfloat[][]{
     %\centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_M-CLUMPY-boxplots.png}
+    \includegraphics[width=0.8\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_M-CLUMPY-boxplots.png}
     \label{fig:smcm_clumpy}
   }%
 \caption{Fragstats class-level results for Sierran Mixed Conifer - Mesic. (a) area-weighted mean patch area (AREA\_AM) (b) area-weighted mean core area (CORE\_AM) (c) area-weighted mean shape index (SHAPE\_AM) (d) clumpiness (CLUMPY). Boxplot whiskers extend from the $5^{\text{th}}-95^{\text{th}}$ percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}
@@ -615,21 +616,21 @@ The spatial configuration of stand conditions fluctuated markedly over time as w
   \centering
   \subfloat[][]{
     %\centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_X-AREA_AM-boxplots.png}
+    \includegraphics[width=0.7\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_X-AREA_AM-boxplots.png}
     \label{fig:smcx_areaam}
-  } 
+  } \\
   \subfloat[][]{
     %\centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_X-CORE_AM-boxplots.png}
+    \includegraphics[width=0.7\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_X-CORE_AM-boxplots.png}
     \label{fig:smcx_coream}
   } \\
   \subfloat[][]{
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_X-SHAPE_AM-boxplots.png}
+    \includegraphics[width=0.7\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_X-SHAPE_AM-boxplots.png}
     \label{fig:smcx_shapeam}
-  } 
+  } \\
   \subfloat[][]{
     %\centering
-    \includegraphics[width=0.5\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_X-CLUMPY-boxplots.png}
+    \includegraphics[width=0.7\textwidth]{/Users/mmallek/Documents/Thesis/Plots/fragclass-bymetrics/HRV/SMC_X-CLUMPY-boxplots.png}
     \label{fig:smcx_clumpy}
   }%
 \caption{Fragstats class-level results for Sierran Mixed Conifer - Xeric. (a) area-weighted mean patch area (AREA\_AM) (b) area-weighted mean core area (CORE\_AM) (c) area-weighted mean shape index (SHAPE\_AM) (d) clumpiness (CLUMPY). Boxplot whiskers extend from the $5^{\text{th}}-95^{\text{th}}$ percentile of the observed distribution. The thick grey bar denotes the metric value on the current landscape.}

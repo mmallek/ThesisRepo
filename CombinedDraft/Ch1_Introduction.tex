@@ -7,7 +7,6 @@
 \newcommand{\source}[1]{%
   \nobreak\parbox[t]{\linewidth}{\raggedleft #1}% Placing a quote source
 }%
-\todo{want source on next line down, also do I want to make it only on right half of page or something?}
 \begin{quote}
 \emph{“In California, vegetation is the meeting place of fire and ecosystems. The plants are the fuel and fire is the driver of vegetation change. Fire and vegetation are often so interactive that they can scarcely be considered separately from each other.”} \\
 \medskip
@@ -21,7 +20,7 @@
 
 %\section{Thesis organization and project objectives}
 
-The overall purpose of this study was to quantify the historical range of variability in landscape structure in the Yuba River watershed on the Tahoe National Forest and evaluate the relative effects of alternative future climate scenarios on landscape structure. \todo{wrote a note ``The study area was...'' not sure what it means}Chapter 1 of this thesis includes a broad introduction to the study area and the motivation for this study. It contains a description of the physical and biological geography of the study area and discusses the relevancy of range of variability analyses to forest and restoration planning efforts. I introduce the concept of ``range of variability'' and outline a methodology for describing the historical and potential future ranges of variability in the disturbance regime and landscape pattern. The introduction also contains a synthesis of the empirical and expert knowledge on disturbance and succession processes characteristic of the pre-settlement period in the ecoregion containing the Yuba River watershed.
+The overall purpose of this study was to quantify the historical range of variability in landscape structure in the Yuba River watershed on the Tahoe National Forest and evaluate the relative effects of alternative future climate scenarios on landscape structure. Chapter 1 of this thesis includes a broad introduction to the study area and the motivation for this study. It contains a description of the physical and biological geography of the study area and discusses the relevancy of range of variability analyses to forest and restoration planning efforts. I introduce the concept of ``range of variability'' and outline a methodology for describing the historical and potential future ranges of variability in the disturbance regime and landscape pattern. The introduction also contains a synthesis of the empirical and expert knowledge on disturbance and succession processes characteristic of the pre-settlement period in the ecoregion containing the Yuba River watershed.
 
 My second objective was to quantify the historical range of variability in the disturbance regime, landscape composition, and landscape configuration in the watershed. In Chapter 2, I provide a detailed presentation of the methodology used in developing the historical range of variability. This includes the development of the input spatial data layers, selection of values for model parameterization, model calibration and execution, and the suite of tools used to conduct the analysis. Results are presented by focusing first on the disturbance regime and second on the vegetation response. A more focused analysis of the two most extensive cover types, Sierran Mixed Conifer - Mesic and Sierran Mixed Conifer - Xeric, which are key components of Sierra Nevada forests and thus a major focus for resource managers \citep{North2010}, are included in the main body of this chapter. Analysis and interpretation for seven additional cover types is included in Appendix~\ref{app:full-results}. 
 
@@ -36,7 +35,7 @@ My fourth and final objective was to interpret the results, develop management r
 \subsection{Physical Geography}
 
 \begin{figure}[!htbp]
-\includegraphics[width=\textwidth]{/Users/mmallek/Tahoe/Report3/images/studyarea.png}
+\includegraphics[width=0.8\textwidth]{/Users/mmallek/Tahoe/Report3/images/studyarea.png}
 \caption{The Sierra Nevada Ecoregion is outlined in red. The study area (outlined in black) is located in the northern Sierra Nevada on the Tahoe National Forest, and follows the boundaries of the Yuba River watershed.}
 \label{projectarea}
 \end{figure}
@@ -71,11 +70,11 @@ about 30\% of the land inside the study area is not held by the U.S. Forest Serv
    	% \label{fig:conditionmap}
    } \\
   \subfloat[][]{
-    \includegraphics[height=2in]{/Users/mmallek/Documents/Thesis/Seminar/historicalfiresuppression.jpg}
+    \includegraphics[height=1.8in]{/Users/mmallek/Documents/Thesis/Seminar/historicalfiresuppression.jpg}
     %\label{fig:conditionmap}
    }
      \subfloat[][]{
-    \includegraphics[height=2in]{/Users/mmallek/Documents/Thesis/Seminar/retardantUSFS.jpg}
+    \includegraphics[height=1.8in]{/Users/mmallek/Documents/Thesis/Seminar/retardantUSFS.jpg}
     %\label{fig:conditionmap}
     }
    \caption{(a) Harvested  sugar pine trees awaiting transport by rail to markets. Timber harvest historically focused on the most valuable trees, which in this area tended to be fire resistant species such as sugar pine and ponderosa pine \citep{YoseLibrary}. (b) Hundreds of thousands of sheep were grazed on mountain meadows. Grazing removes fine fuels, altering the fire regime by reducing the frequency and extent of wildfire \citep{Graff}. (c) Fire suppression to protect natural resources, especially timber, was implemented soon after the arrival of Europeans \citep{Barret1927}. (d) After World War II, fire suppression technology became more advanced, and most fires were quickly put out \citep{USFSRegion2013}.} 
@@ -112,6 +111,7 @@ Although very large fires have burned in the Sierra Nevada recently (e.g., the 2
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Disturbance Regime}
+\label{distregime}
 \paragraph*{Fire in the Sierra Nevada}
 In the Sierra Nevada, cycles of fire and vegetation recovery occur variably over large extents, as well as over long periods of time. Ongoing disturbance results in heterogeneity in vegetation composition and configuration, which can be captured by various statistical metrics \citep{Monica2008}. Prior to European settlement, wildfire was the major source of disturbance in Sierran forests, shaping the composition and configuration of vegetation communities. Fires were primarily lightning-caused, although indigenous peoples are thought to have set fires for vegetation management, especially in the lower elevations \citep{Anderson1996}. 
 
@@ -119,18 +119,18 @@ In the Sierra Nevada, cycles of fire and vegetation recovery occur variably over
   \centering
   \subfloat[][]{
     \centering
-		\includegraphics[height=2in]{/Users/mmallek/Documents/Thesis/Seminar/lowseverityfire-AlanTaylor.jpg}
+		\includegraphics[height=1.8in]{/Users/mmallek/Documents/Thesis/Seminar/lowseverityfire-AlanTaylor.jpg}
     \label{fig:lowseverity}
   } 
   \subfloat[][]{
-    \includegraphics[height=2in]{/Users/mmallek/Documents/Thesis/Seminar/smokywoodsUSFS.jpg}
+    \includegraphics[height=1.8in]{/Users/mmallek/Documents/Thesis/Seminar/smokywoodsUSFS.jpg}
     \label{fig:highseverity}
    } 
    \caption{(a) Low severity fires have short flame heights, staying near the ground. Fire primarily consumes fuels and understory vegetation. Photo by Alan Taylor \citep{lowseverityfirephoto}. (b) 2013 Rim Fire burning near a highway. Fire consumes fuels and both understory and overstory vegetation \citep{highseverityphoto}.} 
 \label{figs:fireseverity}
 \end{figure}
 
-In general, regardless of vegetation type, fires during the pre-settlement period were thought to burn primarily at low intensities (Figure~\ref{fig:lowseverity}). High severity fire (over 75\% overstory canopy mortality) was uncommon \citep{Skinner1996, SNEP1996a,Mallek2013,Stephens2015}. Under this disturbance regime, stand-replacing fire initiated early successional conditions on the landscape, but since they were uncommon, most fires only affected the understory by removing fuels \citep{Skinner1996, SNEP1996a,Mallek2013}. In some cases, individual trees or groups of tree could ``torch'' and burn down during a fire that otherwise consumed ground fuels. This is sometimes referred to as a ``moderate severity'' fire \citep{Beaty2001}. In these instances, fire thinned the forest. Trees left alive after fire were more widely spaced. Thus the overall age of the stand, defined as the age of the overstory trees, would be unaffected, but succession would be reset to an extent among the understory vegetation. Fires of moderate severity, that result in more open overstory canopy cover, were more prevalent in more xeric environments, including south-facing slopes and ridges \citep{SNEP1996a,SNEP1996,Mallek2013,Safford2014}. Where fires did not recur frequently or only occurred at very low severity levels, succession processes such as infill or overstory growth led to gradual closing of the overstory tree canopy \citep{SNEP1996a,McKenzie2004}. Closed canopy forests could be even-aged or multi-aged; the term ``closed'' alone does not distinguish fine-scale heterogeneity at a finer-scale than the 30 m pixel used in my model (as explained in Chapter~\ref{sec:hrvmethods}). For most of the cover types in the study area, high severity fire rates were sufficiently low that stands could succeed into late development and old growth conditions with a variety of canopy structures \citep{SNEP1996a,SNEP1996,Mallek2013,Safford2014}. 
+In general, regardless of vegetation type, fires during the pre-settlement period were thought to burn primarily at low intensities (Figure~\ref{fig:lowseverity}). High severity fire was uncommon \citep{Skinner1996, SNEP1996a,Mallek2013,Stephens2015}. Under this disturbance regime, stand-replacing fire initiated early successional conditions on the landscape, but since they were uncommon, most fires only affected the understory by removing fuels \citep{Skinner1996, SNEP1996a,Mallek2013}. In some cases, individual trees or groups of tree could ``torch'' and burn down during a fire that otherwise consumed ground fuels. This is sometimes referred to as a ``moderate severity'' fire \citep{Beaty2001}. In these instances, fire thinned the forest. Trees left alive after fire were more widely spaced. Thus the overall age of the stand, defined as the age of the overstory trees, would be unaffected, but succession would be reset to an extent among the understory vegetation. Fires of moderate severity, that result in more open overstory canopy cover, were more prevalent in more xeric environments, including south-facing slopes and ridges \citep{SNEP1996a,SNEP1996,Mallek2013,Safford2014}. Where fires did not recur frequently or only occurred at very low severity levels, succession processes such as infill or overstory growth led to gradual closing of the overstory tree canopy \citep{SNEP1996a,McKenzie2004}. Closed canopy forests could be even-aged or multi-aged; the term ``closed'' alone does not distinguish fine-scale heterogeneity at a finer-scale than the 30 m pixel used in my model (as explained in Chapter~\ref{sec:hrvmethods}). For most of the cover types in the study area, high severity fire rates were sufficiently low that stands could succeed into late development and old growth conditions with a variety of canopy structures \citep{SNEP1996a,SNEP1996,Mallek2013,Safford2014}. 
 
 
 Fire rotations, defined as the time it takes to burn an area equivalent to the total area under study \citep{Agee1993}, have been calculated for the major cover types in the study area \citep{Mallek2013}. Under historical conditions, wildfires were frequent, but slightly less so in wetter or higher elevation areas. For example, mean rotation was only 20 years in \emph{Pinus ponderosa} (ponderosa pine)-dominated forests, 30 years in the wetter mixed conifer areas, and as long as 60 years for mesic \emph{Abies magnifica} (red fir) forests, which are found around 2,000 feet higher in elevation than \emph{P.~ponderosa} forests \citep{Mallek2013}. However, mean fire rotations do not tell the full story, as the variance in fire rotation may be remarkable; some parts of the forest experienced frequent fire, while others escaped fire for long periods \citep{Mallek2013}.
@@ -159,7 +159,7 @@ There are 13 major vegetation types, several of which include one or more of the
 \begin{figure}[!htbp]
 \centering
 \includegraphics[height=0.3\textheight]{/Users/mmallek/Documents/Thesis/Plots/ImagefromFireTextbook.pdf}
-\caption{Area of ecological zones by 500 m elevation bands \citep[][ 269]{VanWag2006}. The elevational distribution of ecological zones is evident as area cover by each zone increases and then decreases as elevation increases. Aspect, soil quality, moisture availability, and elevation all contribute to the exact distribution of individual tree species within these broad vegetation types.}
+\caption{Area of ecological zones by 500 m elevation bands \citep[269]{VanWag2006}. The elevational distribution of ecological zones is evident as area cover by each zone increases and then decreases as elevation increases. Aspect, soil quality, moisture availability, and elevation all contribute to the exact distribution of individual tree species within these broad vegetation types.}
 \label{fig:ecologicalzonebands}
 \end{figure}
 
@@ -285,7 +285,7 @@ In addition to the HRV analysis, the need to explore and understand the ramifica
 \label{fig:satellitesnowpack}
 \end{figure}
 
-An\todo{proof this paragraph} analysis by \citep{Mallek2014} of the Eldorado and Tahoe National Forest meteorological history found that temperatures have increased over the last century, primarily manifesting as higher minimum temperatures. Changes in precipitation occur along elevational bands, with lower elevations experiencing a reduction in annual precipitation, while higher elevations experience an increase \citep{Mallek2014}. In addition, more precipitation is falling as rain as opposed to snow, and snow persists for less of the spring season \citep{Mallek2014}. Concern about the broad influence that climate change will have on local disturbance regimes, and subsequently, on seral stage distributions and patch configurations, motivates this study \citep{Fule2008,North2012}. Several researchers have shown that a more frequent and proportionally more severe fire regime in western forests in general and the Sierra Nevada in particular \citep{McKenzie2004,Westerling2011,Miller2012} is related to climate change. These trends are anticipated to continue under warmer and drier climate change scenarios \citep{Dale2001,Cook2004,Westerling2006, Westerling2008}. Upward shifts in the elevation of fires have also been reported in the Sierra Nevada\citep{Schwartz2015}. When fires occur at high severity, resetting succession, the potential for upward shifts of the elevational range occupied by species and vegetation assemblages increases \citep{Schwartz2015}. 
+An analysis by \citep{Mallek2014} of the Eldorado and Tahoe National Forest meteorological history found that temperatures have increased over the last century, primarily manifesting as higher minimum temperatures. Changes in precipitation is occurring along elevational bands, with lower elevations experiencing a reduction in annual precipitation, while higher elevations experience an increase \citep{Mallek2014}. In addition, more precipitation is falling as rain as opposed to snow, and snow persists for less of the spring season \citep{Mallek2014}. Concern about the broad influence that climate change will have on local disturbance regimes, and subsequently, on seral stage distributions and patch configurations, motivates this study \citep{Fule2008,North2012}. Several researchers have shown that a more frequent and proportionally more severe fire regime in western forests in general and the Sierra Nevada in particular \citep{McKenzie2004,Westerling2011,Miller2012} is related to climate change. These trends are anticipated to continue under warmer and drier climate change scenarios \citep{Dale2001,Cook2004,Westerling2006, Westerling2008}. Upward shifts in the elevation of fires have also been reported in the Sierra Nevada\citep{Schwartz2015}. When fires occur at high severity, resetting succession, the potential for upward shifts of the elevational range occupied by species and vegetation assemblages increases \citep{Schwartz2015}. 
 
 Range of variability analyses that offer a complementary analysis of future scenarios under climate change are rare (but see \cite{Keane2008} and \cite{Duveneck2014}). While the focus of management efforts has in the past been restoration, current policy emphasizes using adaptive strategies to ensure resilient ecosystems \citep{Stephens2010}. By simulating a range of potential future climate scenarios, I generate data to use in evaluating trends in landscape pattern related to trends projected under climate change, and place the current landscape in that context. Moreover, I use this additional information to consider which restoration strategies are likely to promote resilient forests and make sense ecologically for the area under study \citep{Duncan2010}. 
 
