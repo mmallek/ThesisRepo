@@ -32,7 +32,7 @@ Many range of variability analyses in the United States focus on the HRV of an a
 
 
 
-\subsection*{Objectives}
+\paragraph*{Objectives}
 In this study, my objectives were to simulate wildfires and vegetation succession under a set of potential future climate scenarios, compare the results to the current landscape across metrics describing landscape composition and configuration, and assess management implications. To do this, I simulated forest fires and succession using \textsc{RMLands}, holding all model parameters except the climate parameter constant. The climate parameter incorporated Palmer Drought Severity Index (PDSI) values from a suite of seven climate trajectories developed by the National Center for Atmospheric Research (USA) and the Canadian Centre for Climate Modelling and Analysis to the year 2100 \citep{Cook2014}. I used \textsc{Fragstats} and R software to analyze outputs and report the 90\% range of variability for simulated future metrics \citep{Fragstats2012,RCoreTeam2013}. Finally, I compared the simulated future landscape results to current conditions, drawing conclusions and assessing their implications for restoration and forest planning.
 
 
@@ -43,7 +43,7 @@ In this study, my objectives were to simulate wildfires and vegetation successio
 
 \section{Methods}
 
-\subsection*{Study area}
+\subsection{Study area}
 The study area (see Figure~\ref{projectarea-ch3}) is located in the Yuba River and Sierraville Ranger Districts on the northern part of the Tahoe National Forest, and comprises about 181,500 ha. The topography of the study area consists of rugged mountains incised by two major and a few minor river drainages. Elevation ranges from about 350 m to 2500 m. Like the rest of the Sierra Nevada, the study area has a Mediterranean climate, in which summer drought typically persists from May to September \citep{Minnich2007,Skinner1996}. This annual summer drought is complemented by the development of a significant snowpack during the winter months. The area receives 30 cm to 260 cm of precipitation annually, most of which falls as snow in the middle to upper elevations \citep{Storer1963}. Within the Sierra Nevada, the heaviest precipitation occurs to the east and north of the San Francisco Bay area \citep{VanWag2006}. Datasets of the 30-year normal precipitation at 800 m resolution for the northern Sierra, illustrate that particularly high amounts of precipitation fall across the middle elevations of the study area compared to the larger region \citep{PRISMClimateGroup2004}. This increased moisture contributes to the occurrence of exceptionally productive patches of forest \citep{Littell2012}. Vegetation is tremendously diverse and changes slowly along an elevational gradient and in response to local changes in drainage, aspect, and soil structure. Vegetation communities include grasslands, chaparral, oak woodlands, mixed conifer forests, red fir forests, and subalpine forests.
 
 % brad said to make study area more obvious for non-US readers; will probably have to redo plot for publication but this is ok for now I think
@@ -58,7 +58,7 @@ Sierran Mixed Conifer - Xeric and Sierran Mixed Conifer - Mesic forests are the 
 
 
 
-\subsection*{Simulations}
+\subsection{Simulations}
 
 \textsc{RMLands} is a spatially-explicit, stochastic, landscape-level disturbance and succession model capable of simulating fine-grained processes over large spatial and long temporal extents \citep{McGarigal2005}. It is part of a class of models known as landscape disturbance (often fire) and succession models, many of which are still in use today (such as \textsc{landis} \citep{He1999}, \textsc{zelig-l} \citep{Miller1999}, \textsc{safe-forests} \citep{Sessions1997} and \textsc{landsum} \citep{Keane2012}). \textsc{RMLands} is grid-based and simulates fire on landscapes in a spatially explicit and realistic manner, in that fire perimeters resemble those that occur naturally \citep{McGarigal2005,McGarigal2005a}. A component of many landscape fire and succession models are state and transition models, which provide a framework for defining the fundamental vegetation communities and the probability over time of completing a transition from one defined set of vegetative community characteristics to another \citep{Stringham2003,Blankenship2015}. State transitions in \textsc{RMLands} are simulated at the 30 m pixel scale \citep{Cushman2011}. Transitions may take place in response to fire or in the absence of it (natural succession) \citep{McGarigal2012}. Outputs from the model are readable by the landscape pattern analysis software \textsc{Fragstats}, which facilitates the landscape configuration analysis \citep{Fragstats2012}.
 
@@ -87,7 +87,7 @@ In a historical range of variability analysis, the simulation length is designed
 %%%% Notes in response: not easily. some language in hrv that addresses this. we don't know, beyond my assumption that the model treats it realistically in the first place, which is based on Kevin's word. You could hindcast, maybe. But I'm not expecting a super strong relationship. Don't know exactly how to deal with this comment but it feels important.
 %%%% More notes: HRV article has a brief comparison of climate vs. disturbed area. Weak relationship. We expect cascading results affecting landscape structure and composition as well as changes to fires. Some non-standard fire behavior may occur but no real way to test this because we don't know what fires will "look" like in the future.
 
-\subsection*{Climate Parameter and PDSI}
+\subsection{Climate Parameter and PDSI}
 
 The climate parameter values used in this study were derived from potential future climate models initialized using the set of parameters for Representative Concentration Pathway (RCP) 8.5. RCP8.5 includes no specific climate mitigation target, unlike the other three RCP scenarios in use \citep{Riahi2011}. As a result, it is considered a reference, or baseline scenario, in which greenhouse gas emission and concentrations increase over time without leveling out \citep{Riahi2011}. A literature review during the RCP development process designated radiative forcing in 2100 of 8.5 W/m$^2$ as the high end of plausible futures that had been modeled \citep{VanVuuren2011}. The corresponding $\text{CO}_2$ concentration is \textgreater $\sim$1370 $\text{CO}_2$ -eq in 2100, compared to 375 $\text{CO}_2$ -eq in 2005. The 66\% range of temperature increase above pre-industrial levels under the RCP8.5 scenario is 4.0\textdegree C--6.1\textdegree C \citep{Rogelj2012}. Since the development of RCP8.5 as a scenario, storylines have been produced that describe how such a scenario could come about. The main storyline released for RCP8.5 describes a world in which the human population rises to 12 billion by 2100. Little progress in energy efficiency and the food demands of the increasing population lead to high energy demands, which are met by coal-intensive technology choices \citep{Riahi2011}. Data from the RCP8.5 scenario was used to model climate variables like temperature and precipitation, which \citet{Cook2014} then used to project trajectories of drought severity to 2100.
 
@@ -121,7 +121,7 @@ Six PDSI sequences based on the \textsc{ccsm4} model were available, so I treate
 \end{figure}
 
 
-\subsection*{Evaluating Future Range of Variability}
+\subsection{Evaluating Future Range of Variability}
 \label{sec:evalFRV}
 I evaluated the range of variability in the wildfire regime across the future scenarios by calculating and comparing the median area burned on the landscape for each scenario across severity levels for the full landscape and the two most prevalent cover types in the study area, Sierran Mixed Conifer - Mesic and Sierran Mixed Conifer - Xeric (Figure~\ref{fig:dareacomp}). %\todo{compared to what we'd expect based on proportional difference?}
 I also computed the fire rotation, defined as the time it takes to burn an area equivalent to the area under study \citep{Agee1993}, for those two cover types, and compared the simulated future scenario results to the empirically derived historical fire rotation (Figure~\ref{fig:frotation}). 
@@ -141,7 +141,7 @@ To assess landscape departure, I compared the current landscape to the FRV, and 
 %  (\textsc{area\_am}) (\textsc{core\_am}) (\textsc{contag}) (\textsc{gyrate\_am}) (\textsc{shape\_am}) (\textsc{siei})
 
 
-\subsection*{Methodological Limitations} 
+\subsection{Methodological Limitations} 
 Some limitations of this work should be clarified before applying the results in a management context. \textsc{RMLands} simulates wildfires, but there are many other disturbance processes that exist at varying scales that are not simulated here, including insects and disease, wind-throw, wild ungulate and beaver herbivory, avalanches, and other forms of soil movement. The complex interactions among them that characterize real landscapes are also, as a result, omitted from consideration. %
 The cover type and seral stage data used as inputs were the best available, but are not perfect because of both human and computer errors in classification, and because they combine three separate classification efforts \citep{USDAForestService2009}. Improvements to the existing vegetation layer, such as the LiDAR maps currently in development, would improve the model by offering a standardized and more accurate classification of existing vegetation for the full study area. Also, if new data became available that would alter the model parameterization, then I would expect the estimate of the future range of variability to change. 
 
@@ -161,7 +161,7 @@ Finally, the climate parameter used in \textsc{RMLands} is a proxy for climate, 
 
 % brad says figures > table. precise results not necessary
 % becky found this confusing
-\subsection*{Natural fire regime}
+\subsection{Natural fire regime}
 
 I analyzed the wildfire disturbance regime in terms of its effect on the full study area, on mesic mixed conifer forests, and on xeric mixed conifer forests. 
 %
@@ -208,7 +208,7 @@ I also calculated the fire rotation for each scenario, and plotted these results
 
 
 
-\subsection*{Landscape Pattern}
+\subsection{Landscape Pattern}
 
 \paragraph*{Seral Stage Distribution}
 The landscape pattern analysis focuses first on changes to the seral stage distribution of mesic and xeric mixed conifer forests. Evidence of both high mortality fire, which always triggers a transition to Early Development, and low mortality fire, which can thin a stand and cause a transition to a more open canopy condition, is visible in examining the output grids.
@@ -480,7 +480,7 @@ The current landscape is completely departed from the FRV across all tested clim
 
 \section{Discussion}
 
-\subsection*{Future landscape dynamics and comparison to current conditions}
+\subsection{Future landscape dynamics and comparison to current conditions}
 
 The overall effect of a warming and drying climate in the simulated future climate scenarios was to alter the wildfire regime in the study landscape, which had both direct and indirect effects on the forest, at scales ranging a few to hundreds of thousands of acres. Examining the seral stage distribution created by wildfire provides a link between the abstract concept of fire frequency and forest pattern and structure. As a complement to the seral stage distribution analysis, I analyzed the patch configuration of individual seral stages. The Early Development stage of both mesic and xeric mixed conifer forests stood out for its shift, over increasingly warm and dry climate trajectories, to the dominant seral stage in both cover types. Although I analyzed and reviewed the patch metrics for the Middle and Late Development stages, my focus in this chapter is on the Early Development stage alone.
 
@@ -498,7 +498,7 @@ The questions driving the configuration analysis center around the questions of 
 
 These results imply that current trends of increased amounts of high severity fire \citep{Miller2012,Mallek2013} are related to climate, and may be difficult to reverse. I observed a loss of structural diversity (compared to the current conditions) within the xeric mixed conifer forests, which transformed into a distribution composed almost entirely of Early Development, Mid--Open, and Late--Open forest. Mesic forests contained more structural complexity, but a large increase in Early Development comes at the loss of the Late--Closed and Late--Moderate stages, which may be problematic because this cover type is a major source of late successional, closed canopy forest for the study area.
 
-\subsection*{Influence of the Initial Conditions}
+\subsection{Influence of the Initial Conditions}
 Because the initial conditions for both forest types included a large amount of land in the Late Development and Mid--Closed seral stages, which are generally parameterized to be more susceptible to fire than other seral stages, it seemed plausible that these initial conditions could have a disproportionate impact on the trajectory and the range of variability, as displayed in Figures~\ref{fig:covcond_smcm} and \ref{fig:covcond_smcx}. This could occur if the higher susceptibility resulted in high rates of wildfire in addition to high rates of high mortality from wildfire, leading to a large amount of land in the Early Development stage that would then dominate the cover type composition for the remainder of the simulation. However, Figures~\ref{fig:median_trajectory_smcm} and \ref{fig:median_trajectory_smcx}, which depict the median values across all runs of each climate model scenario, and for each seral stage of mesic and xeric mixed conifer forests, demonstrate that this is not the case. While the first few timesteps include a very sharp shift in the proportion of each seral stage on the landscape, stasis does not follow. A single narrative cannot capture the dynamics across all seral stages of the two focal cover types. The landscape is resilient to the punch of the first few timesteps, settling into a an oscillating trend by the end of the simulation across all the climate scenarios. In neither cover type does it appear that the shifting proportions of Early Development in the first few timesteps directly cause or predict the proportions of Early Development in the last five timesteps.
 
 It is true that the proportion of Early Development increases in the first several timesteps. However, in mesic mixed conifer the proportion dips back down, and appears to be responding more to the climate parameter than the initial conditions, particularly by timestep 14, which is the point at which I begin using the output landscape grids for analysis. In xeric mixed conifer, the initial increase continues throughout the length of the simulation, again indicating that the driver behind this increase is related primarily to the climate parameter set and related feedback, rather than the initial conditions. In the same way, if the preceding hypothesis were true, I would expect to see a fairly stable distribution once the first few timesteps had passed. Instead, for most seral stages, including the Late--Closed stage, I observe a clear trend. This trend appears to reflect that of the climate parameter, implying that climate is more influential than the initial conditions. Furthermore, my analysis and conclusions are focused on the end of the simulation. I did this in part to avoid incorporating artifacts related to initial conditions. The plots in Figures~\ref{fig:median_trajectory_smcm} and \ref{fig:median_trajectory_smcx} show that the shift in seral stage proportions over time follow trends, rather than oscillate in equilibrium, and thus the short length of the simulation (compared to a multi-century HRV) is not a main factor in the decline of middle and late successional forest observed in the simulations.
@@ -519,9 +519,9 @@ It is true that the proportion of Early Development increases in the first sever
 
 
 
-\subsection*{Management Implications}
+\subsection{Management Implications}
 
-\subsubsection*{Using results at various scales}
+\subsubsection{Using results at various scales}
 This study was designed to address questions on the landscape level, and therefore the simulations and analysis were conducted at that scale. When considering smaller-scale subregions of the study area, managers should carefully review results through a comparative or relative lens. In general, the landscape-level statistical results are inappropriate for use as the template for a project-level target. Instead, the landscape-level results should guide the development of project-level targets. In addition, the success of a project should be measured not by whether the results of the project mirror the results of this study, but by whether the project contributed to a particular landscape-level shift set as a goal using those landscape-level results. This is a subtle but important distinction in how to use the outputs of these simulations. 
 
 To further illustrate, consider an area identified as being appropriate for fire restoration. The composition of that area cannot be assumed to match that of the overall landscape. Many variables will affect the composition, including environmental (topographic position) and social (wildland-urban interface) considerations. Furthermore, my results rely on the generation and analysis of a large quantity of data. Even in the absence of such variation, if the scale of analysis is reduced from 180,000 ha to a few thousand, the statistical validity of the results and their implications deteriorates. As discussed, the need for statistically viable results led me to use only results from cover types at least 1000 ha in extent, and focused my analysis on the two dominant cover types, which extend across an area many times that minimum.
@@ -531,7 +531,7 @@ With respect to planning, my results are best used to provide a broad-scale cont
 \textsc{RMLands} has been optimized to perform well statistically when used to examine landscape change over large extents and long time periods. While spatially explicit in its dynamics, it is a simulation, producing many potential outcomes, and is not intended to predict specific outcomes at specific places and points in time. Rather, the data produced are aggregated in order to develop an understanding of the area as a whole. Because this model should not be used to predict an actual fire rotation value for a particular point on the landscape, it should also not be used to predict the effect of a particular vegetation management strategy \emph{at a particular point on the landscape.} Other forest and fire simulation models are designed for this purpose. \textsc{RMLands} is designed to produce outputs that facilitate measuring the effect of vegetation management implemented across space and time, which in turn enables assessing and understanding the potential impacts of such actions at scales larger than is practical or possible to measure experimentally.  
 
 
-\subsubsection*{Implications for Restoration}
+\subsubsection{Implications for Restoration}
 
 Restoration toward a resilient, somewhat stable ecology is often an important goal of resource managers. The comparisons made here consider the difference between the current and future disturbance regimes and landscape patterns, given a scenario in which natural fire regimes were allowed to occur. Since letting all fires burn naturally is not a realistic option, I note that the results do not provide a simple roadmap for restoration. However, they provide some insights into what landscape patterns may be resilient with climate change. In addition, the results indicate whether restoration toward the current wildfire disturbance regime, seral stage composition, or patch configuration appears likely to succeed under climate change, or whether the future is likely to significantly diverge from the present. 
 
@@ -554,7 +554,7 @@ Assessments of the effects of post-fire treatments of various kinds need to be c
 
 
 
-\subsubsection*{Implications for Planning}
+\subsubsection{Implications for Planning}
 Many National Forests will undergo Forest Plan revisions in the next decade. The 2012 Planning Rule instructs managers to manage for resilient conditions within a natural range of variability. While my results may be used as one potential range of variability, they are also the outcome of a model that simplified several aspects of the landscape, including ownership patterns and tolerable amounts of fire. For example, I did not model varying levels of fire suppression effort. Assuming the U.S. Forest Service and other stakeholders in the area do not view the amount of wildfire I simulated as tolerable, they will need to adopt various strategies to try and reduce the likelihood of frequent large fires, as well as the negative impacts of suppression. 
 
 Overall, the results of my study strongly indicate that more time, personnel, and funding will be needed in the future to fight fire, and subsequently repair and restore the damage from firefighting efforts and the flames themselves. I assert that there is a critical need to define desired future conditions for forests, and compare them to what would naturally develop under the simulated conditions, which are intended to portray the future range of variability for the landscape under study. I believe it is likely that there will be a gap between the projected conditions and the desired future conditions. A ``no-management'' strategy of fire and forests is not compatible with human settlement in the region: even before European settlement, fires were used by native peoples to manage vegetation and fire behavior \citep{Anderson1996}. However, an analysis comparing my results to desired future conditions would provide information on the feasibility of restoration efforts, and provide one anchor for conversations about the future of forest and fire management in the area.
